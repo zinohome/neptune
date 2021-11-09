@@ -1,0 +1,1906 @@
+2021-11-08 at 18:41:04 | INFO | Neptune Start Up ....
+2021-11-08 at 18:41:04 | INFO | API prefix is: [ /api/v2 ]
+2021-11-08 at 18:41:04 | INFO | Neptune Starting ....
+2021-11-08 at 18:41:04 | INFO | API cache does not exists ....
+2021-11-08 at 18:41:18 | INFO | Neptune Shutting Down ....
+2021-11-08 at 18:41:18 | INFO | API cache does not exists ....
+2021-11-08 at 18:41:20 | INFO | Neptune Start Up ....
+2021-11-08 at 18:41:20 | INFO | API prefix is: [ /api/v2 ]
+2021-11-08 at 18:41:20 | INFO | Neptune Starting ....
+2021-11-08 at 18:41:20 | INFO | API cache does not exists ....
+2021-11-08 at 18:42:06 | INFO | Neptune Shutting Down ....
+2021-11-08 at 18:42:06 | INFO | API cache does not exists ....
+2021-11-08 at 18:42:08 | INFO | Neptune Start Up ....
+2021-11-08 at 18:42:08 | INFO | API prefix is: [ /api/v1 ]
+2021-11-08 at 18:42:08 | INFO | Neptune Starting ....
+2021-11-08 at 18:42:08 | INFO | API cache does not exists ....
+2021-11-08 at 18:43:33 | INFO | Neptune Shutting Down ....
+2021-11-08 at 18:43:33 | INFO | API cache does not exists ....
+2021-11-08 at 18:43:34 | INFO | Neptune Start Up ....
+2021-11-08 at 18:43:34 | INFO | API prefix is: [ /api/v1 ]
+2021-11-08 at 18:43:34 | INFO | Neptune Starting ....
+2021-11-08 at 18:43:34 | INFO | API cache does not exists ....
+2021-11-08 at 18:43:45 | INFO | Neptune Shutting Down ....
+2021-11-08 at 18:43:45 | INFO | API cache does not exists ....
+2021-11-08 at 18:43:47 | INFO | Neptune Start Up ....
+2021-11-08 at 18:43:47 | INFO | API prefix is: [ /api/v1 ]
+2021-11-08 at 18:43:47 | INFO | Neptune Starting ....
+2021-11-08 at 18:43:47 | INFO | API cache does not exists ....
+2021-11-08 at 18:44:04 | INFO | Neptune Shutting Down ....
+2021-11-08 at 18:44:04 | INFO | API cache does not exists ....
+2021-11-08 at 18:44:05 | INFO | Neptune Start Up ....
+2021-11-08 at 18:44:05 | INFO | API prefix is: [ /api/v1 ]
+2021-11-08 at 18:44:05 | INFO | Neptune Starting ....
+2021-11-08 at 18:44:05 | INFO | API cache does not exists ....
+2021-11-08 at 18:53:00 | INFO | Neptune Shutting Down ....
+2021-11-08 at 18:53:00 | INFO | API cache does not exists ....
+2021-11-08 at 18:53:01 | INFO | Neptune Start Up ....
+2021-11-08 at 18:53:01 | INFO | API prefix is: [ /api/v1 ]
+2021-11-08 at 18:53:01 | INFO | Neptune Starting ....
+2021-11-08 at 18:53:01 | INFO | API cache does not exists ....
+2021-11-08 at 18:53:28 | INFO | Neptune Shutting Down ....
+2021-11-08 at 18:53:28 | INFO | API cache does not exists ....
+2021-11-08 at 18:53:29 | INFO | Neptune Start Up ....
+2021-11-08 at 18:53:29 | INFO | API prefix is: [ /api/v1 ]
+2021-11-08 at 18:53:29 | INFO | Neptune Starting ....
+2021-11-08 at 18:53:29 | INFO | API cache does not exists ....
+2021-11-08 at 18:55:33 | INFO | Neptune Shutting Down ....
+2021-11-08 at 18:55:33 | INFO | API cache does not exists ....
+2021-11-08 at 18:55:35 | INFO | Neptune Start Up ....
+2021-11-08 at 18:55:35 | INFO | API prefix is: [ /api/v1 ]
+2021-11-08 at 18:55:35 | INFO | Neptune Starting ....
+2021-11-08 at 18:55:35 | INFO | API cache does not exists ....
+2021-11-08 at 19:01:53 | INFO | Neptune Shutting Down ....
+2021-11-08 at 19:01:53 | INFO | API cache does not exists ....
+2021-11-09 at 10:03:30 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:05:43 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:06:03 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:07:05 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:18:58 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:18:58 | DEBUG | Metadata cache save to [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ] 
+2021-11-09 at 10:18:58 | DEBUG | Schema file does not exists, generate it from database ...
+2021-11-09 at 10:18:58 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:18:59 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:18:59 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:18:59 | DEBUG | __class__
+2021-11-09 at 10:18:59 | DEBUG | __class_getitem__
+2021-11-09 at 10:18:59 | DEBUG | __contains__
+2021-11-09 at 10:18:59 | DEBUG | __delattr__
+2021-11-09 at 10:18:59 | DEBUG | __dict__
+2021-11-09 at 10:18:59 | DEBUG | __dir__
+2021-11-09 at 10:18:59 | DEBUG | __doc__
+2021-11-09 at 10:18:59 | DEBUG | __eq__
+2021-11-09 at 10:18:59 | DEBUG | __format__
+2021-11-09 at 10:18:59 | DEBUG | __ge__
+2021-11-09 at 10:18:59 | DEBUG | __getattribute__
+2021-11-09 at 10:18:59 | DEBUG | __getstate__
+2021-11-09 at 10:18:59 | DEBUG | __gt__
+2021-11-09 at 10:18:59 | DEBUG | __hash__
+2021-11-09 at 10:18:59 | DEBUG | __init__
+2021-11-09 at 10:18:59 | DEBUG | __init_subclass__
+2021-11-09 at 10:18:59 | DEBUG | __le__
+2021-11-09 at 10:18:59 | DEBUG | __lt__
+2021-11-09 at 10:18:59 | DEBUG | __module__
+2021-11-09 at 10:18:59 | DEBUG | __ne__
+2021-11-09 at 10:18:59 | DEBUG | __new__
+2021-11-09 at 10:18:59 | DEBUG | __reduce__
+2021-11-09 at 10:18:59 | DEBUG | __reduce_ex__
+2021-11-09 at 10:18:59 | DEBUG | __repr__
+2021-11-09 at 10:18:59 | DEBUG | __setattr__
+2021-11-09 at 10:18:59 | DEBUG | __setstate__
+2021-11-09 at 10:18:59 | DEBUG | __sizeof__
+2021-11-09 at 10:18:59 | DEBUG | __str__
+2021-11-09 at 10:18:59 | DEBUG | __subclasshook__
+2021-11-09 at 10:18:59 | DEBUG | __visit_name__
+2021-11-09 at 10:18:59 | DEBUG | __weakref__
+2021-11-09 at 10:18:59 | DEBUG | _add_table
+2021-11-09 at 10:18:59 | DEBUG | _bind
+2021-11-09 at 10:18:59 | DEBUG | _bind_to
+2021-11-09 at 10:18:59 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:18:59 | DEBUG | _fk_memos
+2021-11-09 at 10:18:59 | DEBUG | _init_items
+2021-11-09 at 10:18:59 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:18:59 | DEBUG | _remove_table
+2021-11-09 at 10:18:59 | DEBUG | _schema_item_copy
+2021-11-09 at 10:18:59 | DEBUG | _schemas
+2021-11-09 at 10:18:59 | DEBUG | _sequences
+2021-11-09 at 10:18:59 | DEBUG | _set_parent
+2021-11-09 at 10:18:59 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:18:59 | DEBUG | _use_schema_map
+2021-11-09 at 10:18:59 | DEBUG | bind
+2021-11-09 at 10:18:59 | DEBUG | clear
+2021-11-09 at 10:18:59 | DEBUG | create_all
+2021-11-09 at 10:18:59 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:18:59 | DEBUG | dispatch
+2021-11-09 at 10:18:59 | DEBUG | drop_all
+2021-11-09 at 10:18:59 | DEBUG | get_children
+2021-11-09 at 10:18:59 | DEBUG | info
+2021-11-09 at 10:18:59 | DEBUG | is_bound
+2021-11-09 at 10:18:59 | DEBUG | naming_convention
+2021-11-09 at 10:18:59 | DEBUG | reflect
+2021-11-09 at 10:18:59 | DEBUG | remove
+2021-11-09 at 10:18:59 | DEBUG | schema
+2021-11-09 at 10:18:59 | DEBUG | sorted_tables
+2021-11-09 at 10:18:59 | DEBUG | tables
+2021-11-09 at 10:18:59 | DEBUG | items
+2021-11-09 at 10:18:59 | DEBUG | offices
+2021-11-09 at 10:18:59 | DEBUG | productlines
+2021-11-09 at 10:18:59 | DEBUG | tokens
+2021-11-09 at 10:18:59 | DEBUG | zinopara
+2021-11-09 at 10:18:59 | DEBUG | employees
+2021-11-09 at 10:18:59 | DEBUG | products
+2021-11-09 at 10:18:59 | DEBUG | customers
+2021-11-09 at 10:18:59 | DEBUG | orders
+2021-11-09 at 10:18:59 | DEBUG | payments
+2021-11-09 at 10:18:59 | DEBUG | orderdetails
+2021-11-09 at 10:18:59 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:19:58 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:19:58 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:19:58 | DEBUG | Schema file does not exists, generate it from database ...
+2021-11-09 at 10:19:58 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:19:58 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:19:58 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:19:58 | DEBUG | __class__
+2021-11-09 at 10:19:58 | DEBUG | __class_getitem__
+2021-11-09 at 10:19:58 | DEBUG | __contains__
+2021-11-09 at 10:19:58 | DEBUG | __delattr__
+2021-11-09 at 10:19:58 | DEBUG | __dict__
+2021-11-09 at 10:19:58 | DEBUG | __dir__
+2021-11-09 at 10:19:58 | DEBUG | __doc__
+2021-11-09 at 10:19:58 | DEBUG | __eq__
+2021-11-09 at 10:19:58 | DEBUG | __format__
+2021-11-09 at 10:19:58 | DEBUG | __ge__
+2021-11-09 at 10:19:58 | DEBUG | __getattribute__
+2021-11-09 at 10:19:58 | DEBUG | __getstate__
+2021-11-09 at 10:19:58 | DEBUG | __gt__
+2021-11-09 at 10:19:58 | DEBUG | __hash__
+2021-11-09 at 10:19:58 | DEBUG | __init__
+2021-11-09 at 10:19:58 | DEBUG | __init_subclass__
+2021-11-09 at 10:19:58 | DEBUG | __le__
+2021-11-09 at 10:19:58 | DEBUG | __lt__
+2021-11-09 at 10:19:58 | DEBUG | __module__
+2021-11-09 at 10:19:58 | DEBUG | __ne__
+2021-11-09 at 10:19:58 | DEBUG | __new__
+2021-11-09 at 10:19:58 | DEBUG | __reduce__
+2021-11-09 at 10:19:58 | DEBUG | __reduce_ex__
+2021-11-09 at 10:19:58 | DEBUG | __repr__
+2021-11-09 at 10:19:58 | DEBUG | __setattr__
+2021-11-09 at 10:19:58 | DEBUG | __setstate__
+2021-11-09 at 10:19:58 | DEBUG | __sizeof__
+2021-11-09 at 10:19:58 | DEBUG | __str__
+2021-11-09 at 10:19:58 | DEBUG | __subclasshook__
+2021-11-09 at 10:19:58 | DEBUG | __visit_name__
+2021-11-09 at 10:19:58 | DEBUG | __weakref__
+2021-11-09 at 10:19:58 | DEBUG | _add_table
+2021-11-09 at 10:19:58 | DEBUG | _bind
+2021-11-09 at 10:19:58 | DEBUG | _bind_to
+2021-11-09 at 10:19:58 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:19:58 | DEBUG | _fk_memos
+2021-11-09 at 10:19:58 | DEBUG | _init_items
+2021-11-09 at 10:19:58 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:19:58 | DEBUG | _remove_table
+2021-11-09 at 10:19:58 | DEBUG | _schema_item_copy
+2021-11-09 at 10:19:58 | DEBUG | _schemas
+2021-11-09 at 10:19:58 | DEBUG | _sequences
+2021-11-09 at 10:19:58 | DEBUG | _set_parent
+2021-11-09 at 10:19:58 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:19:58 | DEBUG | _use_schema_map
+2021-11-09 at 10:19:58 | DEBUG | bind
+2021-11-09 at 10:19:58 | DEBUG | clear
+2021-11-09 at 10:19:58 | DEBUG | create_all
+2021-11-09 at 10:19:58 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:19:58 | DEBUG | dispatch
+2021-11-09 at 10:19:58 | DEBUG | drop_all
+2021-11-09 at 10:19:58 | DEBUG | get_children
+2021-11-09 at 10:19:58 | DEBUG | info
+2021-11-09 at 10:19:58 | DEBUG | is_bound
+2021-11-09 at 10:19:58 | DEBUG | naming_convention
+2021-11-09 at 10:19:58 | DEBUG | reflect
+2021-11-09 at 10:19:58 | DEBUG | remove
+2021-11-09 at 10:19:58 | DEBUG | schema
+2021-11-09 at 10:19:58 | DEBUG | sorted_tables
+2021-11-09 at 10:19:58 | DEBUG | tables
+2021-11-09 at 10:19:58 | DEBUG | =================
+2021-11-09 at 10:19:58 | DEBUG | items
+2021-11-09 at 10:19:58 | DEBUG | offices
+2021-11-09 at 10:19:58 | DEBUG | productlines
+2021-11-09 at 10:19:58 | DEBUG | tokens
+2021-11-09 at 10:19:58 | DEBUG | zinopara
+2021-11-09 at 10:19:58 | DEBUG | employees
+2021-11-09 at 10:19:58 | DEBUG | products
+2021-11-09 at 10:19:58 | DEBUG | customers
+2021-11-09 at 10:19:58 | DEBUG | orders
+2021-11-09 at 10:19:58 | DEBUG | payments
+2021-11-09 at 10:19:58 | DEBUG | orderdetails
+2021-11-09 at 10:19:58 | DEBUG | ****************************************
+2021-11-09 at 10:19:58 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:20:11 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:20:11 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:20:11 | DEBUG | Schema file does not exists, generate it from database ...
+2021-11-09 at 10:20:11 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:20:12 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:20:12 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:20:12 | DEBUG | __class__
+2021-11-09 at 10:20:12 | DEBUG | __class_getitem__
+2021-11-09 at 10:20:12 | DEBUG | __contains__
+2021-11-09 at 10:20:12 | DEBUG | __delattr__
+2021-11-09 at 10:20:12 | DEBUG | __dict__
+2021-11-09 at 10:20:12 | DEBUG | __dir__
+2021-11-09 at 10:20:12 | DEBUG | __doc__
+2021-11-09 at 10:20:12 | DEBUG | __eq__
+2021-11-09 at 10:20:12 | DEBUG | __format__
+2021-11-09 at 10:20:12 | DEBUG | __ge__
+2021-11-09 at 10:20:12 | DEBUG | __getattribute__
+2021-11-09 at 10:20:12 | DEBUG | __getstate__
+2021-11-09 at 10:20:12 | DEBUG | __gt__
+2021-11-09 at 10:20:12 | DEBUG | __hash__
+2021-11-09 at 10:20:12 | DEBUG | __init__
+2021-11-09 at 10:20:12 | DEBUG | __init_subclass__
+2021-11-09 at 10:20:12 | DEBUG | __le__
+2021-11-09 at 10:20:12 | DEBUG | __lt__
+2021-11-09 at 10:20:12 | DEBUG | __module__
+2021-11-09 at 10:20:12 | DEBUG | __ne__
+2021-11-09 at 10:20:12 | DEBUG | __new__
+2021-11-09 at 10:20:12 | DEBUG | __reduce__
+2021-11-09 at 10:20:12 | DEBUG | __reduce_ex__
+2021-11-09 at 10:20:12 | DEBUG | __repr__
+2021-11-09 at 10:20:12 | DEBUG | __setattr__
+2021-11-09 at 10:20:12 | DEBUG | __setstate__
+2021-11-09 at 10:20:12 | DEBUG | __sizeof__
+2021-11-09 at 10:20:12 | DEBUG | __str__
+2021-11-09 at 10:20:12 | DEBUG | __subclasshook__
+2021-11-09 at 10:20:12 | DEBUG | __visit_name__
+2021-11-09 at 10:20:12 | DEBUG | __weakref__
+2021-11-09 at 10:20:12 | DEBUG | _add_table
+2021-11-09 at 10:20:12 | DEBUG | _bind
+2021-11-09 at 10:20:12 | DEBUG | _bind_to
+2021-11-09 at 10:20:12 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:20:12 | DEBUG | _fk_memos
+2021-11-09 at 10:20:12 | DEBUG | _init_items
+2021-11-09 at 10:20:12 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:20:12 | DEBUG | _remove_table
+2021-11-09 at 10:20:12 | DEBUG | _schema_item_copy
+2021-11-09 at 10:20:12 | DEBUG | _schemas
+2021-11-09 at 10:20:12 | DEBUG | _sequences
+2021-11-09 at 10:20:12 | DEBUG | _set_parent
+2021-11-09 at 10:20:12 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:20:12 | DEBUG | _use_schema_map
+2021-11-09 at 10:20:12 | DEBUG | bind
+2021-11-09 at 10:20:12 | DEBUG | clear
+2021-11-09 at 10:20:12 | DEBUG | create_all
+2021-11-09 at 10:20:12 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:20:12 | DEBUG | dispatch
+2021-11-09 at 10:20:12 | DEBUG | drop_all
+2021-11-09 at 10:20:12 | DEBUG | get_children
+2021-11-09 at 10:20:12 | DEBUG | info
+2021-11-09 at 10:20:12 | DEBUG | is_bound
+2021-11-09 at 10:20:12 | DEBUG | naming_convention
+2021-11-09 at 10:20:12 | DEBUG | reflect
+2021-11-09 at 10:20:12 | DEBUG | remove
+2021-11-09 at 10:20:12 | DEBUG | schema
+2021-11-09 at 10:20:12 | DEBUG | sorted_tables
+2021-11-09 at 10:20:12 | DEBUG | tables
+2021-11-09 at 10:20:12 | DEBUG | ===================================================
+2021-11-09 at 10:20:12 | DEBUG | items
+2021-11-09 at 10:20:12 | DEBUG | offices
+2021-11-09 at 10:20:12 | DEBUG | productlines
+2021-11-09 at 10:20:12 | DEBUG | tokens
+2021-11-09 at 10:20:12 | DEBUG | zinopara
+2021-11-09 at 10:20:12 | DEBUG | employees
+2021-11-09 at 10:20:12 | DEBUG | products
+2021-11-09 at 10:20:12 | DEBUG | customers
+2021-11-09 at 10:20:12 | DEBUG | orders
+2021-11-09 at 10:20:12 | DEBUG | payments
+2021-11-09 at 10:20:12 | DEBUG | orderdetails
+2021-11-09 at 10:20:12 | DEBUG | ****************************************************
+2021-11-09 at 10:20:12 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:20:52 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:20:52 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:20:52 | DEBUG | Schema file does not exists, generate it from database ...
+2021-11-09 at 10:20:52 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:20:53 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:20:53 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:20:53 | DEBUG | ****************************************************
+2021-11-09 at 10:20:53 | DEBUG | __class__
+2021-11-09 at 10:20:53 | DEBUG | __class_getitem__
+2021-11-09 at 10:20:53 | DEBUG | __contains__
+2021-11-09 at 10:20:53 | DEBUG | __delattr__
+2021-11-09 at 10:20:53 | DEBUG | __dict__
+2021-11-09 at 10:20:53 | DEBUG | __dir__
+2021-11-09 at 10:20:53 | DEBUG | __doc__
+2021-11-09 at 10:20:53 | DEBUG | __eq__
+2021-11-09 at 10:20:53 | DEBUG | __format__
+2021-11-09 at 10:20:53 | DEBUG | __ge__
+2021-11-09 at 10:20:53 | DEBUG | __getattribute__
+2021-11-09 at 10:20:53 | DEBUG | __getstate__
+2021-11-09 at 10:20:53 | DEBUG | __gt__
+2021-11-09 at 10:20:53 | DEBUG | __hash__
+2021-11-09 at 10:20:53 | DEBUG | __init__
+2021-11-09 at 10:20:53 | DEBUG | __init_subclass__
+2021-11-09 at 10:20:53 | DEBUG | __le__
+2021-11-09 at 10:20:53 | DEBUG | __lt__
+2021-11-09 at 10:20:53 | DEBUG | __module__
+2021-11-09 at 10:20:53 | DEBUG | __ne__
+2021-11-09 at 10:20:53 | DEBUG | __new__
+2021-11-09 at 10:20:53 | DEBUG | __reduce__
+2021-11-09 at 10:20:53 | DEBUG | __reduce_ex__
+2021-11-09 at 10:20:53 | DEBUG | __repr__
+2021-11-09 at 10:20:53 | DEBUG | __setattr__
+2021-11-09 at 10:20:53 | DEBUG | __setstate__
+2021-11-09 at 10:20:53 | DEBUG | __sizeof__
+2021-11-09 at 10:20:53 | DEBUG | __str__
+2021-11-09 at 10:20:53 | DEBUG | __subclasshook__
+2021-11-09 at 10:20:53 | DEBUG | __visit_name__
+2021-11-09 at 10:20:53 | DEBUG | __weakref__
+2021-11-09 at 10:20:53 | DEBUG | _add_table
+2021-11-09 at 10:20:53 | DEBUG | _bind
+2021-11-09 at 10:20:53 | DEBUG | _bind_to
+2021-11-09 at 10:20:53 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:20:53 | DEBUG | _fk_memos
+2021-11-09 at 10:20:53 | DEBUG | _init_items
+2021-11-09 at 10:20:53 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:20:53 | DEBUG | _remove_table
+2021-11-09 at 10:20:53 | DEBUG | _schema_item_copy
+2021-11-09 at 10:20:53 | DEBUG | _schemas
+2021-11-09 at 10:20:53 | DEBUG | _sequences
+2021-11-09 at 10:20:53 | DEBUG | _set_parent
+2021-11-09 at 10:20:53 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:20:53 | DEBUG | _use_schema_map
+2021-11-09 at 10:20:53 | DEBUG | bind
+2021-11-09 at 10:20:53 | DEBUG | clear
+2021-11-09 at 10:20:53 | DEBUG | create_all
+2021-11-09 at 10:20:53 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:20:53 | DEBUG | dispatch
+2021-11-09 at 10:20:53 | DEBUG | drop_all
+2021-11-09 at 10:20:53 | DEBUG | get_children
+2021-11-09 at 10:20:53 | DEBUG | info
+2021-11-09 at 10:20:53 | DEBUG | is_bound
+2021-11-09 at 10:20:53 | DEBUG | naming_convention
+2021-11-09 at 10:20:53 | DEBUG | reflect
+2021-11-09 at 10:20:53 | DEBUG | remove
+2021-11-09 at 10:20:53 | DEBUG | schema
+2021-11-09 at 10:20:53 | DEBUG | sorted_tables
+2021-11-09 at 10:20:53 | DEBUG | tables
+2021-11-09 at 10:20:53 | DEBUG | ===================================================
+2021-11-09 at 10:20:53 | DEBUG | items
+2021-11-09 at 10:20:53 | DEBUG | offices
+2021-11-09 at 10:20:53 | DEBUG | productlines
+2021-11-09 at 10:20:53 | DEBUG | tokens
+2021-11-09 at 10:20:53 | DEBUG | zinopara
+2021-11-09 at 10:20:53 | DEBUG | employees
+2021-11-09 at 10:20:53 | DEBUG | products
+2021-11-09 at 10:20:53 | DEBUG | customers
+2021-11-09 at 10:20:53 | DEBUG | orders
+2021-11-09 at 10:20:53 | DEBUG | payments
+2021-11-09 at 10:20:53 | DEBUG | orderdetails
+2021-11-09 at 10:20:53 | DEBUG | ****************************************************
+2021-11-09 at 10:20:53 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:21:47 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:21:47 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:21:47 | DEBUG | Schema file does not exists, generate it from database ...
+2021-11-09 at 10:21:47 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:21:47 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:21:47 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:21:47 | DEBUG | ****************************************************
+2021-11-09 at 10:21:47 | DEBUG | __class__
+2021-11-09 at 10:21:47 | DEBUG | __class_getitem__
+2021-11-09 at 10:21:47 | DEBUG | __contains__
+2021-11-09 at 10:21:47 | DEBUG | __delattr__
+2021-11-09 at 10:21:47 | DEBUG | __dict__
+2021-11-09 at 10:21:47 | DEBUG | __dir__
+2021-11-09 at 10:21:47 | DEBUG | __doc__
+2021-11-09 at 10:21:47 | DEBUG | __eq__
+2021-11-09 at 10:21:47 | DEBUG | __format__
+2021-11-09 at 10:21:47 | DEBUG | __ge__
+2021-11-09 at 10:21:47 | DEBUG | __getattribute__
+2021-11-09 at 10:21:47 | DEBUG | __getstate__
+2021-11-09 at 10:21:47 | DEBUG | __gt__
+2021-11-09 at 10:21:47 | DEBUG | __hash__
+2021-11-09 at 10:21:47 | DEBUG | __init__
+2021-11-09 at 10:21:47 | DEBUG | __init_subclass__
+2021-11-09 at 10:21:47 | DEBUG | __le__
+2021-11-09 at 10:21:47 | DEBUG | __lt__
+2021-11-09 at 10:21:47 | DEBUG | __module__
+2021-11-09 at 10:21:47 | DEBUG | __ne__
+2021-11-09 at 10:21:47 | DEBUG | __new__
+2021-11-09 at 10:21:47 | DEBUG | __reduce__
+2021-11-09 at 10:21:47 | DEBUG | __reduce_ex__
+2021-11-09 at 10:21:47 | DEBUG | __repr__
+2021-11-09 at 10:21:47 | DEBUG | __setattr__
+2021-11-09 at 10:21:47 | DEBUG | __setstate__
+2021-11-09 at 10:21:47 | DEBUG | __sizeof__
+2021-11-09 at 10:21:47 | DEBUG | __str__
+2021-11-09 at 10:21:47 | DEBUG | __subclasshook__
+2021-11-09 at 10:21:47 | DEBUG | __visit_name__
+2021-11-09 at 10:21:47 | DEBUG | __weakref__
+2021-11-09 at 10:21:47 | DEBUG | _add_table
+2021-11-09 at 10:21:47 | DEBUG | _bind
+2021-11-09 at 10:21:47 | DEBUG | _bind_to
+2021-11-09 at 10:21:47 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:21:47 | DEBUG | _fk_memos
+2021-11-09 at 10:21:47 | DEBUG | _init_items
+2021-11-09 at 10:21:47 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:21:47 | DEBUG | _remove_table
+2021-11-09 at 10:21:47 | DEBUG | _schema_item_copy
+2021-11-09 at 10:21:47 | DEBUG | _schemas
+2021-11-09 at 10:21:47 | DEBUG | _sequences
+2021-11-09 at 10:21:47 | DEBUG | _set_parent
+2021-11-09 at 10:21:47 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:21:47 | DEBUG | _use_schema_map
+2021-11-09 at 10:21:47 | DEBUG | bind
+2021-11-09 at 10:21:47 | DEBUG | clear
+2021-11-09 at 10:21:47 | DEBUG | create_all
+2021-11-09 at 10:21:47 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:21:47 | DEBUG | dispatch
+2021-11-09 at 10:21:47 | DEBUG | drop_all
+2021-11-09 at 10:21:47 | DEBUG | get_children
+2021-11-09 at 10:21:47 | DEBUG | info
+2021-11-09 at 10:21:47 | DEBUG | is_bound
+2021-11-09 at 10:21:47 | DEBUG | naming_convention
+2021-11-09 at 10:21:47 | DEBUG | reflect
+2021-11-09 at 10:21:47 | DEBUG | remove
+2021-11-09 at 10:21:47 | DEBUG | schema
+2021-11-09 at 10:21:47 | DEBUG | sorted_tables
+2021-11-09 at 10:21:47 | DEBUG | tables
+2021-11-09 at 10:21:47 | DEBUG | ===================================================
+2021-11-09 at 10:21:47 | DEBUG | items
+2021-11-09 at 10:21:47 | DEBUG | offices
+2021-11-09 at 10:21:47 | DEBUG | productlines
+2021-11-09 at 10:21:47 | DEBUG | tokens
+2021-11-09 at 10:21:47 | DEBUG | zinopara
+2021-11-09 at 10:21:47 | DEBUG | employees
+2021-11-09 at 10:21:47 | DEBUG | products
+2021-11-09 at 10:21:47 | DEBUG | customers
+2021-11-09 at 10:21:47 | DEBUG | orders
+2021-11-09 at 10:21:47 | DEBUG | payments
+2021-11-09 at 10:21:47 | DEBUG | orderdetails
+2021-11-09 at 10:21:47 | DEBUG | ****************************************************
+2021-11-09 at 10:21:47 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:22:42 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:22:42 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:22:42 | DEBUG | Schema file does not exists, generate it from database ...
+2021-11-09 at 10:22:42 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:22:42 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:22:42 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:22:42 | DEBUG | ****************************************************
+2021-11-09 at 10:22:42 | DEBUG | __class__
+2021-11-09 at 10:22:42 | DEBUG | __class_getitem__
+2021-11-09 at 10:22:42 | DEBUG | __contains__
+2021-11-09 at 10:22:42 | DEBUG | __delattr__
+2021-11-09 at 10:22:42 | DEBUG | __dict__
+2021-11-09 at 10:22:42 | DEBUG | __dir__
+2021-11-09 at 10:22:42 | DEBUG | __doc__
+2021-11-09 at 10:22:42 | DEBUG | __eq__
+2021-11-09 at 10:22:42 | DEBUG | __format__
+2021-11-09 at 10:22:42 | DEBUG | __ge__
+2021-11-09 at 10:22:42 | DEBUG | __getattribute__
+2021-11-09 at 10:22:42 | DEBUG | __getstate__
+2021-11-09 at 10:22:42 | DEBUG | __gt__
+2021-11-09 at 10:22:42 | DEBUG | __hash__
+2021-11-09 at 10:22:42 | DEBUG | __init__
+2021-11-09 at 10:22:42 | DEBUG | __init_subclass__
+2021-11-09 at 10:22:42 | DEBUG | __le__
+2021-11-09 at 10:22:42 | DEBUG | __lt__
+2021-11-09 at 10:22:42 | DEBUG | __module__
+2021-11-09 at 10:22:42 | DEBUG | __ne__
+2021-11-09 at 10:22:42 | DEBUG | __new__
+2021-11-09 at 10:22:42 | DEBUG | __reduce__
+2021-11-09 at 10:22:42 | DEBUG | __reduce_ex__
+2021-11-09 at 10:22:42 | DEBUG | __repr__
+2021-11-09 at 10:22:42 | DEBUG | __setattr__
+2021-11-09 at 10:22:42 | DEBUG | __setstate__
+2021-11-09 at 10:22:42 | DEBUG | __sizeof__
+2021-11-09 at 10:22:42 | DEBUG | __str__
+2021-11-09 at 10:22:42 | DEBUG | __subclasshook__
+2021-11-09 at 10:22:42 | DEBUG | __visit_name__
+2021-11-09 at 10:22:42 | DEBUG | __weakref__
+2021-11-09 at 10:22:42 | DEBUG | _add_table
+2021-11-09 at 10:22:42 | DEBUG | _bind
+2021-11-09 at 10:22:42 | DEBUG | _bind_to
+2021-11-09 at 10:22:42 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:22:42 | DEBUG | _fk_memos
+2021-11-09 at 10:22:42 | DEBUG | _init_items
+2021-11-09 at 10:22:42 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:22:42 | DEBUG | _remove_table
+2021-11-09 at 10:22:42 | DEBUG | _schema_item_copy
+2021-11-09 at 10:22:42 | DEBUG | _schemas
+2021-11-09 at 10:22:42 | DEBUG | _sequences
+2021-11-09 at 10:22:42 | DEBUG | _set_parent
+2021-11-09 at 10:22:42 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:22:42 | DEBUG | _use_schema_map
+2021-11-09 at 10:22:42 | DEBUG | bind
+2021-11-09 at 10:22:42 | DEBUG | clear
+2021-11-09 at 10:22:42 | DEBUG | create_all
+2021-11-09 at 10:22:42 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:22:42 | DEBUG | dispatch
+2021-11-09 at 10:22:42 | DEBUG | drop_all
+2021-11-09 at 10:22:42 | DEBUG | get_children
+2021-11-09 at 10:22:42 | DEBUG | info
+2021-11-09 at 10:22:42 | DEBUG | is_bound
+2021-11-09 at 10:22:42 | DEBUG | naming_convention
+2021-11-09 at 10:22:42 | DEBUG | reflect
+2021-11-09 at 10:22:42 | DEBUG | remove
+2021-11-09 at 10:22:42 | DEBUG | schema
+2021-11-09 at 10:22:42 | DEBUG | sorted_tables
+2021-11-09 at 10:22:42 | DEBUG | tables
+2021-11-09 at 10:22:42 | DEBUG | ===================================================
+2021-11-09 at 10:22:42 | DEBUG | items
+2021-11-09 at 10:22:42 | DEBUG | offices
+2021-11-09 at 10:22:42 | DEBUG | productlines
+2021-11-09 at 10:22:42 | DEBUG | tokens
+2021-11-09 at 10:22:42 | DEBUG | zinopara
+2021-11-09 at 10:22:42 | DEBUG | employees
+2021-11-09 at 10:22:42 | DEBUG | products
+2021-11-09 at 10:22:42 | DEBUG | customers
+2021-11-09 at 10:22:42 | DEBUG | orders
+2021-11-09 at 10:22:42 | DEBUG | payments
+2021-11-09 at 10:22:42 | DEBUG | orderdetails
+2021-11-09 at 10:22:42 | DEBUG | ****************************************************
+2021-11-09 at 10:22:42 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:31:53 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:31:53 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:31:53 | DEBUG | Schema file does not exists, generate it from database ...
+2021-11-09 at 10:31:53 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:31:53 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:31:53 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:31:53 | DEBUG | ****************************************************
+2021-11-09 at 10:31:53 | DEBUG | __class__
+2021-11-09 at 10:31:53 | DEBUG | __class_getitem__
+2021-11-09 at 10:31:53 | DEBUG | __contains__
+2021-11-09 at 10:31:53 | DEBUG | __delattr__
+2021-11-09 at 10:31:53 | DEBUG | __dict__
+2021-11-09 at 10:31:53 | DEBUG | __dir__
+2021-11-09 at 10:31:53 | DEBUG | __doc__
+2021-11-09 at 10:31:53 | DEBUG | __eq__
+2021-11-09 at 10:31:53 | DEBUG | __format__
+2021-11-09 at 10:31:53 | DEBUG | __ge__
+2021-11-09 at 10:31:53 | DEBUG | __getattribute__
+2021-11-09 at 10:31:53 | DEBUG | __getstate__
+2021-11-09 at 10:31:53 | DEBUG | __gt__
+2021-11-09 at 10:31:53 | DEBUG | __hash__
+2021-11-09 at 10:31:53 | DEBUG | __init__
+2021-11-09 at 10:31:53 | DEBUG | __init_subclass__
+2021-11-09 at 10:31:53 | DEBUG | __le__
+2021-11-09 at 10:31:53 | DEBUG | __lt__
+2021-11-09 at 10:31:53 | DEBUG | __module__
+2021-11-09 at 10:31:53 | DEBUG | __ne__
+2021-11-09 at 10:31:53 | DEBUG | __new__
+2021-11-09 at 10:31:53 | DEBUG | __reduce__
+2021-11-09 at 10:31:53 | DEBUG | __reduce_ex__
+2021-11-09 at 10:31:53 | DEBUG | __repr__
+2021-11-09 at 10:31:53 | DEBUG | __setattr__
+2021-11-09 at 10:31:53 | DEBUG | __setstate__
+2021-11-09 at 10:31:53 | DEBUG | __sizeof__
+2021-11-09 at 10:31:53 | DEBUG | __str__
+2021-11-09 at 10:31:53 | DEBUG | __subclasshook__
+2021-11-09 at 10:31:53 | DEBUG | __visit_name__
+2021-11-09 at 10:31:53 | DEBUG | __weakref__
+2021-11-09 at 10:31:53 | DEBUG | _add_table
+2021-11-09 at 10:31:53 | DEBUG | _bind
+2021-11-09 at 10:31:53 | DEBUG | _bind_to
+2021-11-09 at 10:31:53 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:31:53 | DEBUG | _fk_memos
+2021-11-09 at 10:31:53 | DEBUG | _init_items
+2021-11-09 at 10:31:53 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:31:53 | DEBUG | _remove_table
+2021-11-09 at 10:31:53 | DEBUG | _schema_item_copy
+2021-11-09 at 10:31:53 | DEBUG | _schemas
+2021-11-09 at 10:31:53 | DEBUG | _sequences
+2021-11-09 at 10:31:53 | DEBUG | _set_parent
+2021-11-09 at 10:31:53 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:31:53 | DEBUG | _use_schema_map
+2021-11-09 at 10:31:53 | DEBUG | bind
+2021-11-09 at 10:31:53 | DEBUG | clear
+2021-11-09 at 10:31:53 | DEBUG | create_all
+2021-11-09 at 10:31:53 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:31:53 | DEBUG | dispatch
+2021-11-09 at 10:31:53 | DEBUG | drop_all
+2021-11-09 at 10:31:53 | DEBUG | get_children
+2021-11-09 at 10:31:53 | DEBUG | info
+2021-11-09 at 10:31:53 | DEBUG | is_bound
+2021-11-09 at 10:31:53 | DEBUG | naming_convention
+2021-11-09 at 10:31:53 | DEBUG | reflect
+2021-11-09 at 10:31:53 | DEBUG | remove
+2021-11-09 at 10:31:53 | DEBUG | schema
+2021-11-09 at 10:31:53 | DEBUG | sorted_tables
+2021-11-09 at 10:31:53 | DEBUG | tables
+2021-11-09 at 10:31:53 | DEBUG | ===================================================
+2021-11-09 at 10:31:53 | DEBUG | items
+2021-11-09 at 10:31:53 | DEBUG | offices
+2021-11-09 at 10:31:53 | DEBUG | productlines
+2021-11-09 at 10:31:53 | DEBUG | tokens
+2021-11-09 at 10:31:53 | DEBUG | zinopara
+2021-11-09 at 10:31:53 | DEBUG | employees
+2021-11-09 at 10:31:53 | DEBUG | products
+2021-11-09 at 10:31:53 | DEBUG | customers
+2021-11-09 at 10:31:53 | DEBUG | orders
+2021-11-09 at 10:31:53 | DEBUG | payments
+2021-11-09 at 10:31:53 | DEBUG | orderdetails
+2021-11-09 at 10:31:53 | DEBUG | ****************************************************
+2021-11-09 at 10:31:53 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:32:42 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:32:42 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:32:42 | DEBUG | Schema file does not exists, generate it from database ...
+2021-11-09 at 10:32:42 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:32:43 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:32:43 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:32:43 | DEBUG | ****************************************************
+2021-11-09 at 10:32:43 | DEBUG | __class__
+2021-11-09 at 10:32:43 | DEBUG | __class_getitem__
+2021-11-09 at 10:32:43 | DEBUG | __contains__
+2021-11-09 at 10:32:43 | DEBUG | __delattr__
+2021-11-09 at 10:32:43 | DEBUG | __dict__
+2021-11-09 at 10:32:43 | DEBUG | __dir__
+2021-11-09 at 10:32:43 | DEBUG | __doc__
+2021-11-09 at 10:32:43 | DEBUG | __eq__
+2021-11-09 at 10:32:43 | DEBUG | __format__
+2021-11-09 at 10:32:43 | DEBUG | __ge__
+2021-11-09 at 10:32:43 | DEBUG | __getattribute__
+2021-11-09 at 10:32:43 | DEBUG | __getstate__
+2021-11-09 at 10:32:43 | DEBUG | __gt__
+2021-11-09 at 10:32:43 | DEBUG | __hash__
+2021-11-09 at 10:32:43 | DEBUG | __init__
+2021-11-09 at 10:32:43 | DEBUG | __init_subclass__
+2021-11-09 at 10:32:43 | DEBUG | __le__
+2021-11-09 at 10:32:43 | DEBUG | __lt__
+2021-11-09 at 10:32:43 | DEBUG | __module__
+2021-11-09 at 10:32:43 | DEBUG | __ne__
+2021-11-09 at 10:32:43 | DEBUG | __new__
+2021-11-09 at 10:32:43 | DEBUG | __reduce__
+2021-11-09 at 10:32:43 | DEBUG | __reduce_ex__
+2021-11-09 at 10:32:43 | DEBUG | __repr__
+2021-11-09 at 10:32:43 | DEBUG | __setattr__
+2021-11-09 at 10:32:43 | DEBUG | __setstate__
+2021-11-09 at 10:32:43 | DEBUG | __sizeof__
+2021-11-09 at 10:32:43 | DEBUG | __str__
+2021-11-09 at 10:32:43 | DEBUG | __subclasshook__
+2021-11-09 at 10:32:43 | DEBUG | __visit_name__
+2021-11-09 at 10:32:43 | DEBUG | __weakref__
+2021-11-09 at 10:32:43 | DEBUG | _add_table
+2021-11-09 at 10:32:43 | DEBUG | _bind
+2021-11-09 at 10:32:43 | DEBUG | _bind_to
+2021-11-09 at 10:32:43 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:32:43 | DEBUG | _fk_memos
+2021-11-09 at 10:32:43 | DEBUG | _init_items
+2021-11-09 at 10:32:43 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:32:43 | DEBUG | _remove_table
+2021-11-09 at 10:32:43 | DEBUG | _schema_item_copy
+2021-11-09 at 10:32:43 | DEBUG | _schemas
+2021-11-09 at 10:32:43 | DEBUG | _sequences
+2021-11-09 at 10:32:43 | DEBUG | _set_parent
+2021-11-09 at 10:32:43 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:32:43 | DEBUG | _use_schema_map
+2021-11-09 at 10:32:43 | DEBUG | bind
+2021-11-09 at 10:32:43 | DEBUG | clear
+2021-11-09 at 10:32:43 | DEBUG | create_all
+2021-11-09 at 10:32:43 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:32:43 | DEBUG | dispatch
+2021-11-09 at 10:32:43 | DEBUG | drop_all
+2021-11-09 at 10:32:43 | DEBUG | get_children
+2021-11-09 at 10:32:43 | DEBUG | info
+2021-11-09 at 10:32:43 | DEBUG | is_bound
+2021-11-09 at 10:32:43 | DEBUG | naming_convention
+2021-11-09 at 10:32:43 | DEBUG | reflect
+2021-11-09 at 10:32:43 | DEBUG | remove
+2021-11-09 at 10:32:43 | DEBUG | schema
+2021-11-09 at 10:32:43 | DEBUG | sorted_tables
+2021-11-09 at 10:32:43 | DEBUG | tables
+2021-11-09 at 10:32:43 | DEBUG | ===================================================
+2021-11-09 at 10:32:43 | DEBUG | items
+2021-11-09 at 10:32:43 | DEBUG | offices
+2021-11-09 at 10:32:43 | DEBUG | productlines
+2021-11-09 at 10:32:43 | DEBUG | tokens
+2021-11-09 at 10:32:43 | DEBUG | zinopara
+2021-11-09 at 10:32:43 | DEBUG | employees
+2021-11-09 at 10:32:43 | DEBUG | products
+2021-11-09 at 10:32:43 | DEBUG | customers
+2021-11-09 at 10:32:43 | DEBUG | orders
+2021-11-09 at 10:32:43 | DEBUG | payments
+2021-11-09 at 10:32:43 | DEBUG | orderdetails
+2021-11-09 at 10:32:43 | DEBUG | ****************************************************
+2021-11-09 at 10:32:43 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:33:31 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:33:31 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:33:31 | DEBUG | Schema file exists, you can load it to application ...
+2021-11-09 at 10:33:31 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:33:31 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:33:31 | DEBUG | ****************************************************
+2021-11-09 at 10:33:31 | DEBUG | __class__
+2021-11-09 at 10:33:31 | DEBUG | __class_getitem__
+2021-11-09 at 10:33:31 | DEBUG | __contains__
+2021-11-09 at 10:33:31 | DEBUG | __delattr__
+2021-11-09 at 10:33:31 | DEBUG | __dict__
+2021-11-09 at 10:33:31 | DEBUG | __dir__
+2021-11-09 at 10:33:31 | DEBUG | __doc__
+2021-11-09 at 10:33:31 | DEBUG | __eq__
+2021-11-09 at 10:33:31 | DEBUG | __format__
+2021-11-09 at 10:33:31 | DEBUG | __ge__
+2021-11-09 at 10:33:31 | DEBUG | __getattribute__
+2021-11-09 at 10:33:31 | DEBUG | __getstate__
+2021-11-09 at 10:33:31 | DEBUG | __gt__
+2021-11-09 at 10:33:31 | DEBUG | __hash__
+2021-11-09 at 10:33:31 | DEBUG | __init__
+2021-11-09 at 10:33:31 | DEBUG | __init_subclass__
+2021-11-09 at 10:33:31 | DEBUG | __le__
+2021-11-09 at 10:33:31 | DEBUG | __lt__
+2021-11-09 at 10:33:31 | DEBUG | __module__
+2021-11-09 at 10:33:31 | DEBUG | __ne__
+2021-11-09 at 10:33:31 | DEBUG | __new__
+2021-11-09 at 10:33:31 | DEBUG | __reduce__
+2021-11-09 at 10:33:31 | DEBUG | __reduce_ex__
+2021-11-09 at 10:33:31 | DEBUG | __repr__
+2021-11-09 at 10:33:31 | DEBUG | __setattr__
+2021-11-09 at 10:33:31 | DEBUG | __setstate__
+2021-11-09 at 10:33:31 | DEBUG | __sizeof__
+2021-11-09 at 10:33:31 | DEBUG | __str__
+2021-11-09 at 10:33:31 | DEBUG | __subclasshook__
+2021-11-09 at 10:33:31 | DEBUG | __visit_name__
+2021-11-09 at 10:33:31 | DEBUG | __weakref__
+2021-11-09 at 10:33:31 | DEBUG | _add_table
+2021-11-09 at 10:33:31 | DEBUG | _bind
+2021-11-09 at 10:33:31 | DEBUG | _bind_to
+2021-11-09 at 10:33:31 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:33:31 | DEBUG | _fk_memos
+2021-11-09 at 10:33:31 | DEBUG | _init_items
+2021-11-09 at 10:33:31 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:33:31 | DEBUG | _remove_table
+2021-11-09 at 10:33:31 | DEBUG | _schema_item_copy
+2021-11-09 at 10:33:31 | DEBUG | _schemas
+2021-11-09 at 10:33:31 | DEBUG | _sequences
+2021-11-09 at 10:33:31 | DEBUG | _set_parent
+2021-11-09 at 10:33:31 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:33:31 | DEBUG | _use_schema_map
+2021-11-09 at 10:33:31 | DEBUG | bind
+2021-11-09 at 10:33:31 | DEBUG | clear
+2021-11-09 at 10:33:31 | DEBUG | create_all
+2021-11-09 at 10:33:31 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:33:31 | DEBUG | dispatch
+2021-11-09 at 10:33:31 | DEBUG | drop_all
+2021-11-09 at 10:33:31 | DEBUG | get_children
+2021-11-09 at 10:33:31 | DEBUG | info
+2021-11-09 at 10:33:31 | DEBUG | is_bound
+2021-11-09 at 10:33:31 | DEBUG | naming_convention
+2021-11-09 at 10:33:31 | DEBUG | reflect
+2021-11-09 at 10:33:31 | DEBUG | remove
+2021-11-09 at 10:33:31 | DEBUG | schema
+2021-11-09 at 10:33:31 | DEBUG | sorted_tables
+2021-11-09 at 10:33:31 | DEBUG | tables
+2021-11-09 at 10:33:31 | DEBUG | ===================================================
+2021-11-09 at 10:33:31 | DEBUG | items
+2021-11-09 at 10:33:31 | DEBUG | offices
+2021-11-09 at 10:33:31 | DEBUG | productlines
+2021-11-09 at 10:33:31 | DEBUG | tokens
+2021-11-09 at 10:33:31 | DEBUG | zinopara
+2021-11-09 at 10:33:31 | DEBUG | employees
+2021-11-09 at 10:33:31 | DEBUG | products
+2021-11-09 at 10:33:31 | DEBUG | customers
+2021-11-09 at 10:33:31 | DEBUG | orders
+2021-11-09 at 10:33:31 | DEBUG | payments
+2021-11-09 at 10:33:31 | DEBUG | orderdetails
+2021-11-09 at 10:33:31 | DEBUG | ****************************************************
+2021-11-09 at 10:33:31 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:33:41 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:33:41 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:33:41 | DEBUG | Schema file does not exists, generate it from database ...
+2021-11-09 at 10:33:41 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:33:42 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:33:42 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:33:42 | DEBUG | ****************************************************
+2021-11-09 at 10:33:42 | DEBUG | __class__
+2021-11-09 at 10:33:42 | DEBUG | __class_getitem__
+2021-11-09 at 10:33:42 | DEBUG | __contains__
+2021-11-09 at 10:33:42 | DEBUG | __delattr__
+2021-11-09 at 10:33:42 | DEBUG | __dict__
+2021-11-09 at 10:33:42 | DEBUG | __dir__
+2021-11-09 at 10:33:42 | DEBUG | __doc__
+2021-11-09 at 10:33:42 | DEBUG | __eq__
+2021-11-09 at 10:33:42 | DEBUG | __format__
+2021-11-09 at 10:33:42 | DEBUG | __ge__
+2021-11-09 at 10:33:42 | DEBUG | __getattribute__
+2021-11-09 at 10:33:42 | DEBUG | __getstate__
+2021-11-09 at 10:33:42 | DEBUG | __gt__
+2021-11-09 at 10:33:42 | DEBUG | __hash__
+2021-11-09 at 10:33:42 | DEBUG | __init__
+2021-11-09 at 10:33:42 | DEBUG | __init_subclass__
+2021-11-09 at 10:33:42 | DEBUG | __le__
+2021-11-09 at 10:33:42 | DEBUG | __lt__
+2021-11-09 at 10:33:42 | DEBUG | __module__
+2021-11-09 at 10:33:42 | DEBUG | __ne__
+2021-11-09 at 10:33:42 | DEBUG | __new__
+2021-11-09 at 10:33:42 | DEBUG | __reduce__
+2021-11-09 at 10:33:42 | DEBUG | __reduce_ex__
+2021-11-09 at 10:33:42 | DEBUG | __repr__
+2021-11-09 at 10:33:42 | DEBUG | __setattr__
+2021-11-09 at 10:33:42 | DEBUG | __setstate__
+2021-11-09 at 10:33:42 | DEBUG | __sizeof__
+2021-11-09 at 10:33:42 | DEBUG | __str__
+2021-11-09 at 10:33:42 | DEBUG | __subclasshook__
+2021-11-09 at 10:33:42 | DEBUG | __visit_name__
+2021-11-09 at 10:33:42 | DEBUG | __weakref__
+2021-11-09 at 10:33:42 | DEBUG | _add_table
+2021-11-09 at 10:33:42 | DEBUG | _bind
+2021-11-09 at 10:33:42 | DEBUG | _bind_to
+2021-11-09 at 10:33:42 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:33:42 | DEBUG | _fk_memos
+2021-11-09 at 10:33:42 | DEBUG | _init_items
+2021-11-09 at 10:33:42 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:33:42 | DEBUG | _remove_table
+2021-11-09 at 10:33:42 | DEBUG | _schema_item_copy
+2021-11-09 at 10:33:42 | DEBUG | _schemas
+2021-11-09 at 10:33:42 | DEBUG | _sequences
+2021-11-09 at 10:33:42 | DEBUG | _set_parent
+2021-11-09 at 10:33:42 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:33:42 | DEBUG | _use_schema_map
+2021-11-09 at 10:33:42 | DEBUG | bind
+2021-11-09 at 10:33:42 | DEBUG | clear
+2021-11-09 at 10:33:42 | DEBUG | create_all
+2021-11-09 at 10:33:42 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:33:42 | DEBUG | dispatch
+2021-11-09 at 10:33:42 | DEBUG | drop_all
+2021-11-09 at 10:33:42 | DEBUG | get_children
+2021-11-09 at 10:33:42 | DEBUG | info
+2021-11-09 at 10:33:42 | DEBUG | is_bound
+2021-11-09 at 10:33:42 | DEBUG | naming_convention
+2021-11-09 at 10:33:42 | DEBUG | reflect
+2021-11-09 at 10:33:42 | DEBUG | remove
+2021-11-09 at 10:33:42 | DEBUG | schema
+2021-11-09 at 10:33:42 | DEBUG | sorted_tables
+2021-11-09 at 10:33:42 | DEBUG | tables
+2021-11-09 at 10:33:42 | DEBUG | ===================================================
+2021-11-09 at 10:33:42 | DEBUG | items
+2021-11-09 at 10:33:42 | DEBUG | offices
+2021-11-09 at 10:33:42 | DEBUG | productlines
+2021-11-09 at 10:33:42 | DEBUG | tokens
+2021-11-09 at 10:33:42 | DEBUG | zinopara
+2021-11-09 at 10:33:42 | DEBUG | employees
+2021-11-09 at 10:33:42 | DEBUG | products
+2021-11-09 at 10:33:42 | DEBUG | customers
+2021-11-09 at 10:33:42 | DEBUG | orders
+2021-11-09 at 10:33:42 | DEBUG | payments
+2021-11-09 at 10:33:42 | DEBUG | orderdetails
+2021-11-09 at 10:33:42 | DEBUG | ****************************************************
+2021-11-09 at 10:33:42 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:44:43 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:44:44 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:44:44 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 10:44:44 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:44:44 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:44:44 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:44:44 | DEBUG | ****************************************************
+2021-11-09 at 10:44:44 | DEBUG | __class__
+2021-11-09 at 10:44:44 | DEBUG | __class_getitem__
+2021-11-09 at 10:44:44 | DEBUG | __contains__
+2021-11-09 at 10:44:44 | DEBUG | __delattr__
+2021-11-09 at 10:44:44 | DEBUG | __dict__
+2021-11-09 at 10:44:44 | DEBUG | __dir__
+2021-11-09 at 10:44:44 | DEBUG | __doc__
+2021-11-09 at 10:44:44 | DEBUG | __eq__
+2021-11-09 at 10:44:44 | DEBUG | __format__
+2021-11-09 at 10:44:44 | DEBUG | __ge__
+2021-11-09 at 10:44:44 | DEBUG | __getattribute__
+2021-11-09 at 10:44:44 | DEBUG | __getstate__
+2021-11-09 at 10:44:44 | DEBUG | __gt__
+2021-11-09 at 10:44:44 | DEBUG | __hash__
+2021-11-09 at 10:44:44 | DEBUG | __init__
+2021-11-09 at 10:44:44 | DEBUG | __init_subclass__
+2021-11-09 at 10:44:44 | DEBUG | __le__
+2021-11-09 at 10:44:44 | DEBUG | __lt__
+2021-11-09 at 10:44:44 | DEBUG | __module__
+2021-11-09 at 10:44:44 | DEBUG | __ne__
+2021-11-09 at 10:44:44 | DEBUG | __new__
+2021-11-09 at 10:44:44 | DEBUG | __reduce__
+2021-11-09 at 10:44:44 | DEBUG | __reduce_ex__
+2021-11-09 at 10:44:44 | DEBUG | __repr__
+2021-11-09 at 10:44:44 | DEBUG | __setattr__
+2021-11-09 at 10:44:44 | DEBUG | __setstate__
+2021-11-09 at 10:44:44 | DEBUG | __sizeof__
+2021-11-09 at 10:44:44 | DEBUG | __str__
+2021-11-09 at 10:44:44 | DEBUG | __subclasshook__
+2021-11-09 at 10:44:44 | DEBUG | __visit_name__
+2021-11-09 at 10:44:44 | DEBUG | __weakref__
+2021-11-09 at 10:44:44 | DEBUG | _add_table
+2021-11-09 at 10:44:44 | DEBUG | _bind
+2021-11-09 at 10:44:44 | DEBUG | _bind_to
+2021-11-09 at 10:44:44 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:44:44 | DEBUG | _fk_memos
+2021-11-09 at 10:44:44 | DEBUG | _init_items
+2021-11-09 at 10:44:44 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:44:44 | DEBUG | _remove_table
+2021-11-09 at 10:44:44 | DEBUG | _schema_item_copy
+2021-11-09 at 10:44:44 | DEBUG | _schemas
+2021-11-09 at 10:44:44 | DEBUG | _sequences
+2021-11-09 at 10:44:44 | DEBUG | _set_parent
+2021-11-09 at 10:44:44 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:44:44 | DEBUG | _use_schema_map
+2021-11-09 at 10:44:44 | DEBUG | bind
+2021-11-09 at 10:44:44 | DEBUG | clear
+2021-11-09 at 10:44:44 | DEBUG | create_all
+2021-11-09 at 10:44:44 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:44:44 | DEBUG | dispatch
+2021-11-09 at 10:44:44 | DEBUG | drop_all
+2021-11-09 at 10:44:44 | DEBUG | get_children
+2021-11-09 at 10:44:44 | DEBUG | info
+2021-11-09 at 10:44:44 | DEBUG | is_bound
+2021-11-09 at 10:44:44 | DEBUG | naming_convention
+2021-11-09 at 10:44:44 | DEBUG | reflect
+2021-11-09 at 10:44:44 | DEBUG | remove
+2021-11-09 at 10:44:44 | DEBUG | schema
+2021-11-09 at 10:44:44 | DEBUG | sorted_tables
+2021-11-09 at 10:44:44 | DEBUG | tables
+2021-11-09 at 10:44:44 | DEBUG | ===================================================
+2021-11-09 at 10:44:44 | DEBUG | items
+2021-11-09 at 10:44:44 | DEBUG | offices
+2021-11-09 at 10:44:44 | DEBUG | productlines
+2021-11-09 at 10:44:44 | DEBUG | tokens
+2021-11-09 at 10:44:44 | DEBUG | zinopara
+2021-11-09 at 10:44:44 | DEBUG | employees
+2021-11-09 at 10:44:44 | DEBUG | products
+2021-11-09 at 10:44:44 | DEBUG | customers
+2021-11-09 at 10:44:44 | DEBUG | orders
+2021-11-09 at 10:44:44 | DEBUG | payments
+2021-11-09 at 10:44:44 | DEBUG | orderdetails
+2021-11-09 at 10:44:44 | DEBUG | ****************************************************
+2021-11-09 at 10:44:44 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:45:44 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:45:44 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 10:45:44 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 10:45:44 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 10:45:44 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:45:44 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 10:45:44 | DEBUG | ****************************************************
+2021-11-09 at 10:45:44 | DEBUG | __class__
+2021-11-09 at 10:45:44 | DEBUG | __class_getitem__
+2021-11-09 at 10:45:44 | DEBUG | __contains__
+2021-11-09 at 10:45:44 | DEBUG | __delattr__
+2021-11-09 at 10:45:44 | DEBUG | __dict__
+2021-11-09 at 10:45:44 | DEBUG | __dir__
+2021-11-09 at 10:45:44 | DEBUG | __doc__
+2021-11-09 at 10:45:44 | DEBUG | __eq__
+2021-11-09 at 10:45:44 | DEBUG | __format__
+2021-11-09 at 10:45:44 | DEBUG | __ge__
+2021-11-09 at 10:45:44 | DEBUG | __getattribute__
+2021-11-09 at 10:45:44 | DEBUG | __getstate__
+2021-11-09 at 10:45:44 | DEBUG | __gt__
+2021-11-09 at 10:45:44 | DEBUG | __hash__
+2021-11-09 at 10:45:44 | DEBUG | __init__
+2021-11-09 at 10:45:44 | DEBUG | __init_subclass__
+2021-11-09 at 10:45:44 | DEBUG | __le__
+2021-11-09 at 10:45:44 | DEBUG | __lt__
+2021-11-09 at 10:45:44 | DEBUG | __module__
+2021-11-09 at 10:45:44 | DEBUG | __ne__
+2021-11-09 at 10:45:44 | DEBUG | __new__
+2021-11-09 at 10:45:44 | DEBUG | __reduce__
+2021-11-09 at 10:45:44 | DEBUG | __reduce_ex__
+2021-11-09 at 10:45:44 | DEBUG | __repr__
+2021-11-09 at 10:45:44 | DEBUG | __setattr__
+2021-11-09 at 10:45:44 | DEBUG | __setstate__
+2021-11-09 at 10:45:44 | DEBUG | __sizeof__
+2021-11-09 at 10:45:44 | DEBUG | __str__
+2021-11-09 at 10:45:44 | DEBUG | __subclasshook__
+2021-11-09 at 10:45:44 | DEBUG | __visit_name__
+2021-11-09 at 10:45:44 | DEBUG | __weakref__
+2021-11-09 at 10:45:44 | DEBUG | _add_table
+2021-11-09 at 10:45:44 | DEBUG | _bind
+2021-11-09 at 10:45:44 | DEBUG | _bind_to
+2021-11-09 at 10:45:44 | DEBUG | _compiler_dispatch
+2021-11-09 at 10:45:44 | DEBUG | _fk_memos
+2021-11-09 at 10:45:44 | DEBUG | _init_items
+2021-11-09 at 10:45:44 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 10:45:44 | DEBUG | _remove_table
+2021-11-09 at 10:45:44 | DEBUG | _schema_item_copy
+2021-11-09 at 10:45:44 | DEBUG | _schemas
+2021-11-09 at 10:45:44 | DEBUG | _sequences
+2021-11-09 at 10:45:44 | DEBUG | _set_parent
+2021-11-09 at 10:45:44 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 10:45:44 | DEBUG | _use_schema_map
+2021-11-09 at 10:45:44 | DEBUG | bind
+2021-11-09 at 10:45:44 | DEBUG | clear
+2021-11-09 at 10:45:44 | DEBUG | create_all
+2021-11-09 at 10:45:44 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 10:45:44 | DEBUG | dispatch
+2021-11-09 at 10:45:44 | DEBUG | drop_all
+2021-11-09 at 10:45:44 | DEBUG | get_children
+2021-11-09 at 10:45:44 | DEBUG | info
+2021-11-09 at 10:45:44 | DEBUG | is_bound
+2021-11-09 at 10:45:44 | DEBUG | naming_convention
+2021-11-09 at 10:45:44 | DEBUG | reflect
+2021-11-09 at 10:45:44 | DEBUG | remove
+2021-11-09 at 10:45:44 | DEBUG | schema
+2021-11-09 at 10:45:44 | DEBUG | sorted_tables
+2021-11-09 at 10:45:44 | DEBUG | tables
+2021-11-09 at 10:45:44 | DEBUG | ===================================================
+2021-11-09 at 10:45:44 | DEBUG | items
+2021-11-09 at 10:45:44 | DEBUG | offices
+2021-11-09 at 10:45:44 | DEBUG | productlines
+2021-11-09 at 10:45:44 | DEBUG | tokens
+2021-11-09 at 10:45:44 | DEBUG | zinopara
+2021-11-09 at 10:45:44 | DEBUG | employees
+2021-11-09 at 10:45:45 | DEBUG | products
+2021-11-09 at 10:45:45 | DEBUG | customers
+2021-11-09 at 10:45:45 | DEBUG | orders
+2021-11-09 at 10:45:45 | DEBUG | payments
+2021-11-09 at 10:45:45 | DEBUG | orderdetails
+2021-11-09 at 10:45:45 | DEBUG | ****************************************************
+2021-11-09 at 10:45:45 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 10:47:54 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:48:08 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:48:35 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:48:36 | DEBUG | UserFunc query():
+2021-11-09 at 10:48:36 | DEBUG | sqlstr: select * from orders where id > :id limit 10
+2021-11-09 at 10:48:36 | DEBUG | sqlparam: {'id': 10000}
+2021-11-09 at 10:48:36 | DEBUG | SQL of Query: [ select * from orders where id > :id limit 10 ]
+2021-11-09 at 10:48:36 | ERROR | Exception at userfunc query(): (pymysql.err.OperationalError) (1054, "Unknown column 'id' in 'where clause'")
+[SQL: select * from orders where id > %(id)s limit 10]
+[parameters: {'id': 10000}]
+(Background on this error at: https://sqlalche.me/e/14/e3q8) 
+2021-11-09 at 10:48:36 | DEBUG | {'updateResult': 'Error', 'updateError': 'Exception at userfunc query(): (pymysql.err.OperationalError) (1054, "Unknown column \'id\' in \'where clause\'")\n[SQL: select * from orders where id > %(id)s limit 10]\n[parameters: {\'id\': 10000}]\n(Background on this error at: https://sqlalche.me/e/14/e3q8) '}
+2021-11-09 at 10:49:30 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:49:30 | DEBUG | UserFunc query():
+2021-11-09 at 10:49:30 | DEBUG | sqlstr: select * from orders where orderNumber > :id limit 10
+2021-11-09 at 10:49:30 | DEBUG | sqlparam: {'id': 10000}
+2021-11-09 at 10:49:30 | DEBUG | SQL of Query: [ select * from orders where orderNumber > :id limit 10 ]
+2021-11-09 at 10:49:30 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x10a4543a0> ]
+2021-11-09 at 10:49:30 | DEBUG | Select Result Return : [ 10 ] rows 
+2021-11-09 at 10:49:30 | DEBUG | {'data': [{'orderNumber': 10100, 'orderDate': '2013-01-06', 'requiredDate': '2013-01-13', 'shippedDate': '2013-01-10', 'status': 'Shipped', 'comments': None, 'customerNumber': 363}, {'orderNumber': 10101, 'orderDate': '2013-01-09', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-11', 'status': 'Shipped', 'comments': 'Check on availability.', 'customerNumber': 128}, {'orderNumber': 10102, 'orderDate': '2013-01-10', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-14', 'status': 'Shipped', 'comments': None, 'customerNumber': 181}, {'orderNumber': 10103, 'orderDate': '2013-01-29', 'requiredDate': '2013-02-07', 'shippedDate': '2013-02-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 121}, {'orderNumber': 10104, 'orderDate': '2013-01-31', 'requiredDate': '2013-02-09', 'shippedDate': '2013-02-01', 'status': 'Shipped', 'comments': None, 'customerNumber': 141}, {'orderNumber': 10105, 'orderDate': '2013-02-11', 'requiredDate': '2013-02-21', 'shippedDate': '2013-02-12', 'status': 'Shipped', 'comments': None, 'customerNumber': 145}, {'orderNumber': 10106, 'orderDate': '2013-02-17', 'requiredDate': '2013-02-24', 'shippedDate': '2013-02-21', 'status': 'Shipped', 'comments': None, 'customerNumber': 278}, {'orderNumber': 10107, 'orderDate': '2013-02-24', 'requiredDate': '2013-03-03', 'shippedDate': '2013-02-26', 'status': 'Shipped', 'comments': 'Difficult to negotiate with customer. We need more marketing materials', 'customerNumber': 131}, {'orderNumber': 10108, 'orderDate': '2013-03-03', 'requiredDate': '2013-03-12', 'shippedDate': '2013-03-08', 'status': 'Shipped', 'comments': None, 'customerNumber': 385}, {'orderNumber': 10109, 'orderDate': '2013-03-10', 'requiredDate': '2013-03-19', 'shippedDate': '2013-03-11', 'status': 'Shipped', 'comments': 'Customer requested that FedEx Ground is used for this shipping', 'customerNumber': 486}]}
+2021-11-09 at 10:51:34 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:51:34 | DEBUG | UserFunc query():
+2021-11-09 at 10:51:34 | DEBUG | sqlstr: select * from orders where orderNumber > :id limit 10
+2021-11-09 at 10:51:34 | DEBUG | sqlparam: {'id': 10000}
+2021-11-09 at 10:51:34 | DEBUG | SQL of Query: [ select * from orders where orderNumber > :id limit 10 ]
+2021-11-09 at 10:51:34 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x11211d2b0> ]
+2021-11-09 at 10:51:34 | DEBUG | Select Result Return : [ 10 ] rows 
+2021-11-09 at 10:51:34 | DEBUG | {'data': [{'orderNumber': 10100, 'orderDate': '2013-01-06', 'requiredDate': '2013-01-13', 'shippedDate': '2013-01-10', 'status': 'Shipped', 'comments': None, 'customerNumber': 363}, {'orderNumber': 10101, 'orderDate': '2013-01-09', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-11', 'status': 'Shipped', 'comments': 'Check on availability.', 'customerNumber': 128}, {'orderNumber': 10102, 'orderDate': '2013-01-10', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-14', 'status': 'Shipped', 'comments': None, 'customerNumber': 181}, {'orderNumber': 10103, 'orderDate': '2013-01-29', 'requiredDate': '2013-02-07', 'shippedDate': '2013-02-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 121}, {'orderNumber': 10104, 'orderDate': '2013-01-31', 'requiredDate': '2013-02-09', 'shippedDate': '2013-02-01', 'status': 'Shipped', 'comments': None, 'customerNumber': 141}, {'orderNumber': 10105, 'orderDate': '2013-02-11', 'requiredDate': '2013-02-21', 'shippedDate': '2013-02-12', 'status': 'Shipped', 'comments': None, 'customerNumber': 145}, {'orderNumber': 10106, 'orderDate': '2013-02-17', 'requiredDate': '2013-02-24', 'shippedDate': '2013-02-21', 'status': 'Shipped', 'comments': None, 'customerNumber': 278}, {'orderNumber': 10107, 'orderDate': '2013-02-24', 'requiredDate': '2013-03-03', 'shippedDate': '2013-02-26', 'status': 'Shipped', 'comments': 'Difficult to negotiate with customer. We need more marketing materials', 'customerNumber': 131}, {'orderNumber': 10108, 'orderDate': '2013-03-03', 'requiredDate': '2013-03-12', 'shippedDate': '2013-03-08', 'status': 'Shipped', 'comments': None, 'customerNumber': 385}, {'orderNumber': 10109, 'orderDate': '2013-03-10', 'requiredDate': '2013-03-19', 'shippedDate': '2013-03-11', 'status': 'Shipped', 'comments': 'Customer requested that FedEx Ground is used for this shipping', 'customerNumber': 486}]}
+2021-11-09 at 10:51:40 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:51:40 | DEBUG | UserFunc query():
+2021-11-09 at 10:51:40 | DEBUG | sqlstr: select * from orders where orderNumber > :id limit 10
+2021-11-09 at 10:51:40 | DEBUG | sqlparam: {'id': 10000}
+2021-11-09 at 10:51:40 | DEBUG | SQL of Query: [ select * from orders where orderNumber > :id limit 10 ]
+2021-11-09 at 10:51:40 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x105dbe3a0> ]
+2021-11-09 at 10:51:40 | DEBUG | Select Result Return : [ 10 ] rows 
+2021-11-09 at 10:51:40 | DEBUG | {'data': [{'orderNumber': 10100, 'orderDate': '2013-01-06', 'requiredDate': '2013-01-13', 'shippedDate': '2013-01-10', 'status': 'Shipped', 'comments': None, 'customerNumber': 363}, {'orderNumber': 10101, 'orderDate': '2013-01-09', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-11', 'status': 'Shipped', 'comments': 'Check on availability.', 'customerNumber': 128}, {'orderNumber': 10102, 'orderDate': '2013-01-10', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-14', 'status': 'Shipped', 'comments': None, 'customerNumber': 181}, {'orderNumber': 10103, 'orderDate': '2013-01-29', 'requiredDate': '2013-02-07', 'shippedDate': '2013-02-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 121}, {'orderNumber': 10104, 'orderDate': '2013-01-31', 'requiredDate': '2013-02-09', 'shippedDate': '2013-02-01', 'status': 'Shipped', 'comments': None, 'customerNumber': 141}, {'orderNumber': 10105, 'orderDate': '2013-02-11', 'requiredDate': '2013-02-21', 'shippedDate': '2013-02-12', 'status': 'Shipped', 'comments': None, 'customerNumber': 145}, {'orderNumber': 10106, 'orderDate': '2013-02-17', 'requiredDate': '2013-02-24', 'shippedDate': '2013-02-21', 'status': 'Shipped', 'comments': None, 'customerNumber': 278}, {'orderNumber': 10107, 'orderDate': '2013-02-24', 'requiredDate': '2013-03-03', 'shippedDate': '2013-02-26', 'status': 'Shipped', 'comments': 'Difficult to negotiate with customer. We need more marketing materials', 'customerNumber': 131}, {'orderNumber': 10108, 'orderDate': '2013-03-03', 'requiredDate': '2013-03-12', 'shippedDate': '2013-03-08', 'status': 'Shipped', 'comments': None, 'customerNumber': 385}, {'orderNumber': 10109, 'orderDate': '2013-03-10', 'requiredDate': '2013-03-19', 'shippedDate': '2013-03-11', 'status': 'Shipped', 'comments': 'Customer requested that FedEx Ground is used for this shipping', 'customerNumber': 486}]}
+2021-11-09 at 10:51:42 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:51:42 | DEBUG | UserFunc query():
+2021-11-09 at 10:51:42 | DEBUG | sqlstr: select * from orders where orderNumber > :id limit 10
+2021-11-09 at 10:51:42 | DEBUG | sqlparam: {'id': 10000}
+2021-11-09 at 10:51:42 | DEBUG | SQL of Query: [ select * from orders where orderNumber > :id limit 10 ]
+2021-11-09 at 10:51:42 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x106ab43a0> ]
+2021-11-09 at 10:51:42 | DEBUG | Select Result Return : [ 10 ] rows 
+2021-11-09 at 10:51:42 | DEBUG | {'data': [{'orderNumber': 10100, 'orderDate': '2013-01-06', 'requiredDate': '2013-01-13', 'shippedDate': '2013-01-10', 'status': 'Shipped', 'comments': None, 'customerNumber': 363}, {'orderNumber': 10101, 'orderDate': '2013-01-09', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-11', 'status': 'Shipped', 'comments': 'Check on availability.', 'customerNumber': 128}, {'orderNumber': 10102, 'orderDate': '2013-01-10', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-14', 'status': 'Shipped', 'comments': None, 'customerNumber': 181}, {'orderNumber': 10103, 'orderDate': '2013-01-29', 'requiredDate': '2013-02-07', 'shippedDate': '2013-02-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 121}, {'orderNumber': 10104, 'orderDate': '2013-01-31', 'requiredDate': '2013-02-09', 'shippedDate': '2013-02-01', 'status': 'Shipped', 'comments': None, 'customerNumber': 141}, {'orderNumber': 10105, 'orderDate': '2013-02-11', 'requiredDate': '2013-02-21', 'shippedDate': '2013-02-12', 'status': 'Shipped', 'comments': None, 'customerNumber': 145}, {'orderNumber': 10106, 'orderDate': '2013-02-17', 'requiredDate': '2013-02-24', 'shippedDate': '2013-02-21', 'status': 'Shipped', 'comments': None, 'customerNumber': 278}, {'orderNumber': 10107, 'orderDate': '2013-02-24', 'requiredDate': '2013-03-03', 'shippedDate': '2013-02-26', 'status': 'Shipped', 'comments': 'Difficult to negotiate with customer. We need more marketing materials', 'customerNumber': 131}, {'orderNumber': 10108, 'orderDate': '2013-03-03', 'requiredDate': '2013-03-12', 'shippedDate': '2013-03-08', 'status': 'Shipped', 'comments': None, 'customerNumber': 385}, {'orderNumber': 10109, 'orderDate': '2013-03-10', 'requiredDate': '2013-03-19', 'shippedDate': '2013-03-11', 'status': 'Shipped', 'comments': 'Customer requested that FedEx Ground is used for this shipping', 'customerNumber': 486}]}
+2021-11-09 at 10:51:44 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 10:51:44 | DEBUG | UserFunc query():
+2021-11-09 at 10:51:44 | DEBUG | sqlstr: select * from orders where orderNumber > :id limit 10
+2021-11-09 at 10:51:44 | DEBUG | sqlparam: {'id': 10000}
+2021-11-09 at 10:51:44 | DEBUG | SQL of Query: [ select * from orders where orderNumber > :id limit 10 ]
+2021-11-09 at 10:51:44 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x11060a1c0> ]
+2021-11-09 at 10:51:44 | DEBUG | Select Result Return : [ 10 ] rows 
+2021-11-09 at 10:51:44 | DEBUG | {'data': [{'orderNumber': 10100, 'orderDate': '2013-01-06', 'requiredDate': '2013-01-13', 'shippedDate': '2013-01-10', 'status': 'Shipped', 'comments': None, 'customerNumber': 363}, {'orderNumber': 10101, 'orderDate': '2013-01-09', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-11', 'status': 'Shipped', 'comments': 'Check on availability.', 'customerNumber': 128}, {'orderNumber': 10102, 'orderDate': '2013-01-10', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-14', 'status': 'Shipped', 'comments': None, 'customerNumber': 181}, {'orderNumber': 10103, 'orderDate': '2013-01-29', 'requiredDate': '2013-02-07', 'shippedDate': '2013-02-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 121}, {'orderNumber': 10104, 'orderDate': '2013-01-31', 'requiredDate': '2013-02-09', 'shippedDate': '2013-02-01', 'status': 'Shipped', 'comments': None, 'customerNumber': 141}, {'orderNumber': 10105, 'orderDate': '2013-02-11', 'requiredDate': '2013-02-21', 'shippedDate': '2013-02-12', 'status': 'Shipped', 'comments': None, 'customerNumber': 145}, {'orderNumber': 10106, 'orderDate': '2013-02-17', 'requiredDate': '2013-02-24', 'shippedDate': '2013-02-21', 'status': 'Shipped', 'comments': None, 'customerNumber': 278}, {'orderNumber': 10107, 'orderDate': '2013-02-24', 'requiredDate': '2013-03-03', 'shippedDate': '2013-02-26', 'status': 'Shipped', 'comments': 'Difficult to negotiate with customer. We need more marketing materials', 'customerNumber': 131}, {'orderNumber': 10108, 'orderDate': '2013-03-03', 'requiredDate': '2013-03-12', 'shippedDate': '2013-03-08', 'status': 'Shipped', 'comments': None, 'customerNumber': 385}, {'orderNumber': 10109, 'orderDate': '2013-03-10', 'requiredDate': '2013-03-19', 'shippedDate': '2013-03-11', 'status': 'Shipped', 'comments': 'Customer requested that FedEx Ground is used for this shipping', 'customerNumber': 486}]}
+2021-11-09 at 11:15:33 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 11:15:33 | DEBUG | UserFunc query():
+2021-11-09 at 11:15:33 | DEBUG | sqlstr: select * from orders where orderNumber > :id limit 10
+2021-11-09 at 11:15:33 | DEBUG | sqlparam: {'id': 10000}
+2021-11-09 at 11:15:33 | DEBUG | SQL of Query: [ select * from orders where orderNumber > :id limit 10 ]
+2021-11-09 at 11:15:33 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x10a4b83a0> ]
+2021-11-09 at 11:15:33 | DEBUG | Select Result Return : [ 10 ] rows 
+2021-11-09 at 11:15:33 | DEBUG | {'data': [{'orderNumber': 10100, 'orderDate': '2013-01-06', 'requiredDate': '2013-01-13', 'shippedDate': '2013-01-10', 'status': 'Shipped', 'comments': None, 'customerNumber': 363}, {'orderNumber': 10101, 'orderDate': '2013-01-09', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-11', 'status': 'Shipped', 'comments': 'Check on availability.', 'customerNumber': 128}, {'orderNumber': 10102, 'orderDate': '2013-01-10', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-14', 'status': 'Shipped', 'comments': None, 'customerNumber': 181}, {'orderNumber': 10103, 'orderDate': '2013-01-29', 'requiredDate': '2013-02-07', 'shippedDate': '2013-02-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 121}, {'orderNumber': 10104, 'orderDate': '2013-01-31', 'requiredDate': '2013-02-09', 'shippedDate': '2013-02-01', 'status': 'Shipped', 'comments': None, 'customerNumber': 141}, {'orderNumber': 10105, 'orderDate': '2013-02-11', 'requiredDate': '2013-02-21', 'shippedDate': '2013-02-12', 'status': 'Shipped', 'comments': None, 'customerNumber': 145}, {'orderNumber': 10106, 'orderDate': '2013-02-17', 'requiredDate': '2013-02-24', 'shippedDate': '2013-02-21', 'status': 'Shipped', 'comments': None, 'customerNumber': 278}, {'orderNumber': 10107, 'orderDate': '2013-02-24', 'requiredDate': '2013-03-03', 'shippedDate': '2013-02-26', 'status': 'Shipped', 'comments': 'Difficult to negotiate with customer. We need more marketing materials', 'customerNumber': 131}, {'orderNumber': 10108, 'orderDate': '2013-03-03', 'requiredDate': '2013-03-12', 'shippedDate': '2013-03-08', 'status': 'Shipped', 'comments': None, 'customerNumber': 385}, {'orderNumber': 10109, 'orderDate': '2013-03-10', 'requiredDate': '2013-03-19', 'shippedDate': '2013-03-11', 'status': 'Shipped', 'comments': 'Customer requested that FedEx Ground is used for this shipping', 'customerNumber': 486}]}
+2021-11-09 at 11:17:41 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 11:17:41 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 11:17:41 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 11:17:41 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 11:17:42 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 11:17:42 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 11:17:42 | DEBUG | ****************************************************
+2021-11-09 at 11:17:42 | DEBUG | __class__
+2021-11-09 at 11:17:42 | DEBUG | __class_getitem__
+2021-11-09 at 11:17:42 | DEBUG | __contains__
+2021-11-09 at 11:17:42 | DEBUG | __delattr__
+2021-11-09 at 11:17:42 | DEBUG | __dict__
+2021-11-09 at 11:17:42 | DEBUG | __dir__
+2021-11-09 at 11:17:42 | DEBUG | __doc__
+2021-11-09 at 11:17:42 | DEBUG | __eq__
+2021-11-09 at 11:17:42 | DEBUG | __format__
+2021-11-09 at 11:17:42 | DEBUG | __ge__
+2021-11-09 at 11:17:42 | DEBUG | __getattribute__
+2021-11-09 at 11:17:42 | DEBUG | __getstate__
+2021-11-09 at 11:17:42 | DEBUG | __gt__
+2021-11-09 at 11:17:42 | DEBUG | __hash__
+2021-11-09 at 11:17:42 | DEBUG | __init__
+2021-11-09 at 11:17:42 | DEBUG | __init_subclass__
+2021-11-09 at 11:17:42 | DEBUG | __le__
+2021-11-09 at 11:17:42 | DEBUG | __lt__
+2021-11-09 at 11:17:42 | DEBUG | __module__
+2021-11-09 at 11:17:42 | DEBUG | __ne__
+2021-11-09 at 11:17:42 | DEBUG | __new__
+2021-11-09 at 11:17:42 | DEBUG | __reduce__
+2021-11-09 at 11:17:42 | DEBUG | __reduce_ex__
+2021-11-09 at 11:17:42 | DEBUG | __repr__
+2021-11-09 at 11:17:42 | DEBUG | __setattr__
+2021-11-09 at 11:17:42 | DEBUG | __setstate__
+2021-11-09 at 11:17:42 | DEBUG | __sizeof__
+2021-11-09 at 11:17:42 | DEBUG | __str__
+2021-11-09 at 11:17:42 | DEBUG | __subclasshook__
+2021-11-09 at 11:17:42 | DEBUG | __visit_name__
+2021-11-09 at 11:17:42 | DEBUG | __weakref__
+2021-11-09 at 11:17:42 | DEBUG | _add_table
+2021-11-09 at 11:17:42 | DEBUG | _bind
+2021-11-09 at 11:17:42 | DEBUG | _bind_to
+2021-11-09 at 11:17:42 | DEBUG | _compiler_dispatch
+2021-11-09 at 11:17:42 | DEBUG | _fk_memos
+2021-11-09 at 11:17:42 | DEBUG | _init_items
+2021-11-09 at 11:17:42 | DEBUG | _original_compiler_dispatch
+2021-11-09 at 11:17:42 | DEBUG | _remove_table
+2021-11-09 at 11:17:42 | DEBUG | _schema_item_copy
+2021-11-09 at 11:17:42 | DEBUG | _schemas
+2021-11-09 at 11:17:42 | DEBUG | _sequences
+2021-11-09 at 11:17:42 | DEBUG | _set_parent
+2021-11-09 at 11:17:42 | DEBUG | _set_parent_with_dispatch
+2021-11-09 at 11:17:42 | DEBUG | _use_schema_map
+2021-11-09 at 11:17:42 | DEBUG | bind
+2021-11-09 at 11:17:42 | DEBUG | clear
+2021-11-09 at 11:17:42 | DEBUG | create_all
+2021-11-09 at 11:17:42 | DEBUG | create_drop_stringify_dialect
+2021-11-09 at 11:17:42 | DEBUG | dispatch
+2021-11-09 at 11:17:42 | DEBUG | drop_all
+2021-11-09 at 11:17:42 | DEBUG | get_children
+2021-11-09 at 11:17:42 | DEBUG | info
+2021-11-09 at 11:17:42 | DEBUG | is_bound
+2021-11-09 at 11:17:42 | DEBUG | naming_convention
+2021-11-09 at 11:17:42 | DEBUG | reflect
+2021-11-09 at 11:17:42 | DEBUG | remove
+2021-11-09 at 11:17:42 | DEBUG | schema
+2021-11-09 at 11:17:42 | DEBUG | sorted_tables
+2021-11-09 at 11:17:42 | DEBUG | tables
+2021-11-09 at 11:17:42 | DEBUG | ===================================================
+2021-11-09 at 11:17:42 | DEBUG | items
+2021-11-09 at 11:17:42 | DEBUG | offices
+2021-11-09 at 11:17:42 | DEBUG | productlines
+2021-11-09 at 11:17:42 | DEBUG | tokens
+2021-11-09 at 11:17:42 | DEBUG | zinopara
+2021-11-09 at 11:17:42 | DEBUG | employees
+2021-11-09 at 11:17:42 | DEBUG | products
+2021-11-09 at 11:17:42 | DEBUG | customers
+2021-11-09 at 11:17:42 | DEBUG | orders
+2021-11-09 at 11:17:42 | DEBUG | payments
+2021-11-09 at 11:17:42 | DEBUG | orderdetails
+2021-11-09 at 11:17:42 | DEBUG | ****************************************************
+2021-11-09 at 11:17:42 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 11:26:29 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 11:26:44 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 11:26:44 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 11:26:44 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 11:26:44 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 11:26:44 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 11:26:44 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 11:26:44 | DEBUG | table select():
+2021-11-09 at 11:26:44 | DEBUG | tablename: orders
+2021-11-09 at 11:26:44 | DEBUG | fieldlist: *
+2021-11-09 at 11:26:44 | DEBUG | filter: None
+2021-11-09 at 11:26:44 | DEBUG | limit: 20
+2021-11-09 at 11:26:44 | DEBUG | offset: 0
+2021-11-09 at 11:26:44 | DEBUG | order: None
+2021-11-09 at 11:26:44 | DEBUG | group: None
+2021-11-09 at 11:26:44 | DEBUG | distinct: False
+2021-11-09 at 11:26:44 | DEBUG | count_only: False
+2021-11-09 at 11:26:44 | DEBUG | include_count: False
+2021-11-09 at 11:26:44 | DEBUG | Table Columns: [Column('orderNumber', INTEGER(display_width=11), table=<orders>, primary_key=True, nullable=False), Column('orderDate', DATE(), table=<orders>, nullable=False), Column('requiredDate', DATE(), table=<orders>, nullable=False), Column('shippedDate', DATE(), table=<orders>), Column('status', VARCHAR(length=15), table=<orders>, nullable=False), Column('comments', TEXT(), table=<orders>), Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<orders>, nullable=False)]
+2021-11-09 at 11:26:44 | DEBUG | SQL of Select: [ SELECT mysqlsrc.orders.`orderNumber`, mysqlsrc.orders.`orderDate`, mysqlsrc.orders.`requiredDate`, mysqlsrc.orders.`shippedDate`, mysqlsrc.orders.`status`, mysqlsrc.orders.comments, mysqlsrc.orders.`customerNumber` 
+FROM mysqlsrc.orders 
+ LIMIT %(param_1)s, %(param_2)s ]
+2021-11-09 at 11:26:44 | DEBUG | SQL of Count: [ SELECT count(mysqlsrc.orders.`orderNumber`) AS col_count 
+FROM mysqlsrc.orders ]
+2021-11-09 at 11:26:44 | DEBUG | SQL of Query Full : [ SELECT mysqlsrc.orders.`orderNumber`, mysqlsrc.orders.`orderDate`, mysqlsrc.orders.`requiredDate`, mysqlsrc.orders.`shippedDate`, mysqlsrc.orders.`status`, mysqlsrc.orders.comments, mysqlsrc.orders.`customerNumber` 
+FROM mysqlsrc.orders 
+ LIMIT %(param_1)s, %(param_2)s ]
+2021-11-09 at 11:26:44 | DEBUG | SQL of Count Full : [ SELECT count(mysqlsrc.orders.`orderNumber`) AS col_count 
+FROM mysqlsrc.orders ]
+2021-11-09 at 11:26:44 | DEBUG | Select Count Result: [ <sqlalchemy.engine.cursor.CursorResult object at 0x102dd5a60> ]
+2021-11-09 at 11:26:44 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x102dcbfd0> ]
+2021-11-09 at 11:26:44 | DEBUG | Select Result Return : [ 20 ] rows 
+2021-11-09 at 11:26:44 | DEBUG | {'data': [{'orderNumber': 10100, 'orderDate': '2013-01-06', 'requiredDate': '2013-01-13', 'shippedDate': '2013-01-10', 'status': 'Shipped', 'comments': None, 'customerNumber': 363}, {'orderNumber': 10101, 'orderDate': '2013-01-09', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-11', 'status': 'Shipped', 'comments': 'Check on availability.', 'customerNumber': 128}, {'orderNumber': 10102, 'orderDate': '2013-01-10', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-14', 'status': 'Shipped', 'comments': None, 'customerNumber': 181}, {'orderNumber': 10103, 'orderDate': '2013-01-29', 'requiredDate': '2013-02-07', 'shippedDate': '2013-02-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 121}, {'orderNumber': 10104, 'orderDate': '2013-01-31', 'requiredDate': '2013-02-09', 'shippedDate': '2013-02-01', 'status': 'Shipped', 'comments': None, 'customerNumber': 141}, {'orderNumber': 10105, 'orderDate': '2013-02-11', 'requiredDate': '2013-02-21', 'shippedDate': '2013-02-12', 'status': 'Shipped', 'comments': None, 'customerNumber': 145}, {'orderNumber': 10106, 'orderDate': '2013-02-17', 'requiredDate': '2013-02-24', 'shippedDate': '2013-02-21', 'status': 'Shipped', 'comments': None, 'customerNumber': 278}, {'orderNumber': 10107, 'orderDate': '2013-02-24', 'requiredDate': '2013-03-03', 'shippedDate': '2013-02-26', 'status': 'Shipped', 'comments': 'Difficult to negotiate with customer. We need more marketing materials', 'customerNumber': 131}, {'orderNumber': 10108, 'orderDate': '2013-03-03', 'requiredDate': '2013-03-12', 'shippedDate': '2013-03-08', 'status': 'Shipped', 'comments': None, 'customerNumber': 385}, {'orderNumber': 10109, 'orderDate': '2013-03-10', 'requiredDate': '2013-03-19', 'shippedDate': '2013-03-11', 'status': 'Shipped', 'comments': 'Customer requested that FedEx Ground is used for this shipping', 'customerNumber': 486}, {'orderNumber': 10110, 'orderDate': '2013-03-18', 'requiredDate': '2013-03-24', 'shippedDate': '2013-03-20', 'status': 'Shipped', 'comments': None, 'customerNumber': 187}, {'orderNumber': 10111, 'orderDate': '2013-03-25', 'requiredDate': '2013-03-31', 'shippedDate': '2013-03-30', 'status': 'Shipped', 'comments': None, 'customerNumber': 129}, {'orderNumber': 10112, 'orderDate': '2013-03-24', 'requiredDate': '2013-04-03', 'shippedDate': '2013-03-29', 'status': 'Shipped', 'comments': 'Customer requested that ad materials (such as posters, pamphlets) be included in the shippment', 'customerNumber': 144}, {'orderNumber': 10113, 'orderDate': '2013-03-26', 'requiredDate': '2013-04-02', 'shippedDate': '2013-03-27', 'status': 'Shipped', 'comments': None, 'customerNumber': 124}, {'orderNumber': 10114, 'orderDate': '2013-04-01', 'requiredDate': '2013-04-07', 'shippedDate': '2013-04-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 172}, {'orderNumber': 10115, 'orderDate': '2013-04-04', 'requiredDate': '2013-04-12', 'shippedDate': '2013-04-07', 'status': 'Shipped', 'comments': None, 'customerNumber': 424}, {'orderNumber': 10116, 'orderDate': '2013-04-11', 'requiredDate': '2013-04-19', 'shippedDate': '2013-04-13', 'status': 'Shipped', 'comments': None, 'customerNumber': 381}, {'orderNumber': 10117, 'orderDate': '2013-04-16', 'requiredDate': '2013-04-24', 'shippedDate': '2013-04-17', 'status': 'Shipped', 'comments': None, 'customerNumber': 148}, {'orderNumber': 10118, 'orderDate': '2013-04-21', 'requiredDate': '2013-04-29', 'shippedDate': '2013-04-26', 'status': 'Shipped', 'comments': 'Customer has worked with some of our vendors in the past and is aware of their MSRP', 'customerNumber': 216}, {'orderNumber': 10119, 'orderDate': '2013-04-28', 'requiredDate': '2013-05-05', 'shippedDate': '2013-05-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 382}]}
+2021-11-09 at 11:27:12 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 11:27:12 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 11:27:12 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 11:27:12 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 11:27:12 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 11:27:12 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 11:27:12 | DEBUG | table select():
+2021-11-09 at 11:27:12 | DEBUG | tablename: orders
+2021-11-09 at 11:27:12 | DEBUG | fieldlist: *
+2021-11-09 at 11:27:12 | DEBUG | filter: None
+2021-11-09 at 11:27:12 | DEBUG | limit: 20
+2021-11-09 at 11:27:12 | DEBUG | offset: 0
+2021-11-09 at 11:27:12 | DEBUG | order: None
+2021-11-09 at 11:27:12 | DEBUG | group: None
+2021-11-09 at 11:27:12 | DEBUG | distinct: False
+2021-11-09 at 11:27:12 | DEBUG | count_only: False
+2021-11-09 at 11:27:12 | DEBUG | include_count: False
+2021-11-09 at 11:27:12 | DEBUG | Table Columns: [Column('orderNumber', INTEGER(display_width=11), table=<orders>, primary_key=True, nullable=False), Column('orderDate', DATE(), table=<orders>, nullable=False), Column('requiredDate', DATE(), table=<orders>, nullable=False), Column('shippedDate', DATE(), table=<orders>), Column('status', VARCHAR(length=15), table=<orders>, nullable=False), Column('comments', TEXT(), table=<orders>), Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<orders>, nullable=False)]
+2021-11-09 at 11:27:12 | DEBUG | SQL of Select: [ SELECT mysqlsrc.orders.`orderNumber`, mysqlsrc.orders.`orderDate`, mysqlsrc.orders.`requiredDate`, mysqlsrc.orders.`shippedDate`, mysqlsrc.orders.`status`, mysqlsrc.orders.comments, mysqlsrc.orders.`customerNumber` 
+FROM mysqlsrc.orders 
+ LIMIT %(param_1)s, %(param_2)s ]
+2021-11-09 at 11:27:12 | DEBUG | SQL of Count: [ SELECT count(mysqlsrc.orders.`orderNumber`) AS col_count 
+FROM mysqlsrc.orders ]
+2021-11-09 at 11:27:12 | DEBUG | SQL of Query Full : [ SELECT mysqlsrc.orders.`orderNumber`, mysqlsrc.orders.`orderDate`, mysqlsrc.orders.`requiredDate`, mysqlsrc.orders.`shippedDate`, mysqlsrc.orders.`status`, mysqlsrc.orders.comments, mysqlsrc.orders.`customerNumber` 
+FROM mysqlsrc.orders 
+ LIMIT %(param_1)s, %(param_2)s ]
+2021-11-09 at 11:27:12 | DEBUG | SQL of Count Full : [ SELECT count(mysqlsrc.orders.`orderNumber`) AS col_count 
+FROM mysqlsrc.orders ]
+2021-11-09 at 11:27:12 | DEBUG | Select Count Result: [ <sqlalchemy.engine.cursor.CursorResult object at 0x10f9a1af0> ]
+2021-11-09 at 11:27:12 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x10f6e3fd0> ]
+2021-11-09 at 11:27:12 | DEBUG | Select Result Return : [ 20 ] rows 
+2021-11-09 at 11:27:12 | DEBUG | {'data': [{'orderNumber': 10100, 'orderDate': '2013-01-06', 'requiredDate': '2013-01-13', 'shippedDate': '2013-01-10', 'status': 'Shipped', 'comments': None, 'customerNumber': 363}, {'orderNumber': 10101, 'orderDate': '2013-01-09', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-11', 'status': 'Shipped', 'comments': 'Check on availability.', 'customerNumber': 128}, {'orderNumber': 10102, 'orderDate': '2013-01-10', 'requiredDate': '2013-01-18', 'shippedDate': '2013-01-14', 'status': 'Shipped', 'comments': None, 'customerNumber': 181}, {'orderNumber': 10103, 'orderDate': '2013-01-29', 'requiredDate': '2013-02-07', 'shippedDate': '2013-02-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 121}, {'orderNumber': 10104, 'orderDate': '2013-01-31', 'requiredDate': '2013-02-09', 'shippedDate': '2013-02-01', 'status': 'Shipped', 'comments': None, 'customerNumber': 141}, {'orderNumber': 10105, 'orderDate': '2013-02-11', 'requiredDate': '2013-02-21', 'shippedDate': '2013-02-12', 'status': 'Shipped', 'comments': None, 'customerNumber': 145}, {'orderNumber': 10106, 'orderDate': '2013-02-17', 'requiredDate': '2013-02-24', 'shippedDate': '2013-02-21', 'status': 'Shipped', 'comments': None, 'customerNumber': 278}, {'orderNumber': 10107, 'orderDate': '2013-02-24', 'requiredDate': '2013-03-03', 'shippedDate': '2013-02-26', 'status': 'Shipped', 'comments': 'Difficult to negotiate with customer. We need more marketing materials', 'customerNumber': 131}, {'orderNumber': 10108, 'orderDate': '2013-03-03', 'requiredDate': '2013-03-12', 'shippedDate': '2013-03-08', 'status': 'Shipped', 'comments': None, 'customerNumber': 385}, {'orderNumber': 10109, 'orderDate': '2013-03-10', 'requiredDate': '2013-03-19', 'shippedDate': '2013-03-11', 'status': 'Shipped', 'comments': 'Customer requested that FedEx Ground is used for this shipping', 'customerNumber': 486}, {'orderNumber': 10110, 'orderDate': '2013-03-18', 'requiredDate': '2013-03-24', 'shippedDate': '2013-03-20', 'status': 'Shipped', 'comments': None, 'customerNumber': 187}, {'orderNumber': 10111, 'orderDate': '2013-03-25', 'requiredDate': '2013-03-31', 'shippedDate': '2013-03-30', 'status': 'Shipped', 'comments': None, 'customerNumber': 129}, {'orderNumber': 10112, 'orderDate': '2013-03-24', 'requiredDate': '2013-04-03', 'shippedDate': '2013-03-29', 'status': 'Shipped', 'comments': 'Customer requested that ad materials (such as posters, pamphlets) be included in the shippment', 'customerNumber': 144}, {'orderNumber': 10113, 'orderDate': '2013-03-26', 'requiredDate': '2013-04-02', 'shippedDate': '2013-03-27', 'status': 'Shipped', 'comments': None, 'customerNumber': 124}, {'orderNumber': 10114, 'orderDate': '2013-04-01', 'requiredDate': '2013-04-07', 'shippedDate': '2013-04-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 172}, {'orderNumber': 10115, 'orderDate': '2013-04-04', 'requiredDate': '2013-04-12', 'shippedDate': '2013-04-07', 'status': 'Shipped', 'comments': None, 'customerNumber': 424}, {'orderNumber': 10116, 'orderDate': '2013-04-11', 'requiredDate': '2013-04-19', 'shippedDate': '2013-04-13', 'status': 'Shipped', 'comments': None, 'customerNumber': 381}, {'orderNumber': 10117, 'orderDate': '2013-04-16', 'requiredDate': '2013-04-24', 'shippedDate': '2013-04-17', 'status': 'Shipped', 'comments': None, 'customerNumber': 148}, {'orderNumber': 10118, 'orderDate': '2013-04-21', 'requiredDate': '2013-04-29', 'shippedDate': '2013-04-26', 'status': 'Shipped', 'comments': 'Customer has worked with some of our vendors in the past and is aware of their MSRP', 'customerNumber': 216}, {'orderNumber': 10119, 'orderDate': '2013-04-28', 'requiredDate': '2013-05-05', 'shippedDate': '2013-05-02', 'status': 'Shipped', 'comments': None, 'customerNumber': 382}]}
+2021-11-09 at 11:32:30 | INFO | Neptune Start Up ....
+2021-11-09 at 11:32:30 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 11:32:31 | INFO | Neptune Starting ....
+2021-11-09 at 11:32:31 | INFO | API cache cleared ....
+2021-11-09 at 11:32:33 | DEBUG | Access '/' : run in app_root()
+2021-11-09 at 11:32:54 | DEBUG | Access '/token' : run in login_for_access_token(), input data username: [admin] and password: [admin]
+2021-11-09 at 11:32:54 | DEBUG | authenticate_user with username: [admin] and password: [admin]
+2021-11-09 at 11:32:54 | DEBUG | verify_password with hashed_password: [$2b$12$WGpjvAAjcew9hylrN0RdBOuzFPhdpj9OBp4Hqkz3xLUXuBh72u7xu]
+2021-11-09 at 11:32:55 | DEBUG | create_access_token with encoded_jwt: [eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzNjQzMDU3NX0.BOqoH6UyBFaQgVwdu5DvpnZE75vF9UatDTiYVyKZDxM]
+2021-11-09 at 11:33:00 | DEBUG | Access '/_schema' : run in get_schema()
+2021-11-09 at 11:35:00 | INFO | Neptune Shutting Down ....
+2021-11-09 at 11:35:00 | INFO | API cache does not exists ....
+2021-11-09 at 11:35:01 | INFO | Neptune Start Up ....
+2021-11-09 at 11:35:01 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 11:35:01 | INFO | Neptune Starting ....
+2021-11-09 at 11:35:01 | INFO | API cache does not exists ....
+2021-11-09 at 11:35:13 | DEBUG | Access '/_schema' : run in get_schema()
+2021-11-09 at 11:35:13 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 11:35:13 | DEBUG | Metadata cache save to [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ] 
+2021-11-09 at 11:35:13 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 11:35:13 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 11:35:13 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 11:35:13 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 11:35:27 | DEBUG | Access '/_schema/{table_name}' : run in get_table_schema(), input data table_name: [zinopara]
+2021-11-09 at 11:39:26 | INFO | Neptune Shutting Down ....
+2021-11-09 at 11:39:26 | INFO | API cache cleared ....
+2021-11-09 at 11:39:27 | INFO | Neptune Start Up ....
+2021-11-09 at 11:39:27 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 11:39:39 | INFO | Neptune Start Up ....
+2021-11-09 at 11:39:39 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 11:41:35 | INFO | Neptune Start Up ....
+2021-11-09 at 11:41:35 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 11:42:30 | INFO | Neptune Start Up ....
+2021-11-09 at 11:42:30 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 11:44:42 | INFO | Neptune Start Up ....
+2021-11-09 at 11:44:42 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 11:44:42 | INFO | Add Custom query ...
+2021-11-09 at 11:44:42 | INFO | Neptune Starting ....
+2021-11-09 at 11:44:42 | INFO | API cache does not exists ....
+2021-11-09 at 11:45:11 | DEBUG | Access '/token' : run in login_for_access_token(), input data username: [admin] and password: [admin]
+2021-11-09 at 11:45:11 | DEBUG | authenticate_user with username: [admin] and password: [admin]
+2021-11-09 at 11:45:11 | DEBUG | verify_password with hashed_password: [$2b$12$WGpjvAAjcew9hylrN0RdBOuzFPhdpj9OBp4Hqkz3xLUXuBh72u7xu]
+2021-11-09 at 11:45:12 | DEBUG | create_access_token with encoded_jwt: [eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzNjQzMTMxMn0.Nl_PkjjV_7f5TTTu8pd9kit63qwkkjAdCSRZ4SC7uWY]
+2021-11-09 at 11:45:17 | DEBUG | Access '/sys/status' : run in main.py, input data: [ Confirm ]
+2021-11-09 at 11:45:17 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 11:45:21 | DEBUG | Access '/sys/status' : run in main.py, input data: [ Confirm ]
+2021-11-09 at 11:45:35 | INFO | Neptune Shutting Down ....
+2021-11-09 at 11:45:35 | INFO | API cache does not exists ....
+2021-11-09 at 11:45:36 | INFO | Neptune Start Up ....
+2021-11-09 at 11:45:36 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 11:45:36 | INFO | Add Custom query ...
+2021-11-09 at 11:45:36 | INFO | Neptune Starting ....
+2021-11-09 at 11:45:36 | INFO | API cache does not exists ....
+2021-11-09 at 11:45:37 | DEBUG | Access '/sys/status' : run in main.py, input data: [ Confirm ]
+2021-11-09 at 11:45:37 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 11:45:49 | DEBUG | Access '/sys/reloadmeta' : run in reload_meta(), input data: [ Confirm ]
+2021-11-09 at 11:45:49 | INFO | API cache does not exists ....
+2021-11-09 at 11:45:49 | DEBUG | Metadata cache save to [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ] 
+2021-11-09 at 11:45:49 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 11:45:49 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 11:45:50 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 11:45:50 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 11:45:50 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ]
+2021-11-09 at 11:45:50 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 11:45:52 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 11:45:52 | DEBUG | Schema load with [ 22 ] tables and [ 0 ] views
+2021-11-09 at 11:48:59 | INFO | Neptune Shutting Down ....
+2021-11-09 at 11:48:59 | INFO | API cache cleared ....
+2021-11-09 at 11:49:02 | INFO | Neptune Start Up ....
+2021-11-09 at 11:49:02 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 11:49:02 | INFO | Add Custom query ...
+2021-11-09 at 11:49:02 | INFO | Neptune Starting ....
+2021-11-09 at 11:49:02 | INFO | API cache does not exists ....
+2021-11-09 at 11:49:10 | INFO | Neptune Shutting Down ....
+2021-11-09 at 11:49:10 | INFO | API cache does not exists ....
+2021-11-09 at 11:49:12 | INFO | Neptune Start Up ....
+2021-11-09 at 11:49:12 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 11:49:12 | INFO | Add Custom query ...
+2021-11-09 at 11:49:12 | INFO | Neptune Starting ....
+2021-11-09 at 11:49:12 | INFO | API cache does not exists ....
+2021-11-09 at 12:26:46 | DEBUG | Access '/token' : run in login_for_access_token(), input data username: [admin] and password: [admin]
+2021-11-09 at 12:26:46 | DEBUG | authenticate_user with username: [admin] and password: [admin]
+2021-11-09 at 12:26:46 | DEBUG | verify_password with hashed_password: [$2b$12$WGpjvAAjcew9hylrN0RdBOuzFPhdpj9OBp4Hqkz3xLUXuBh72u7xu]
+2021-11-09 at 12:26:47 | DEBUG | create_access_token with encoded_jwt: [eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzNjQzMzgwN30.F8jDw5adKe5ea7gsYivVBCqozD3Y95V0lpRVmuUQtZo]
+2021-11-09 at 12:26:50 | DEBUG | Access '/users/me/' : run in read_users_me()
+2021-11-09 at 12:27:07 | DEBUG | Access '/_table/{table_name}' : run in get_data(), input data table_name: [customers]
+2021-11-09 at 12:27:07 | DEBUG | fieldlist: [*]
+2021-11-09 at 12:27:07 | DEBUG | filter: [None]
+2021-11-09 at 12:27:07 | DEBUG | filterparam: [None]
+2021-11-09 at 12:27:07 | DEBUG | limit: [20]
+2021-11-09 at 12:27:07 | DEBUG | offset: [0]
+2021-11-09 at 12:27:07 | DEBUG | order: [None]
+2021-11-09 at 12:27:07 | DEBUG | group: [None]
+2021-11-09 at 12:27:07 | DEBUG | distinct: [False]
+2021-11-09 at 12:27:07 | DEBUG | count_only: [False]
+2021-11-09 at 12:27:07 | DEBUG | include_count: [False]
+2021-11-09 at 12:27:07 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 12:27:08 | DEBUG | Metadata cache save to [ /Users/zhangjun/.pyAPI_cache/neptune_metadata ] 
+2021-11-09 at 12:27:08 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 12:27:08 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 12:27:09 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 12:27:09 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 12:27:09 | DEBUG | table select():
+2021-11-09 at 12:27:09 | DEBUG | tablename: customers
+2021-11-09 at 12:27:09 | DEBUG | fieldlist: *
+2021-11-09 at 12:27:09 | DEBUG | filter: None
+2021-11-09 at 12:27:09 | DEBUG | limit: 20
+2021-11-09 at 12:27:09 | DEBUG | offset: 0
+2021-11-09 at 12:27:09 | DEBUG | order: None
+2021-11-09 at 12:27:09 | DEBUG | group: None
+2021-11-09 at 12:27:09 | DEBUG | distinct: False
+2021-11-09 at 12:27:09 | DEBUG | count_only: False
+2021-11-09 at 12:27:09 | DEBUG | include_count: False
+2021-11-09 at 12:27:09 | DEBUG | TableModel Columns: [Column('customerNumber', INTEGER(display_width=11), table=<customers>, primary_key=True, nullable=False), Column('customerName', VARCHAR(length=50), table=<customers>, nullable=False), Column('contactLastName', VARCHAR(length=50), table=<customers>, nullable=False), Column('contactFirstName', VARCHAR(length=50), table=<customers>, nullable=False), Column('phone', VARCHAR(length=50), table=<customers>, nullable=False), Column('addressLine1', VARCHAR(length=50), table=<customers>, nullable=False), Column('addressLine2', VARCHAR(length=50), table=<customers>), Column('city', VARCHAR(length=50), table=<customers>, nullable=False), Column('state', VARCHAR(length=50), table=<customers>), Column('postalCode', VARCHAR(length=15), table=<customers>), Column('country', VARCHAR(length=50), table=<customers>, nullable=False), Column('salesRepEmployeeNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<customers>), Column('creditLimit', DECIMAL(precision=10, scale=2), table=<customers>)]
+2021-11-09 at 12:27:09 | DEBUG | SQL of Select: [ SELECT mysqlsrc.customers.`customerNumber`, mysqlsrc.customers.`customerName`, mysqlsrc.customers.`contactLastName`, mysqlsrc.customers.`contactFirstName`, mysqlsrc.customers.phone, mysqlsrc.customers.`addressLine1`, mysqlsrc.customers.`addressLine2`, mysqlsrc.customers.city, mysqlsrc.customers.state, mysqlsrc.customers.`postalCode`, mysqlsrc.customers.country, mysqlsrc.customers.`salesRepEmployeeNumber`, mysqlsrc.customers.`creditLimit` 
+FROM mysqlsrc.customers 
+ LIMIT %(param_1)s, %(param_2)s ]
+2021-11-09 at 12:27:09 | DEBUG | SQL of Count: [ SELECT count(mysqlsrc.customers.`customerNumber`) AS col_count 
+FROM mysqlsrc.customers ]
+2021-11-09 at 12:27:09 | DEBUG | SQL of Query Full : [ SELECT mysqlsrc.customers.`customerNumber`, mysqlsrc.customers.`customerName`, mysqlsrc.customers.`contactLastName`, mysqlsrc.customers.`contactFirstName`, mysqlsrc.customers.phone, mysqlsrc.customers.`addressLine1`, mysqlsrc.customers.`addressLine2`, mysqlsrc.customers.city, mysqlsrc.customers.state, mysqlsrc.customers.`postalCode`, mysqlsrc.customers.country, mysqlsrc.customers.`salesRepEmployeeNumber`, mysqlsrc.customers.`creditLimit` 
+FROM mysqlsrc.customers 
+ LIMIT %(param_1)s, %(param_2)s ]
+2021-11-09 at 12:27:09 | DEBUG | SQL of Count Full : [ SELECT count(mysqlsrc.customers.`customerNumber`) AS col_count 
+FROM mysqlsrc.customers ]
+2021-11-09 at 12:27:09 | DEBUG | Select Count Result: [ <sqlalchemy.engine.cursor.CursorResult object at 0x10fa1fc10> ]
+2021-11-09 at 12:27:09 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x10f96b100> ]
+2021-11-09 at 12:27:09 | DEBUG | Select Result Return : [ 20 ] rows 
+2021-11-09 at 12:27:34 | DEBUG | Access '/_table/{table_name}' : run in get_data(), input data table_name: [customers]
+2021-11-09 at 12:27:34 | DEBUG | fieldlist: [*]
+2021-11-09 at 12:27:34 | DEBUG | filter: [None]
+2021-11-09 at 12:27:34 | DEBUG | filterparam: [None]
+2021-11-09 at 12:27:34 | DEBUG | limit: [50]
+2021-11-09 at 12:27:34 | DEBUG | offset: [0]
+2021-11-09 at 12:27:34 | DEBUG | order: [None]
+2021-11-09 at 12:27:34 | DEBUG | group: [None]
+2021-11-09 at 12:27:34 | DEBUG | distinct: [True]
+2021-11-09 at 12:27:34 | DEBUG | count_only: [False]
+2021-11-09 at 12:27:34 | DEBUG | include_count: [True]
+2021-11-09 at 12:27:34 | DEBUG | table select():
+2021-11-09 at 12:27:34 | DEBUG | tablename: customers
+2021-11-09 at 12:27:34 | DEBUG | fieldlist: *
+2021-11-09 at 12:27:34 | DEBUG | filter: None
+2021-11-09 at 12:27:34 | DEBUG | limit: 50
+2021-11-09 at 12:27:34 | DEBUG | offset: 0
+2021-11-09 at 12:27:34 | DEBUG | order: None
+2021-11-09 at 12:27:34 | DEBUG | group: None
+2021-11-09 at 12:27:34 | DEBUG | distinct: True
+2021-11-09 at 12:27:34 | DEBUG | count_only: False
+2021-11-09 at 12:27:34 | DEBUG | include_count: True
+2021-11-09 at 12:27:34 | DEBUG | TableModel Columns: [Column('customerNumber', INTEGER(display_width=11), table=<customers>, primary_key=True, nullable=False), Column('customerName', VARCHAR(length=50), table=<customers>, nullable=False), Column('contactLastName', VARCHAR(length=50), table=<customers>, nullable=False), Column('contactFirstName', VARCHAR(length=50), table=<customers>, nullable=False), Column('phone', VARCHAR(length=50), table=<customers>, nullable=False), Column('addressLine1', VARCHAR(length=50), table=<customers>, nullable=False), Column('addressLine2', VARCHAR(length=50), table=<customers>), Column('city', VARCHAR(length=50), table=<customers>, nullable=False), Column('state', VARCHAR(length=50), table=<customers>), Column('postalCode', VARCHAR(length=15), table=<customers>), Column('country', VARCHAR(length=50), table=<customers>, nullable=False), Column('salesRepEmployeeNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<customers>), Column('creditLimit', DECIMAL(precision=10, scale=2), table=<customers>)]
+2021-11-09 at 12:27:34 | DEBUG | SQL of Select: [ SELECT DISTINCT mysqlsrc.customers.`customerNumber`, mysqlsrc.customers.`customerName`, mysqlsrc.customers.`contactLastName`, mysqlsrc.customers.`contactFirstName`, mysqlsrc.customers.phone, mysqlsrc.customers.`addressLine1`, mysqlsrc.customers.`addressLine2`, mysqlsrc.customers.city, mysqlsrc.customers.state, mysqlsrc.customers.`postalCode`, mysqlsrc.customers.country, mysqlsrc.customers.`salesRepEmployeeNumber`, mysqlsrc.customers.`creditLimit` 
+FROM mysqlsrc.customers 
+ LIMIT %(param_1)s, %(param_2)s ]
+2021-11-09 at 12:27:34 | DEBUG | SQL of Count: [ SELECT DISTINCT count(mysqlsrc.customers.`customerNumber`) AS col_count 
+FROM mysqlsrc.customers ]
+2021-11-09 at 12:27:34 | DEBUG | SQL of Query Full : [ SELECT DISTINCT mysqlsrc.customers.`customerNumber`, mysqlsrc.customers.`customerName`, mysqlsrc.customers.`contactLastName`, mysqlsrc.customers.`contactFirstName`, mysqlsrc.customers.phone, mysqlsrc.customers.`addressLine1`, mysqlsrc.customers.`addressLine2`, mysqlsrc.customers.city, mysqlsrc.customers.state, mysqlsrc.customers.`postalCode`, mysqlsrc.customers.country, mysqlsrc.customers.`salesRepEmployeeNumber`, mysqlsrc.customers.`creditLimit` 
+FROM mysqlsrc.customers 
+ LIMIT %(param_1)s, %(param_2)s ]
+2021-11-09 at 12:27:34 | DEBUG | SQL of Count Full : [ SELECT DISTINCT count(mysqlsrc.customers.`customerNumber`) AS col_count 
+FROM mysqlsrc.customers ]
+2021-11-09 at 12:27:34 | DEBUG | Select Count Result: [ <sqlalchemy.engine.cursor.CursorResult object at 0x10fa59af0> ]
+2021-11-09 at 12:27:34 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x10fa59d60> ]
+2021-11-09 at 12:27:34 | DEBUG | Select Result Return : [ 50 ] rows 
+2021-11-09 at 12:27:57 | DEBUG | Access '/_table/{table_name}' : run in get_data(), input data table_name: [zinopara]
+2021-11-09 at 12:27:57 | DEBUG | fieldlist: [*]
+2021-11-09 at 12:27:57 | DEBUG | filter: [None]
+2021-11-09 at 12:27:57 | DEBUG | filterparam: [None]
+2021-11-09 at 12:27:57 | DEBUG | limit: [50]
+2021-11-09 at 12:27:57 | DEBUG | offset: [0]
+2021-11-09 at 12:27:57 | DEBUG | order: [None]
+2021-11-09 at 12:27:57 | DEBUG | group: [None]
+2021-11-09 at 12:27:57 | DEBUG | distinct: [True]
+2021-11-09 at 12:27:57 | DEBUG | count_only: [False]
+2021-11-09 at 12:27:57 | DEBUG | include_count: [True]
+2021-11-09 at 12:27:57 | DEBUG | table select():
+2021-11-09 at 12:27:57 | DEBUG | tablename: zinopara
+2021-11-09 at 12:27:57 | DEBUG | fieldlist: *
+2021-11-09 at 12:27:57 | DEBUG | filter: None
+2021-11-09 at 12:27:57 | DEBUG | limit: 50
+2021-11-09 at 12:27:57 | DEBUG | offset: 0
+2021-11-09 at 12:27:57 | DEBUG | order: None
+2021-11-09 at 12:27:57 | DEBUG | group: None
+2021-11-09 at 12:27:57 | DEBUG | distinct: True
+2021-11-09 at 12:27:57 | DEBUG | count_only: False
+2021-11-09 at 12:27:57 | DEBUG | include_count: True
+2021-11-09 at 12:27:57 | DEBUG | TableModel Columns: [Column('id', VARCHAR(collation='utf8mb4_unicode_ci', length=255), table=<zinopara>, primary_key=True, nullable=False), Column('type', VARCHAR(collation='utf8mb4_unicode_ci', length=255), table=<zinopara>, nullable=False), Column('creatorid', VARCHAR(collation='utf8mb4_unicode_ci', length=255), table=<zinopara>), Column('json', TEXT(collation='utf8mb4_unicode_ci'), table=<zinopara>, nullable=False), Column('json_updates', TEXT(collation='utf8mb4_unicode_ci'), table=<zinopara>)]
+2021-11-09 at 12:27:57 | DEBUG | SQL of Select: [ SELECT DISTINCT mysqlsrc.zinopara.id, mysqlsrc.zinopara.type, mysqlsrc.zinopara.creatorid, mysqlsrc.zinopara.json, mysqlsrc.zinopara.json_updates 
+FROM mysqlsrc.zinopara 
+ LIMIT %(param_1)s, %(param_2)s ]
+2021-11-09 at 12:27:57 | DEBUG | SQL of Count: [ SELECT DISTINCT count(mysqlsrc.zinopara.id) AS col_count 
+FROM mysqlsrc.zinopara ]
+2021-11-09 at 12:27:57 | DEBUG | SQL of Query Full : [ SELECT DISTINCT mysqlsrc.zinopara.id, mysqlsrc.zinopara.type, mysqlsrc.zinopara.creatorid, mysqlsrc.zinopara.json, mysqlsrc.zinopara.json_updates 
+FROM mysqlsrc.zinopara 
+ LIMIT %(param_1)s, %(param_2)s ]
+2021-11-09 at 12:27:57 | DEBUG | SQL of Count Full : [ SELECT DISTINCT count(mysqlsrc.zinopara.id) AS col_count 
+FROM mysqlsrc.zinopara ]
+2021-11-09 at 12:27:57 | DEBUG | Select Count Result: [ <sqlalchemy.engine.cursor.CursorResult object at 0x10fa381f0> ]
+2021-11-09 at 12:27:57 | DEBUG | Select Result: [ <sqlalchemy.engine.cursor.LegacyCursorResult object at 0x10fa38070> ]
+2021-11-09 at 12:27:57 | DEBUG | Select Result Return : [ 3 ] rows 
+2021-11-09 at 13:04:05 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:04:05 | INFO | API cache cleared ....
+2021-11-09 at 13:04:07 | INFO | Neptune Start Up ....
+2021-11-09 at 13:04:07 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:04:07 | INFO | Add Custom query ...
+2021-11-09 at 13:04:07 | INFO | Neptune Starting ....
+2021-11-09 at 13:04:07 | INFO | API cache does not exists ....
+2021-11-09 at 13:05:22 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:05:22 | INFO | API cache does not exists ....
+2021-11-09 at 13:05:23 | INFO | Neptune Start Up ....
+2021-11-09 at 13:05:23 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:05:23 | INFO | Add Custom query ...
+2021-11-09 at 13:05:23 | INFO | Neptune Starting ....
+2021-11-09 at 13:05:23 | INFO | API cache does not exists ....
+2021-11-09 at 13:06:16 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:06:16 | INFO | API cache does not exists ....
+2021-11-09 at 13:06:17 | INFO | Neptune Start Up ....
+2021-11-09 at 13:06:17 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:06:17 | INFO | Add Custom query ...
+2021-11-09 at 13:06:17 | INFO | Neptune Starting ....
+2021-11-09 at 13:06:17 | INFO | API cache does not exists ....
+2021-11-09 at 13:07:11 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:07:11 | INFO | API cache does not exists ....
+2021-11-09 at 13:07:12 | INFO | Neptune Start Up ....
+2021-11-09 at 13:07:12 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:07:12 | INFO | Add Custom query ...
+2021-11-09 at 13:07:12 | INFO | Neptune Starting ....
+2021-11-09 at 13:07:12 | INFO | API cache does not exists ....
+2021-11-09 at 13:07:32 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:07:32 | INFO | API cache does not exists ....
+2021-11-09 at 13:07:33 | INFO | Neptune Start Up ....
+2021-11-09 at 13:07:33 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:07:33 | INFO | Add Custom query ...
+2021-11-09 at 13:07:33 | INFO | Neptune Starting ....
+2021-11-09 at 13:07:33 | INFO | API cache does not exists ....
+2021-11-09 at 13:12:49 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:12:49 | INFO | API cache does not exists ....
+2021-11-09 at 13:12:50 | INFO | Neptune Start Up ....
+2021-11-09 at 13:12:50 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:12:50 | INFO | Add Custom query ...
+2021-11-09 at 13:12:50 | INFO | Neptune Starting ....
+2021-11-09 at 13:12:50 | INFO | API cache does not exists ....
+2021-11-09 at 13:13:57 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:13:57 | INFO | API cache does not exists ....
+2021-11-09 at 13:13:58 | INFO | Neptune Start Up ....
+2021-11-09 at 13:13:58 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:13:58 | INFO | Add Custom query ...
+2021-11-09 at 13:13:58 | INFO | Neptune Starting ....
+2021-11-09 at 13:13:58 | INFO | API cache does not exists ....
+2021-11-09 at 13:16:24 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:16:24 | INFO | API cache does not exists ....
+2021-11-09 at 13:16:25 | INFO | Neptune Start Up ....
+2021-11-09 at 13:16:25 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:16:25 | INFO | Add Custom query ...
+2021-11-09 at 13:16:25 | INFO | Neptune Starting ....
+2021-11-09 at 13:16:25 | INFO | API cache does not exists ....
+2021-11-09 at 13:18:45 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:18:45 | INFO | API cache does not exists ....
+2021-11-09 at 13:18:46 | INFO | Neptune Start Up ....
+2021-11-09 at 13:18:46 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:18:46 | INFO | Add Custom query ...
+2021-11-09 at 13:18:46 | INFO | Neptune Starting ....
+2021-11-09 at 13:18:46 | INFO | API cache does not exists ....
+2021-11-09 at 13:20:33 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:20:33 | INFO | API cache does not exists ....
+2021-11-09 at 13:20:34 | INFO | Neptune Start Up ....
+2021-11-09 at 13:20:34 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:20:34 | INFO | Add Custom query ...
+2021-11-09 at 13:20:34 | INFO | Neptune Starting ....
+2021-11-09 at 13:20:34 | INFO | API cache does not exists ....
+2021-11-09 at 13:25:19 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:25:19 | INFO | API cache does not exists ....
+2021-11-09 at 13:25:20 | INFO | Neptune Start Up ....
+2021-11-09 at 13:25:20 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:25:20 | INFO | Add Custom query ...
+2021-11-09 at 13:25:20 | INFO | Neptune Starting ....
+2021-11-09 at 13:25:20 | INFO | API cache does not exists ....
+2021-11-09 at 13:25:21 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:25:21 | INFO | API cache does not exists ....
+2021-11-09 at 13:25:23 | INFO | Neptune Start Up ....
+2021-11-09 at 13:25:23 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:25:23 | INFO | Add Custom query ...
+2021-11-09 at 13:25:23 | INFO | Neptune Starting ....
+2021-11-09 at 13:25:23 | INFO | API cache does not exists ....
+2021-11-09 at 13:26:04 | DEBUG | Access '/' : run in app_root()
+2021-11-09 at 13:31:11 | INFO | Neptune Shutting Down ....
+2021-11-09 at 13:31:11 | INFO | API cache does not exists ....
+2021-11-09 at 13:56:28 | INFO | Neptune Start Up ....
+2021-11-09 at 13:56:28 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 13:56:28 | INFO | Add Custom query ...
+2021-11-09 at 13:56:28 | INFO | Neptune Starting ....
+2021-11-09 at 13:56:28 | INFO | API cache does not exists ....
+2021-11-09 at 14:49:58 | INFO | Neptune Shutting Down ....
+2021-11-09 at 14:49:58 | INFO | API cache does not exists ....
+2021-11-09 at 14:49:59 | INFO | Neptune Start Up ....
+2021-11-09 at 14:49:59 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 14:49:59 | INFO | Add Custom query ...
+2021-11-09 at 14:49:59 | INFO | Neptune Starting ....
+2021-11-09 at 14:49:59 | INFO | API cache does not exists ....
+2021-11-09 at 14:51:54 | INFO | Neptune Shutting Down ....
+2021-11-09 at 14:51:54 | INFO | API cache does not exists ....
+2021-11-09 at 14:51:55 | INFO | Neptune Start Up ....
+2021-11-09 at 14:51:55 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 14:51:55 | INFO | Add Custom query ...
+2021-11-09 at 14:51:55 | INFO | Neptune Starting ....
+2021-11-09 at 14:51:55 | INFO | API cache does not exists ....
+2021-11-09 at 14:52:01 | INFO | Neptune Shutting Down ....
+2021-11-09 at 14:52:01 | INFO | API cache does not exists ....
+2021-11-09 at 15:03:53 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:04:06 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:04:06 | DEBUG | Metadata cache save to [ /Users/zhangjun/.neptune_cache/neptune_metadata ] 
+2021-11-09 at 15:04:06 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:04:06 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:04:07 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:04:07 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:04:53 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:04:53 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:04:53 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:04:53 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:04:53 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:04:53 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:06:18 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:06:18 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:06:18 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:06:18 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:06:18 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:06:18 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:06:38 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:06:38 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:06:38 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:06:38 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:06:39 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:06:39 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:06:45 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:06:46 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:06:46 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:06:46 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:06:46 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:06:46 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:06:58 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:06:58 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:06:58 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:06:58 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:06:58 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:06:58 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:07:12 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:07:12 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:07:12 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:07:12 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:07:13 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:07:13 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:12:08 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:12:08 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:12:08 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:12:08 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:12:09 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:12:09 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:12:18 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:12:18 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:12:18 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:12:18 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:12:18 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:12:18 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:12:42 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:12:42 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:12:42 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:12:42 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:12:43 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:12:43 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:13:13 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:13:13 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:13:13 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:13:13 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:13:13 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:13:13 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:13:31 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:13:31 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:13:31 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:13:31 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:13:32 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:13:32 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:14:21 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:14:22 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:14:22 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:14:22 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:14:22 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:14:22 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:18:28 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:18:28 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:18:28 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:18:28 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:18:29 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:18:29 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:18:52 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:18:52 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:18:52 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:18:52 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:18:52 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:18:52 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:19:22 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:19:22 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:19:22 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:19:22 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:19:23 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:19:23 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:19:32 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:19:32 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:19:32 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:19:32 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:19:32 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:19:32 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:20:20 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:20:20 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:20:20 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:20:20 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:20:20 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:20:20 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:20:34 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:20:34 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:20:34 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:20:34 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:20:34 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:20:34 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:21:18 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:21:18 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:21:18 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:21:18 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:21:19 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:21:19 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:21:50 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:21:50 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:21:50 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:21:50 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:21:50 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:21:50 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:22:04 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:22:04 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-09 at 15:22:04 | DEBUG | Generate Schema file from database ...
+2021-11-09 at 15:22:04 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-09 at 15:22:04 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-09 at 15:22:04 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-09 at 15:36:47 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:46:05 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:46:18 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:46:32 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:48:48 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:49:26 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:49:57 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:50:22 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:50:58 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:51:05 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:51:37 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:54:59 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:55:30 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:56:27 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:58:16 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:58:42 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 15:59:24 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 16:00:08 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 16:10:34 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 16:11:46 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 16:12:55 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 16:23:24 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 16:23:35 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 16:46:15 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 17:26:12 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 17:27:20 | INFO | Neptune Start Up ....
+2021-11-09 at 17:27:20 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:27:20 | INFO | Add Custom query ...
+2021-11-09 at 17:27:20 | INFO | Neptune Starting ....
+2021-11-09 at 17:27:20 | INFO | API cache does not exists ....
+2021-11-09 at 17:27:34 | DEBUG | Access '/' : run in app_root()
+2021-11-09 at 17:48:08 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:48:08 | INFO | API cache does not exists ....
+2021-11-09 at 17:48:11 | INFO | Neptune Start Up ....
+2021-11-09 at 17:48:11 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:48:11 | INFO | Add Custom query ...
+2021-11-09 at 17:48:11 | INFO | Neptune Starting ....
+2021-11-09 at 17:48:11 | INFO | API cache does not exists ....
+2021-11-09 at 17:48:34 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:48:34 | INFO | API cache does not exists ....
+2021-11-09 at 17:48:35 | INFO | Neptune Start Up ....
+2021-11-09 at 17:48:35 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:48:35 | INFO | Add Custom query ...
+2021-11-09 at 17:48:35 | INFO | Neptune Starting ....
+2021-11-09 at 17:48:35 | INFO | API cache does not exists ....
+2021-11-09 at 17:49:12 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:49:12 | INFO | API cache does not exists ....
+2021-11-09 at 17:49:14 | INFO | Neptune Start Up ....
+2021-11-09 at 17:49:14 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:49:14 | INFO | Add Custom query ...
+2021-11-09 at 17:49:14 | INFO | Neptune Starting ....
+2021-11-09 at 17:49:14 | INFO | API cache does not exists ....
+2021-11-09 at 17:49:32 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:49:32 | INFO | API cache does not exists ....
+2021-11-09 at 17:49:34 | INFO | Neptune Start Up ....
+2021-11-09 at 17:49:34 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:49:34 | INFO | Add Custom query ...
+2021-11-09 at 17:49:34 | INFO | Neptune Starting ....
+2021-11-09 at 17:49:34 | INFO | API cache does not exists ....
+2021-11-09 at 17:50:15 | INFO | [测试log] hello, world
+2021-11-09 at 17:50:15 | DEBUG | [测试log] hello, world
+2021-11-09 at 17:50:15 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:50:15 | INFO | API cache does not exists ....
+2021-11-09 at 17:50:17 | INFO | Neptune Start Up ....
+2021-11-09 at 17:50:17 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:50:17 | INFO | Add Custom query ...
+2021-11-09 at 17:50:17 | INFO | Neptune Starting ....
+2021-11-09 at 17:50:17 | INFO | API cache does not exists ....
+2021-11-09 at 17:50:43 | INFO | [测试log] hello, world
+2021-11-09 at 17:50:43 | DEBUG | [测试log] hello, world
+2021-11-09 at 17:50:43 | ERROR | [测试log] hello, world
+2021-11-09 at 17:50:43 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:50:43 | INFO | API cache does not exists ....
+2021-11-09 at 17:50:45 | INFO | Neptune Start Up ....
+2021-11-09 at 17:50:45 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:50:45 | INFO | Add Custom query ...
+2021-11-09 at 17:50:45 | INFO | Neptune Starting ....
+2021-11-09 at 17:50:45 | INFO | API cache does not exists ....
+2021-11-09 at 17:52:06 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:52:06 | INFO | API cache does not exists ....
+2021-11-09 at 17:52:11 | SUCCESS | [测试log] hello, world
+2021-11-09 at 17:52:11 | INFO | [测试log] hello, world
+2021-11-09 at 17:52:11 | DEBUG | [测试log] hello, world
+2021-11-09 at 17:52:11 | WARNING | [测试log] hello, world
+2021-11-09 at 17:52:11 | ERROR | [测试log] hello, world
+2021-11-09 at 17:52:11 | CRITICAL | [测试log] hello, world
+2021-11-09 at 17:52:11 | ERROR | [测试log] hello, world
+NoneType: None
+2021-11-09 at 17:52:12 | INFO | Neptune Start Up ....
+2021-11-09 at 17:52:12 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:52:12 | INFO | Add Custom query ...
+2021-11-09 at 17:52:12 | INFO | Neptune Starting ....
+2021-11-09 at 17:52:12 | INFO | API cache does not exists ....
+2021-11-09 at 17:53:14 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:53:14 | INFO | API cache does not exists ....
+2021-11-09 at 17:53:15 | SUCCESS | [测试log] hello, world
+2021-11-09 at 17:53:16 | INFO | Neptune Start Up ....
+2021-11-09 at 17:53:16 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:53:17 | INFO | Add Custom query ...
+2021-11-09 at 17:53:17 | INFO | Neptune Starting ....
+2021-11-09 at 17:53:17 | INFO | API cache does not exists ....
+2021-11-09 at 17:53:29 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:53:29 | INFO | API cache does not exists ....
+2021-11-09 at 17:53:30 | SUCCESS | [测试log] hello, world
+2021-11-09 at 17:53:31 | INFO | Neptune Start Up ....
+2021-11-09 at 17:53:31 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:53:31 | INFO | Add Custom query ...
+2021-11-09 at 17:53:31 | INFO | Neptune Starting ....
+2021-11-09 at 17:53:31 | INFO | API cache does not exists ....
+2021-11-09 at 17:54:01 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:54:01 | INFO | API cache does not exists ....
+2021-11-09 at 17:54:02 | SUCCESS | [测试log] hello, world
+2021-11-09 at 17:54:02 | INFO | [测试log] hello, world
+2021-11-09 at 17:54:02 | DEBUG | [测试log] hello, world
+2021-11-09 at 17:54:02 | WARNING | [测试log] hello, world
+2021-11-09 at 17:54:02 | ERROR | [测试log] hello, world
+2021-11-09 at 17:54:02 | CRITICAL | [测试log] hello, world
+2021-11-09 at 17:54:02 | ERROR | [测试log] hello, world
+NoneType: None
+2021-11-09 at 17:54:03 | INFO | Neptune Start Up ....
+2021-11-09 at 17:54:03 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:54:03 | INFO | Add Custom query ...
+2021-11-09 at 17:54:03 | INFO | Neptune Starting ....
+2021-11-09 at 17:54:03 | INFO | API cache does not exists ....
+2021-11-09 at 17:54:20 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:54:20 | INFO | API cache does not exists ....
+2021-11-09 at 17:54:20 | SUCCESS | [测试log] hello, world
+2021-11-09 at 17:54:20 | INFO | [测试log] hello, world
+2021-11-09 at 17:54:20 | DEBUG | [测试log] hello, world
+2021-11-09 at 17:54:20 | WARNING | [测试log] hello, world
+2021-11-09 at 17:54:20 | ERROR | [测试log] hello, world
+2021-11-09 at 17:54:20 | CRITICAL | [测试log] hello, world
+2021-11-09 at 17:54:20 | ERROR | [测试log] hello, world
+NoneType: None
+2021-11-09 at 17:54:21 | INFO | Neptune Start Up ....
+2021-11-09 at 17:54:21 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:54:21 | INFO | Add Custom query ...
+2021-11-09 at 17:54:21 | INFO | Neptune Starting ....
+2021-11-09 at 17:54:21 | INFO | API cache does not exists ....
+2021-11-09 at 17:54:24 | SUCCESS | [测试log] hello, world
+2021-11-09 at 17:54:24 | INFO | [测试log] hello, world
+2021-11-09 at 17:54:24 | DEBUG | [测试log] hello, world
+2021-11-09 at 17:54:24 | WARNING | [测试log] hello, world
+2021-11-09 at 17:54:24 | ERROR | [测试log] hello, world
+2021-11-09 at 17:54:24 | CRITICAL | [测试log] hello, world
+2021-11-09 at 17:54:24 | ERROR | [测试log] hello, world
+NoneType: None
+2021-11-09 at 17:56:01 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:56:01 | INFO | API cache does not exists ....
+2021-11-09 at 17:56:03 | INFO | Neptune Start Up ....
+2021-11-09 at 17:56:03 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:56:03 | INFO | Add Custom query ...
+2021-11-09 at 17:56:03 | INFO | Neptune Starting ....
+2021-11-09 at 17:56:03 | INFO | API cache does not exists ....
+2021-11-09 at 17:56:41 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:56:41 | INFO | API cache does not exists ....
+2021-11-09 at 17:56:42 | INFO | Neptune Start Up ....
+2021-11-09 at 17:56:42 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:56:42 | INFO | Add Custom query ...
+2021-11-09 at 17:56:42 | INFO | Neptune Starting ....
+2021-11-09 at 17:56:42 | INFO | API cache does not exists ....
+2021-11-09 at 17:58:19 | INFO | Neptune Shutting Down ....
+2021-11-09 at 17:58:19 | INFO | API cache does not exists ....
+2021-11-09 at 17:58:20 | INFO | Neptune Start Up ....
+2021-11-09 at 17:58:20 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 17:58:20 | INFO | Add Custom query ...
+2021-11-09 at 17:58:20 | INFO | Neptune Starting ....
+2021-11-09 at 17:58:20 | INFO | API cache does not exists ....
+2021-11-09 at 20:43:58 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 20:43:59 | SUCCESS | [测试log] hello, world
+2021-11-09 at 20:43:59 | INFO | [测试log] hello, world
+2021-11-09 at 20:43:59 | DEBUG | [测试log] hello, world
+2021-11-09 at 20:43:59 | WARNING | [测试log] hello, world
+2021-11-09 at 20:43:59 | ERROR | [测试log] hello, world
+2021-11-09 at 20:43:59 | CRITICAL | [测试log] hello, world
+2021-11-09 at 20:43:59 | ERROR | [测试log] hello, world
+NoneType: None
+2021-11-09 at 20:44:16 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 20:44:17 | SUCCESS | [测试log] hello, world
+2021-11-09 at 20:44:17 | INFO | [测试log] hello, world
+2021-11-09 at 20:44:17 | DEBUG | [测试log] hello, world
+2021-11-09 at 20:44:17 | WARNING | [测试log] hello, world
+2021-11-09 at 20:44:17 | ERROR | [测试log] hello, world
+2021-11-09 at 20:44:17 | CRITICAL | [测试log] hello, world
+2021-11-09 at 20:44:17 | ERROR | [测试log] hello, world
+NoneType: None
+2021-11-09 at 20:45:35 | INFO | Neptune Start Up ....
+2021-11-09 at 20:45:35 | INFO | Neptune Start Up ....
+2021-11-09 at 20:45:35 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:45:35 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:45:35 | INFO | Neptune Start Up ....
+2021-11-09 at 20:45:35 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:45:35 | INFO | Neptune Start Up ....
+2021-11-09 at 20:45:35 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:45:35 | INFO | Add Custom query ...
+2021-11-09 at 20:45:35 | INFO | Add Custom query ...
+2021-11-09 at 20:45:35 | INFO | Add Custom query ...
+2021-11-09 at 20:45:35 | INFO | Add Custom query ...
+2021-11-09 at 20:45:43 | INFO | Neptune Start Up ....
+2021-11-09 at 20:45:43 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:45:43 | INFO | Add Custom query ...
+2021-11-09 at 20:45:43 | INFO | Neptune Starting ....
+2021-11-09 at 20:45:43 | INFO | API cache does not exists ....
+2021-11-09 at 20:46:06 | INFO | Neptune Shutting Down ....
+2021-11-09 at 20:46:06 | INFO | API cache does not exists ....
+2021-11-09 at 20:46:10 | INFO | Neptune Start Up ....
+2021-11-09 at 20:46:10 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:46:10 | INFO | Add Custom query ...
+2021-11-09 at 20:46:10 | INFO | Neptune Start Up ....
+2021-11-09 at 20:46:10 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:46:10 | INFO | Add Custom query ...
+2021-11-09 at 20:46:10 | INFO | Neptune Start Up ....
+2021-11-09 at 20:46:10 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:46:10 | INFO | Neptune Start Up ....
+2021-11-09 at 20:46:10 | INFO | Add Custom query ...
+2021-11-09 at 20:46:10 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:46:41 | INFO | Neptune Start Up ....
+2021-11-09 at 20:46:41 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:46:41 | INFO | Neptune Start Up ....
+2021-11-09 at 20:46:41 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:46:41 | INFO | Neptune Start Up ....
+2021-11-09 at 20:46:41 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:46:41 | INFO | Add Custom query ...
+2021-11-09 at 20:46:41 | INFO | Add Custom query ...
+2021-11-09 at 20:46:41 | INFO | Neptune Start Up ....
+2021-11-09 at 20:46:41 | INFO | API prefix is: [ /api/v1 ]
+2021-11-09 at 20:46:41 | INFO | Add Custom query ...
+2021-11-09 at 20:46:41 | INFO | Add Custom query ...
+2021-11-09 at 20:46:41 | INFO | Neptune Starting ....
+2021-11-09 at 20:46:41 | INFO | Neptune Starting ....
+2021-11-09 at 20:46:41 | INFO | Neptune Starting ....
+2021-11-09 at 20:46:41 | INFO | API cache does not exists ....
+2021-11-09 at 20:46:41 | INFO | API cache does not exists ....
+2021-11-09 at 20:46:41 | INFO | API cache does not exists ....
+2021-11-09 at 20:46:41 | INFO | Neptune Starting ....
+2021-11-09 at 20:46:41 | INFO | API cache does not exists ....

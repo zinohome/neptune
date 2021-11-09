@@ -1,0 +1,8 @@
+testfunc:
+  func_name : testfunc
+  description : "& **sqlparam:** {'qid':3,'qname':'jack'}"
+  func_sql : "select 1"
+testfunc2:
+  func_name: testfunc2
+  description: "& **sqlparam:** {'pid':3,'qname':'jack'}"
+  func_sql : "select 10"

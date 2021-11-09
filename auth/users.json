@@ -1,0 +1,26 @@
+{
+    "admin": {
+        "username": "admin",
+        "full_name": "Admin",
+        "email": "admin@zino.com",
+        "hashed_password": "$2b$12$WGpjvAAjcew9hylrN0RdBOuzFPhdpj9OBp4Hqkz3xLUXuBh72u7xu",
+        "role":"Superadmin",
+        "disabled": "False"
+    },
+    "reader": {
+        "username": "reader",
+        "full_name": "Reader",
+        "email": "reader@zino.com",
+        "hashed_password": "$2b$12$yXVcWEHglbxjF4STXnpFaeNhJ4mCxGpbPuDwHohg3V/wlbxG2tBQa",
+        "role":"Reader",
+        "disabled": "False"
+    },
+    "writer": {
+        "username": "writer",
+        "full_name": "c",
+        "email": "writer@zino.com",
+        "hashed_password": "$2b$12$keQAorYzGkrYU10ya9OwHuAlgtvueay.dHhqxtMWjYP4daGQXsjGO",
+        "role":"Writer",
+        "disabled": "False"
+    }
+}
