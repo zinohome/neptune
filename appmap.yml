@@ -1,0 +1,7 @@
+name: neptune
+packages:
+- path: core
+- path: auth
+- path: util
+- path: tests
+- path: config
