@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from sqlalchemy import Table
 
 class TableSchema(object):
     def __init__(self, name, type):
-        self.__name = name
-        self.__type = type
-        self.__primarykeys = 'N/A'
-        self.__indexes = 'N/A'
-        self.__columns = 'N/A'
+        self._name = name
+        self._type = type
+        self._primarykeys = 'N/A'
+        self._indexes = 'N/A'
+        self._columns = 'N/A'
 
-    def getname(self):
-        return self.__name
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        self._name = value
 
     def gettype(self):
         return self.__type
@@ -33,6 +39,7 @@ class TableSchema(object):
 
     def setcolumns(self, columns):
         self.__columns = columns
+
 
     def table2json(self):
         return {
