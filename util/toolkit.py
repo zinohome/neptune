@@ -104,7 +104,8 @@ def gen_dburi():
 
 
 if __name__ == '__main__':
-
+    str1 = "{'name': 'productDescription', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': False}"
+    print(to_json(str1))
     '''
     print(uappendlist(['id', 'name', 'phone']))
     print(uappend('id'))

@@ -1958,3 +1958,1775 @@ NoneType: None
 2021-11-09 at 21:30:37 | INFO | Add Custom query ...
 2021-11-09 at 21:30:37 | INFO | Neptune Starting ....
 2021-11-09 at 21:30:37 | INFO | API cache does not exists ....
+2021-11-09 at 21:33:38 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-09 at 21:33:39 | SUCCESS | [测试log] hello, world
+2021-11-09 at 21:33:39 | INFO | [测试log] hello, world
+2021-11-09 at 21:33:39 | DEBUG | [测试log] hello, world
+2021-11-09 at 21:33:39 | WARNING | [测试log] hello, world
+2021-11-09 at 21:33:39 | ERROR | [测试log] hello, world
+2021-11-09 at 21:33:39 | CRITICAL | [测试log] hello, world
+2021-11-09 at 21:33:39 | ERROR | [测试log] hello, world
+NoneType: None
+2021-11-10 at 09:42:00 | INFO | Neptune Start Up ....
+2021-11-10 at 09:42:00 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 09:42:00 | INFO | Add Custom query ...
+2021-11-10 at 09:42:00 | INFO | Neptune Starting ....
+2021-11-10 at 09:42:00 | INFO | API cache does not exists ....
+2021-11-10 at 09:42:21 | DEBUG | Access '/' : run in app_root()
+2021-11-10 at 09:47:52 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 09:53:38 | INFO | Neptune Shutting Down ....
+2021-11-10 at 09:53:38 | INFO | API cache does not exists ....
+2021-11-10 at 09:53:40 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 09:53:40 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 09:53:40 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 09:53:40 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'customerName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'contactLastName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'contactFirstName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'phone', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'addressLine1', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'addressLine2', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'city', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'state', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'postalCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'country', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'salesRepEmployeeNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'creditLimit', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'employeeNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'lastName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'firstName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'extension', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'email', 'type': VARCHAR(length=100), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'officeCode', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'reportsTo', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'jobTitle', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'id', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'item_no', 'type': VARCHAR(length=255), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'officeCode', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'city', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'phone', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'addressLine1', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'addressLine2', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'state', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'country', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'postalCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'territory', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'orderNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'productCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'quantityOrdered', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'priceEach', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'orderLineNumber', 'type': SMALLINT(display_width=6), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'orderNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'orderDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'requiredDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'shippedDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'status', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'comments', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'checkNumber', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'paymentDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'amount', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'productLine', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'textDescription', 'type': VARCHAR(length=4000), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'htmlDescription', 'type': MEDIUMTEXT(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:40 | SUCCESS | {'name': 'image', 'type': MEDIUMBLOB(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'productCode', 'type': VARCHAR(length=15), 'default': "''", 'comment': '产品代码', 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'productName', 'type': VARCHAR(length=70), 'default': None, 'comment': '产品名称', 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'productLine', 'type': VARCHAR(length=50), 'default': None, 'comment': '产品线', 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'productScale', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'productVendor', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'productDescription', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'quantityInStock', 'type': SMALLINT(display_width=6), 'default': None, 'comment': '库存', 'nullable': False, 'autoincrement': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'buyPrice', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': '价格', 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'MSRP', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': '建议零售价', 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 's', 'type': VARCHAR(length=6), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'id', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'type', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'creatorid', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'json', 'type': TEXT(collation='utf8mb4_unicode_ci'), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 09:53:41 | SUCCESS | {'name': 'json_updates', 'type': TEXT(collation='utf8mb4_unicode_ci'), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 09:53:41 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 09:53:41 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 09:53:41 | DEBUG | ****************************************************
+2021-11-10 at 09:53:41 | DEBUG | __class__
+2021-11-10 at 09:53:41 | DEBUG | __class_getitem__
+2021-11-10 at 09:53:41 | DEBUG | __contains__
+2021-11-10 at 09:53:41 | DEBUG | __delattr__
+2021-11-10 at 09:53:41 | DEBUG | __dict__
+2021-11-10 at 09:53:41 | DEBUG | __dir__
+2021-11-10 at 09:53:41 | DEBUG | __doc__
+2021-11-10 at 09:53:41 | DEBUG | __eq__
+2021-11-10 at 09:53:41 | DEBUG | __format__
+2021-11-10 at 09:53:41 | DEBUG | __ge__
+2021-11-10 at 09:53:41 | DEBUG | __getattribute__
+2021-11-10 at 09:53:41 | DEBUG | __getstate__
+2021-11-10 at 09:53:41 | DEBUG | __gt__
+2021-11-10 at 09:53:41 | DEBUG | __hash__
+2021-11-10 at 09:53:41 | DEBUG | __init__
+2021-11-10 at 09:53:41 | DEBUG | __init_subclass__
+2021-11-10 at 09:53:41 | DEBUG | __le__
+2021-11-10 at 09:53:41 | DEBUG | __lt__
+2021-11-10 at 09:53:41 | DEBUG | __module__
+2021-11-10 at 09:53:41 | DEBUG | __ne__
+2021-11-10 at 09:53:41 | DEBUG | __new__
+2021-11-10 at 09:53:41 | DEBUG | __reduce__
+2021-11-10 at 09:53:41 | DEBUG | __reduce_ex__
+2021-11-10 at 09:53:41 | DEBUG | __repr__
+2021-11-10 at 09:53:41 | DEBUG | __setattr__
+2021-11-10 at 09:53:41 | DEBUG | __setstate__
+2021-11-10 at 09:53:41 | DEBUG | __sizeof__
+2021-11-10 at 09:53:41 | DEBUG | __str__
+2021-11-10 at 09:53:41 | DEBUG | __subclasshook__
+2021-11-10 at 09:53:41 | DEBUG | __visit_name__
+2021-11-10 at 09:53:41 | DEBUG | __weakref__
+2021-11-10 at 09:53:41 | DEBUG | _add_table
+2021-11-10 at 09:53:41 | DEBUG | _bind
+2021-11-10 at 09:53:41 | DEBUG | _bind_to
+2021-11-10 at 09:53:41 | DEBUG | _compiler_dispatch
+2021-11-10 at 09:53:41 | DEBUG | _fk_memos
+2021-11-10 at 09:53:41 | DEBUG | _init_items
+2021-11-10 at 09:53:41 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 09:53:41 | DEBUG | _remove_table
+2021-11-10 at 09:53:41 | DEBUG | _schema_item_copy
+2021-11-10 at 09:53:41 | DEBUG | _schemas
+2021-11-10 at 09:53:41 | DEBUG | _sequences
+2021-11-10 at 09:53:41 | DEBUG | _set_parent
+2021-11-10 at 09:53:41 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 09:53:41 | DEBUG | _use_schema_map
+2021-11-10 at 09:53:41 | DEBUG | bind
+2021-11-10 at 09:53:41 | DEBUG | clear
+2021-11-10 at 09:53:41 | DEBUG | create_all
+2021-11-10 at 09:53:41 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 09:53:41 | DEBUG | dispatch
+2021-11-10 at 09:53:41 | DEBUG | drop_all
+2021-11-10 at 09:53:41 | DEBUG | get_children
+2021-11-10 at 09:53:41 | DEBUG | info
+2021-11-10 at 09:53:41 | DEBUG | is_bound
+2021-11-10 at 09:53:41 | DEBUG | naming_convention
+2021-11-10 at 09:53:41 | DEBUG | reflect
+2021-11-10 at 09:53:41 | DEBUG | remove
+2021-11-10 at 09:53:41 | DEBUG | schema
+2021-11-10 at 09:53:41 | DEBUG | sorted_tables
+2021-11-10 at 09:53:41 | DEBUG | tables
+2021-11-10 at 09:53:41 | DEBUG | ===================================================
+2021-11-10 at 09:53:41 | DEBUG | items
+2021-11-10 at 09:53:41 | DEBUG | offices
+2021-11-10 at 09:53:41 | DEBUG | productlines
+2021-11-10 at 09:53:41 | DEBUG | tokens
+2021-11-10 at 09:53:41 | DEBUG | zinopara
+2021-11-10 at 09:53:41 | DEBUG | employees
+2021-11-10 at 09:53:41 | DEBUG | products
+2021-11-10 at 09:53:41 | DEBUG | customers
+2021-11-10 at 09:53:41 | DEBUG | orders
+2021-11-10 at 09:53:41 | DEBUG | payments
+2021-11-10 at 09:53:41 | DEBUG | orderdetails
+2021-11-10 at 09:53:41 | DEBUG | ****************************************************
+2021-11-10 at 09:53:41 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 09:53:41 | INFO | Neptune Start Up ....
+2021-11-10 at 09:53:41 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 09:53:41 | INFO | Add Custom query ...
+2021-11-10 at 09:53:41 | INFO | Neptune Starting ....
+2021-11-10 at 09:53:41 | INFO | API cache does not exists ....
+2021-11-10 at 10:06:30 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:06:30 | INFO | API cache does not exists ....
+2021-11-10 at 10:06:33 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:06:33 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:06:33 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:06:33 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:33 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | SUCCESS | ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2021-11-10 at 10:06:34 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:06:34 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:06:34 | DEBUG | ****************************************************
+2021-11-10 at 10:06:34 | DEBUG | __class__
+2021-11-10 at 10:06:34 | DEBUG | __class_getitem__
+2021-11-10 at 10:06:34 | DEBUG | __contains__
+2021-11-10 at 10:06:34 | DEBUG | __delattr__
+2021-11-10 at 10:06:34 | DEBUG | __dict__
+2021-11-10 at 10:06:34 | DEBUG | __dir__
+2021-11-10 at 10:06:34 | DEBUG | __doc__
+2021-11-10 at 10:06:34 | DEBUG | __eq__
+2021-11-10 at 10:06:34 | DEBUG | __format__
+2021-11-10 at 10:06:34 | DEBUG | __ge__
+2021-11-10 at 10:06:34 | DEBUG | __getattribute__
+2021-11-10 at 10:06:34 | DEBUG | __getstate__
+2021-11-10 at 10:06:34 | DEBUG | __gt__
+2021-11-10 at 10:06:34 | DEBUG | __hash__
+2021-11-10 at 10:06:34 | DEBUG | __init__
+2021-11-10 at 10:06:34 | DEBUG | __init_subclass__
+2021-11-10 at 10:06:34 | DEBUG | __le__
+2021-11-10 at 10:06:34 | DEBUG | __lt__
+2021-11-10 at 10:06:34 | DEBUG | __module__
+2021-11-10 at 10:06:34 | DEBUG | __ne__
+2021-11-10 at 10:06:34 | DEBUG | __new__
+2021-11-10 at 10:06:34 | DEBUG | __reduce__
+2021-11-10 at 10:06:34 | DEBUG | __reduce_ex__
+2021-11-10 at 10:06:34 | DEBUG | __repr__
+2021-11-10 at 10:06:34 | DEBUG | __setattr__
+2021-11-10 at 10:06:34 | DEBUG | __setstate__
+2021-11-10 at 10:06:34 | DEBUG | __sizeof__
+2021-11-10 at 10:06:34 | DEBUG | __str__
+2021-11-10 at 10:06:34 | DEBUG | __subclasshook__
+2021-11-10 at 10:06:34 | DEBUG | __visit_name__
+2021-11-10 at 10:06:34 | DEBUG | __weakref__
+2021-11-10 at 10:06:34 | DEBUG | _add_table
+2021-11-10 at 10:06:34 | DEBUG | _bind
+2021-11-10 at 10:06:34 | DEBUG | _bind_to
+2021-11-10 at 10:06:34 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:06:34 | DEBUG | _fk_memos
+2021-11-10 at 10:06:34 | DEBUG | _init_items
+2021-11-10 at 10:06:34 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:06:34 | DEBUG | _remove_table
+2021-11-10 at 10:06:34 | DEBUG | _schema_item_copy
+2021-11-10 at 10:06:34 | DEBUG | _schemas
+2021-11-10 at 10:06:34 | DEBUG | _sequences
+2021-11-10 at 10:06:34 | DEBUG | _set_parent
+2021-11-10 at 10:06:34 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:06:34 | DEBUG | _use_schema_map
+2021-11-10 at 10:06:34 | DEBUG | bind
+2021-11-10 at 10:06:34 | DEBUG | clear
+2021-11-10 at 10:06:34 | DEBUG | create_all
+2021-11-10 at 10:06:34 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:06:34 | DEBUG | dispatch
+2021-11-10 at 10:06:34 | DEBUG | drop_all
+2021-11-10 at 10:06:34 | DEBUG | get_children
+2021-11-10 at 10:06:34 | DEBUG | info
+2021-11-10 at 10:06:34 | DEBUG | is_bound
+2021-11-10 at 10:06:34 | DEBUG | naming_convention
+2021-11-10 at 10:06:34 | DEBUG | reflect
+2021-11-10 at 10:06:34 | DEBUG | remove
+2021-11-10 at 10:06:34 | DEBUG | schema
+2021-11-10 at 10:06:34 | DEBUG | sorted_tables
+2021-11-10 at 10:06:34 | DEBUG | tables
+2021-11-10 at 10:06:34 | DEBUG | ===================================================
+2021-11-10 at 10:06:34 | DEBUG | items
+2021-11-10 at 10:06:34 | DEBUG | offices
+2021-11-10 at 10:06:34 | DEBUG | productlines
+2021-11-10 at 10:06:34 | DEBUG | tokens
+2021-11-10 at 10:06:34 | DEBUG | zinopara
+2021-11-10 at 10:06:34 | DEBUG | employees
+2021-11-10 at 10:06:34 | DEBUG | products
+2021-11-10 at 10:06:34 | DEBUG | customers
+2021-11-10 at 10:06:34 | DEBUG | orders
+2021-11-10 at 10:06:34 | DEBUG | payments
+2021-11-10 at 10:06:34 | DEBUG | orderdetails
+2021-11-10 at 10:06:34 | DEBUG | ****************************************************
+2021-11-10 at 10:06:34 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:06:35 | INFO | Neptune Start Up ....
+2021-11-10 at 10:06:35 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:06:36 | INFO | Add Custom query ...
+2021-11-10 at 10:06:36 | INFO | Neptune Starting ....
+2021-11-10 at 10:06:36 | INFO | API cache does not exists ....
+2021-11-10 at 10:07:23 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:07:23 | INFO | API cache does not exists ....
+2021-11-10 at 10:07:25 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:07:25 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:07:25 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:07:25 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034914c0>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103491540>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034915c0>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103491600>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103491680>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103491740>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034917c0>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103491840>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034918c0>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103491900>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103491980>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034919c0>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103491a40>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103493b40>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103493c00>
+2021-11-10 at 10:07:25 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103493cc0>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103493d80>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103493e40>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103493f40>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103497040>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103497100>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103499300>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x103499380>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x10349c540>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x10349c600>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x10349c6c0>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x10349c780>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x10349c840>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x10349c940>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x10349ca00>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x10349cac0>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x10349cb80>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a0380>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a0440>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a0500>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a05c0>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a0680>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a4340>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a4380>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a4400>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a4480>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a4580>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a4640>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a4740>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a6f80>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a9080>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a90c0>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034a91c0>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ab4c0>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ab580>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ab5c0>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ab640>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ade80>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034adf40>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ae040>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ae100>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ae1c0>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ae240>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ae300>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ae400>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034ae4c0>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034b4640>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034b6680>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034b6740>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034b6800>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034b6880>
+2021-11-10 at 10:07:26 | SUCCESS | <method-wrapper '__str__' of dict object at 0x1034b6940>
+2021-11-10 at 10:07:26 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:07:26 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:07:26 | DEBUG | ****************************************************
+2021-11-10 at 10:07:26 | DEBUG | __class__
+2021-11-10 at 10:07:26 | DEBUG | __class_getitem__
+2021-11-10 at 10:07:26 | DEBUG | __contains__
+2021-11-10 at 10:07:26 | DEBUG | __delattr__
+2021-11-10 at 10:07:26 | DEBUG | __dict__
+2021-11-10 at 10:07:26 | DEBUG | __dir__
+2021-11-10 at 10:07:26 | DEBUG | __doc__
+2021-11-10 at 10:07:26 | DEBUG | __eq__
+2021-11-10 at 10:07:26 | DEBUG | __format__
+2021-11-10 at 10:07:26 | DEBUG | __ge__
+2021-11-10 at 10:07:26 | DEBUG | __getattribute__
+2021-11-10 at 10:07:26 | DEBUG | __getstate__
+2021-11-10 at 10:07:26 | DEBUG | __gt__
+2021-11-10 at 10:07:26 | DEBUG | __hash__
+2021-11-10 at 10:07:26 | DEBUG | __init__
+2021-11-10 at 10:07:26 | DEBUG | __init_subclass__
+2021-11-10 at 10:07:26 | DEBUG | __le__
+2021-11-10 at 10:07:26 | DEBUG | __lt__
+2021-11-10 at 10:07:26 | DEBUG | __module__
+2021-11-10 at 10:07:26 | DEBUG | __ne__
+2021-11-10 at 10:07:26 | DEBUG | __new__
+2021-11-10 at 10:07:26 | DEBUG | __reduce__
+2021-11-10 at 10:07:26 | DEBUG | __reduce_ex__
+2021-11-10 at 10:07:26 | DEBUG | __repr__
+2021-11-10 at 10:07:26 | DEBUG | __setattr__
+2021-11-10 at 10:07:26 | DEBUG | __setstate__
+2021-11-10 at 10:07:26 | DEBUG | __sizeof__
+2021-11-10 at 10:07:26 | DEBUG | __str__
+2021-11-10 at 10:07:26 | DEBUG | __subclasshook__
+2021-11-10 at 10:07:26 | DEBUG | __visit_name__
+2021-11-10 at 10:07:26 | DEBUG | __weakref__
+2021-11-10 at 10:07:26 | DEBUG | _add_table
+2021-11-10 at 10:07:26 | DEBUG | _bind
+2021-11-10 at 10:07:26 | DEBUG | _bind_to
+2021-11-10 at 10:07:26 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:07:26 | DEBUG | _fk_memos
+2021-11-10 at 10:07:26 | DEBUG | _init_items
+2021-11-10 at 10:07:26 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:07:26 | DEBUG | _remove_table
+2021-11-10 at 10:07:26 | DEBUG | _schema_item_copy
+2021-11-10 at 10:07:26 | DEBUG | _schemas
+2021-11-10 at 10:07:26 | DEBUG | _sequences
+2021-11-10 at 10:07:26 | DEBUG | _set_parent
+2021-11-10 at 10:07:26 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:07:26 | DEBUG | _use_schema_map
+2021-11-10 at 10:07:26 | DEBUG | bind
+2021-11-10 at 10:07:26 | DEBUG | clear
+2021-11-10 at 10:07:26 | DEBUG | create_all
+2021-11-10 at 10:07:26 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:07:26 | DEBUG | dispatch
+2021-11-10 at 10:07:26 | DEBUG | drop_all
+2021-11-10 at 10:07:26 | DEBUG | get_children
+2021-11-10 at 10:07:26 | DEBUG | info
+2021-11-10 at 10:07:26 | DEBUG | is_bound
+2021-11-10 at 10:07:26 | DEBUG | naming_convention
+2021-11-10 at 10:07:26 | DEBUG | reflect
+2021-11-10 at 10:07:26 | DEBUG | remove
+2021-11-10 at 10:07:26 | DEBUG | schema
+2021-11-10 at 10:07:26 | DEBUG | sorted_tables
+2021-11-10 at 10:07:26 | DEBUG | tables
+2021-11-10 at 10:07:26 | DEBUG | ===================================================
+2021-11-10 at 10:07:26 | DEBUG | items
+2021-11-10 at 10:07:26 | DEBUG | offices
+2021-11-10 at 10:07:26 | DEBUG | productlines
+2021-11-10 at 10:07:26 | DEBUG | tokens
+2021-11-10 at 10:07:26 | DEBUG | zinopara
+2021-11-10 at 10:07:26 | DEBUG | employees
+2021-11-10 at 10:07:26 | DEBUG | products
+2021-11-10 at 10:07:26 | DEBUG | customers
+2021-11-10 at 10:07:26 | DEBUG | orders
+2021-11-10 at 10:07:26 | DEBUG | payments
+2021-11-10 at 10:07:26 | DEBUG | orderdetails
+2021-11-10 at 10:07:26 | DEBUG | ****************************************************
+2021-11-10 at 10:07:26 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:07:28 | INFO | Neptune Start Up ....
+2021-11-10 at 10:07:28 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:07:28 | INFO | Add Custom query ...
+2021-11-10 at 10:07:28 | INFO | Neptune Starting ....
+2021-11-10 at 10:07:28 | INFO | API cache does not exists ....
+2021-11-10 at 10:07:34 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:07:34 | INFO | API cache does not exists ....
+2021-11-10 at 10:07:37 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:07:37 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:07:37 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:07:37 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'customerName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'contactLastName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'contactFirstName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'phone', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'addressLine1', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'addressLine2', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'city', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'state', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'postalCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'country', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'salesRepEmployeeNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'creditLimit', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'employeeNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'lastName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'firstName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'extension', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'email', 'type': VARCHAR(length=100), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'officeCode', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'reportsTo', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'jobTitle', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'id', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': True}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'item_no', 'type': VARCHAR(length=255), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'officeCode', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'city', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'phone', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'addressLine1', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'addressLine2', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'state', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'country', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'postalCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'territory', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'orderNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'productCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'quantityOrdered', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'priceEach', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'orderLineNumber', 'type': SMALLINT(display_width=6), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'orderNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'orderDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'requiredDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'shippedDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'status', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'comments', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:37 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'checkNumber', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'paymentDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'amount', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'productLine', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'textDescription', 'type': VARCHAR(length=4000), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'htmlDescription', 'type': MEDIUMTEXT(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'image', 'type': MEDIUMBLOB(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'productCode', 'type': VARCHAR(length=15), 'default': "''", 'comment': '产品代码', 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'productName', 'type': VARCHAR(length=70), 'default': None, 'comment': '产品名称', 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'productLine', 'type': VARCHAR(length=50), 'default': None, 'comment': '产品线', 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'productScale', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'productVendor', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'productDescription', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'quantityInStock', 'type': SMALLINT(display_width=6), 'default': None, 'comment': '库存', 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'buyPrice', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': '价格', 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'MSRP', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': '建议零售价', 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 's', 'type': VARCHAR(length=6), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'id', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'type', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'creatorid', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'json', 'type': TEXT(collation='utf8mb4_unicode_ci'), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:07:38 | SUCCESS | {'name': 'json_updates', 'type': TEXT(collation='utf8mb4_unicode_ci'), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:07:38 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:07:38 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:07:38 | DEBUG | ****************************************************
+2021-11-10 at 10:07:38 | DEBUG | __class__
+2021-11-10 at 10:07:38 | DEBUG | __class_getitem__
+2021-11-10 at 10:07:38 | DEBUG | __contains__
+2021-11-10 at 10:07:38 | DEBUG | __delattr__
+2021-11-10 at 10:07:38 | DEBUG | __dict__
+2021-11-10 at 10:07:38 | DEBUG | __dir__
+2021-11-10 at 10:07:38 | DEBUG | __doc__
+2021-11-10 at 10:07:38 | DEBUG | __eq__
+2021-11-10 at 10:07:38 | DEBUG | __format__
+2021-11-10 at 10:07:38 | DEBUG | __ge__
+2021-11-10 at 10:07:38 | DEBUG | __getattribute__
+2021-11-10 at 10:07:38 | DEBUG | __getstate__
+2021-11-10 at 10:07:38 | DEBUG | __gt__
+2021-11-10 at 10:07:38 | DEBUG | __hash__
+2021-11-10 at 10:07:38 | DEBUG | __init__
+2021-11-10 at 10:07:38 | DEBUG | __init_subclass__
+2021-11-10 at 10:07:38 | DEBUG | __le__
+2021-11-10 at 10:07:38 | DEBUG | __lt__
+2021-11-10 at 10:07:38 | DEBUG | __module__
+2021-11-10 at 10:07:38 | DEBUG | __ne__
+2021-11-10 at 10:07:38 | DEBUG | __new__
+2021-11-10 at 10:07:38 | DEBUG | __reduce__
+2021-11-10 at 10:07:38 | DEBUG | __reduce_ex__
+2021-11-10 at 10:07:38 | DEBUG | __repr__
+2021-11-10 at 10:07:38 | DEBUG | __setattr__
+2021-11-10 at 10:07:38 | DEBUG | __setstate__
+2021-11-10 at 10:07:38 | DEBUG | __sizeof__
+2021-11-10 at 10:07:38 | DEBUG | __str__
+2021-11-10 at 10:07:38 | DEBUG | __subclasshook__
+2021-11-10 at 10:07:38 | DEBUG | __visit_name__
+2021-11-10 at 10:07:38 | DEBUG | __weakref__
+2021-11-10 at 10:07:38 | DEBUG | _add_table
+2021-11-10 at 10:07:38 | DEBUG | _bind
+2021-11-10 at 10:07:38 | DEBUG | _bind_to
+2021-11-10 at 10:07:38 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:07:38 | DEBUG | _fk_memos
+2021-11-10 at 10:07:38 | DEBUG | _init_items
+2021-11-10 at 10:07:38 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:07:38 | DEBUG | _remove_table
+2021-11-10 at 10:07:38 | DEBUG | _schema_item_copy
+2021-11-10 at 10:07:38 | DEBUG | _schemas
+2021-11-10 at 10:07:38 | DEBUG | _sequences
+2021-11-10 at 10:07:38 | DEBUG | _set_parent
+2021-11-10 at 10:07:38 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:07:38 | DEBUG | _use_schema_map
+2021-11-10 at 10:07:38 | DEBUG | bind
+2021-11-10 at 10:07:38 | DEBUG | clear
+2021-11-10 at 10:07:38 | DEBUG | create_all
+2021-11-10 at 10:07:38 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:07:38 | DEBUG | dispatch
+2021-11-10 at 10:07:38 | DEBUG | drop_all
+2021-11-10 at 10:07:38 | DEBUG | get_children
+2021-11-10 at 10:07:38 | DEBUG | info
+2021-11-10 at 10:07:38 | DEBUG | is_bound
+2021-11-10 at 10:07:38 | DEBUG | naming_convention
+2021-11-10 at 10:07:38 | DEBUG | reflect
+2021-11-10 at 10:07:38 | DEBUG | remove
+2021-11-10 at 10:07:38 | DEBUG | schema
+2021-11-10 at 10:07:38 | DEBUG | sorted_tables
+2021-11-10 at 10:07:38 | DEBUG | tables
+2021-11-10 at 10:07:38 | DEBUG | ===================================================
+2021-11-10 at 10:07:38 | DEBUG | items
+2021-11-10 at 10:07:38 | DEBUG | offices
+2021-11-10 at 10:07:38 | DEBUG | productlines
+2021-11-10 at 10:07:38 | DEBUG | tokens
+2021-11-10 at 10:07:38 | DEBUG | zinopara
+2021-11-10 at 10:07:38 | DEBUG | employees
+2021-11-10 at 10:07:38 | DEBUG | products
+2021-11-10 at 10:07:38 | DEBUG | customers
+2021-11-10 at 10:07:38 | DEBUG | orders
+2021-11-10 at 10:07:38 | DEBUG | payments
+2021-11-10 at 10:07:38 | DEBUG | orderdetails
+2021-11-10 at 10:07:38 | DEBUG | ****************************************************
+2021-11-10 at 10:07:38 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:07:39 | INFO | Neptune Start Up ....
+2021-11-10 at 10:07:39 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:07:39 | INFO | Add Custom query ...
+2021-11-10 at 10:07:39 | INFO | Neptune Starting ....
+2021-11-10 at 10:07:39 | INFO | API cache does not exists ....
+2021-11-10 at 10:08:35 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:08:35 | INFO | API cache does not exists ....
+2021-11-10 at 10:08:38 | INFO | Neptune Start Up ....
+2021-11-10 at 10:08:38 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:08:38 | INFO | Add Custom query ...
+2021-11-10 at 10:08:38 | INFO | Neptune Starting ....
+2021-11-10 at 10:08:38 | INFO | API cache does not exists ....
+2021-11-10 at 10:10:41 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:10:41 | INFO | API cache does not exists ....
+2021-11-10 at 10:10:43 | INFO | Neptune Start Up ....
+2021-11-10 at 10:10:43 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:10:43 | INFO | Add Custom query ...
+2021-11-10 at 10:10:43 | INFO | Neptune Starting ....
+2021-11-10 at 10:10:43 | INFO | API cache does not exists ....
+2021-11-10 at 10:19:20 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:19:20 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:19:20 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:19:20 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'customerName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'contactLastName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'contactFirstName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'phone', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'addressLine1', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'addressLine2', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'city', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'state', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'postalCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'country', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'salesRepEmployeeNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'creditLimit', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'employeeNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'lastName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'firstName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'extension', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'email', 'type': VARCHAR(length=100), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'officeCode', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'reportsTo', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'jobTitle', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'id', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'item_no', 'type': VARCHAR(length=255), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'officeCode', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'city', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'phone', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'addressLine1', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'addressLine2', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'state', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'country', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'postalCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'territory', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'orderNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'productCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'quantityOrdered', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'priceEach', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'orderLineNumber', 'type': SMALLINT(display_width=6), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'orderNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'orderDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'requiredDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'shippedDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'status', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'comments', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'checkNumber', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'paymentDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'amount', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'productLine', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'textDescription', 'type': VARCHAR(length=4000), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'htmlDescription', 'type': MEDIUMTEXT(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'image', 'type': MEDIUMBLOB(), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'productCode', 'type': VARCHAR(length=15), 'default': "''", 'comment': '产品代码', 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'productName', 'type': VARCHAR(length=70), 'default': None, 'comment': '产品名称', 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'productLine', 'type': VARCHAR(length=50), 'default': None, 'comment': '产品线', 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'productScale', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'productVendor', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'productDescription', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'quantityInStock', 'type': SMALLINT(display_width=6), 'default': None, 'comment': '库存', 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'buyPrice', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': '价格', 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'MSRP', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': '建议零售价', 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 's', 'type': VARCHAR(length=6), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'id', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'type', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'creatorid', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'json', 'type': TEXT(collation='utf8mb4_unicode_ci'), 'default': None, 'comment': None, 'nullable': False}
+2021-11-10 at 10:19:20 | SUCCESS | {'name': 'json_updates', 'type': TEXT(collation='utf8mb4_unicode_ci'), 'default': None, 'comment': None, 'nullable': True}
+2021-11-10 at 10:19:20 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:19:20 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:19:20 | DEBUG | ****************************************************
+2021-11-10 at 10:19:20 | DEBUG | __class__
+2021-11-10 at 10:19:20 | DEBUG | __class_getitem__
+2021-11-10 at 10:19:20 | DEBUG | __contains__
+2021-11-10 at 10:19:20 | DEBUG | __delattr__
+2021-11-10 at 10:19:20 | DEBUG | __dict__
+2021-11-10 at 10:19:20 | DEBUG | __dir__
+2021-11-10 at 10:19:20 | DEBUG | __doc__
+2021-11-10 at 10:19:20 | DEBUG | __eq__
+2021-11-10 at 10:19:20 | DEBUG | __format__
+2021-11-10 at 10:19:20 | DEBUG | __ge__
+2021-11-10 at 10:19:20 | DEBUG | __getattribute__
+2021-11-10 at 10:19:20 | DEBUG | __getstate__
+2021-11-10 at 10:19:20 | DEBUG | __gt__
+2021-11-10 at 10:19:20 | DEBUG | __hash__
+2021-11-10 at 10:19:20 | DEBUG | __init__
+2021-11-10 at 10:19:20 | DEBUG | __init_subclass__
+2021-11-10 at 10:19:20 | DEBUG | __le__
+2021-11-10 at 10:19:20 | DEBUG | __lt__
+2021-11-10 at 10:19:20 | DEBUG | __module__
+2021-11-10 at 10:19:20 | DEBUG | __ne__
+2021-11-10 at 10:19:20 | DEBUG | __new__
+2021-11-10 at 10:19:20 | DEBUG | __reduce__
+2021-11-10 at 10:19:20 | DEBUG | __reduce_ex__
+2021-11-10 at 10:19:20 | DEBUG | __repr__
+2021-11-10 at 10:19:20 | DEBUG | __setattr__
+2021-11-10 at 10:19:20 | DEBUG | __setstate__
+2021-11-10 at 10:19:20 | DEBUG | __sizeof__
+2021-11-10 at 10:19:20 | DEBUG | __str__
+2021-11-10 at 10:19:20 | DEBUG | __subclasshook__
+2021-11-10 at 10:19:20 | DEBUG | __visit_name__
+2021-11-10 at 10:19:20 | DEBUG | __weakref__
+2021-11-10 at 10:19:20 | DEBUG | _add_table
+2021-11-10 at 10:19:20 | DEBUG | _bind
+2021-11-10 at 10:19:20 | DEBUG | _bind_to
+2021-11-10 at 10:19:20 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:19:20 | DEBUG | _fk_memos
+2021-11-10 at 10:19:20 | DEBUG | _init_items
+2021-11-10 at 10:19:20 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:19:20 | DEBUG | _remove_table
+2021-11-10 at 10:19:20 | DEBUG | _schema_item_copy
+2021-11-10 at 10:19:20 | DEBUG | _schemas
+2021-11-10 at 10:19:20 | DEBUG | _sequences
+2021-11-10 at 10:19:20 | DEBUG | _set_parent
+2021-11-10 at 10:19:20 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:19:20 | DEBUG | _use_schema_map
+2021-11-10 at 10:19:20 | DEBUG | bind
+2021-11-10 at 10:19:20 | DEBUG | clear
+2021-11-10 at 10:19:20 | DEBUG | create_all
+2021-11-10 at 10:19:20 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:19:20 | DEBUG | dispatch
+2021-11-10 at 10:19:20 | DEBUG | drop_all
+2021-11-10 at 10:19:20 | DEBUG | get_children
+2021-11-10 at 10:19:20 | DEBUG | info
+2021-11-10 at 10:19:20 | DEBUG | is_bound
+2021-11-10 at 10:19:20 | DEBUG | naming_convention
+2021-11-10 at 10:19:20 | DEBUG | reflect
+2021-11-10 at 10:19:20 | DEBUG | remove
+2021-11-10 at 10:19:20 | DEBUG | schema
+2021-11-10 at 10:19:20 | DEBUG | sorted_tables
+2021-11-10 at 10:19:20 | DEBUG | tables
+2021-11-10 at 10:19:20 | DEBUG | ===================================================
+2021-11-10 at 10:19:20 | DEBUG | items
+2021-11-10 at 10:19:20 | DEBUG | offices
+2021-11-10 at 10:19:20 | DEBUG | productlines
+2021-11-10 at 10:19:20 | DEBUG | tokens
+2021-11-10 at 10:19:20 | DEBUG | zinopara
+2021-11-10 at 10:19:20 | DEBUG | employees
+2021-11-10 at 10:19:20 | DEBUG | products
+2021-11-10 at 10:19:20 | DEBUG | customers
+2021-11-10 at 10:19:20 | DEBUG | orders
+2021-11-10 at 10:19:20 | DEBUG | payments
+2021-11-10 at 10:19:20 | DEBUG | orderdetails
+2021-11-10 at 10:19:20 | DEBUG | ****************************************************
+2021-11-10 at 10:19:20 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:19:46 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:19:46 | INFO | API cache does not exists ....
+2021-11-10 at 10:19:50 | INFO | Neptune Start Up ....
+2021-11-10 at 10:19:50 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:19:50 | INFO | Add Custom query ...
+2021-11-10 at 10:19:50 | INFO | Neptune Starting ....
+2021-11-10 at 10:19:50 | INFO | API cache does not exists ....
+2021-11-10 at 10:19:55 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:19:55 | INFO | API cache does not exists ....
+2021-11-10 at 10:19:58 | INFO | Neptune Start Up ....
+2021-11-10 at 10:19:58 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:19:58 | INFO | Add Custom query ...
+2021-11-10 at 10:19:58 | INFO | Neptune Starting ....
+2021-11-10 at 10:19:58 | INFO | API cache does not exists ....
+2021-11-10 at 10:21:00 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:21:00 | INFO | API cache does not exists ....
+2021-11-10 at 10:21:05 | INFO | Neptune Start Up ....
+2021-11-10 at 10:21:05 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:21:05 | INFO | Add Custom query ...
+2021-11-10 at 10:21:06 | INFO | Neptune Starting ....
+2021-11-10 at 10:21:06 | INFO | API cache does not exists ....
+2021-11-10 at 10:21:06 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:21:06 | INFO | API cache does not exists ....
+2021-11-10 at 10:21:09 | INFO | Neptune Start Up ....
+2021-11-10 at 10:21:09 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:21:09 | INFO | Add Custom query ...
+2021-11-10 at 10:21:09 | INFO | Neptune Starting ....
+2021-11-10 at 10:21:10 | INFO | API cache does not exists ....
+2021-11-10 at 10:21:38 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:21:38 | INFO | API cache does not exists ....
+2021-11-10 at 10:21:39 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:21:39 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:21:39 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:21:39 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:21:39 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:21:39 | ERROR | Exception get metadata at genschema() 'computed' 
+2021-11-10 at 10:21:39 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:21:39 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:21:39 | DEBUG | ****************************************************
+2021-11-10 at 10:21:39 | DEBUG | __class__
+2021-11-10 at 10:21:39 | DEBUG | __class_getitem__
+2021-11-10 at 10:21:39 | DEBUG | __contains__
+2021-11-10 at 10:21:39 | DEBUG | __delattr__
+2021-11-10 at 10:21:39 | DEBUG | __dict__
+2021-11-10 at 10:21:39 | DEBUG | __dir__
+2021-11-10 at 10:21:39 | DEBUG | __doc__
+2021-11-10 at 10:21:39 | DEBUG | __eq__
+2021-11-10 at 10:21:39 | DEBUG | __format__
+2021-11-10 at 10:21:39 | DEBUG | __ge__
+2021-11-10 at 10:21:39 | DEBUG | __getattribute__
+2021-11-10 at 10:21:39 | DEBUG | __getstate__
+2021-11-10 at 10:21:39 | DEBUG | __gt__
+2021-11-10 at 10:21:39 | DEBUG | __hash__
+2021-11-10 at 10:21:39 | DEBUG | __init__
+2021-11-10 at 10:21:39 | DEBUG | __init_subclass__
+2021-11-10 at 10:21:39 | DEBUG | __le__
+2021-11-10 at 10:21:39 | DEBUG | __lt__
+2021-11-10 at 10:21:39 | DEBUG | __module__
+2021-11-10 at 10:21:39 | DEBUG | __ne__
+2021-11-10 at 10:21:39 | DEBUG | __new__
+2021-11-10 at 10:21:39 | DEBUG | __reduce__
+2021-11-10 at 10:21:39 | DEBUG | __reduce_ex__
+2021-11-10 at 10:21:39 | DEBUG | __repr__
+2021-11-10 at 10:21:39 | DEBUG | __setattr__
+2021-11-10 at 10:21:39 | DEBUG | __setstate__
+2021-11-10 at 10:21:39 | DEBUG | __sizeof__
+2021-11-10 at 10:21:39 | DEBUG | __str__
+2021-11-10 at 10:21:39 | DEBUG | __subclasshook__
+2021-11-10 at 10:21:39 | DEBUG | __visit_name__
+2021-11-10 at 10:21:39 | DEBUG | __weakref__
+2021-11-10 at 10:21:39 | DEBUG | _add_table
+2021-11-10 at 10:21:39 | DEBUG | _bind
+2021-11-10 at 10:21:39 | DEBUG | _bind_to
+2021-11-10 at 10:21:39 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:21:39 | DEBUG | _fk_memos
+2021-11-10 at 10:21:39 | DEBUG | _init_items
+2021-11-10 at 10:21:39 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:21:39 | DEBUG | _remove_table
+2021-11-10 at 10:21:39 | DEBUG | _schema_item_copy
+2021-11-10 at 10:21:39 | DEBUG | _schemas
+2021-11-10 at 10:21:39 | DEBUG | _sequences
+2021-11-10 at 10:21:39 | DEBUG | _set_parent
+2021-11-10 at 10:21:39 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:21:39 | DEBUG | _use_schema_map
+2021-11-10 at 10:21:39 | DEBUG | bind
+2021-11-10 at 10:21:39 | DEBUG | clear
+2021-11-10 at 10:21:39 | DEBUG | create_all
+2021-11-10 at 10:21:39 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:21:39 | DEBUG | dispatch
+2021-11-10 at 10:21:39 | DEBUG | drop_all
+2021-11-10 at 10:21:39 | DEBUG | get_children
+2021-11-10 at 10:21:39 | DEBUG | info
+2021-11-10 at 10:21:39 | DEBUG | is_bound
+2021-11-10 at 10:21:39 | DEBUG | naming_convention
+2021-11-10 at 10:21:39 | DEBUG | reflect
+2021-11-10 at 10:21:39 | DEBUG | remove
+2021-11-10 at 10:21:39 | DEBUG | schema
+2021-11-10 at 10:21:39 | DEBUG | sorted_tables
+2021-11-10 at 10:21:39 | DEBUG | tables
+2021-11-10 at 10:21:39 | DEBUG | ===================================================
+2021-11-10 at 10:21:39 | DEBUG | items
+2021-11-10 at 10:21:39 | DEBUG | offices
+2021-11-10 at 10:21:39 | DEBUG | productlines
+2021-11-10 at 10:21:39 | DEBUG | tokens
+2021-11-10 at 10:21:39 | DEBUG | zinopara
+2021-11-10 at 10:21:39 | DEBUG | employees
+2021-11-10 at 10:21:39 | DEBUG | products
+2021-11-10 at 10:21:39 | DEBUG | customers
+2021-11-10 at 10:21:39 | DEBUG | orders
+2021-11-10 at 10:21:39 | DEBUG | payments
+2021-11-10 at 10:21:39 | DEBUG | orderdetails
+2021-11-10 at 10:21:39 | DEBUG | ****************************************************
+2021-11-10 at 10:21:39 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:21:40 | INFO | Neptune Start Up ....
+2021-11-10 at 10:21:40 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:21:41 | INFO | Add Custom query ...
+2021-11-10 at 10:21:41 | INFO | Neptune Starting ....
+2021-11-10 at 10:21:41 | INFO | API cache does not exists ....
+2021-11-10 at 10:22:45 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:22:45 | INFO | API cache does not exists ....
+2021-11-10 at 10:22:46 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:22:46 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:22:46 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:22:46 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:22:47 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:22:47 | SUCCESS | INTEGER
+2021-11-10 at 10:22:47 | ERROR | Exception get metadata at genschema() 'computed' 
+2021-11-10 at 10:22:47 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:22:47 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:22:47 | DEBUG | ****************************************************
+2021-11-10 at 10:22:47 | DEBUG | __class__
+2021-11-10 at 10:22:47 | DEBUG | __class_getitem__
+2021-11-10 at 10:22:47 | DEBUG | __contains__
+2021-11-10 at 10:22:47 | DEBUG | __delattr__
+2021-11-10 at 10:22:47 | DEBUG | __dict__
+2021-11-10 at 10:22:47 | DEBUG | __dir__
+2021-11-10 at 10:22:47 | DEBUG | __doc__
+2021-11-10 at 10:22:47 | DEBUG | __eq__
+2021-11-10 at 10:22:47 | DEBUG | __format__
+2021-11-10 at 10:22:47 | DEBUG | __ge__
+2021-11-10 at 10:22:47 | DEBUG | __getattribute__
+2021-11-10 at 10:22:47 | DEBUG | __getstate__
+2021-11-10 at 10:22:47 | DEBUG | __gt__
+2021-11-10 at 10:22:47 | DEBUG | __hash__
+2021-11-10 at 10:22:47 | DEBUG | __init__
+2021-11-10 at 10:22:47 | DEBUG | __init_subclass__
+2021-11-10 at 10:22:47 | DEBUG | __le__
+2021-11-10 at 10:22:47 | DEBUG | __lt__
+2021-11-10 at 10:22:47 | DEBUG | __module__
+2021-11-10 at 10:22:47 | DEBUG | __ne__
+2021-11-10 at 10:22:47 | DEBUG | __new__
+2021-11-10 at 10:22:47 | DEBUG | __reduce__
+2021-11-10 at 10:22:47 | DEBUG | __reduce_ex__
+2021-11-10 at 10:22:47 | DEBUG | __repr__
+2021-11-10 at 10:22:47 | DEBUG | __setattr__
+2021-11-10 at 10:22:47 | DEBUG | __setstate__
+2021-11-10 at 10:22:47 | DEBUG | __sizeof__
+2021-11-10 at 10:22:47 | DEBUG | __str__
+2021-11-10 at 10:22:47 | DEBUG | __subclasshook__
+2021-11-10 at 10:22:47 | DEBUG | __visit_name__
+2021-11-10 at 10:22:47 | DEBUG | __weakref__
+2021-11-10 at 10:22:47 | DEBUG | _add_table
+2021-11-10 at 10:22:47 | DEBUG | _bind
+2021-11-10 at 10:22:47 | DEBUG | _bind_to
+2021-11-10 at 10:22:47 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:22:47 | DEBUG | _fk_memos
+2021-11-10 at 10:22:47 | DEBUG | _init_items
+2021-11-10 at 10:22:47 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:22:47 | DEBUG | _remove_table
+2021-11-10 at 10:22:47 | DEBUG | _schema_item_copy
+2021-11-10 at 10:22:47 | DEBUG | _schemas
+2021-11-10 at 10:22:47 | DEBUG | _sequences
+2021-11-10 at 10:22:47 | DEBUG | _set_parent
+2021-11-10 at 10:22:47 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:22:47 | DEBUG | _use_schema_map
+2021-11-10 at 10:22:47 | DEBUG | bind
+2021-11-10 at 10:22:47 | DEBUG | clear
+2021-11-10 at 10:22:47 | DEBUG | create_all
+2021-11-10 at 10:22:47 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:22:47 | DEBUG | dispatch
+2021-11-10 at 10:22:47 | DEBUG | drop_all
+2021-11-10 at 10:22:47 | DEBUG | get_children
+2021-11-10 at 10:22:47 | DEBUG | info
+2021-11-10 at 10:22:47 | DEBUG | is_bound
+2021-11-10 at 10:22:47 | DEBUG | naming_convention
+2021-11-10 at 10:22:47 | DEBUG | reflect
+2021-11-10 at 10:22:47 | DEBUG | remove
+2021-11-10 at 10:22:47 | DEBUG | schema
+2021-11-10 at 10:22:47 | DEBUG | sorted_tables
+2021-11-10 at 10:22:47 | DEBUG | tables
+2021-11-10 at 10:22:47 | DEBUG | ===================================================
+2021-11-10 at 10:22:47 | DEBUG | items
+2021-11-10 at 10:22:47 | DEBUG | offices
+2021-11-10 at 10:22:47 | DEBUG | productlines
+2021-11-10 at 10:22:47 | DEBUG | tokens
+2021-11-10 at 10:22:47 | DEBUG | zinopara
+2021-11-10 at 10:22:47 | DEBUG | employees
+2021-11-10 at 10:22:47 | DEBUG | products
+2021-11-10 at 10:22:47 | DEBUG | customers
+2021-11-10 at 10:22:47 | DEBUG | orders
+2021-11-10 at 10:22:47 | DEBUG | payments
+2021-11-10 at 10:22:47 | DEBUG | orderdetails
+2021-11-10 at 10:22:47 | DEBUG | ****************************************************
+2021-11-10 at 10:22:47 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:22:49 | INFO | Neptune Start Up ....
+2021-11-10 at 10:22:49 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:22:49 | INFO | Add Custom query ...
+2021-11-10 at 10:22:49 | INFO | Neptune Starting ....
+2021-11-10 at 10:22:49 | INFO | API cache does not exists ....
+2021-11-10 at 10:23:04 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:23:04 | INFO | API cache does not exists ....
+2021-11-10 at 10:23:05 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:23:05 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:23:05 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:23:05 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:23:05 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:23:05 | SUCCESS | INTEGER
+2021-11-10 at 10:23:05 | ERROR | Exception get metadata at genschema() 'computed' 
+2021-11-10 at 10:23:05 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:23:05 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:23:05 | DEBUG | ****************************************************
+2021-11-10 at 10:23:05 | DEBUG | __class__
+2021-11-10 at 10:23:05 | DEBUG | __class_getitem__
+2021-11-10 at 10:23:05 | DEBUG | __contains__
+2021-11-10 at 10:23:05 | DEBUG | __delattr__
+2021-11-10 at 10:23:05 | DEBUG | __dict__
+2021-11-10 at 10:23:05 | DEBUG | __dir__
+2021-11-10 at 10:23:05 | DEBUG | __doc__
+2021-11-10 at 10:23:05 | DEBUG | __eq__
+2021-11-10 at 10:23:05 | DEBUG | __format__
+2021-11-10 at 10:23:05 | DEBUG | __ge__
+2021-11-10 at 10:23:05 | DEBUG | __getattribute__
+2021-11-10 at 10:23:05 | DEBUG | __getstate__
+2021-11-10 at 10:23:05 | DEBUG | __gt__
+2021-11-10 at 10:23:05 | DEBUG | __hash__
+2021-11-10 at 10:23:05 | DEBUG | __init__
+2021-11-10 at 10:23:05 | DEBUG | __init_subclass__
+2021-11-10 at 10:23:05 | DEBUG | __le__
+2021-11-10 at 10:23:05 | DEBUG | __lt__
+2021-11-10 at 10:23:05 | DEBUG | __module__
+2021-11-10 at 10:23:05 | DEBUG | __ne__
+2021-11-10 at 10:23:05 | DEBUG | __new__
+2021-11-10 at 10:23:05 | DEBUG | __reduce__
+2021-11-10 at 10:23:05 | DEBUG | __reduce_ex__
+2021-11-10 at 10:23:05 | DEBUG | __repr__
+2021-11-10 at 10:23:05 | DEBUG | __setattr__
+2021-11-10 at 10:23:05 | DEBUG | __setstate__
+2021-11-10 at 10:23:05 | DEBUG | __sizeof__
+2021-11-10 at 10:23:05 | DEBUG | __str__
+2021-11-10 at 10:23:05 | DEBUG | __subclasshook__
+2021-11-10 at 10:23:05 | DEBUG | __visit_name__
+2021-11-10 at 10:23:05 | DEBUG | __weakref__
+2021-11-10 at 10:23:05 | DEBUG | _add_table
+2021-11-10 at 10:23:05 | DEBUG | _bind
+2021-11-10 at 10:23:05 | DEBUG | _bind_to
+2021-11-10 at 10:23:05 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:23:05 | DEBUG | _fk_memos
+2021-11-10 at 10:23:05 | DEBUG | _init_items
+2021-11-10 at 10:23:05 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:23:05 | DEBUG | _remove_table
+2021-11-10 at 10:23:05 | DEBUG | _schema_item_copy
+2021-11-10 at 10:23:05 | DEBUG | _schemas
+2021-11-10 at 10:23:05 | DEBUG | _sequences
+2021-11-10 at 10:23:05 | DEBUG | _set_parent
+2021-11-10 at 10:23:05 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:23:05 | DEBUG | _use_schema_map
+2021-11-10 at 10:23:05 | DEBUG | bind
+2021-11-10 at 10:23:05 | DEBUG | clear
+2021-11-10 at 10:23:05 | DEBUG | create_all
+2021-11-10 at 10:23:05 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:23:05 | DEBUG | dispatch
+2021-11-10 at 10:23:05 | DEBUG | drop_all
+2021-11-10 at 10:23:05 | DEBUG | get_children
+2021-11-10 at 10:23:05 | DEBUG | info
+2021-11-10 at 10:23:05 | DEBUG | is_bound
+2021-11-10 at 10:23:05 | DEBUG | naming_convention
+2021-11-10 at 10:23:05 | DEBUG | reflect
+2021-11-10 at 10:23:05 | DEBUG | remove
+2021-11-10 at 10:23:05 | DEBUG | schema
+2021-11-10 at 10:23:05 | DEBUG | sorted_tables
+2021-11-10 at 10:23:05 | DEBUG | tables
+2021-11-10 at 10:23:05 | DEBUG | ===================================================
+2021-11-10 at 10:23:05 | DEBUG | items
+2021-11-10 at 10:23:05 | DEBUG | offices
+2021-11-10 at 10:23:05 | DEBUG | productlines
+2021-11-10 at 10:23:05 | DEBUG | tokens
+2021-11-10 at 10:23:05 | DEBUG | zinopara
+2021-11-10 at 10:23:05 | DEBUG | employees
+2021-11-10 at 10:23:05 | DEBUG | products
+2021-11-10 at 10:23:05 | DEBUG | customers
+2021-11-10 at 10:23:05 | DEBUG | orders
+2021-11-10 at 10:23:05 | DEBUG | payments
+2021-11-10 at 10:23:05 | DEBUG | orderdetails
+2021-11-10 at 10:23:05 | DEBUG | ****************************************************
+2021-11-10 at 10:23:05 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:23:08 | INFO | Neptune Start Up ....
+2021-11-10 at 10:23:08 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:23:08 | INFO | Add Custom query ...
+2021-11-10 at 10:23:08 | INFO | Neptune Starting ....
+2021-11-10 at 10:23:08 | INFO | API cache does not exists ....
+2021-11-10 at 10:24:05 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:24:05 | INFO | API cache does not exists ....
+2021-11-10 at 10:24:08 | INFO | Neptune Start Up ....
+2021-11-10 at 10:24:08 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:24:08 | INFO | Add Custom query ...
+2021-11-10 at 10:24:08 | INFO | Neptune Starting ....
+2021-11-10 at 10:24:08 | INFO | API cache does not exists ....
+2021-11-10 at 10:26:59 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:26:59 | INFO | API cache does not exists ....
+2021-11-10 at 10:27:00 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:27:00 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:27:00 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:27:00 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:27:00 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:27:00 | ERROR | Exception get metadata at genschema() 'computed' 
+2021-11-10 at 10:27:00 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:27:00 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:27:00 | DEBUG | ****************************************************
+2021-11-10 at 10:27:00 | DEBUG | __class__
+2021-11-10 at 10:27:00 | DEBUG | __class_getitem__
+2021-11-10 at 10:27:00 | DEBUG | __contains__
+2021-11-10 at 10:27:00 | DEBUG | __delattr__
+2021-11-10 at 10:27:00 | DEBUG | __dict__
+2021-11-10 at 10:27:00 | DEBUG | __dir__
+2021-11-10 at 10:27:00 | DEBUG | __doc__
+2021-11-10 at 10:27:00 | DEBUG | __eq__
+2021-11-10 at 10:27:00 | DEBUG | __format__
+2021-11-10 at 10:27:00 | DEBUG | __ge__
+2021-11-10 at 10:27:00 | DEBUG | __getattribute__
+2021-11-10 at 10:27:00 | DEBUG | __getstate__
+2021-11-10 at 10:27:00 | DEBUG | __gt__
+2021-11-10 at 10:27:00 | DEBUG | __hash__
+2021-11-10 at 10:27:00 | DEBUG | __init__
+2021-11-10 at 10:27:00 | DEBUG | __init_subclass__
+2021-11-10 at 10:27:00 | DEBUG | __le__
+2021-11-10 at 10:27:00 | DEBUG | __lt__
+2021-11-10 at 10:27:00 | DEBUG | __module__
+2021-11-10 at 10:27:00 | DEBUG | __ne__
+2021-11-10 at 10:27:00 | DEBUG | __new__
+2021-11-10 at 10:27:00 | DEBUG | __reduce__
+2021-11-10 at 10:27:00 | DEBUG | __reduce_ex__
+2021-11-10 at 10:27:00 | DEBUG | __repr__
+2021-11-10 at 10:27:00 | DEBUG | __setattr__
+2021-11-10 at 10:27:00 | DEBUG | __setstate__
+2021-11-10 at 10:27:00 | DEBUG | __sizeof__
+2021-11-10 at 10:27:00 | DEBUG | __str__
+2021-11-10 at 10:27:00 | DEBUG | __subclasshook__
+2021-11-10 at 10:27:00 | DEBUG | __visit_name__
+2021-11-10 at 10:27:00 | DEBUG | __weakref__
+2021-11-10 at 10:27:00 | DEBUG | _add_table
+2021-11-10 at 10:27:00 | DEBUG | _bind
+2021-11-10 at 10:27:00 | DEBUG | _bind_to
+2021-11-10 at 10:27:00 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:27:00 | DEBUG | _fk_memos
+2021-11-10 at 10:27:00 | DEBUG | _init_items
+2021-11-10 at 10:27:00 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:27:00 | DEBUG | _remove_table
+2021-11-10 at 10:27:00 | DEBUG | _schema_item_copy
+2021-11-10 at 10:27:00 | DEBUG | _schemas
+2021-11-10 at 10:27:00 | DEBUG | _sequences
+2021-11-10 at 10:27:00 | DEBUG | _set_parent
+2021-11-10 at 10:27:00 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:27:00 | DEBUG | _use_schema_map
+2021-11-10 at 10:27:00 | DEBUG | bind
+2021-11-10 at 10:27:00 | DEBUG | clear
+2021-11-10 at 10:27:00 | DEBUG | create_all
+2021-11-10 at 10:27:00 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:27:00 | DEBUG | dispatch
+2021-11-10 at 10:27:00 | DEBUG | drop_all
+2021-11-10 at 10:27:00 | DEBUG | get_children
+2021-11-10 at 10:27:00 | DEBUG | info
+2021-11-10 at 10:27:00 | DEBUG | is_bound
+2021-11-10 at 10:27:00 | DEBUG | naming_convention
+2021-11-10 at 10:27:00 | DEBUG | reflect
+2021-11-10 at 10:27:00 | DEBUG | remove
+2021-11-10 at 10:27:00 | DEBUG | schema
+2021-11-10 at 10:27:00 | DEBUG | sorted_tables
+2021-11-10 at 10:27:00 | DEBUG | tables
+2021-11-10 at 10:27:00 | DEBUG | ===================================================
+2021-11-10 at 10:27:00 | DEBUG | items
+2021-11-10 at 10:27:00 | DEBUG | offices
+2021-11-10 at 10:27:00 | DEBUG | productlines
+2021-11-10 at 10:27:00 | DEBUG | tokens
+2021-11-10 at 10:27:00 | DEBUG | zinopara
+2021-11-10 at 10:27:00 | DEBUG | employees
+2021-11-10 at 10:27:00 | DEBUG | products
+2021-11-10 at 10:27:00 | DEBUG | customers
+2021-11-10 at 10:27:00 | DEBUG | orders
+2021-11-10 at 10:27:00 | DEBUG | payments
+2021-11-10 at 10:27:00 | DEBUG | orderdetails
+2021-11-10 at 10:27:00 | DEBUG | ****************************************************
+2021-11-10 at 10:27:00 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:27:04 | INFO | Neptune Start Up ....
+2021-11-10 at 10:27:04 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:27:04 | INFO | Add Custom query ...
+2021-11-10 at 10:27:04 | INFO | Neptune Starting ....
+2021-11-10 at 10:27:04 | INFO | API cache does not exists ....
+2021-11-10 at 10:27:39 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:27:39 | INFO | API cache does not exists ....
+2021-11-10 at 10:27:40 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:27:40 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:27:40 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:27:40 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:27:40 | SUCCESS | {'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}
+2021-11-10 at 10:27:40 | CRITICAL | "{'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}"
+2021-11-10 at 10:27:40 | ERROR | Exception get metadata at genschema() 'computed' 
+2021-11-10 at 10:27:40 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:27:40 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:27:40 | DEBUG | ****************************************************
+2021-11-10 at 10:27:40 | DEBUG | __class__
+2021-11-10 at 10:27:40 | DEBUG | __class_getitem__
+2021-11-10 at 10:27:40 | DEBUG | __contains__
+2021-11-10 at 10:27:40 | DEBUG | __delattr__
+2021-11-10 at 10:27:40 | DEBUG | __dict__
+2021-11-10 at 10:27:40 | DEBUG | __dir__
+2021-11-10 at 10:27:40 | DEBUG | __doc__
+2021-11-10 at 10:27:40 | DEBUG | __eq__
+2021-11-10 at 10:27:40 | DEBUG | __format__
+2021-11-10 at 10:27:40 | DEBUG | __ge__
+2021-11-10 at 10:27:40 | DEBUG | __getattribute__
+2021-11-10 at 10:27:40 | DEBUG | __getstate__
+2021-11-10 at 10:27:40 | DEBUG | __gt__
+2021-11-10 at 10:27:40 | DEBUG | __hash__
+2021-11-10 at 10:27:40 | DEBUG | __init__
+2021-11-10 at 10:27:40 | DEBUG | __init_subclass__
+2021-11-10 at 10:27:40 | DEBUG | __le__
+2021-11-10 at 10:27:40 | DEBUG | __lt__
+2021-11-10 at 10:27:40 | DEBUG | __module__
+2021-11-10 at 10:27:40 | DEBUG | __ne__
+2021-11-10 at 10:27:40 | DEBUG | __new__
+2021-11-10 at 10:27:40 | DEBUG | __reduce__
+2021-11-10 at 10:27:40 | DEBUG | __reduce_ex__
+2021-11-10 at 10:27:40 | DEBUG | __repr__
+2021-11-10 at 10:27:40 | DEBUG | __setattr__
+2021-11-10 at 10:27:40 | DEBUG | __setstate__
+2021-11-10 at 10:27:40 | DEBUG | __sizeof__
+2021-11-10 at 10:27:40 | DEBUG | __str__
+2021-11-10 at 10:27:40 | DEBUG | __subclasshook__
+2021-11-10 at 10:27:40 | DEBUG | __visit_name__
+2021-11-10 at 10:27:40 | DEBUG | __weakref__
+2021-11-10 at 10:27:40 | DEBUG | _add_table
+2021-11-10 at 10:27:40 | DEBUG | _bind
+2021-11-10 at 10:27:40 | DEBUG | _bind_to
+2021-11-10 at 10:27:40 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:27:40 | DEBUG | _fk_memos
+2021-11-10 at 10:27:40 | DEBUG | _init_items
+2021-11-10 at 10:27:40 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:27:40 | DEBUG | _remove_table
+2021-11-10 at 10:27:40 | DEBUG | _schema_item_copy
+2021-11-10 at 10:27:40 | DEBUG | _schemas
+2021-11-10 at 10:27:40 | DEBUG | _sequences
+2021-11-10 at 10:27:40 | DEBUG | _set_parent
+2021-11-10 at 10:27:40 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:27:40 | DEBUG | _use_schema_map
+2021-11-10 at 10:27:40 | DEBUG | bind
+2021-11-10 at 10:27:40 | DEBUG | clear
+2021-11-10 at 10:27:40 | DEBUG | create_all
+2021-11-10 at 10:27:40 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:27:40 | DEBUG | dispatch
+2021-11-10 at 10:27:40 | DEBUG | drop_all
+2021-11-10 at 10:27:40 | DEBUG | get_children
+2021-11-10 at 10:27:40 | DEBUG | info
+2021-11-10 at 10:27:40 | DEBUG | is_bound
+2021-11-10 at 10:27:40 | DEBUG | naming_convention
+2021-11-10 at 10:27:40 | DEBUG | reflect
+2021-11-10 at 10:27:40 | DEBUG | remove
+2021-11-10 at 10:27:40 | DEBUG | schema
+2021-11-10 at 10:27:40 | DEBUG | sorted_tables
+2021-11-10 at 10:27:40 | DEBUG | tables
+2021-11-10 at 10:27:40 | DEBUG | ===================================================
+2021-11-10 at 10:27:40 | DEBUG | items
+2021-11-10 at 10:27:40 | DEBUG | offices
+2021-11-10 at 10:27:40 | DEBUG | productlines
+2021-11-10 at 10:27:40 | DEBUG | tokens
+2021-11-10 at 10:27:40 | DEBUG | zinopara
+2021-11-10 at 10:27:40 | DEBUG | employees
+2021-11-10 at 10:27:40 | DEBUG | products
+2021-11-10 at 10:27:41 | DEBUG | customers
+2021-11-10 at 10:27:41 | DEBUG | orders
+2021-11-10 at 10:27:41 | DEBUG | payments
+2021-11-10 at 10:27:41 | DEBUG | orderdetails
+2021-11-10 at 10:27:41 | DEBUG | ****************************************************
+2021-11-10 at 10:27:41 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:27:44 | INFO | Neptune Start Up ....
+2021-11-10 at 10:27:44 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:27:44 | INFO | Add Custom query ...
+2021-11-10 at 10:27:44 | INFO | Neptune Starting ....
+2021-11-10 at 10:27:44 | INFO | API cache does not exists ....
+2021-11-10 at 10:28:57 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:28:57 | INFO | API cache does not exists ....
+2021-11-10 at 10:29:03 | INFO | Neptune Start Up ....
+2021-11-10 at 10:29:03 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:29:03 | INFO | Add Custom query ...
+2021-11-10 at 10:29:03 | INFO | Neptune Starting ....
+2021-11-10 at 10:29:03 | INFO | API cache does not exists ....
+2021-11-10 at 10:29:25 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:29:25 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:29:25 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:29:25 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:29:26 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:29:26 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:29:26 | DEBUG | ****************************************************
+2021-11-10 at 10:29:26 | DEBUG | __class__
+2021-11-10 at 10:29:26 | DEBUG | __class_getitem__
+2021-11-10 at 10:29:26 | DEBUG | __contains__
+2021-11-10 at 10:29:26 | DEBUG | __delattr__
+2021-11-10 at 10:29:26 | DEBUG | __dict__
+2021-11-10 at 10:29:26 | DEBUG | __dir__
+2021-11-10 at 10:29:26 | DEBUG | __doc__
+2021-11-10 at 10:29:26 | DEBUG | __eq__
+2021-11-10 at 10:29:26 | DEBUG | __format__
+2021-11-10 at 10:29:26 | DEBUG | __ge__
+2021-11-10 at 10:29:26 | DEBUG | __getattribute__
+2021-11-10 at 10:29:26 | DEBUG | __getstate__
+2021-11-10 at 10:29:26 | DEBUG | __gt__
+2021-11-10 at 10:29:26 | DEBUG | __hash__
+2021-11-10 at 10:29:26 | DEBUG | __init__
+2021-11-10 at 10:29:26 | DEBUG | __init_subclass__
+2021-11-10 at 10:29:26 | DEBUG | __le__
+2021-11-10 at 10:29:26 | DEBUG | __lt__
+2021-11-10 at 10:29:26 | DEBUG | __module__
+2021-11-10 at 10:29:26 | DEBUG | __ne__
+2021-11-10 at 10:29:26 | DEBUG | __new__
+2021-11-10 at 10:29:26 | DEBUG | __reduce__
+2021-11-10 at 10:29:26 | DEBUG | __reduce_ex__
+2021-11-10 at 10:29:26 | DEBUG | __repr__
+2021-11-10 at 10:29:26 | DEBUG | __setattr__
+2021-11-10 at 10:29:26 | DEBUG | __setstate__
+2021-11-10 at 10:29:26 | DEBUG | __sizeof__
+2021-11-10 at 10:29:26 | DEBUG | __str__
+2021-11-10 at 10:29:26 | DEBUG | __subclasshook__
+2021-11-10 at 10:29:26 | DEBUG | __visit_name__
+2021-11-10 at 10:29:26 | DEBUG | __weakref__
+2021-11-10 at 10:29:26 | DEBUG | _add_table
+2021-11-10 at 10:29:26 | DEBUG | _bind
+2021-11-10 at 10:29:26 | DEBUG | _bind_to
+2021-11-10 at 10:29:26 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:29:26 | DEBUG | _fk_memos
+2021-11-10 at 10:29:26 | DEBUG | _init_items
+2021-11-10 at 10:29:26 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:29:26 | DEBUG | _remove_table
+2021-11-10 at 10:29:26 | DEBUG | _schema_item_copy
+2021-11-10 at 10:29:26 | DEBUG | _schemas
+2021-11-10 at 10:29:26 | DEBUG | _sequences
+2021-11-10 at 10:29:26 | DEBUG | _set_parent
+2021-11-10 at 10:29:26 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:29:26 | DEBUG | _use_schema_map
+2021-11-10 at 10:29:26 | DEBUG | bind
+2021-11-10 at 10:29:26 | DEBUG | clear
+2021-11-10 at 10:29:26 | DEBUG | create_all
+2021-11-10 at 10:29:26 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:29:26 | DEBUG | dispatch
+2021-11-10 at 10:29:26 | DEBUG | drop_all
+2021-11-10 at 10:29:26 | DEBUG | get_children
+2021-11-10 at 10:29:26 | DEBUG | info
+2021-11-10 at 10:29:26 | DEBUG | is_bound
+2021-11-10 at 10:29:26 | DEBUG | naming_convention
+2021-11-10 at 10:29:26 | DEBUG | reflect
+2021-11-10 at 10:29:26 | DEBUG | remove
+2021-11-10 at 10:29:26 | DEBUG | schema
+2021-11-10 at 10:29:26 | DEBUG | sorted_tables
+2021-11-10 at 10:29:26 | DEBUG | tables
+2021-11-10 at 10:29:26 | DEBUG | ===================================================
+2021-11-10 at 10:29:26 | DEBUG | items
+2021-11-10 at 10:29:26 | DEBUG | offices
+2021-11-10 at 10:29:26 | DEBUG | productlines
+2021-11-10 at 10:29:26 | DEBUG | tokens
+2021-11-10 at 10:29:26 | DEBUG | zinopara
+2021-11-10 at 10:29:26 | DEBUG | employees
+2021-11-10 at 10:29:26 | DEBUG | products
+2021-11-10 at 10:29:26 | DEBUG | customers
+2021-11-10 at 10:29:26 | DEBUG | orders
+2021-11-10 at 10:29:26 | DEBUG | payments
+2021-11-10 at 10:29:26 | DEBUG | orderdetails
+2021-11-10 at 10:29:26 | DEBUG | ****************************************************
+2021-11-10 at 10:29:26 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:31:44 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:31:44 | INFO | API cache does not exists ....
+2021-11-10 at 10:31:49 | INFO | Neptune Start Up ....
+2021-11-10 at 10:31:49 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:31:49 | INFO | Add Custom query ...
+2021-11-10 at 10:31:49 | INFO | Neptune Starting ....
+2021-11-10 at 10:31:49 | INFO | API cache does not exists ....
+2021-11-10 at 10:31:53 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:31:53 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:31:53 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:31:53 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:31:53 | ERROR | Exception get metadata at genschema() dump() missing 1 required positional argument: 'fp' 
+2021-11-10 at 10:31:53 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:34:10 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:34:10 | INFO | API cache does not exists ....
+2021-11-10 at 10:34:24 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:34:25 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:34:25 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:34:25 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:34:25 | ERROR | Exception get metadata at genschema() dump() missing 1 required positional argument: 'fp' 
+2021-11-10 at 10:34:25 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:34:25 | INFO | Neptune Start Up ....
+2021-11-10 at 10:34:25 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:34:25 | INFO | Add Custom query ...
+2021-11-10 at 10:34:25 | INFO | Neptune Starting ....
+2021-11-10 at 10:34:25 | INFO | API cache does not exists ....
+2021-11-10 at 10:34:34 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:34:34 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:34:34 | INFO | API cache does not exists ....
+2021-11-10 at 10:34:34 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:34:34 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:34:34 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:34:35 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:34:35 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:34:35 | DEBUG | ****************************************************
+2021-11-10 at 10:34:35 | DEBUG | __class__
+2021-11-10 at 10:34:35 | DEBUG | __class_getitem__
+2021-11-10 at 10:34:35 | DEBUG | __contains__
+2021-11-10 at 10:34:35 | DEBUG | __delattr__
+2021-11-10 at 10:34:35 | DEBUG | __dict__
+2021-11-10 at 10:34:35 | DEBUG | __dir__
+2021-11-10 at 10:34:35 | DEBUG | __doc__
+2021-11-10 at 10:34:35 | DEBUG | __eq__
+2021-11-10 at 10:34:35 | DEBUG | __format__
+2021-11-10 at 10:34:35 | DEBUG | __ge__
+2021-11-10 at 10:34:35 | DEBUG | __getattribute__
+2021-11-10 at 10:34:35 | DEBUG | __getstate__
+2021-11-10 at 10:34:35 | DEBUG | __gt__
+2021-11-10 at 10:34:35 | DEBUG | __hash__
+2021-11-10 at 10:34:35 | DEBUG | __init__
+2021-11-10 at 10:34:35 | DEBUG | __init_subclass__
+2021-11-10 at 10:34:35 | DEBUG | __le__
+2021-11-10 at 10:34:35 | DEBUG | __lt__
+2021-11-10 at 10:34:35 | DEBUG | __module__
+2021-11-10 at 10:34:35 | DEBUG | __ne__
+2021-11-10 at 10:34:35 | DEBUG | __new__
+2021-11-10 at 10:34:35 | DEBUG | __reduce__
+2021-11-10 at 10:34:35 | DEBUG | __reduce_ex__
+2021-11-10 at 10:34:35 | DEBUG | __repr__
+2021-11-10 at 10:34:35 | DEBUG | __setattr__
+2021-11-10 at 10:34:35 | DEBUG | __setstate__
+2021-11-10 at 10:34:35 | DEBUG | __sizeof__
+2021-11-10 at 10:34:35 | DEBUG | __str__
+2021-11-10 at 10:34:35 | DEBUG | __subclasshook__
+2021-11-10 at 10:34:35 | DEBUG | __visit_name__
+2021-11-10 at 10:34:35 | DEBUG | __weakref__
+2021-11-10 at 10:34:35 | DEBUG | _add_table
+2021-11-10 at 10:34:35 | DEBUG | _bind
+2021-11-10 at 10:34:35 | DEBUG | _bind_to
+2021-11-10 at 10:34:35 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:34:35 | DEBUG | _fk_memos
+2021-11-10 at 10:34:35 | DEBUG | _init_items
+2021-11-10 at 10:34:35 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:34:35 | DEBUG | _remove_table
+2021-11-10 at 10:34:35 | DEBUG | _schema_item_copy
+2021-11-10 at 10:34:35 | DEBUG | _schemas
+2021-11-10 at 10:34:35 | DEBUG | _sequences
+2021-11-10 at 10:34:35 | DEBUG | _set_parent
+2021-11-10 at 10:34:35 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:34:35 | DEBUG | _use_schema_map
+2021-11-10 at 10:34:35 | DEBUG | bind
+2021-11-10 at 10:34:35 | DEBUG | clear
+2021-11-10 at 10:34:35 | DEBUG | create_all
+2021-11-10 at 10:34:35 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:34:35 | DEBUG | dispatch
+2021-11-10 at 10:34:35 | DEBUG | drop_all
+2021-11-10 at 10:34:35 | DEBUG | get_children
+2021-11-10 at 10:34:35 | DEBUG | info
+2021-11-10 at 10:34:35 | DEBUG | is_bound
+2021-11-10 at 10:34:35 | DEBUG | naming_convention
+2021-11-10 at 10:34:35 | DEBUG | reflect
+2021-11-10 at 10:34:35 | DEBUG | remove
+2021-11-10 at 10:34:35 | DEBUG | schema
+2021-11-10 at 10:34:35 | DEBUG | sorted_tables
+2021-11-10 at 10:34:35 | DEBUG | tables
+2021-11-10 at 10:34:35 | DEBUG | ===================================================
+2021-11-10 at 10:34:35 | DEBUG | items
+2021-11-10 at 10:34:35 | DEBUG | offices
+2021-11-10 at 10:34:35 | DEBUG | productlines
+2021-11-10 at 10:34:35 | DEBUG | tokens
+2021-11-10 at 10:34:35 | DEBUG | zinopara
+2021-11-10 at 10:34:35 | DEBUG | employees
+2021-11-10 at 10:34:35 | DEBUG | products
+2021-11-10 at 10:34:35 | DEBUG | customers
+2021-11-10 at 10:34:35 | DEBUG | orders
+2021-11-10 at 10:34:35 | DEBUG | payments
+2021-11-10 at 10:34:35 | DEBUG | orderdetails
+2021-11-10 at 10:34:35 | DEBUG | ****************************************************
+2021-11-10 at 10:34:35 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:34:39 | INFO | Neptune Start Up ....
+2021-11-10 at 10:34:39 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:34:39 | INFO | Add Custom query ...
+2021-11-10 at 10:34:39 | INFO | Neptune Starting ....
+2021-11-10 at 10:34:39 | INFO | API cache does not exists ....
+2021-11-10 at 10:35:42 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:35:42 | INFO | API cache does not exists ....
+2021-11-10 at 10:35:46 | INFO | Neptune Start Up ....
+2021-11-10 at 10:35:46 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:35:46 | INFO | Add Custom query ...
+2021-11-10 at 10:35:46 | INFO | Neptune Starting ....
+2021-11-10 at 10:35:46 | INFO | API cache does not exists ....
+2021-11-10 at 10:35:46 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:35:46 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:35:46 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:35:46 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:35:47 | ERROR | Exception get metadata at genschema() __init__() got an unexpected keyword argument 'separators' 
+2021-11-10 at 10:35:47 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:35:47 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:35:47 | DEBUG | ****************************************************
+2021-11-10 at 10:35:47 | DEBUG | __class__
+2021-11-10 at 10:35:47 | DEBUG | __class_getitem__
+2021-11-10 at 10:35:47 | DEBUG | __contains__
+2021-11-10 at 10:35:47 | DEBUG | __delattr__
+2021-11-10 at 10:35:47 | DEBUG | __dict__
+2021-11-10 at 10:35:47 | DEBUG | __dir__
+2021-11-10 at 10:35:47 | DEBUG | __doc__
+2021-11-10 at 10:35:47 | DEBUG | __eq__
+2021-11-10 at 10:35:47 | DEBUG | __format__
+2021-11-10 at 10:35:47 | DEBUG | __ge__
+2021-11-10 at 10:35:47 | DEBUG | __getattribute__
+2021-11-10 at 10:35:47 | DEBUG | __getstate__
+2021-11-10 at 10:35:47 | DEBUG | __gt__
+2021-11-10 at 10:35:47 | DEBUG | __hash__
+2021-11-10 at 10:35:47 | DEBUG | __init__
+2021-11-10 at 10:35:47 | DEBUG | __init_subclass__
+2021-11-10 at 10:35:47 | DEBUG | __le__
+2021-11-10 at 10:35:47 | DEBUG | __lt__
+2021-11-10 at 10:35:47 | DEBUG | __module__
+2021-11-10 at 10:35:47 | DEBUG | __ne__
+2021-11-10 at 10:35:47 | DEBUG | __new__
+2021-11-10 at 10:35:47 | DEBUG | __reduce__
+2021-11-10 at 10:35:47 | DEBUG | __reduce_ex__
+2021-11-10 at 10:35:47 | DEBUG | __repr__
+2021-11-10 at 10:35:47 | DEBUG | __setattr__
+2021-11-10 at 10:35:47 | DEBUG | __setstate__
+2021-11-10 at 10:35:47 | DEBUG | __sizeof__
+2021-11-10 at 10:35:47 | DEBUG | __str__
+2021-11-10 at 10:35:47 | DEBUG | __subclasshook__
+2021-11-10 at 10:35:47 | DEBUG | __visit_name__
+2021-11-10 at 10:35:47 | DEBUG | __weakref__
+2021-11-10 at 10:35:47 | DEBUG | _add_table
+2021-11-10 at 10:35:47 | DEBUG | _bind
+2021-11-10 at 10:35:47 | DEBUG | _bind_to
+2021-11-10 at 10:35:47 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:35:47 | DEBUG | _fk_memos
+2021-11-10 at 10:35:47 | DEBUG | _init_items
+2021-11-10 at 10:35:47 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:35:47 | DEBUG | _remove_table
+2021-11-10 at 10:35:47 | DEBUG | _schema_item_copy
+2021-11-10 at 10:35:47 | DEBUG | _schemas
+2021-11-10 at 10:35:47 | DEBUG | _sequences
+2021-11-10 at 10:35:47 | DEBUG | _set_parent
+2021-11-10 at 10:35:47 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:35:47 | DEBUG | _use_schema_map
+2021-11-10 at 10:35:47 | DEBUG | bind
+2021-11-10 at 10:35:47 | DEBUG | clear
+2021-11-10 at 10:35:47 | DEBUG | create_all
+2021-11-10 at 10:35:47 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:35:47 | DEBUG | dispatch
+2021-11-10 at 10:35:47 | DEBUG | drop_all
+2021-11-10 at 10:35:47 | DEBUG | get_children
+2021-11-10 at 10:35:47 | DEBUG | info
+2021-11-10 at 10:35:47 | DEBUG | is_bound
+2021-11-10 at 10:35:47 | DEBUG | naming_convention
+2021-11-10 at 10:35:47 | DEBUG | reflect
+2021-11-10 at 10:35:47 | DEBUG | remove
+2021-11-10 at 10:35:47 | DEBUG | schema
+2021-11-10 at 10:35:47 | DEBUG | sorted_tables
+2021-11-10 at 10:35:47 | DEBUG | tables
+2021-11-10 at 10:35:47 | DEBUG | ===================================================
+2021-11-10 at 10:35:47 | DEBUG | items
+2021-11-10 at 10:35:47 | DEBUG | offices
+2021-11-10 at 10:35:47 | DEBUG | productlines
+2021-11-10 at 10:35:47 | DEBUG | tokens
+2021-11-10 at 10:35:47 | DEBUG | zinopara
+2021-11-10 at 10:35:47 | DEBUG | employees
+2021-11-10 at 10:35:47 | DEBUG | products
+2021-11-10 at 10:35:47 | DEBUG | customers
+2021-11-10 at 10:35:47 | DEBUG | orders
+2021-11-10 at 10:35:47 | DEBUG | payments
+2021-11-10 at 10:35:47 | DEBUG | orderdetails
+2021-11-10 at 10:35:47 | DEBUG | ****************************************************
+2021-11-10 at 10:35:47 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:35:57 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:35:58 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:35:58 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:35:58 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:35:58 | ERROR | Exception get metadata at genschema() __init__() got an unexpected keyword argument 'separators' 
+2021-11-10 at 10:35:58 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:37:21 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:37:21 | INFO | API cache does not exists ....
+2021-11-10 at 10:37:22 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:37:23 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:37:23 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:37:23 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:37:23 | ERROR | Exception get metadata at genschema() Expecting property name enclosed in double quotes: line 1 column 2 (char 1) 
+2021-11-10 at 10:37:23 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:37:24 | INFO | Neptune Start Up ....
+2021-11-10 at 10:37:24 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:37:24 | INFO | Add Custom query ...
+2021-11-10 at 10:37:24 | INFO | Neptune Starting ....
+2021-11-10 at 10:37:24 | INFO | API cache does not exists ....
+2021-11-10 at 10:38:25 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:38:25 | INFO | API cache does not exists ....
+2021-11-10 at 10:38:29 | INFO | Neptune Start Up ....
+2021-11-10 at 10:38:29 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:38:29 | INFO | Add Custom query ...
+2021-11-10 at 10:38:29 | INFO | Neptune Starting ....
+2021-11-10 at 10:38:29 | INFO | API cache does not exists ....
+2021-11-10 at 10:38:31 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:38:31 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:38:31 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:38:31 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:38:32 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:38:32 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:38:32 | DEBUG | ****************************************************
+2021-11-10 at 10:38:32 | DEBUG | __class__
+2021-11-10 at 10:38:32 | DEBUG | __class_getitem__
+2021-11-10 at 10:38:32 | DEBUG | __contains__
+2021-11-10 at 10:38:32 | DEBUG | __delattr__
+2021-11-10 at 10:38:32 | DEBUG | __dict__
+2021-11-10 at 10:38:32 | DEBUG | __dir__
+2021-11-10 at 10:38:32 | DEBUG | __doc__
+2021-11-10 at 10:38:32 | DEBUG | __eq__
+2021-11-10 at 10:38:32 | DEBUG | __format__
+2021-11-10 at 10:38:32 | DEBUG | __ge__
+2021-11-10 at 10:38:32 | DEBUG | __getattribute__
+2021-11-10 at 10:38:32 | DEBUG | __getstate__
+2021-11-10 at 10:38:32 | DEBUG | __gt__
+2021-11-10 at 10:38:32 | DEBUG | __hash__
+2021-11-10 at 10:38:32 | DEBUG | __init__
+2021-11-10 at 10:38:32 | DEBUG | __init_subclass__
+2021-11-10 at 10:38:32 | DEBUG | __le__
+2021-11-10 at 10:38:32 | DEBUG | __lt__
+2021-11-10 at 10:38:32 | DEBUG | __module__
+2021-11-10 at 10:38:32 | DEBUG | __ne__
+2021-11-10 at 10:38:32 | DEBUG | __new__
+2021-11-10 at 10:38:32 | DEBUG | __reduce__
+2021-11-10 at 10:38:32 | DEBUG | __reduce_ex__
+2021-11-10 at 10:38:32 | DEBUG | __repr__
+2021-11-10 at 10:38:32 | DEBUG | __setattr__
+2021-11-10 at 10:38:32 | DEBUG | __setstate__
+2021-11-10 at 10:38:32 | DEBUG | __sizeof__
+2021-11-10 at 10:38:32 | DEBUG | __str__
+2021-11-10 at 10:38:32 | DEBUG | __subclasshook__
+2021-11-10 at 10:38:32 | DEBUG | __visit_name__
+2021-11-10 at 10:38:32 | DEBUG | __weakref__
+2021-11-10 at 10:38:32 | DEBUG | _add_table
+2021-11-10 at 10:38:32 | DEBUG | _bind
+2021-11-10 at 10:38:32 | DEBUG | _bind_to
+2021-11-10 at 10:38:32 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:38:32 | DEBUG | _fk_memos
+2021-11-10 at 10:38:32 | DEBUG | _init_items
+2021-11-10 at 10:38:32 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:38:32 | DEBUG | _remove_table
+2021-11-10 at 10:38:32 | DEBUG | _schema_item_copy
+2021-11-10 at 10:38:32 | DEBUG | _schemas
+2021-11-10 at 10:38:32 | DEBUG | _sequences
+2021-11-10 at 10:38:32 | DEBUG | _set_parent
+2021-11-10 at 10:38:32 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:38:32 | DEBUG | _use_schema_map
+2021-11-10 at 10:38:32 | DEBUG | bind
+2021-11-10 at 10:38:32 | DEBUG | clear
+2021-11-10 at 10:38:32 | DEBUG | create_all
+2021-11-10 at 10:38:32 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:38:32 | DEBUG | dispatch
+2021-11-10 at 10:38:32 | DEBUG | drop_all
+2021-11-10 at 10:38:32 | DEBUG | get_children
+2021-11-10 at 10:38:32 | DEBUG | info
+2021-11-10 at 10:38:32 | DEBUG | is_bound
+2021-11-10 at 10:38:32 | DEBUG | naming_convention
+2021-11-10 at 10:38:32 | DEBUG | reflect
+2021-11-10 at 10:38:32 | DEBUG | remove
+2021-11-10 at 10:38:32 | DEBUG | schema
+2021-11-10 at 10:38:32 | DEBUG | sorted_tables
+2021-11-10 at 10:38:32 | DEBUG | tables
+2021-11-10 at 10:38:32 | DEBUG | ===================================================
+2021-11-10 at 10:38:32 | DEBUG | items
+2021-11-10 at 10:38:32 | DEBUG | offices
+2021-11-10 at 10:38:32 | DEBUG | productlines
+2021-11-10 at 10:38:32 | DEBUG | tokens
+2021-11-10 at 10:38:32 | DEBUG | zinopara
+2021-11-10 at 10:38:32 | DEBUG | employees
+2021-11-10 at 10:38:32 | DEBUG | products
+2021-11-10 at 10:38:32 | DEBUG | customers
+2021-11-10 at 10:38:32 | DEBUG | orders
+2021-11-10 at 10:38:32 | DEBUG | payments
+2021-11-10 at 10:38:32 | DEBUG | orderdetails
+2021-11-10 at 10:38:32 | DEBUG | ****************************************************
+2021-11-10 at 10:38:32 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:43:50 | INFO | Neptune Shutting Down ....
+2021-11-10 at 10:43:50 | INFO | API cache does not exists ....
+2021-11-10 at 10:43:50 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-10 at 10:43:51 | DEBUG | Metadata cache exists, load meta from cache file [ /Users/zhangjun/.neptune_cache/neptune_metadata ]
+2021-11-10 at 10:43:51 | DEBUG | Generate Schema file from database ...
+2021-11-10 at 10:43:51 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-10 at 10:43:51 | DEBUG | Loading schema from /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:43:51 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-10 at 10:43:51 | DEBUG | ****************************************************
+2021-11-10 at 10:43:51 | DEBUG | __class__
+2021-11-10 at 10:43:51 | DEBUG | __class_getitem__
+2021-11-10 at 10:43:51 | DEBUG | __contains__
+2021-11-10 at 10:43:51 | DEBUG | __delattr__
+2021-11-10 at 10:43:51 | DEBUG | __dict__
+2021-11-10 at 10:43:51 | DEBUG | __dir__
+2021-11-10 at 10:43:51 | DEBUG | __doc__
+2021-11-10 at 10:43:51 | DEBUG | __eq__
+2021-11-10 at 10:43:51 | DEBUG | __format__
+2021-11-10 at 10:43:51 | DEBUG | __ge__
+2021-11-10 at 10:43:51 | DEBUG | __getattribute__
+2021-11-10 at 10:43:51 | DEBUG | __getstate__
+2021-11-10 at 10:43:51 | DEBUG | __gt__
+2021-11-10 at 10:43:51 | DEBUG | __hash__
+2021-11-10 at 10:43:51 | DEBUG | __init__
+2021-11-10 at 10:43:51 | DEBUG | __init_subclass__
+2021-11-10 at 10:43:51 | DEBUG | __le__
+2021-11-10 at 10:43:51 | DEBUG | __lt__
+2021-11-10 at 10:43:51 | DEBUG | __module__
+2021-11-10 at 10:43:51 | DEBUG | __ne__
+2021-11-10 at 10:43:51 | DEBUG | __new__
+2021-11-10 at 10:43:51 | DEBUG | __reduce__
+2021-11-10 at 10:43:51 | DEBUG | __reduce_ex__
+2021-11-10 at 10:43:51 | DEBUG | __repr__
+2021-11-10 at 10:43:51 | DEBUG | __setattr__
+2021-11-10 at 10:43:51 | DEBUG | __setstate__
+2021-11-10 at 10:43:51 | DEBUG | __sizeof__
+2021-11-10 at 10:43:51 | DEBUG | __str__
+2021-11-10 at 10:43:51 | DEBUG | __subclasshook__
+2021-11-10 at 10:43:51 | DEBUG | __visit_name__
+2021-11-10 at 10:43:51 | DEBUG | __weakref__
+2021-11-10 at 10:43:51 | DEBUG | _add_table
+2021-11-10 at 10:43:51 | DEBUG | _bind
+2021-11-10 at 10:43:51 | DEBUG | _bind_to
+2021-11-10 at 10:43:51 | DEBUG | _compiler_dispatch
+2021-11-10 at 10:43:51 | DEBUG | _fk_memos
+2021-11-10 at 10:43:51 | DEBUG | _init_items
+2021-11-10 at 10:43:51 | DEBUG | _original_compiler_dispatch
+2021-11-10 at 10:43:51 | DEBUG | _remove_table
+2021-11-10 at 10:43:51 | DEBUG | _schema_item_copy
+2021-11-10 at 10:43:51 | DEBUG | _schemas
+2021-11-10 at 10:43:51 | DEBUG | _sequences
+2021-11-10 at 10:43:51 | DEBUG | _set_parent
+2021-11-10 at 10:43:51 | DEBUG | _set_parent_with_dispatch
+2021-11-10 at 10:43:51 | DEBUG | _use_schema_map
+2021-11-10 at 10:43:51 | DEBUG | bind
+2021-11-10 at 10:43:51 | DEBUG | clear
+2021-11-10 at 10:43:51 | DEBUG | create_all
+2021-11-10 at 10:43:51 | DEBUG | create_drop_stringify_dialect
+2021-11-10 at 10:43:51 | DEBUG | dispatch
+2021-11-10 at 10:43:51 | DEBUG | drop_all
+2021-11-10 at 10:43:51 | DEBUG | get_children
+2021-11-10 at 10:43:51 | DEBUG | info
+2021-11-10 at 10:43:51 | DEBUG | is_bound
+2021-11-10 at 10:43:51 | DEBUG | naming_convention
+2021-11-10 at 10:43:51 | DEBUG | reflect
+2021-11-10 at 10:43:51 | DEBUG | remove
+2021-11-10 at 10:43:51 | DEBUG | schema
+2021-11-10 at 10:43:51 | DEBUG | sorted_tables
+2021-11-10 at 10:43:51 | DEBUG | tables
+2021-11-10 at 10:43:51 | DEBUG | ===================================================
+2021-11-10 at 10:43:51 | DEBUG | items
+2021-11-10 at 10:43:51 | DEBUG | offices
+2021-11-10 at 10:43:51 | DEBUG | productlines
+2021-11-10 at 10:43:51 | DEBUG | tokens
+2021-11-10 at 10:43:51 | DEBUG | zinopara
+2021-11-10 at 10:43:51 | DEBUG | employees
+2021-11-10 at 10:43:51 | DEBUG | products
+2021-11-10 at 10:43:51 | DEBUG | customers
+2021-11-10 at 10:43:51 | DEBUG | orders
+2021-11-10 at 10:43:51 | DEBUG | payments
+2021-11-10 at 10:43:51 | DEBUG | orderdetails
+2021-11-10 at 10:43:51 | DEBUG | ****************************************************
+2021-11-10 at 10:43:51 | DEBUG | /Users/zhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-10 at 10:43:54 | INFO | Neptune Start Up ....
+2021-11-10 at 10:43:54 | INFO | API prefix is: [ /api/v1 ]
+2021-11-10 at 10:43:54 | INFO | Add Custom query ...
+2021-11-10 at 10:43:54 | INFO | Neptune Starting ....
+2021-11-10 at 10:43:54 | INFO | API cache does not exists ....

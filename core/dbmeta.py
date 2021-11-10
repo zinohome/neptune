@@ -184,8 +184,8 @@ class DBMeta(object):
                             table_columes = inspector.get_columns(table_name, schema=self.__schema)
                         for column in table_columes:
                             if len(column) > 0:
-                                jtbl['Columns'].append({'name': column['name'], 'type': type(column['type']).__name__,
-                                                        'default': column['default'], 'nullable': column['nullable']})
+                                jtbl['Columns'].append(json.loads(json.dumps(column.__str__(), separators=(',', ':'))))
+
                 view_names = inspector.get_view_names()
                 if self.use_schema:
                     view_names = inspector.get_view_names(schema=self.__schema)
@@ -206,12 +206,9 @@ class DBMeta(object):
                                 vtbl['Columns'] = []
                                 for v_column in table_v.columns:
                                     if len(v_column) > 0:
-                                        vtbl['Columns'].append({'name': v_column.name,
-                                                                'type': type(v_column['type']).__name__,
-                                                                'default': v_column.default,
-                                                                'nullable': v_column.nullable})
+                                        vtbl['Columns'].append(json.loads(json.dumps(v_column.__str__(), separators=(',', ':'))))
                 with open(self.get_schema_file(), 'w') as jsonfile:
-                    json.dump(jmeta, jsonfile, separators=(',', ':'), sort_keys=False, indent=4 * ' ', encoding='utf-8')
+                    json.dump(jmeta, jsonfile, separators=(',', ':'), sort_keys=False, indent=4 * ' ', ensure_ascii=False, encoding='utf-8')
 
             else:
                 log.logger.error('Can not get metadata at genschema() ... ')

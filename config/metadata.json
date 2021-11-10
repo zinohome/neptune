@@ -17,84 +17,19 @@
                 }
             ],
             "Columns":[
-                {
-                    "name":"customerNumber",
-                    "type":"INTEGER",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"customerName",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"contactLastName",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"contactFirstName",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"phone",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"addressLine1",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"addressLine2",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"city",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"state",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"postalCode",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"country",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"salesRepEmployeeNumber",
-                    "type":"INTEGER",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"creditLimit",
-                    "type":"DECIMAL",
-                    "default":null,
-                    "nullable":true
-                }
+                "{'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}",
+                "{'name': 'customerName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'contactLastName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'contactFirstName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'phone', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'addressLine1', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'addressLine2', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}",
+                "{'name': 'city', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'state', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}",
+                "{'name': 'postalCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': True}",
+                "{'name': 'country', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'salesRepEmployeeNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}",
+                "{'name': 'creditLimit', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': True}"
             ]
         },
         "employees":{
@@ -120,54 +55,14 @@
                 }
             ],
             "Columns":[
-                {
-                    "name":"employeeNumber",
-                    "type":"INTEGER",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"lastName",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"firstName",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"extension",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"email",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"officeCode",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"reportsTo",
-                    "type":"INTEGER",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"jobTitle",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                }
+                "{'name': 'employeeNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}",
+                "{'name': 'lastName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'firstName', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'extension', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'email', 'type': VARCHAR(length=100), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'officeCode', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'reportsTo', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}",
+                "{'name': 'jobTitle', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}"
             ]
         },
         "items":{
@@ -178,18 +73,8 @@
             ],
             "Indexes":[],
             "Columns":[
-                {
-                    "name":"id",
-                    "type":"INTEGER",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"item_no",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                }
+                "{'name': 'id', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': True}",
+                "{'name': 'item_no', 'type': VARCHAR(length=255), 'default': None, 'comment': None, 'nullable': False}"
             ]
         },
         "offices":{
@@ -200,60 +85,15 @@
             ],
             "Indexes":[],
             "Columns":[
-                {
-                    "name":"officeCode",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"city",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"phone",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"addressLine1",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"addressLine2",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"state",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"country",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"postalCode",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"territory",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                }
+                "{'name': 'officeCode', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'city', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'phone', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'addressLine1', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'addressLine2', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}",
+                "{'name': 'state', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': True}",
+                "{'name': 'country', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'postalCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'territory', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}"
             ]
         },
         "orderdetails":{
@@ -273,36 +113,11 @@
                 }
             ],
             "Columns":[
-                {
-                    "name":"orderNumber",
-                    "type":"INTEGER",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"productCode",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"quantityOrdered",
-                    "type":"INTEGER",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"priceEach",
-                    "type":"DECIMAL",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"orderLineNumber",
-                    "type":"SMALLINT",
-                    "default":null,
-                    "nullable":false
-                }
+                "{'name': 'orderNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}",
+                "{'name': 'productCode', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'quantityOrdered', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}",
+                "{'name': 'priceEach', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'orderLineNumber', 'type': SMALLINT(display_width=6), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}"
             ]
         },
         "orders":{
@@ -321,48 +136,13 @@
                 }
             ],
             "Columns":[
-                {
-                    "name":"orderNumber",
-                    "type":"INTEGER",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"orderDate",
-                    "type":"DATE",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"requiredDate",
-                    "type":"DATE",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"shippedDate",
-                    "type":"DATE",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"status",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"comments",
-                    "type":"TEXT",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"customerNumber",
-                    "type":"INTEGER",
-                    "default":null,
-                    "nullable":false
-                }
+                "{'name': 'orderNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}",
+                "{'name': 'orderDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'requiredDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'shippedDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': True}",
+                "{'name': 'status', 'type': VARCHAR(length=15), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'comments', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': True}",
+                "{'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}"
             ]
         },
         "payments":{
@@ -374,30 +154,10 @@
             ],
             "Indexes":[],
             "Columns":[
-                {
-                    "name":"customerNumber",
-                    "type":"INTEGER",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"checkNumber",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"paymentDate",
-                    "type":"DATE",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"amount",
-                    "type":"DECIMAL",
-                    "default":null,
-                    "nullable":false
-                }
+                "{'name': 'customerNumber', 'type': INTEGER(display_width=11), 'default': None, 'comment': None, 'nullable': False, 'autoincrement': False}",
+                "{'name': 'checkNumber', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'paymentDate', 'type': DATE(), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'amount', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': None, 'nullable': False}"
             ]
         },
         "productlines":{
@@ -408,30 +168,10 @@
             ],
             "Indexes":[],
             "Columns":[
-                {
-                    "name":"productLine",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"textDescription",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"htmlDescription",
-                    "type":"MEDIUMTEXT",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"image",
-                    "type":"MEDIUMBLOB",
-                    "default":null,
-                    "nullable":true
-                }
+                "{'name': 'productLine', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'textDescription', 'type': VARCHAR(length=4000), 'default': None, 'comment': None, 'nullable': True}",
+                "{'name': 'htmlDescription', 'type': MEDIUMTEXT(), 'default': None, 'comment': None, 'nullable': True}",
+                "{'name': 'image', 'type': MEDIUMBLOB(), 'default': None, 'comment': None, 'nullable': True}"
             ]
         },
         "products":{
@@ -450,60 +190,15 @@
                 }
             ],
             "Columns":[
-                {
-                    "name":"productCode",
-                    "type":"VARCHAR",
-                    "default":"''",
-                    "nullable":false
-                },
-                {
-                    "name":"productName",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"productLine",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"productScale",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"productVendor",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"productDescription",
-                    "type":"TEXT",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"quantityInStock",
-                    "type":"SMALLINT",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"buyPrice",
-                    "type":"DECIMAL",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"MSRP",
-                    "type":"DECIMAL",
-                    "default":null,
-                    "nullable":false
-                }
+                "{'name': 'productCode', 'type': VARCHAR(length=15), 'default': \"''\", 'comment': '产品代码', 'nullable': False}",
+                "{'name': 'productName', 'type': VARCHAR(length=70), 'default': None, 'comment': '产品名称', 'nullable': False}",
+                "{'name': 'productLine', 'type': VARCHAR(length=50), 'default': None, 'comment': '产品线', 'nullable': False}",
+                "{'name': 'productScale', 'type': VARCHAR(length=10), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'productVendor', 'type': VARCHAR(length=50), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'productDescription', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'quantityInStock', 'type': SMALLINT(display_width=6), 'default': None, 'comment': '库存', 'nullable': False, 'autoincrement': False}",
+                "{'name': 'buyPrice', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': '价格', 'nullable': False}",
+                "{'name': 'MSRP', 'type': DECIMAL(precision=10, scale=2), 'default': None, 'comment': '建议零售价', 'nullable': False}"
             ]
         },
         "tokens":{
@@ -512,12 +207,7 @@
             "PrimaryKeys":[],
             "Indexes":[],
             "Columns":[
-                {
-                    "name":"s",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":true
-                }
+                "{'name': 's', 'type': VARCHAR(length=6), 'default': None, 'comment': None, 'nullable': True}"
             ]
         },
         "zinopara":{
@@ -528,36 +218,11 @@
             ],
             "Indexes":[],
             "Columns":[
-                {
-                    "name":"id",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"type",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"creatorid",
-                    "type":"VARCHAR",
-                    "default":null,
-                    "nullable":true
-                },
-                {
-                    "name":"json",
-                    "type":"TEXT",
-                    "default":null,
-                    "nullable":false
-                },
-                {
-                    "name":"json_updates",
-                    "type":"TEXT",
-                    "default":null,
-                    "nullable":true
-                }
+                "{'name': 'id', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'type', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'creatorid', 'type': VARCHAR(collation='utf8mb4_unicode_ci', length=255), 'default': None, 'comment': None, 'nullable': True}",
+                "{'name': 'json', 'type': TEXT(collation='utf8mb4_unicode_ci'), 'default': None, 'comment': None, 'nullable': False}",
+                "{'name': 'json_updates', 'type': TEXT(collation='utf8mb4_unicode_ci'), 'default': None, 'comment': None, 'nullable': True}"
             ]
         }
     }
