@@ -5707,3 +5707,9 @@ NoneType: None
 2021-11-10 at 23:47:14 | INFO | Neptune Starting ....
 2021-11-10 at 23:47:14 | INFO | API cache does not exists ....
 2021-11-10 at 23:48:18 | DEBUG | Access '/' : run in app_root()
+2021-11-11 at 00:00:13 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-11 at 00:00:13 | DEBUG | Metadata cache exists, load meta from cache file [ /home/ibmzhangjun/.neptune_cache/neptune_metadata ]
+2021-11-11 at 00:00:13 | DEBUG | Generate Schema file from database ...
+2021-11-11 at 00:00:14 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-11 at 00:00:23 | ERROR | Exception get metadata at genschema() object of type 'Column' has no len() 
+2021-11-11 at 00:00:23 | DEBUG | Loading schema from /home/ibmzhangjun/PycharmProjects/neptune/config/metadata.json
