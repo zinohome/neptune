@@ -227,23 +227,24 @@ class DBMeta(object):
                     jtable = jmeta['Tables'][jtbname]
                     table = tableschema.TableSchema(jtable['Name'], jtable['Type'])
                     for elename in jtable:
+                        log.logger.critical(elename)
                         if elename == 'PrimaryKeys':
-                            table.setprimarykeys(jtable[elename])
+                            table.primarykeys = jtable[elename]
                         elif elename == 'Indexes':
-                            table.setindexes(jtable[elename])
+                            table.indexes = jtable[elename]
                         elif elename == 'Columns':
-                            table.setcolumns(jtable[elename])
+                            table.columns = jtable[elename]
                     self.__tables.append(table)
-                    if table.gettype() == 'table':
+                    if table.type == 'table':
                         self.__tableCount = self.__tableCount + 1
-                    if table.gettype() == 'view':
+                    if table.type == 'view':
                         self.__viewCount = self.__viewCount + 1
         log.logger.debug('Schema load with [ %s ] tables and [ %s ] views' % (self.__tableCount, self.__viewCount))
 
     def response_schema(self):
         tblist = []
         for tb in self.__tables:
-            tblist.append(tb.getname())
+            tblist.append(tb.name)
         return tblist
 
     def response_table_schema(self, tablename):
