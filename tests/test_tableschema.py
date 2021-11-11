@@ -1,6 +1,6 @@
-from unittest import TestCase
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-
-class TestTableSchema(TestCase):
+class TestTableSchema():
     def test_table_schema(self):
-        self.fail()
+        assert False
