@@ -6655,3 +6655,406 @@ NoneType: None
 2021-11-11 at 18:19:05 | INFO | Add Custom query ...
 2021-11-11 at 18:19:05 | INFO | Neptune Starting ....
 2021-11-11 at 18:19:05 | INFO | API cache does not exists ....
+2021-11-11 at 21:41:51 | SUCCESS | [测试log] hello, world
+2021-11-11 at 21:41:51 | INFO | [测试log] hello, world
+2021-11-11 at 21:41:51 | DEBUG | [测试log] hello, world
+2021-11-11 at 21:41:51 | WARNING | [测试log] hello, world
+2021-11-11 at 21:41:51 | ERROR | [测试log] hello, world
+2021-11-11 at 21:41:51 | CRITICAL | [测试log] hello, world
+2021-11-11 at 21:41:51 | ERROR | [测试log] hello, world
+NoneType: None
+2021-11-11 at 21:43:56 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-11 at 21:43:56 | DEBUG | Metadata cache exists, load meta from cache file [ /home/ibmzhangjun/.neptune_cache/neptune_metadata ]
+2021-11-11 at 21:43:56 | DEBUG | Generate Schema file from database ...
+2021-11-11 at 21:43:57 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-11 at 21:44:06 | ERROR | Exception get metadata at genschema() object of type 'Column' has no len() 
+2021-11-11 at 21:44:06 | DEBUG | Loading schema from /home/ibmzhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | CRITICAL | Name
+2021-11-11 at 21:44:06 | CRITICAL | Type
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeys
+2021-11-11 at 21:44:06 | CRITICAL | Indexes
+2021-11-11 at 21:44:06 | CRITICAL | Columns
+2021-11-11 at 21:44:06 | DEBUG | Schema load with [ 11 ] tables and [ 0 ] views
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa14e740>, 'name': 'customers', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0ef450>, 'primary_key': PrimaryKeyConstraint(Column('customerNumber', INTEGER(display_width=11), table=<customers>, primary_key=True, nullable=False)), 'foreign_keys': {ForeignKey('mysqlsrc.employees.employeeNumber')}, 'fullname': 'mysqlsrc.customers', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': {Index('salesRepEmployeeNumber', Column('salesRepEmployeeNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<customers>))}, 'constraints': {PrimaryKeyConstraint(Column('customerNumber', INTEGER(display_width=11), table=<customers>, primary_key=True, nullable=False)), ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0efb30>, None, name='customers_ibfk_1', link_to_name=True, table=Table('customers', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('customerNumber', INTEGER(display_width=11), table=<customers>, primary_key=True, nullable=False), Column('customerName', VARCHAR(length=50), table=<customers>, nullable=False), Column('contactLastName', VARCHAR(length=50), table=<customers>, nullable=False), Column('contactFirstName', VARCHAR(length=50), table=<customers>, nullable=False), Column('phone', VARCHAR(length=50), table=<customers>, nullable=False), Column('addressLine1', VARCHAR(length=50), table=<customers>, nullable=False), Column('addressLine2', VARCHAR(length=50), table=<customers>), Column('city', VARCHAR(length=50), table=<customers>, nullable=False), Column('state', VARCHAR(length=50), table=<customers>), Column('postalCode', VARCHAR(length=15), table=<customers>), Column('country', VARCHAR(length=50), table=<customers>, nullable=False), Column('salesRepEmployeeNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<customers>), Column('creditLimit', DECIMAL(precision=10, scale=2), table=<customers>), schema='mysqlsrc'))}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa0fdf90>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa10e070>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa10e100>}, 'description': 'customers'}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(customers.customerNumber, customers.customerName, customers.contactLastName, customers.contactFirstName, customers.phone, customers.addressLine1, customers.addressLine2, customers.city, customers.state, customers.postalCode, customers.country, customers.salesRepEmployeeNumber, customers.creditLimit)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(customers.customerNumber, customers.customerName, customers.contactLastName, customers.contactFirstName, customers.phone, customers.addressLine1, customers.addressLine2, customers.city, customers.state, customers.postalCode, customers.country, customers.salesRepEmployeeNumber, customers.creditLimit)",
+    "comment": null,
+    "constraints": "{PrimaryKeyConstraint(Column('customerNumber', INTEGER(display_width=11), table=<customers>, primary_key=True, nullable=False)), ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0efb30>, None, name='customers_ibfk_1', link_to_name=True, table=Table('customers', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('customerNumber', INTEGER(display_width=11), table=<customers>, primary_key=True, nullable=False), Column('customerName', VARCHAR(length=50), table=<customers>, nullable=False), Column('contactLastName', VARCHAR(length=50), table=<customers>, nullable=False), Column('contactFirstName', VARCHAR(length=50), table=<customers>, nullable=False), Column('phone', VARCHAR(length=50), table=<customers>, nullable=False), Column('addressLine1', VARCHAR(length=50), table=<customers>, nullable=False), Column('addressLine2', VARCHAR(length=50), table=<customers>), Column('city', VARCHAR(length=50), table=<customers>, nullable=False), Column('state', VARCHAR(length=50), table=<customers>), Column('postalCode', VARCHAR(length=15), table=<customers>), Column('country', VARCHAR(length=50), table=<customers>, nullable=False), Column('salesRepEmployeeNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<customers>), Column('creditLimit', DECIMAL(precision=10, scale=2), table=<customers>), schema='mysqlsrc'))}",
+    "description": "customers",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa10e070>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa10e100>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa14e740>",
+    "foreign_keys": "{ForeignKey('mysqlsrc.employees.employeeNumber')}",
+    "fullname": "mysqlsrc.customers",
+    "implicit_returning": true,
+    "indexes": "{Index('salesRepEmployeeNumber', Column('salesRepEmployeeNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<customers>))}",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "customers",
+    "primary_key": "PrimaryKeyConstraint(Column('customerNumber', INTEGER(display_width=11), table=<customers>, primary_key=True, nullable=False))",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | customers
+2021-11-11 at 21:44:06 | ERROR | {Index('salesRepEmployeeNumber', Column('salesRepEmployeeNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<customers>))}
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint(Column('customerNumber', INTEGER(display_width=11), table=<customers>, primary_key=True, nullable=False))
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(customers.customerNumber, customers.customerName, customers.contactLastName, customers.contactFirstName, customers.phone, customers.addressLine1, customers.addressLine2, customers.city, customers.state, customers.postalCode, customers.country, customers.salesRepEmployeeNumber, customers.creditLimit)
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0f7440>, 'name': 'employees', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0efbd0>, 'primary_key': PrimaryKeyConstraint(Column('employeeNumber', INTEGER(display_width=11), table=<employees>, primary_key=True, nullable=False)), 'foreign_keys': {ForeignKey('mysqlsrc.employees.employeeNumber'), ForeignKey('mysqlsrc.offices.officeCode')}, 'fullname': 'mysqlsrc.employees', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': {Index('reportsTo', Column('reportsTo', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<employees>)), Index('officeCode', Column('officeCode', VARCHAR(length=10), ForeignKey('mysqlsrc.offices.officeCode'), table=<employees>, nullable=False))}, 'constraints': {ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0eff90>, None, name='employees_ibfk_2', link_to_name=True, table=Table('employees', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('employeeNumber', INTEGER(display_width=11), table=<employees>, primary_key=True, nullable=False), Column('lastName', VARCHAR(length=50), table=<employees>, nullable=False), Column('firstName', VARCHAR(length=50), table=<employees>, nullable=False), Column('extension', VARCHAR(length=10), table=<employees>, nullable=False), Column('email', VARCHAR(length=100), table=<employees>, nullable=False), Column('officeCode', VARCHAR(length=10), ForeignKey('mysqlsrc.offices.officeCode'), table=<employees>, nullable=False), Column('reportsTo', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<employees>), Column('jobTitle', VARCHAR(length=50), table=<employees>, nullable=False), schema='mysqlsrc')), PrimaryKeyConstraint(Column('employeeNumber', INTEGER(display_width=11), table=<employees>, primary_key=True, nullable=False)), ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0fd950>, None, name='employees_ibfk_1', link_to_name=True, table=Table('employees', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('employeeNumber', INTEGER(display_width=11), table=<employees>, primary_key=True, nullable=False), Column('lastName', VARCHAR(length=50), table=<employees>, nullable=False), Column('firstName', VARCHAR(length=50), table=<employees>, nullable=False), Column('extension', VARCHAR(length=10), table=<employees>, nullable=False), Column('email', VARCHAR(length=100), table=<employees>, nullable=False), Column('officeCode', VARCHAR(length=10), ForeignKey('mysqlsrc.offices.officeCode'), table=<employees>, nullable=False), Column('reportsTo', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<employees>), Column('jobTitle', VARCHAR(length=50), table=<employees>, nullable=False), schema='mysqlsrc'))}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa0fdd60>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa100cd0>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa100d60>}, 'description': 'employees'}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(employees.employeeNumber, employees.lastName, employees.firstName, employees.extension, employees.email, employees.officeCode, employees.reportsTo, employees.jobTitle)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(employees.employeeNumber, employees.lastName, employees.firstName, employees.extension, employees.email, employees.officeCode, employees.reportsTo, employees.jobTitle)",
+    "comment": null,
+    "constraints": "{ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0eff90>, None, name='employees_ibfk_2', link_to_name=True, table=Table('employees', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('employeeNumber', INTEGER(display_width=11), table=<employees>, primary_key=True, nullable=False), Column('lastName', VARCHAR(length=50), table=<employees>, nullable=False), Column('firstName', VARCHAR(length=50), table=<employees>, nullable=False), Column('extension', VARCHAR(length=10), table=<employees>, nullable=False), Column('email', VARCHAR(length=100), table=<employees>, nullable=False), Column('officeCode', VARCHAR(length=10), ForeignKey('mysqlsrc.offices.officeCode'), table=<employees>, nullable=False), Column('reportsTo', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<employees>), Column('jobTitle', VARCHAR(length=50), table=<employees>, nullable=False), schema='mysqlsrc')), PrimaryKeyConstraint(Column('employeeNumber', INTEGER(display_width=11), table=<employees>, primary_key=True, nullable=False)), ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0fd950>, None, name='employees_ibfk_1', link_to_name=True, table=Table('employees', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('employeeNumber', INTEGER(display_width=11), table=<employees>, primary_key=True, nullable=False), Column('lastName', VARCHAR(length=50), table=<employees>, nullable=False), Column('firstName', VARCHAR(length=50), table=<employees>, nullable=False), Column('extension', VARCHAR(length=10), table=<employees>, nullable=False), Column('email', VARCHAR(length=100), table=<employees>, nullable=False), Column('officeCode', VARCHAR(length=10), ForeignKey('mysqlsrc.offices.officeCode'), table=<employees>, nullable=False), Column('reportsTo', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<employees>), Column('jobTitle', VARCHAR(length=50), table=<employees>, nullable=False), schema='mysqlsrc'))}",
+    "description": "employees",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa100cd0>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa100d60>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0f7440>",
+    "foreign_keys": "{ForeignKey('mysqlsrc.employees.employeeNumber'), ForeignKey('mysqlsrc.offices.officeCode')}",
+    "fullname": "mysqlsrc.employees",
+    "implicit_returning": true,
+    "indexes": "{Index('reportsTo', Column('reportsTo', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<employees>)), Index('officeCode', Column('officeCode', VARCHAR(length=10), ForeignKey('mysqlsrc.offices.officeCode'), table=<employees>, nullable=False))}",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "employees",
+    "primary_key": "PrimaryKeyConstraint(Column('employeeNumber', INTEGER(display_width=11), table=<employees>, primary_key=True, nullable=False))",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | employees
+2021-11-11 at 21:44:06 | ERROR | {Index('reportsTo', Column('reportsTo', INTEGER(display_width=11), ForeignKey('mysqlsrc.employees.employeeNumber'), table=<employees>)), Index('officeCode', Column('officeCode', VARCHAR(length=10), ForeignKey('mysqlsrc.offices.officeCode'), table=<employees>, nullable=False))}
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint(Column('employeeNumber', INTEGER(display_width=11), table=<employees>, primary_key=True, nullable=False))
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(employees.employeeNumber, employees.lastName, employees.firstName, employees.extension, employees.email, employees.officeCode, employees.reportsTo, employees.jobTitle)
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa10c1c0>, 'name': 'items', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08f130>, 'primary_key': PrimaryKeyConstraint(Column('id', INTEGER(display_width=11), table=<items>, primary_key=True, nullable=False)), 'foreign_keys': set(), 'fullname': 'mysqlsrc.items', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': set(), 'constraints': {PrimaryKeyConstraint(Column('id', INTEGER(display_width=11), table=<items>, primary_key=True, nullable=False))}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa08f1d0>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa10e490>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa10e4f0>}, 'description': 'items'}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(items.id, items.item_no)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(items.id, items.item_no)",
+    "comment": null,
+    "constraints": "{PrimaryKeyConstraint(Column('id', INTEGER(display_width=11), table=<items>, primary_key=True, nullable=False))}",
+    "description": "items",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa10e490>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa10e4f0>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa10c1c0>",
+    "foreign_keys": "set()",
+    "fullname": "mysqlsrc.items",
+    "implicit_returning": true,
+    "indexes": "set()",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "items",
+    "primary_key": "PrimaryKeyConstraint(Column('id', INTEGER(display_width=11), table=<items>, primary_key=True, nullable=False))",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | items
+2021-11-11 at 21:44:06 | ERROR | set()
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint(Column('id', INTEGER(display_width=11), table=<items>, primary_key=True, nullable=False))
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(items.id, items.item_no)
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0f7b40>, 'name': 'offices', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0fd040>, 'primary_key': PrimaryKeyConstraint(Column('officeCode', VARCHAR(length=10), table=<offices>, primary_key=True, nullable=False)), 'foreign_keys': set(), 'fullname': 'mysqlsrc.offices', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': set(), 'constraints': {PrimaryKeyConstraint(Column('officeCode', VARCHAR(length=10), table=<offices>, primary_key=True, nullable=False))}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa0fd450>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa100610>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa1006a0>}, 'description': 'offices'}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(offices.officeCode, offices.city, offices.phone, offices.addressLine1, offices.addressLine2, offices.state, offices.country, offices.postalCode, offices.territory)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(offices.officeCode, offices.city, offices.phone, offices.addressLine1, offices.addressLine2, offices.state, offices.country, offices.postalCode, offices.territory)",
+    "comment": null,
+    "constraints": "{PrimaryKeyConstraint(Column('officeCode', VARCHAR(length=10), table=<offices>, primary_key=True, nullable=False))}",
+    "description": "offices",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa100610>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa1006a0>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0f7b40>",
+    "foreign_keys": "set()",
+    "fullname": "mysqlsrc.offices",
+    "implicit_returning": true,
+    "indexes": "set()",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "offices",
+    "primary_key": "PrimaryKeyConstraint(Column('officeCode', VARCHAR(length=10), table=<offices>, primary_key=True, nullable=False))",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | offices
+2021-11-11 at 21:44:06 | ERROR | set()
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint(Column('officeCode', VARCHAR(length=10), table=<offices>, primary_key=True, nullable=False))
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(offices.officeCode, offices.city, offices.phone, offices.addressLine1, offices.addressLine2, offices.state, offices.country, offices.postalCode, offices.territory)
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa10c540>, 'name': 'orderdetails', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08f2c0>, 'primary_key': PrimaryKeyConstraint(Column('orderNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.orders.orderNumber'), table=<orderdetails>, primary_key=True, nullable=False), Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False)), 'foreign_keys': {ForeignKey('mysqlsrc.orders.orderNumber'), ForeignKey('mysqlsrc.products.productCode')}, 'fullname': 'mysqlsrc.orderdetails', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': {Index('productCode', Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False))}, 'constraints': {ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08f810>, None, name='orderdetails_ibfk_2', link_to_name=True, table=Table('orderdetails', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('orderNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.orders.orderNumber'), table=<orderdetails>, primary_key=True, nullable=False), Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False), Column('quantityOrdered', INTEGER(display_width=11), table=<orderdetails>, nullable=False), Column('priceEach', DECIMAL(precision=10, scale=2), table=<orderdetails>, nullable=False), Column('orderLineNumber', SMALLINT(display_width=6), table=<orderdetails>, nullable=False), schema='mysqlsrc')), ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08f400>, None, name='orderdetails_ibfk_1', link_to_name=True, table=Table('orderdetails', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('orderNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.orders.orderNumber'), table=<orderdetails>, primary_key=True, nullable=False), Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False), Column('quantityOrdered', INTEGER(display_width=11), table=<orderdetails>, nullable=False), Column('priceEach', DECIMAL(precision=10, scale=2), table=<orderdetails>, nullable=False), Column('orderLineNumber', SMALLINT(display_width=6), table=<orderdetails>, nullable=False), schema='mysqlsrc')), PrimaryKeyConstraint(Column('orderNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.orders.orderNumber'), table=<orderdetails>, primary_key=True, nullable=False), Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False))}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa0ab0e0>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0a4af0>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa0a4b80>}, 'description': 'orderdetails'}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(orderdetails.orderNumber, orderdetails.productCode, orderdetails.quantityOrdered, orderdetails.priceEach, orderdetails.orderLineNumber)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(orderdetails.orderNumber, orderdetails.productCode, orderdetails.quantityOrdered, orderdetails.priceEach, orderdetails.orderLineNumber)",
+    "comment": null,
+    "constraints": "{ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08f810>, None, name='orderdetails_ibfk_2', link_to_name=True, table=Table('orderdetails', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('orderNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.orders.orderNumber'), table=<orderdetails>, primary_key=True, nullable=False), Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False), Column('quantityOrdered', INTEGER(display_width=11), table=<orderdetails>, nullable=False), Column('priceEach', DECIMAL(precision=10, scale=2), table=<orderdetails>, nullable=False), Column('orderLineNumber', SMALLINT(display_width=6), table=<orderdetails>, nullable=False), schema='mysqlsrc')), ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08f400>, None, name='orderdetails_ibfk_1', link_to_name=True, table=Table('orderdetails', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('orderNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.orders.orderNumber'), table=<orderdetails>, primary_key=True, nullable=False), Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False), Column('quantityOrdered', INTEGER(display_width=11), table=<orderdetails>, nullable=False), Column('priceEach', DECIMAL(precision=10, scale=2), table=<orderdetails>, nullable=False), Column('orderLineNumber', SMALLINT(display_width=6), table=<orderdetails>, nullable=False), schema='mysqlsrc')), PrimaryKeyConstraint(Column('orderNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.orders.orderNumber'), table=<orderdetails>, primary_key=True, nullable=False), Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False))}",
+    "description": "orderdetails",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0a4af0>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa0a4b80>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa10c540>",
+    "foreign_keys": "{ForeignKey('mysqlsrc.orders.orderNumber'), ForeignKey('mysqlsrc.products.productCode')}",
+    "fullname": "mysqlsrc.orderdetails",
+    "implicit_returning": true,
+    "indexes": "{Index('productCode', Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False))}",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "orderdetails",
+    "primary_key": "PrimaryKeyConstraint(Column('orderNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.orders.orderNumber'), table=<orderdetails>, primary_key=True, nullable=False), Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False))",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | orderdetails
+2021-11-11 at 21:44:06 | ERROR | {Index('productCode', Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False))}
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint(Column('orderNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.orders.orderNumber'), table=<orderdetails>, primary_key=True, nullable=False), Column('productCode', VARCHAR(length=15), ForeignKey('mysqlsrc.products.productCode'), table=<orderdetails>, primary_key=True, nullable=False))
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(orderdetails.orderNumber, orderdetails.productCode, orderdetails.quantityOrdered, orderdetails.priceEach, orderdetails.orderLineNumber)
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa10c740>, 'name': 'orders', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08f450>, 'primary_key': PrimaryKeyConstraint(Column('orderNumber', INTEGER(display_width=11), table=<orders>, primary_key=True, nullable=False)), 'foreign_keys': {ForeignKey('mysqlsrc.customers.customerNumber')}, 'fullname': 'mysqlsrc.orders', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': {Index('customerNumber', Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<orders>, nullable=False))}, 'constraints': {ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08f4a0>, None, name='orders_ibfk_1', link_to_name=True, table=Table('orders', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('orderNumber', INTEGER(display_width=11), table=<orders>, primary_key=True, nullable=False), Column('orderDate', DATE(), table=<orders>, nullable=False), Column('requiredDate', DATE(), table=<orders>, nullable=False), Column('shippedDate', DATE(), table=<orders>), Column('status', VARCHAR(length=15), table=<orders>, nullable=False), Column('comments', TEXT(), table=<orders>), Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<orders>, nullable=False), schema='mysqlsrc')), PrimaryKeyConstraint(Column('orderNumber', INTEGER(display_width=11), table=<orders>, primary_key=True, nullable=False))}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa08f680>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa098100>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa098190>}, 'description': 'orders'}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(orders.orderNumber, orders.orderDate, orders.requiredDate, orders.shippedDate, orders.status, orders.comments, orders.customerNumber)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(orders.orderNumber, orders.orderDate, orders.requiredDate, orders.shippedDate, orders.status, orders.comments, orders.customerNumber)",
+    "comment": null,
+    "constraints": "{ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08f4a0>, None, name='orders_ibfk_1', link_to_name=True, table=Table('orders', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('orderNumber', INTEGER(display_width=11), table=<orders>, primary_key=True, nullable=False), Column('orderDate', DATE(), table=<orders>, nullable=False), Column('requiredDate', DATE(), table=<orders>, nullable=False), Column('shippedDate', DATE(), table=<orders>), Column('status', VARCHAR(length=15), table=<orders>, nullable=False), Column('comments', TEXT(), table=<orders>), Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<orders>, nullable=False), schema='mysqlsrc')), PrimaryKeyConstraint(Column('orderNumber', INTEGER(display_width=11), table=<orders>, primary_key=True, nullable=False))}",
+    "description": "orders",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa098100>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa098190>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa10c740>",
+    "foreign_keys": "{ForeignKey('mysqlsrc.customers.customerNumber')}",
+    "fullname": "mysqlsrc.orders",
+    "implicit_returning": true,
+    "indexes": "{Index('customerNumber', Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<orders>, nullable=False))}",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "orders",
+    "primary_key": "PrimaryKeyConstraint(Column('orderNumber', INTEGER(display_width=11), table=<orders>, primary_key=True, nullable=False))",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | orders
+2021-11-11 at 21:44:06 | ERROR | {Index('customerNumber', Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<orders>, nullable=False))}
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint(Column('orderNumber', INTEGER(display_width=11), table=<orders>, primary_key=True, nullable=False))
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(orders.orderNumber, orders.orderDate, orders.requiredDate, orders.shippedDate, orders.status, orders.comments, orders.customerNumber)
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0a5d40>, 'name': 'payments', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0ab270>, 'primary_key': PrimaryKeyConstraint(Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<payments>, primary_key=True, nullable=False), Column('checkNumber', VARCHAR(length=50), table=<payments>, primary_key=True, nullable=False)), 'foreign_keys': {ForeignKey('mysqlsrc.customers.customerNumber')}, 'fullname': 'mysqlsrc.payments', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': set(), 'constraints': {PrimaryKeyConstraint(Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<payments>, primary_key=True, nullable=False), Column('checkNumber', VARCHAR(length=50), table=<payments>, primary_key=True, nullable=False)), ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0ab310>, None, name='payments_ibfk_1', link_to_name=True, table=Table('payments', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<payments>, primary_key=True, nullable=False), Column('checkNumber', VARCHAR(length=50), table=<payments>, primary_key=True, nullable=False), Column('paymentDate', DATE(), table=<payments>, nullable=False), Column('amount', DECIMAL(precision=10, scale=2), table=<payments>, nullable=False), schema='mysqlsrc'))}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa0ab400>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0b1280>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa0b12e0>}, 'description': 'payments'}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(payments.customerNumber, payments.checkNumber, payments.paymentDate, payments.amount)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(payments.customerNumber, payments.checkNumber, payments.paymentDate, payments.amount)",
+    "comment": null,
+    "constraints": "{PrimaryKeyConstraint(Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<payments>, primary_key=True, nullable=False), Column('checkNumber', VARCHAR(length=50), table=<payments>, primary_key=True, nullable=False)), ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0ab310>, None, name='payments_ibfk_1', link_to_name=True, table=Table('payments', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<payments>, primary_key=True, nullable=False), Column('checkNumber', VARCHAR(length=50), table=<payments>, primary_key=True, nullable=False), Column('paymentDate', DATE(), table=<payments>, nullable=False), Column('amount', DECIMAL(precision=10, scale=2), table=<payments>, nullable=False), schema='mysqlsrc'))}",
+    "description": "payments",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0b1280>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa0b12e0>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0a5d40>",
+    "foreign_keys": "{ForeignKey('mysqlsrc.customers.customerNumber')}",
+    "fullname": "mysqlsrc.payments",
+    "implicit_returning": true,
+    "indexes": "set()",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "payments",
+    "primary_key": "PrimaryKeyConstraint(Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<payments>, primary_key=True, nullable=False), Column('checkNumber', VARCHAR(length=50), table=<payments>, primary_key=True, nullable=False))",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | payments
+2021-11-11 at 21:44:06 | ERROR | set()
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint(Column('customerNumber', INTEGER(display_width=11), ForeignKey('mysqlsrc.customers.customerNumber'), table=<payments>, primary_key=True, nullable=False), Column('checkNumber', VARCHAR(length=50), table=<payments>, primary_key=True, nullable=False))
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(payments.customerNumber, payments.checkNumber, payments.paymentDate, payments.amount)
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0978c0>, 'name': 'productlines', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08fc20>, 'primary_key': PrimaryKeyConstraint(Column('productLine', VARCHAR(length=50), table=<productlines>, primary_key=True, nullable=False)), 'foreign_keys': set(), 'fullname': 'mysqlsrc.productlines', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': set(), 'constraints': {PrimaryKeyConstraint(Column('productLine', VARCHAR(length=50), table=<productlines>, primary_key=True, nullable=False))}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa08fd10>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa098dc0>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa098e20>}, 'description': 'productlines'}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(productlines.productLine, productlines.textDescription, productlines.htmlDescription, productlines.image)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(productlines.productLine, productlines.textDescription, productlines.htmlDescription, productlines.image)",
+    "comment": null,
+    "constraints": "{PrimaryKeyConstraint(Column('productLine', VARCHAR(length=50), table=<productlines>, primary_key=True, nullable=False))}",
+    "description": "productlines",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa098dc0>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa098e20>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0978c0>",
+    "foreign_keys": "set()",
+    "fullname": "mysqlsrc.productlines",
+    "implicit_returning": true,
+    "indexes": "set()",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "productlines",
+    "primary_key": "PrimaryKeyConstraint(Column('productLine', VARCHAR(length=50), table=<productlines>, primary_key=True, nullable=False))",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | productlines
+2021-11-11 at 21:44:06 | ERROR | set()
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint(Column('productLine', VARCHAR(length=50), table=<productlines>, primary_key=True, nullable=False))
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(productlines.productLine, productlines.textDescription, productlines.htmlDescription, productlines.image)
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa097440>, 'name': 'products', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08f860>, 'primary_key': PrimaryKeyConstraint(Column('productCode', VARCHAR(length=15), table=<products>, primary_key=True, nullable=False, server_default=DefaultClause(<sqlalchemy.sql.elements.TextClause object at 0x7bebfa0985b0>, for_update=False), comment='产品代码')), 'foreign_keys': {ForeignKey('mysqlsrc.productlines.productLine')}, 'fullname': 'mysqlsrc.products', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': {Index('productLine', Column('productLine', VARCHAR(length=50), ForeignKey('mysqlsrc.productlines.productLine'), table=<products>, nullable=False, comment='产品线'))}, 'constraints': {ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08fbd0>, None, name='products_ibfk_1', link_to_name=True, table=Table('products', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('productCode', VARCHAR(length=15), table=<products>, primary_key=True, nullable=False, server_default=DefaultClause(<sqlalchemy.sql.elements.TextClause object at 0x7bebfa0985b0>, for_update=False), comment='产品代码'), Column('productName', VARCHAR(length=70), table=<products>, nullable=False, comment='产品名称'), Column('productLine', VARCHAR(length=50), ForeignKey('mysqlsrc.productlines.productLine'), table=<products>, nullable=False, comment='产品线'), Column('productScale', VARCHAR(length=10), table=<products>, nullable=False), Column('productVendor', VARCHAR(length=50), table=<products>, nullable=False), Column('productDescription', TEXT(), table=<products>, nullable=False), Column('quantityInStock', SMALLINT(display_width=6), table=<products>, nullable=False, comment='库存'), Column('buyPrice', DECIMAL(precision=10, scale=2), table=<products>, nullable=False, comment='价格'), Column('MSRP', DECIMAL(precision=10, scale=2), table=<products>, nullable=False, comment='建议零售价'), schema='mysqlsrc')), PrimaryKeyConstraint(Column('productCode', VARCHAR(length=15), table=<products>, primary_key=True, nullable=False, server_default=DefaultClause(<sqlalchemy.sql.elements.TextClause object at 0x7bebfa0985b0>, for_update=False), comment='产品代码'))}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa08fef0>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0a4550>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa0a45e0>}, 'description': 'products'}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(products.productCode, products.productName, products.productLine, products.productScale, products.productVendor, products.productDescription, products.quantityInStock, products.buyPrice, products.MSRP)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(products.productCode, products.productName, products.productLine, products.productScale, products.productVendor, products.productDescription, products.quantityInStock, products.buyPrice, products.MSRP)",
+    "comment": null,
+    "constraints": "{ForeignKeyConstraint(<sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa08fbd0>, None, name='products_ibfk_1', link_to_name=True, table=Table('products', MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), Column('productCode', VARCHAR(length=15), table=<products>, primary_key=True, nullable=False, server_default=DefaultClause(<sqlalchemy.sql.elements.TextClause object at 0x7bebfa0985b0>, for_update=False), comment='\u4ea7\u54c1\u4ee3\u7801'), Column('productName', VARCHAR(length=70), table=<products>, nullable=False, comment='\u4ea7\u54c1\u540d\u79f0'), Column('productLine', VARCHAR(length=50), ForeignKey('mysqlsrc.productlines.productLine'), table=<products>, nullable=False, comment='\u4ea7\u54c1\u7ebf'), Column('productScale', VARCHAR(length=10), table=<products>, nullable=False), Column('productVendor', VARCHAR(length=50), table=<products>, nullable=False), Column('productDescription', TEXT(), table=<products>, nullable=False), Column('quantityInStock', SMALLINT(display_width=6), table=<products>, nullable=False, comment='\u5e93\u5b58'), Column('buyPrice', DECIMAL(precision=10, scale=2), table=<products>, nullable=False, comment='\u4ef7\u683c'), Column('MSRP', DECIMAL(precision=10, scale=2), table=<products>, nullable=False, comment='\u5efa\u8bae\u96f6\u552e\u4ef7'), schema='mysqlsrc')), PrimaryKeyConstraint(Column('productCode', VARCHAR(length=15), table=<products>, primary_key=True, nullable=False, server_default=DefaultClause(<sqlalchemy.sql.elements.TextClause object at 0x7bebfa0985b0>, for_update=False), comment='\u4ea7\u54c1\u4ee3\u7801'))}",
+    "description": "products",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0a4550>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa0a45e0>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa097440>",
+    "foreign_keys": "{ForeignKey('mysqlsrc.productlines.productLine')}",
+    "fullname": "mysqlsrc.products",
+    "implicit_returning": true,
+    "indexes": "{Index('productLine', Column('productLine', VARCHAR(length=50), ForeignKey('mysqlsrc.productlines.productLine'), table=<products>, nullable=False, comment='\u4ea7\u54c1\u7ebf'))}",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "products",
+    "primary_key": "PrimaryKeyConstraint(Column('productCode', VARCHAR(length=15), table=<products>, primary_key=True, nullable=False, server_default=DefaultClause(<sqlalchemy.sql.elements.TextClause object at 0x7bebfa0985b0>, for_update=False), comment='\u4ea7\u54c1\u4ee3\u7801'))",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | products
+2021-11-11 at 21:44:06 | ERROR | {Index('productLine', Column('productLine', VARCHAR(length=50), ForeignKey('mysqlsrc.productlines.productLine'), table=<products>, nullable=False, comment='产品线'))}
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint(Column('productCode', VARCHAR(length=15), table=<products>, primary_key=True, nullable=False, server_default=DefaultClause(<sqlalchemy.sql.elements.TextClause object at 0x7bebfa0985b0>, for_update=False), comment='产品代码'))
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(products.productCode, products.productName, products.productLine, products.productScale, products.productVendor, products.productDescription, products.quantityInStock, products.buyPrice, products.MSRP)
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0af440>, 'name': 'tokens', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0ab4a0>, 'primary_key': PrimaryKeyConstraint(), 'foreign_keys': set(), 'fullname': 'mysqlsrc.tokens', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': set(), 'constraints': {PrimaryKeyConstraint()}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa0ab4f0>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0b1550>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa0b15b0>}}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(tokens.s)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(tokens.s)",
+    "comment": null,
+    "constraints": "{PrimaryKeyConstraint()}",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0b1550>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa0b15b0>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0af440>",
+    "foreign_keys": "set()",
+    "fullname": "mysqlsrc.tokens",
+    "implicit_returning": true,
+    "indexes": "set()",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "tokens",
+    "primary_key": "PrimaryKeyConstraint()",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | tokens
+2021-11-11 at 21:44:06 | ERROR | set()
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint()
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(tokens.s)
+2021-11-11 at 21:44:06 | DEBUG | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0af6c0>, 'name': 'zinopara', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0ab630>, 'primary_key': PrimaryKeyConstraint(Column('id', VARCHAR(collation='utf8mb4_unicode_ci', length=255), table=<zinopara>, primary_key=True, nullable=False)), 'foreign_keys': set(), 'fullname': 'mysqlsrc.zinopara', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': set(), 'constraints': {PrimaryKeyConstraint(Column('id', VARCHAR(collation='utf8mb4_unicode_ci', length=255), table=<zinopara>, primary_key=True, nullable=False))}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa0ab8b0>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0b1b20>, 'dialect_options': {'mysql': <sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa0b1b80>}, 'description': 'zinopara'}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(zinopara.id, zinopara.type, zinopara.creatorid, zinopara.json, zinopara.json_updates)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(zinopara.id, zinopara.type, zinopara.creatorid, zinopara.json, zinopara.json_updates)",
+    "comment": null,
+    "constraints": "{PrimaryKeyConstraint(Column('id', VARCHAR(collation='utf8mb4_unicode_ci', length=255), table=<zinopara>, primary_key=True, nullable=False))}",
+    "description": "zinopara",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0b1b20>",
+    "dialect_options": {
+        "mysql": "<sqlalchemy.sql.base._DialectArgDict object at 0x7bebfa0b1b80>"
+    },
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0af6c0>",
+    "foreign_keys": "set()",
+    "fullname": "mysqlsrc.zinopara",
+    "implicit_returning": true,
+    "indexes": "set()",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "zinopara",
+    "primary_key": "PrimaryKeyConstraint(Column('id', VARCHAR(collation='utf8mb4_unicode_ci', length=255), table=<zinopara>, primary_key=True, nullable=False))",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | ERROR | zinopara
+2021-11-11 at 21:44:06 | ERROR | set()
+2021-11-11 at 21:44:06 | ERROR | PrimaryKeyConstraint(Column('id', VARCHAR(collation='utf8mb4_unicode_ci', length=255), table=<zinopara>, primary_key=True, nullable=False))
+2021-11-11 at 21:44:06 | ERROR | DedupeColumnCollection(zinopara.id, zinopara.type, zinopara.creatorid, zinopara.json, zinopara.json_updates)
+2021-11-11 at 21:44:06 | SUCCESS | {'dispatch': <sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0afd40>, 'name': 'order_view', '_columns': <sqlalchemy.sql.base.DedupeColumnCollection object at 0x7bebfa0ab9f0>, 'primary_key': PrimaryKeyConstraint(), 'foreign_keys': set(), 'fullname': 'mysqlsrc.order_view', 'metadata': MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc)), 'schema': 'mysqlsrc', 'indexes': set(), 'constraints': {PrimaryKeyConstraint()}, 'columns': <sqlalchemy.sql.base.ImmutableColumnCollection object at 0x7bebfa0abae0>, '_extra_dependencies': set(), 'implicit_returning': True, 'comment': None, '_prefixes': [], 'dialect_kwargs': <sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0bc160>, 'dialect_options': {}}
+2021-11-11 at 21:44:06 | DEBUG | {
+    "_columns": "DedupeColumnCollection(order_view.orderNumber, order_view.orderDate, order_view.requiredDate, order_view.shippedDate, order_view.productCode)",
+    "_extra_dependencies": "set()",
+    "_prefixes": [],
+    "columns": "ImmutableColumnCollection(order_view.orderNumber, order_view.orderDate, order_view.requiredDate, order_view.shippedDate, order_view.productCode)",
+    "comment": null,
+    "constraints": "{PrimaryKeyConstraint()}",
+    "dialect_kwargs": "<sqlalchemy.sql.base._DialectArgView object at 0x7bebfa0bc160>",
+    "dialect_options": {},
+    "dispatch": "<sqlalchemy.event.base.DDLEventsDispatch object at 0x7bebfa0afd40>",
+    "foreign_keys": "set()",
+    "fullname": "mysqlsrc.order_view",
+    "implicit_returning": true,
+    "indexes": "set()",
+    "metadata": "MetaData(bind=Engine(mysql+pymysql://root:***@192.168.50.10:3306/mysqlsrc))",
+    "name": "order_view",
+    "primary_key": "PrimaryKeyConstraint()",
+    "schema": "mysqlsrc"
+}
+2021-11-11 at 21:44:06 | CRITICAL | order_view
+2021-11-11 at 21:44:06 | CRITICAL | set()
+2021-11-11 at 21:44:06 | CRITICAL | PrimaryKeyConstraint()
+2021-11-11 at 21:44:06 | CRITICAL | DedupeColumnCollection(order_view.orderNumber, order_view.orderDate, order_view.requiredDate, order_view.shippedDate, order_view.productCode)
+2021-11-11 at 21:44:31 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-11 at 21:44:32 | DEBUG | Metadata cache exists, load meta from cache file [ /home/ibmzhangjun/.neptune_cache/neptune_metadata ]
+2021-11-11 at 21:44:32 | DEBUG | Generate Schema file from database ...
+2021-11-11 at 21:44:32 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-11 at 21:44:41 | ERROR | Exception get metadata at genschema() object of type 'Column' has no len() 
+2021-11-11 at 21:44:41 | DEBUG | Loading schema from /home/ibmzhangjun/PycharmProjects/neptune/config/metadata.json
+2021-11-11 at 21:58:48 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-11 at 22:02:44 | DEBUG | Connect use uri [ mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc ]
+2021-11-11 at 22:02:44 | DEBUG | Metadata cache exists, load meta from cache file [ /home/ibmzhangjun/.neptune_cache/neptune_metadata ]
+2021-11-11 at 22:02:44 | DEBUG | Generate Schema file from database ...
+2021-11-11 at 22:02:45 | DEBUG | Generate Schema from : [ mysqlsrc ] with db schema [ mysqlsrc ]
+2021-11-11 at 22:02:55 | ERROR | Exception get metadata at genschema() object of type 'Column' has no len() 
+2021-11-11 at 22:02:55 | DEBUG | Loading schema from /home/ibmzhangjun/PycharmProjects/neptune/config/metadata.json

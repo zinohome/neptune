@@ -29,7 +29,7 @@ class TableModel(object):
         meta = dbmeta.DBMeta()
         self.dbmeta = meta
         self.use_schema = cfg.database['db_use_schema']
-        self.metadata = meta.getmetadata()
+        self.metadata = meta.metadata()
         self.metadata.bind = self.engine
         self.schema = self.dbmeta.gettable(table_name)
 
