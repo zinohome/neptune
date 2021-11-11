@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+#  #
+#  Copyright (C) 2021 ZinoHome, Inc. All Rights Reserved
+#  #
+#  @Time    : 2021
+#  @Author  : Zhang Jun
+#  @Email   : ibmzhangjun@139.com
+#  @Software: Neptune
+
+
 import os
 from core import dbengine, tableschema
 from sqlalchemy import inspect, MetaData
@@ -44,7 +53,7 @@ class DBMeta(object):
             log.logger.debug('Generate Schema file from database ...')
             self.gen_schema()
         else:
-            if os.path.exists(self.get_schema_file()):
+            if os.path.exists(self.schema_file):
                 log.logger.debug('Schema file exists, you can load it to application ...')
             else:
                 log.logger.debug('Schema file does not exists, generate it from database ...')
@@ -56,7 +65,7 @@ class DBMeta(object):
         return self._schema
 
     @schema.setter
-    def schema(self,value):
+    def schema(self, value):
         self._schema = value
 
     @property
@@ -78,6 +87,14 @@ class DBMeta(object):
         else:
             return None
 
+    @property
+    def schema_file(self):
+        basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
+        apppath = os.path.abspath(os.path.join(basepath, os.pardir))
+        configpath = os.path.abspath(os.path.join(apppath, 'config'))
+        metafilepath = os.path.abspath(os.path.join(configpath, cfg.schema['schema_db_metafile']))
+        return metafilepath
+
     def load_metadata(self):
         engine = dbengine.DBEngine().connect()
         cached_metadata = None
@@ -95,13 +112,9 @@ class DBMeta(object):
                 cached_metadata.bind = engine
                 self._metadata = cached_metadata
             else:
-                metadata = MetaData(bind=engine)
-                if self.use_schema:
-                    metadata = MetaData(bind=engine, schema=self._schema)
-                if cfg.schema['schema_fetch_all_table']:
-                    metadata.reflect(views=True)
-                else:
-                    metadata.reflect(views=True, only=cfg.schema['schema_fetch_tables'])
+                metadata = MetaData(bind=engine, schema=self._schema if self.use_schema else None)
+                metadata.reflect(views=True, only=cfg.schema['schema_fetch_tables'] if not cfg.schema[
+                    'schema_fetch_all_table'] else None)
                 try:
                     if not os.path.exists(cache_path):
                         os.makedirs(cache_path)
@@ -115,19 +128,15 @@ class DBMeta(object):
                                      '[ %s ] ' % os.path.join(cache_path, metadata_pickle_filename))
                 self._metadata = metadata
         else:
-            metadata = MetaData(bind=engine)
-            if self.use_schema:
-                metadata = MetaData(bind=engine, schema=self._schema)
-            if cfg.schema['schema_fetch_all_table']:
-                metadata.reflect(views=True)
-            else:
-                metadata.reflect(views=True, only=cfg.schema['schema_fetch_tables'])
+            metadata = MetaData(bind=engine, schema=self._schema if self.use_schema else None)
+            metadata.reflect(views=True, only=cfg.schema['schema_fetch_tables'] if not cfg.schema[
+                'schema_fetch_all_table'] else None)
             self._metadata = metadata
 
     def gen_schema(self):
         engine = dbengine.DBEngine().connect()
         inspector = inspect(engine)
-        metadata = self.metadata()
+        metadata = self.metadata
         try:
             if metadata is not None:
                 log.logger.debug("Generate Schema from : [ %s ] with db schema "
@@ -163,24 +172,23 @@ class DBMeta(object):
                         if self.use_schema:
                             jtbl['Indexes'] = inspector.get_indexes(table_name, schema=self._schema)
                         jtbl['Columns'] = []
-                        table_columes = inspector.get_columns(table_name)
+                        table_columns = inspector.get_columns(table_name)
                         if self.use_schema:
-                            table_columes = inspector.get_columns(table_name, schema=self._schema)
-                        for column in table_columes:
-                            if len(column) > 0:
-                                jtbl['Columns'].append(json.loads(json.dumps(column.__str__(), separators=(',', ':'))))
+                            table_columns = inspector.get_columns(table_name, schema=self._schema)
+                        for column in table_columns:
+                            jtbl['Columns'].append(json.loads(json.dumps(column.__str__(), separators=(',', ':'))))
 
                 view_names = inspector.get_view_names()
                 if self.use_schema:
                     view_names = inspector.get_view_names(schema=self._schema)
                 for view_name in view_names:
-                    persist_table = False
+                    persist_view = False
                     if cfg.schema['schema_fetch_all_table']:
-                        persist_table = True
+                        persist_view = True
                     else:
                         if view_name in table_list_set:
-                            persist_table = True
-                    if persist_table:
+                            persist_view = True
+                    if persist_view:
                         for table_v in reversed(metadata.sorted_tables):
                             if table_v.name == view_name:
                                 vtbl = {}
@@ -189,29 +197,26 @@ class DBMeta(object):
                                 vtbl['Type'] = 'view'
                                 vtbl['Columns'] = []
                                 for v_column in table_v.columns:
-                                    if len(v_column) > 0:
-                                        vtbl['Columns'].append(json.loads(json.dumps(v_column.__str__(), separators=(',', ':'))))
-                with open(self.get_schema_file(), 'w') as jsonfile:
+                                    vtbl['Columns'].append(json.loads(json.dumps(v_column.__str__(), separators=(',', ':'))))
+                with open(self.schema_file, 'w') as jsonfile:
                     json.dump(jmeta, jsonfile, separators=(',', ':'), sort_keys=False, indent=4 * ' ', ensure_ascii=False, encoding='utf-8')
-
             else:
-                log.logger.error('Can not get metadata at genschema() ... ')
-                raise Exception('Can not get metadata at genschema()')
-        except Exception as err:
-            log.logger.error('Exception get metadata at genschema() %s ' % err)
+                log.logger.error('Can not get metadata at gen_schema() ... ')
+                raise Exception('Can not get metadata at gen_schema()')
+        except Exception as exp:
+            log.logger.error('Exception at gen_schema() %s ' % exp)
 
     def load_schema(self):
-        log.logger.debug('Loading schema from %s' % self.get_schema_file())
-        with open(self.get_schema_file(), 'r') as metafile:
-            jmeta = json.loads(metafile.read())
-            self._schema = jmeta['Schema']
-            if len(jmeta['Tables']) > 0:
+        log.logger.debug('Loading schema from %s' % self.schema_file)
+        with open(self.schema_file, 'r') as schemafile:
+            jschema = json.loads(schemafile.read())
+            self._schema = jschema['Schema']
+            if len(jschema['Tables']) > 0:
                 self._tables = []
-                for jtbname in jmeta['Tables']:
-                    jtable = jmeta['Tables'][jtbname]
+                for jtbname in jschema['Tables']:
+                    jtable = jschema['Tables'][jtbname]
                     table = tableschema.TableSchema(jtable['Name'], jtable['Type'])
                     for elename in jtable:
-                        log.logger.critical(elename)
                         if elename == 'PrimaryKeys':
                             table.primarykeys = jtable[elename]
                         elif elename == 'Indexes':
@@ -225,25 +230,18 @@ class DBMeta(object):
                         self._viewCount = self._viewCount + 1
         log.logger.debug('Schema load with [ %s ] tables and [ %s ] views' % (self._tableCount, self._viewCount))
 
-    def get_schema_file(self):
-        basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
-        apppath = os.path.abspath(os.path.join(basepath, os.pardir))
-        configpath = os.path.abspath(os.path.join(apppath, 'config'))
-        metafilepath = os.path.abspath(os.path.join(configpath, cfg.schema['schema_db_metafile']))
-        return metafilepath
-
-    def gettable(self, tablename):
+    def gettable(self, value):
         if len(self._tables) > 0:
             for table in self._tables:
-                if table.getname() == tablename:
+                if table.getname() == value:
                     return table
         else:
             return None
 
-    def gettablekey(self, tablename):
-        table = self.gettable(tablename)
+    def get_table_primary_keys(self, value):
+        table = self.gettable(value)
         if table is not None:
-            pks = table.getprimarykeys()
+            pks = table.primarykeys
             if pks == 'N/A':
                 pks = []
             return pks
@@ -256,15 +254,15 @@ class DBMeta(object):
             tblist.append(tb.name)
         return tblist
 
-    def response_table_schema(self, tablename):
-        tb = self.gettable(tablename)
+    def response_table_schema(self, value):
+        tb = self.gettable(value)
         if tb is not None:
             return tb.table2json()
         else:
             return {}
 
-    def check_table_schema(self, tablename):
-        tb = self.gettable(tablename)
+    def check_table_schema(self, value):
+        tb = self.gettable(value)
         if tb is not None:
             return True
         else:
@@ -273,7 +271,7 @@ class DBMeta(object):
 
 if __name__ == '__main__':
     dbmeta = DBMeta()
-    metadata = dbmeta.metadata()
+    metadata = dbmeta.metadata
     log.logger.debug("****************************************************")
     if metadata is not None:
         for item in dir(metadata):
@@ -282,4 +280,4 @@ if __name__ == '__main__':
         for table in metadata.sorted_tables:
             log.logger.debug(table.name)
     log.logger.debug("****************************************************")
-    log.logger.debug(dbmeta.get_schema_file())
+    log.logger.debug(dbmeta.schema_file)

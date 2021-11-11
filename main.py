@@ -560,7 +560,7 @@ async def reload_meta(SecuretKey: str = Header(..., min_length=5),
         'Access \'/sys/reloadmeta\' : run in reload_meta(), input data: [ %s ]' % SecuretKey)
     if SecuretKey == 'Confirm':
         clear_meta_cache()
-        schema_file = meta.DBMeta().get_schema_file()
+        schema_file = meta.DBMeta().schema_file()
         if os.path.exists(schema_file):
             os.remove(schema_file)
         meta.DBMeta().load_metadata()
