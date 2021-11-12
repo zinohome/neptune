@@ -39,6 +39,6 @@ database:
 connection:
   con_pool_size : #NEPTUNE_connection_con_pool_size#
   con_max_overflow : #NEPTUNE_connection_con_max_overflow#
-  con_pool_use_lifo : true
-  con_pool_pre_ping : true
+  con_pool_use_lifo : True
+  con_pool_pre_ping : True
   con_pool_recycle : #NEPTUNE_connection_con_pool_recycle#

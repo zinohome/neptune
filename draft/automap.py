@@ -14,7 +14,7 @@ def set_default(obj):
 
 if __name__ == '__main__':
     engine = dbengine.DBEngine().connect()
-    metadata = dbmeta.DBMeta().metadata()
+    metadata = dbmeta.DBMeta().metadata
     Base = automap_base(metadata=metadata)
     Base.prepare()
     #for cls in Base.classes:

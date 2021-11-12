@@ -12,7 +12,7 @@
 
 import os
 from core import dbengine, tableschema
-from sqlalchemy import inspect, MetaData
+from sqlalchemy import inspect, MetaData, Table
 import simplejson as json
 from config import config
 from util import log
@@ -157,6 +157,7 @@ class DBMeta(object):
                         if table_name in table_list_set:
                             persist_table = True
                     if persist_table:
+                        user_table = Table(table_name, metadata, autoload_with=engine)
                         jtbl = {}
                         jtbls[table_name] = jtbl
                         jtbl['Name'] = table_name
@@ -176,7 +177,8 @@ class DBMeta(object):
                         if self.use_schema:
                             table_columns = inspector.get_columns(table_name, schema=self._schema)
                         for column in table_columns:
-                            jtbl['Columns'].append(json.loads(json.dumps(column.__str__(), separators=(',', ':'))))
+                            #print(column)
+                            jtbl['Columns'].append(json.dumps(column.__str__(), separators=(',', ':')))
 
                 view_names = inspector.get_view_names()
                 if self.use_schema:
@@ -197,7 +199,8 @@ class DBMeta(object):
                                 vtbl['Type'] = 'view'
                                 vtbl['Columns'] = []
                                 for v_column in table_v.columns:
-                                    vtbl['Columns'].append(json.loads(json.dumps(v_column.__str__(), separators=(',', ':'))))
+                                    #print(v_column)
+                                    vtbl['Columns'].append(json.dumps(v_column.__str__(), separators=(',', ':')))
                 with open(self.schema_file, 'w') as jsonfile:
                     json.dump(jmeta, jsonfile, separators=(',', ':'), sort_keys=False, indent=4 * ' ', ensure_ascii=False, encoding='utf-8')
             else:
@@ -270,6 +273,7 @@ class DBMeta(object):
 
 
 if __name__ == '__main__':
+    '''
     dbmeta = DBMeta()
     metadata = dbmeta.metadata
     log.logger.debug("****************************************************")
@@ -281,3 +285,5 @@ if __name__ == '__main__':
             log.logger.debug(table.name)
     log.logger.debug("****************************************************")
     log.logger.debug(dbmeta.schema_file)
+    '''
+

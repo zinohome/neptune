@@ -5,15 +5,15 @@ application:
   app_prefix : /api/v1
   app_cors_origins : '*'
   app_param_prefix : up_b_
-  app_force_generate_meta : true
+  app_force_generate_meta : True
   app_log_level : DEBUG
-  app_user_func: true
-  app_exception_detail: true
+  app_user_func: True
+  app_exception_detail: True
 schema:
   schema_cache_enabled: true
   schema_cache_filename: neptune_metadata
   schema_db_metafile : metadata.json
-  schema_fetch_all_table : true
+  schema_fetch_all_table : True
   schema_fetch_tables : [test,faultmsg]
 query:
   query_limit_upset : 2000
@@ -24,14 +24,14 @@ security:
   security_algorithm : HS256
   access_token_expire_minutes : 30
 database:
-  db_gendburi : true
+  db_gendburi : True
   db_dialect : mysql
   db_drivername : mysql+pymysql
   db_host : 192.168.50.10
   db_port : 3306
   db_name : mysqlsrc
   db_schema : mysqlsrc
-  db_use_schema : true
+  db_use_schema : True
   db_username : root
   db_password : passw0rd
   db_uri : mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc
@@ -39,6 +39,6 @@ database:
 connection:
   con_pool_size : 20
   con_max_overflow : 5
-  con_pool_use_lifo : true
-  con_pool_pre_ping : true
+  con_pool_use_lifo : True
+  con_pool_pre_ping : True
   con_pool_recycle : 3600
