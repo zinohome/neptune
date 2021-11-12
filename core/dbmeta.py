@@ -15,7 +15,7 @@ from core import dbengine, tableschema
 from sqlalchemy import inspect, MetaData, Table
 import simplejson as json
 from config import config
-from util import log
+from util import log, toolkit
 import pickle
 
 '''config'''
@@ -178,8 +178,8 @@ class DBMeta(object):
                             table_columns = inspector.get_columns(table_name, schema=self._schema)
                         for column in table_columns:
                             #print(column)
-                            jtbl['Columns'].append(json.dumps(column.__str__(), separators=(',', ':')))
-
+                            jtbl['Columns'].append(json.loads(json.dumps(column.__str__(), indent=4, sort_keys=True, default=str)))
+                        jtbl['Dict'] = json.loads(json.dumps(user_table.__dict__, indent=4, sort_keys=True, default=str))
                 view_names = inspector.get_view_names()
                 if self.use_schema:
                     view_names = inspector.get_view_names(schema=self._schema)
@@ -191,6 +191,7 @@ class DBMeta(object):
                         if view_name in table_list_set:
                             persist_view = True
                     if persist_view:
+                        user_view = Table(view_name, metadata, autoload_with=engine)
                         for table_v in reversed(metadata.sorted_tables):
                             if table_v.name == view_name:
                                 vtbl = {}
@@ -200,9 +201,10 @@ class DBMeta(object):
                                 vtbl['Columns'] = []
                                 for v_column in table_v.columns:
                                     #print(v_column)
-                                    vtbl['Columns'].append(json.dumps(v_column.__str__(), separators=(',', ':')))
+                                    vtbl['Columns'].append(json.loads(json.dumps(v_column.__str__(), indent=4, sort_keys=True, default=str)))
+                                vtbl['Dict'] = json.loads(json.dumps(user_view.__dict__, indent=4, sort_keys=True, default=str))
                 with open(self.schema_file, 'w') as jsonfile:
-                    json.dump(jmeta, jsonfile, separators=(',', ':'), sort_keys=False, indent=4 * ' ', ensure_ascii=False, encoding='utf-8')
+                    json.dump(jmeta, jsonfile, separators=(',', ':'), sort_keys=False, indent=4, ensure_ascii=False, encoding='utf-8')
             else:
                 log.logger.error('Can not get metadata at gen_schema() ... ')
                 raise Exception('Can not get metadata at gen_schema()')
