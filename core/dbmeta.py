@@ -8,8 +8,7 @@
 #  @Author  : Zhang Jun
 #  @Email   : ibmzhangjun@139.com
 #  @Software: Neptune
-
-
+import ast
 import os
 from core import dbengine, tableschema
 from sqlalchemy import inspect, MetaData, Table
@@ -177,8 +176,10 @@ class DBMeta(object):
                         if self.use_schema:
                             table_columns = inspector.get_columns(table_name, schema=self._schema)
                         for column in table_columns:
-                            #print(column)
-                            jtbl['Columns'].append(json.loads(json.dumps(column.__str__(), indent=4, sort_keys=True, default=str)))
+                            cdict={}
+                            for key, value in column.items():
+                                cdict[key] = value.__str__()
+                            jtbl['Columns'].append(cdict)
                         jtbl['Dict'] = json.loads(json.dumps(user_table.__dict__, indent=4, sort_keys=True, default=str))
                 view_names = inspector.get_view_names()
                 if self.use_schema:
@@ -192,17 +193,31 @@ class DBMeta(object):
                             persist_view = True
                     if persist_view:
                         user_view = Table(view_name, metadata, autoload_with=engine)
-                        for table_v in reversed(metadata.sorted_tables):
-                            if table_v.name == view_name:
-                                vtbl = {}
-                                jtbls[view_name] = vtbl
-                                vtbl['Name'] = view_name
-                                vtbl['Type'] = 'view'
-                                vtbl['Columns'] = []
-                                for v_column in table_v.columns:
-                                    #print(v_column)
-                                    vtbl['Columns'].append(json.loads(json.dumps(v_column.__str__(), indent=4, sort_keys=True, default=str)))
-                                vtbl['Dict'] = json.loads(json.dumps(user_view.__dict__, indent=4, sort_keys=True, default=str))
+                        vtbl = {}
+                        jtbls[view_name] = vtbl
+                        vtbl['Name'] = view_name
+                        vtbl['Type'] = 'view'
+                        pk = inspector.get_pk_constraint(view_name)
+                        if self.use_schema:
+                            pk = inspector.get_pk_constraint(view_name, schema=self._schema)
+                        if len(pk) > 0:
+                            vtbl['PrimaryKeys'] = pk['constrained_columns']
+                        else:
+                            vtbl['PrimaryKeys'] = []
+                        vtbl['Indexes'] = inspector.get_indexes(view_name)
+                        if self.use_schema:
+                            vtbl['Indexes'] = inspector.get_indexes(view_name, schema=self._schema)
+                        vtbl['Columns'] = []
+                        view_columns = inspector.get_columns(view_name)
+                        if self.use_schema:
+                            view_columns = inspector.get_columns(view_name, schema=self._schema)
+                        for vcolumn in view_columns:
+                            vdict = {}
+                            for key, value in vcolumn.items():
+                                vdict[key] = value.__str__()
+                            vtbl['Columns'].append(vdict)
+                        vtbl['Dict'] = json.loads(
+                            json.dumps(user_view.__dict__, indent=4, sort_keys=True, default=str))
                 with open(self.schema_file, 'w') as jsonfile:
                     json.dump(jmeta, jsonfile, separators=(',', ':'), sort_keys=False, indent=4, ensure_ascii=False, encoding='utf-8')
             else:
