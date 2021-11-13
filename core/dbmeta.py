@@ -237,12 +237,17 @@ class DBMeta(object):
                     jtable = jschema['Tables'][jtbname]
                     table = tableschema.TableSchema(jtable['Name'], jtable['Type'])
                     for elename in jtable:
+                        table.__setattr__(elename,jtable[elename])
+                        '''
                         if elename == 'PrimaryKeys':
                             table.primarykeys = jtable[elename]
                         elif elename == 'Indexes':
                             table.indexes = jtable[elename]
                         elif elename == 'Columns':
                             table.columns = jtable[elename]
+                        elif elename == 'Dict':
+                            table.dict = jtable[elename]
+                        '''
                     self._tables.append(table)
                     if table.type == 'table':
                         self._tableCount = self._tableCount + 1
