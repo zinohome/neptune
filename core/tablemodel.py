@@ -24,31 +24,63 @@ log = log.Logger(level=cfg.application['app_log_level'])
 class TableModel(object):
     def __init__(self, table_name):
         """Initialise the table from database schema."""
-        self.name = table_name
-        self.engine = dbengine.DBEngine().connect()
         meta = dbmeta.DBMeta()
-        self.dbmeta = meta
-        self.use_schema = cfg.database['db_use_schema']
-        self.metadata = meta.metadata()
+        self._name = table_name
+        self.engine = dbengine.DBEngine().connect()
+        self._dbmeta = dbmeta.DBMeta()
+        self._use_schema = cfg.database['db_use_schema']
+        self.metadata = meta.metadata
         self.metadata.bind = self.engine
-        self.schema = self.dbmeta.gettable(table_name)
+        self._schematable = self._dbmeta.gettable(table_name)
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        self._name = value
+
+    @property
+    def dbmeta(self):
+        return self._dbmeta
+
+    @dbmeta.setter
+    def dbmeta(self, value):
+        self._dbmeta = value
+
+    @property
+    def use_schema(self):
+        return self._use_schema
+
+    @use_schema.setter
+    def use_schema(self, value):
+        self._use_schema = value
+
+    @property
+    def schematable(self):
+        return self._schematable
+
+    @schematable.setter
+    def schematable(self,value):
+        self._schematable = value
 
     @property
     def exists(self):
         exist = False
         if self.metadata is not None:
             for tbl in self.metadata.sorted_tables:
-                if self.name == tbl.name:
+                if self._name == tbl.name:
                     exist = True
                     break
         return exist
 
     @property
     def fullname(self):
-        if self.dbmeta.use_schema:
-            return self.dbmeta.getschema() + '.' + self.name
+        if self._dbmeta.use_schema:
+            return self._dbmeta.schema + '.' + self._name
         else:
-            return self.name
+            return self._name
 
     @property
     def realtable(self):
@@ -59,13 +91,13 @@ class TableModel(object):
 
     @property
     def columns(self):
-        if isinstance(self.schema.getcolumns(), str):
+        if isinstance(self.schematable.columns, str):
             return []
         else:
-            return self.schema.getcolumns()
+            return self.schematable.columns
 
     @property
-    def columncls(self):
+    def columnvalues(self):
         cls = []
         if self.realtable is not None:
             cls = self.realtable.columns.values()
@@ -73,22 +105,22 @@ class TableModel(object):
 
     @property
     def primarykeys(self):
-        if isinstance(self.schema.getprimarykeys(), str):
+        if isinstance(self.schematable.primarykeys, str):
             return []
         else:
-            return self.schema.getprimarykeys()
+            return self.schematable.primarykeys
 
     @property
-    def primarykeycls(self):
+    def primarykeyvalues(self):
         cls = []
         if self.realtable is not None:
             cls = self.realtable.primary_key.columns.values()
         return cls
 
-    def has_column(self, columnname):
+    def has_column(self, value):
         has = False
-        for cl in self.columncls:
-            if cl.name == columnname:
+        for cl in self.columns:
+            if cl['name'] == value:
                 has = True
                 break
         return has
@@ -100,153 +132,6 @@ class TableModel(object):
         elif isinstance(obj, decimal.Decimal):
             return float(obj)
 
-    def insert(self, idfiled=None, fieldvalue=None):
-        log.logger.debug('table insert():')
-        log.logger.debug('tablename: %s' % self.name)
-        log.logger.debug('idfiled: %s' % idfiled)
-        log.logger.debug('fieldvalue: %s' % fieldvalue)
-        return_json = {}
-        try:
-            session_factory = sessionmaker(bind=self.engine)
-            scsession = scoped_session(session_factory)
-            session = scsession(autoflush=True, autocommit=True)
-            rtable = self.realtable
-            log.logger.debug('TableModel Columns: %s' % self.columncls)
-            insert_st = rtable.insert()
-            log.logger.debug('SQL of Insert: [ %s ]' % insert_st)
-            fvl = toolkit.to_fvcol(fieldvalue)
-            log.logger.debug('Insert Values: [ %s ]' % fvl)
-            if fvl is not None:
-                result = session.execute(insert_st, fvl)
-                log.logger.debug('Insert Result: [ %s ]' % result)
-                # log.logger.debug('Insert Result: [ %s ]' % json.dumps([dict(r) for r in result], default=self.alchemyencoder))
-                if result.is_insert:
-                    return_json['insert_row_id'] = result.inserted_primary_key[0]
-                    return_json['insertResult'] = 'True'
-                else:
-                    return_json['insertResult'] = 'True'
-            else:
-                return_json['insert_row_id'] = -1
-                return_json['insertResult'] = 'False'
-        except Exception as e:
-            log.logger.error('Exception at tablemodel insert(): %s ' % e)
-            if cfg.application['app_exception_detail']:
-                traceback.print_exc(limit=3, file=sys.stdout)
-            return_json['insertResult'] = 'Error'
-            return_json['insertError'] = 'Exception at tablemodel insert(): %s ' % e
-        finally:
-            session.close()
-            scsession.remove()
-        return jsonable_encoder(return_json)
-
-    def update(self, filter=None, filterparam=None, fieldvalue=None):
-        log.logger.debug('table udpate():')
-        log.logger.debug('tablename: %s' % self.name)
-        log.logger.debug('filter: %s' % filter)
-        log.logger.debug('filterparam: %s' % filterparam)
-        log.logger.debug('fieldvalue: %s' % fieldvalue)
-        return_json = {}
-        try:
-            session_factory = sessionmaker(bind=self.engine)
-            scsession = scoped_session(session_factory)
-            session = scsession(autoflush=True, autocommit=True)
-            rtable = self.realtable
-            log.logger.debug('TableModel Columns: %s' % self.columncls)
-            update_st = rtable.update()
-            log.logger.debug('SQL of Update: [ %s ]' % update_st)
-            fvl = toolkit.to_fvcol(fieldvalue)
-            log.logger.debug('Update Values: [ %s ]' % fvl)
-            if filter is not None:
-                update_st = update_st.where(text(filter))
-                log.logger.debug('SQL of Update: [ %s ]' % update_st)
-                if fvl is not None:
-                    update_st = update_st.values(fvl)
-                    log.logger.debug('SQL of Update: [ %s ]' % update_st)
-                    filterparamdict = toolkit.to_dict(filterparam)
-                    if filterparamdict is not None:
-                        result = session.execute(update_st, filterparamdict)
-                        log.logger.debug('Update Result: [ %s ]' % result)
-                        return_json['udpate_rowcount'] = result.rowcount
-                    else:
-                        return_json['udpate_rowcount'] = 0
-                else:
-                    return_json['udpate_rowcount'] = 0
-            else:
-                return_json['udpate_rowcount'] = 0
-        except Exception as e:
-            log.logger.error('Exception at tablemodel update(): %s ' % e)
-            if cfg.application['app_exception_detail']:
-                traceback.print_exc(limit=3, file=sys.stdout)
-            return_json['updateResult'] = 'Error'
-            return_json['updateError'] = 'Exception at tablemodel update(): %s ' % e
-        finally:
-            session.close()
-            scsession.remove()
-        return jsonable_encoder(return_json)
-
-    def updatebyid(self, idfiled=None, idvalue=None, fieldvalue=None):
-        log.logger.debug('table udpatebyid():')
-        log.logger.debug('tablename: %s' % self.name)
-        log.logger.debug('idfiled: %s' % idfiled)
-        log.logger.debug('idvalue: %s' % idvalue)
-        log.logger.debug('fieldvalue: %s' % fieldvalue)
-        return_json = {}
-        try:
-            session_factory = sessionmaker(bind=self.engine)
-            scsession = scoped_session(session_factory)
-            session = scsession(autoflush=True, autocommit=True)
-            rtable = self.realtable
-            log.logger.debug('TableModel Columns: %s' % self.columncls)
-            update_st = rtable.update()
-            log.logger.debug('SQL of Update: [ %s ]' % update_st)
-            lpklist = []
-            if idfiled is not None:
-                lpklist = toolkit.to_list(idfiled)
-            else:
-                lpklist = self.primarykeys
-            ulpklist = toolkit.uappendlist(lpklist)
-            pkstr = None
-            for pk in lpklist:
-                if pkstr is not None:
-                    pkstr = pkstr + ' and ' + pk + '=:' + cfg.application['app_param_prefix'] + pk
-                else:
-                    pkstr = pk + '=:' + cfg.application['app_param_prefix'] + pk
-            log.logger.debug('Primarykey select string : [ %s ]' % pkstr)
-            pkparm = dict(zip(lpklist, toolkit.to_list(idvalue)))
-            # pkparm = dict(zip(ulpklist, toolkit.to_list(idvalue)))
-            typedpkparm = {}
-            for (k, v) in pkparm.items():
-                typedpkparm[k] = rtable.c[k].type.python_type(v)
-            prlist = [v for v in typedpkparm.values()]
-            submittypedpkparm = dict(zip(ulpklist, prlist))
-            log.logger.debug('Primarykey select param : [ %s ]' % submittypedpkparm)
-            fvl = toolkit.to_fvcol(fieldvalue)
-            if pkstr is not None:
-                update_st = update_st.where(text(pkstr))
-                if fvl is not None:
-                    update_st = update_st.values(fvl)
-                    log.logger.debug('SQL of Update: [ %s ]' % update_st)
-                    if len(submittypedpkparm) >= len(lpklist):
-                        result = session.execute(update_st, submittypedpkparm)
-                        log.logger.debug('Update Result: [ %s ]' % result)
-                        return_json['udpate_rowcount'] = result.rowcount
-                    else:
-                        return_json['udpate_rowcount'] = 0
-                else:
-                    return_json['udpate_rowcount'] = 0
-            else:
-                return_json['udpate_rowcount'] = 0
-        except Exception as e:
-            log.logger.error('Exception at tablemodel updatebyid(): %s ' % e)
-            if cfg.application['app_exception_detail']:
-                traceback.print_exc(limit=3, file=sys.stdout)
-            return_json['updateResult'] = 'Error'
-            return_json['updateError'] = 'Exception at tablemodel updatebyid(): %s ' % e
-        finally:
-            session.close()
-            scsession.remove()
-        return jsonable_encoder(return_json)
-
     def select(self, fieldlist='*', filter=None,
                filterparam=None,
                limit=cfg.query['query_default_limit'],
@@ -254,7 +139,7 @@ class TableModel(object):
                order=None, group=None, distinct=False,
                count_only=False, include_count=False):
         log.logger.debug('table select():')
-        log.logger.debug('tablename: %s' % self.name)
+        log.logger.debug('tablename: %s' % self._name)
         log.logger.debug('fieldlist: %s' % fieldlist)
         log.logger.debug('filter: %s' % filter)
         log.logger.debug('limit: %s' % limit)
@@ -273,8 +158,9 @@ class TableModel(object):
             cntsession_factory = sessionmaker(bind=self.engine)
             cntscsession = scoped_session(cntsession_factory)
             cntsession = cntscsession()
+
             rtable = self.realtable
-            log.logger.debug('TableModel Columns: %s' % self.columncls)
+            log.logger.debug('TableModel Columns: %s' % self.columnvalues)
             select_cl = []
             if fieldlist == '*':
                 select_st = select([rtable], distinct=distinct)
@@ -282,7 +168,7 @@ class TableModel(object):
             else:
                 field_list = re.split(r'[\s\,\;]+', fieldlist)
                 for cl in rtable.c:
-                    if cl.name in field_list:
+                    if cl._name in field_list:
                         select_cl.append(cl)
                 select_st = select(select_cl, distinct=distinct)
                 count_st = select([func.count(select_cl[0]).label('col_count')], distinct=distinct)
@@ -348,7 +234,7 @@ class TableModel(object):
 
     def selectbyid(self, idvalue, fieldlist=None, idfiled=None):
         log.logger.debug('table selectbyid():')
-        log.logger.debug('tablename: %s' % self.name)
+        log.logger.debug('tablename: %s' % self._name)
         log.logger.debug('idvalue: %s' % idvalue)
         log.logger.debug('fieldlist: %s' % fieldlist)
         log.logger.debug('idfiled: %s' % idfiled)
@@ -358,7 +244,7 @@ class TableModel(object):
             scsession = scoped_session(session_factory)
             session = scsession(autoflush=True, autocommit=True)
             rtable = self.realtable
-            log.logger.debug('TableModel Columns: %s' % self.columncls)
+            log.logger.debug('TableModel Columns: %s' % self.columnvalues)
             select_cl = []
             if fieldlist is not None:
                 if fieldlist == '*':
@@ -366,7 +252,7 @@ class TableModel(object):
                 else:
                     field_list = toolkit.to_list(fieldlist)
                     for cl in rtable.c:
-                        if cl.name in field_list:
+                        if cl._name in field_list:
                             select_cl.append(cl)
                     select_st = select(select_cl)
             else:
@@ -424,9 +310,156 @@ class TableModel(object):
             scsession.remove()
         return jsonable_encoder(return_json)
 
+    def insert(self, idfiled=None, fieldvalue=None):
+        log.logger.debug('table insert():')
+        log.logger.debug('tablename: %s' % self._name)
+        log.logger.debug('idfiled: %s' % idfiled)
+        log.logger.debug('fieldvalue: %s' % fieldvalue)
+        return_json = {}
+        try:
+            session_factory = sessionmaker(bind=self.engine)
+            scsession = scoped_session(session_factory)
+            session = scsession(autoflush=True, autocommit=True)
+            rtable = self.realtable
+            log.logger.debug('TableModel Columns: %s' % self.columnvalues)
+            insert_st = rtable.insert()
+            log.logger.debug('SQL of Insert: [ %s ]' % insert_st)
+            fvl = toolkit.to_fvcol(fieldvalue)
+            log.logger.debug('Insert Values: [ %s ]' % fvl)
+            if fvl is not None:
+                result = session.execute(insert_st, fvl)
+                log.logger.debug('Insert Result: [ %s ]' % result)
+                # log.logger.debug('Insert Result: [ %s ]' % json.dumps([dict(r) for r in result], default=self.alchemyencoder))
+                if result.is_insert:
+                    return_json['insert_row_id'] = result.inserted_primary_key[0]
+                    return_json['insertResult'] = 'True'
+                else:
+                    return_json['insertResult'] = 'True'
+            else:
+                return_json['insert_row_id'] = -1
+                return_json['insertResult'] = 'False'
+        except Exception as e:
+            log.logger.error('Exception at tablemodel insert(): %s ' % e)
+            if cfg.application['app_exception_detail']:
+                traceback.print_exc(limit=3, file=sys.stdout)
+            return_json['insertResult'] = 'Error'
+            return_json['insertError'] = 'Exception at tablemodel insert(): %s ' % e
+        finally:
+            session.close()
+            scsession.remove()
+        return jsonable_encoder(return_json)
+
+    def update(self, filter=None, filterparam=None, fieldvalue=None):
+        log.logger.debug('table udpate():')
+        log.logger.debug('tablename: %s' % self._name)
+        log.logger.debug('filter: %s' % filter)
+        log.logger.debug('filterparam: %s' % filterparam)
+        log.logger.debug('fieldvalue: %s' % fieldvalue)
+        return_json = {}
+        try:
+            session_factory = sessionmaker(bind=self.engine)
+            scsession = scoped_session(session_factory)
+            session = scsession(autoflush=True, autocommit=True)
+            rtable = self.realtable
+            log.logger.debug('TableModel Columns: %s' % self.columnvalues)
+            update_st = rtable.update()
+            log.logger.debug('SQL of Update: [ %s ]' % update_st)
+            fvl = toolkit.to_fvcol(fieldvalue)
+            log.logger.debug('Update Values: [ %s ]' % fvl)
+            if filter is not None:
+                update_st = update_st.where(text(filter))
+                log.logger.debug('SQL of Update: [ %s ]' % update_st)
+                if fvl is not None:
+                    update_st = update_st.values(fvl)
+                    log.logger.debug('SQL of Update: [ %s ]' % update_st)
+                    filterparamdict = toolkit.to_dict(filterparam)
+                    if filterparamdict is not None:
+                        result = session.execute(update_st, filterparamdict)
+                        log.logger.debug('Update Result: [ %s ]' % result)
+                        return_json['udpate_rowcount'] = result.rowcount
+                    else:
+                        return_json['udpate_rowcount'] = 0
+                else:
+                    return_json['udpate_rowcount'] = 0
+            else:
+                return_json['udpate_rowcount'] = 0
+        except Exception as e:
+            log.logger.error('Exception at tablemodel update(): %s ' % e)
+            if cfg.application['app_exception_detail']:
+                traceback.print_exc(limit=3, file=sys.stdout)
+            return_json['updateResult'] = 'Error'
+            return_json['updateError'] = 'Exception at tablemodel update(): %s ' % e
+        finally:
+            session.close()
+            scsession.remove()
+        return jsonable_encoder(return_json)
+
+    def updatebyid(self, idfiled=None, idvalue=None, fieldvalue=None):
+        log.logger.debug('table udpatebyid():')
+        log.logger.debug('tablename: %s' % self._name)
+        log.logger.debug('idfiled: %s' % idfiled)
+        log.logger.debug('idvalue: %s' % idvalue)
+        log.logger.debug('fieldvalue: %s' % fieldvalue)
+        return_json = {}
+        try:
+            session_factory = sessionmaker(bind=self.engine)
+            scsession = scoped_session(session_factory)
+            session = scsession(autoflush=True, autocommit=True)
+            rtable = self.realtable
+            log.logger.debug('TableModel Columns: %s' % self.columnvalues)
+            update_st = rtable.update()
+            log.logger.debug('SQL of Update: [ %s ]' % update_st)
+            lpklist = []
+            if idfiled is not None:
+                lpklist = toolkit.to_list(idfiled)
+            else:
+                lpklist = self.primarykeys
+            ulpklist = toolkit.uappendlist(lpklist)
+            pkstr = None
+            for pk in lpklist:
+                if pkstr is not None:
+                    pkstr = pkstr + ' and ' + pk + '=:' + cfg.application['app_param_prefix'] + pk
+                else:
+                    pkstr = pk + '=:' + cfg.application['app_param_prefix'] + pk
+            log.logger.debug('Primarykey select string : [ %s ]' % pkstr)
+            pkparm = dict(zip(lpklist, toolkit.to_list(idvalue)))
+            # pkparm = dict(zip(ulpklist, toolkit.to_list(idvalue)))
+            typedpkparm = {}
+            for (k, v) in pkparm.items():
+                typedpkparm[k] = rtable.c[k].type.python_type(v)
+            prlist = [v for v in typedpkparm.values()]
+            submittypedpkparm = dict(zip(ulpklist, prlist))
+            log.logger.debug('Primarykey select param : [ %s ]' % submittypedpkparm)
+            fvl = toolkit.to_fvcol(fieldvalue)
+            if pkstr is not None:
+                update_st = update_st.where(text(pkstr))
+                if fvl is not None:
+                    update_st = update_st.values(fvl)
+                    log.logger.debug('SQL of Update: [ %s ]' % update_st)
+                    if len(submittypedpkparm) >= len(lpklist):
+                        result = session.execute(update_st, submittypedpkparm)
+                        log.logger.debug('Update Result: [ %s ]' % result)
+                        return_json['udpate_rowcount'] = result.rowcount
+                    else:
+                        return_json['udpate_rowcount'] = 0
+                else:
+                    return_json['udpate_rowcount'] = 0
+            else:
+                return_json['udpate_rowcount'] = 0
+        except Exception as e:
+            log.logger.error('Exception at tablemodel updatebyid(): %s ' % e)
+            if cfg.application['app_exception_detail']:
+                traceback.print_exc(limit=3, file=sys.stdout)
+            return_json['updateResult'] = 'Error'
+            return_json['updateError'] = 'Exception at tablemodel updatebyid(): %s ' % e
+        finally:
+            session.close()
+            scsession.remove()
+        return jsonable_encoder(return_json)
+
     def delete(self, filter=None, filterparam=None):
         log.logger.debug('table delete():')
-        log.logger.debug('tablename: %s' % self.name)
+        log.logger.debug('tablename: %s' % self._name)
         log.logger.debug('filter: %s' % filter)
         log.logger.debug('filterparam: %s' % filterparam)
         return_json = {}
@@ -435,7 +468,7 @@ class TableModel(object):
             scsession = scoped_session(session_factory)
             session = scsession(autoflush=True, autocommit=True)
             rtable = self.realtable
-            log.logger.debug('TableModel Columns: %s' % self.columncls)
+            log.logger.debug('TableModel Columns: %s' % self.columnvalues)
             delete_st = rtable.delete()
             log.logger.debug('SQL of Delete: [ %s ]' % delete_st)
             if filter is not None:
@@ -462,7 +495,7 @@ class TableModel(object):
 
     def deletebyid(self, idfiled=None, idvalue=None):
         log.logger.debug('table delete():')
-        log.logger.debug('tablename: %s' % self.name)
+        log.logger.debug('tablename: %s' % self._name)
         log.logger.debug('idfiled: %s' % idfiled)
         log.logger.debug('idvalue: %s' % idvalue)
         return_json = {}
@@ -471,7 +504,7 @@ class TableModel(object):
             scsession = scoped_session(session_factory)
             session = scsession(autoflush=True, autocommit=True)
             rtable = self.realtable
-            log.logger.debug('TableModel Columns: %s' % self.columncls)
+            log.logger.debug('TableModel Columns: %s' % self.columnvalues)
             delete_st = rtable.delete()
             log.logger.debug('SQL of Delete: [ %s ]' % delete_st)
             lpklist = []
@@ -515,14 +548,19 @@ class TableModel(object):
 
 
 if __name__ == '__main__':
+
     '''
-    table = TableModel('test')
-    log.logger.debug(table.has_column('doc'))
+    table = TableModel('orders')
     log.logger.debug(table.exists)
+    log.logger.debug(table.fullname)
+    log.logger.debug(table.realtable)
+    log.logger.debug(table.schematable.columns)
     log.logger.debug(table.columns)
-    log.logger.debug(table.columncls)
+    log.logger.debug(table.columnvalues)
+    log.logger.debug(table.has_column('requiredDate'))
+    log.logger.debug(table.has_column('Date'))
     log.logger.debug(table.primarykeys)
-    log.logger.debug(table.primarykeycls)
+    log.logger.debug(table.primarykeyvalues)
     result = table.insert('id','{\'name\':\'sdf\',\'phone\':\'234243\'}')
     log.logger.debug(result)
     did = result['insert_row_id']
@@ -541,4 +579,5 @@ if __name__ == '__main__':
     table = TableModel('orders')
     sresult = table.select('*', None, None, 20, 0, None, None, False, False, False)
     log.logger.debug(sresult)
+
 

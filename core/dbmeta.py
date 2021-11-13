@@ -237,8 +237,6 @@ class DBMeta(object):
                     jtable = jschema['Tables'][jtbname]
                     table = tableschema.TableSchema(jtable['Name'], jtable['Type'])
                     for elename in jtable:
-                        table.__setattr__(elename,jtable[elename])
-                        '''
                         if elename == 'PrimaryKeys':
                             table.primarykeys = jtable[elename]
                         elif elename == 'Indexes':
@@ -247,7 +245,6 @@ class DBMeta(object):
                             table.columns = jtable[elename]
                         elif elename == 'Dict':
                             table.dict = jtable[elename]
-                        '''
                     self._tables.append(table)
                     if table.type == 'table':
                         self._tableCount = self._tableCount + 1
@@ -258,7 +255,7 @@ class DBMeta(object):
     def gettable(self, value):
         if len(self._tables) > 0:
             for table in self._tables:
-                if table.getname() == value:
+                if table.name == value:
                     return table
         else:
             return None
@@ -295,9 +292,10 @@ class DBMeta(object):
 
 
 if __name__ == '__main__':
-    '''
-    dbmeta = DBMeta()
-    metadata = dbmeta.metadata
+    meta = DBMeta()
+    metadata = meta.metadata
+    otable=meta.gettable('orders')
+    log.logger.debug(otable.table2json())
     log.logger.debug("****************************************************")
     if metadata is not None:
         for item in dir(metadata):
@@ -306,6 +304,5 @@ if __name__ == '__main__':
         for table in metadata.sorted_tables:
             log.logger.debug(table.name)
     log.logger.debug("****************************************************")
-    log.logger.debug(dbmeta.schema_file)
-    '''
+    log.logger.debug(meta.schema_file)
 

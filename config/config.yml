@@ -6,7 +6,7 @@ application:
   app_cors_origins : '*'
   app_param_prefix : up_b_
   app_force_generate_meta : True
-  app_log_level : DEBUG
+  app_log_level : INFO
   app_user_func: True
   app_exception_detail: True
 schema:

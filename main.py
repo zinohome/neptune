@@ -181,13 +181,13 @@ async def get_table_schema(table_name: str, current_user: security.User = Depend
     if not meta.DBMeta().check_table_schema(table_name):
         raise HTTPException(
             status_code=HTTP_404_NOT_FOUND,
-            detail='TableModel [ %s ] not found' % table_name
+            detail='Table [ %s ] not found' % table_name
         )
     return meta.DBMeta().response_table_schema(table_name)
 
 
 @app.get(prefix+"/_table/{table_name}",
-         tags=["Data - TableModel Level"],
+         tags=["Data - Table Level"],
          summary="Retrieve one or more records. ",
          description="",
          )
@@ -233,14 +233,14 @@ async def get_data(table_name: str,
     if not meta.DBMeta().check_table_schema(table_name):
         raise HTTPException(
             status_code=HTTP_404_NOT_FOUND,
-            detail='TableModel [ %s ] not found' % table_name
+            detail='Table [ %s ] not found' % table_name
         )
     ptable = tablemodel.TableModel(table_name)
     return ptable.select(fieldlist, filter, toolkit.to_dict(filterparam), limit, offset, order, group, distinct, count_only, include_count)
 
 
 @app.post(prefix+"/_table/{table_name}/query",
-          tags=["Data - TableModel Level"],
+          tags=["Data - Table Level"],
           summary="Retrieve one or more records. ",
           description="",)
 async def query_data(table_name: str, tablequerybody: apimodel.TableQueryBody,
@@ -272,7 +272,7 @@ async def query_data(table_name: str, tablequerybody: apimodel.TableQueryBody,
     if not meta.DBMeta().check_table_schema(table_name):
         raise HTTPException(
             status_code=HTTP_404_NOT_FOUND,
-            detail='TableModel [ %s ] not found' % table_name
+            detail='Table [ %s ] not found' % table_name
         )
     ptable = tablemodel.TableModel(table_name)
     return ptable.select(tablequerybody.fieldlist, tablequerybody.filter,
@@ -282,7 +282,7 @@ async def query_data(table_name: str, tablequerybody: apimodel.TableQueryBody,
 
 
 @app.post(prefix+"/_table/{table_name}",
-          tags=["Data - TableModel Level"],
+          tags=["Data - Table Level"],
          summary="Create one or more records.",
          description="",
          )
@@ -307,14 +307,14 @@ async def post_data(table_name: str, tablepost: apimodel.TablePostBody,
     if not meta.DBMeta().check_table_schema(table_name):
         raise HTTPException(
             status_code=HTTP_404_NOT_FOUND,
-            detail='TableModel [ %s ] not found' % table_name
+            detail='Table [ %s ] not found' % table_name
         )
     ptable = tablemodel.TableModel(table_name)
     return ptable.insert(tablepost.idfield, tablepost.fieldvalue)
 
 
 @app.put(prefix+"/_table/{table_name}",
-         tags=["Data - TableModel Level"],
+         tags=["Data - Table Level"],
          summary="Update (replace) one or more records.",
          description="",
          deprecated=False
@@ -342,13 +342,13 @@ async def put_data(table_name: str, tableput: apimodel.TablePutBody,
     if not meta.DBMeta().check_table_schema(table_name):
         raise HTTPException(
             status_code=HTTP_404_NOT_FOUND,
-            detail='TableModel [ %s ] not found' % table_name
+            detail='Table [ %s ] not found' % table_name
         )
     ptable = tablemodel.TableModel(table_name)
     return ptable.update(tableput.filter, tableput.filterparam, tableput.fieldvalue)
 
 @app.delete(prefix+"/_table/{table_name}",
-            tags=["Data - TableModel Level"],
+            tags=["Data - Table Level"],
             summary="Delete one or more records.",
             description="",
             )
@@ -369,7 +369,7 @@ async def delete_data(table_name: str,
     if not meta.DBMeta().check_table_schema(table_name):
         raise HTTPException(
             status_code=HTTP_404_NOT_FOUND,
-            detail='TableModel [ %s ] not found' % table_name
+            detail='Table [ %s ] not found' % table_name
         )
     ptable = tablemodel.TableModel(table_name)
     return ptable.delete(filter, filterparam)
@@ -398,7 +398,7 @@ async def get_data_by_id(table_name: str, id: str,
     if not meta.DBMeta().check_table_schema(table_name):
         raise HTTPException(
             status_code=HTTP_404_NOT_FOUND,
-            detail='TableModel [ %s ] not found' % table_name
+            detail='Table [ %s ] not found' % table_name
         )
     ptable = tablemodel.TableModel(table_name)
     return ptable.selectbyid(id, fieldlist, idfield)
@@ -433,7 +433,7 @@ async def query_data_by_id(table_name: str, tablequerybyid: apimodel.TableQueryB
     if not meta.DBMeta().check_table_schema(table_name):
         raise HTTPException(
             status_code=HTTP_404_NOT_FOUND,
-            detail='TableModel [ %s ] not found' % table_name
+            detail='Table [ %s ] not found' % table_name
         )
     ptable = tablemodel.TableModel(table_name)
     return ptable.selectbyid(tablequerybyid.id, tablequerybyid.fieldlist, tablequerybyid.idfield)
@@ -468,7 +468,7 @@ async def put_data_by_id(table_name: str, id: str,
     if not meta.DBMeta().check_table_schema(table_name):
         raise HTTPException(
             status_code=HTTP_404_NOT_FOUND,
-            detail='TableModel [ %s ] not found' % table_name
+            detail='Table [ %s ] not found' % table_name
         )
     ptable = tablemodel.TableModel(table_name)
     return ptable.updatebyid(tableputbyid.idfield, id, tableputbyid.fieldvalue)
@@ -496,7 +496,7 @@ async def delete_data_by_id(table_name: str, id: str,
     if not meta.DBMeta().check_table_schema(table_name):
         raise HTTPException(
             status_code=HTTP_404_NOT_FOUND,
-            detail='TableModel [ %s ] not found' % table_name
+            detail='Table [ %s ] not found' % table_name
         )
     ptable = tablemodel.TableModel(table_name)
     return ptable.deletebyid(idfield, id)
