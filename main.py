@@ -9,12 +9,16 @@
 #  @Author  : Zhang Jun
 #  @Email   : ibmzhangjun@139.com
 #  @Software: Neptune
+from flask_admin.menu import MenuLink
 
 from util import toolkit, log
 from config import config, querydef
 from fastapi import FastAPI, Header, Depends, HTTPException
 from starlette.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
+from fastapi.middleware.wsgi import WSGIMiddleware
+from flask import Flask
+from flask_admin import Admin, AdminIndexView
 from fastapi.openapi.docs import (
     get_redoc_html,
     get_swagger_ui_html,
@@ -57,6 +61,18 @@ app = FastAPI(
 favicon_path = 'static/favicon.ico'
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/admin/static/img", StaticFiles(directory="admin/static/img"), name="adminstaticimg")
+
+# add admin flask app
+flask_admin = Flask(__name__)
+# set optional bootswatch theme
+flask_admin.config['FLASK_ADMIN_SWATCH'] = 'Cosmo'
+admin = Admin(flask_admin, name=cfg.application['app_name'] + ' Admin', url='/', template_mode='bootstrap3')
+admin.add_link(MenuLink('API Docs', '/apidocs', 'apidocs'))
+admin.add_link(MenuLink('API Redoc', '/apiredoc', 'apiredoc'))
+
+
+app.mount("/admin", WSGIMiddleware(flask_admin))
 
 
 @app.on_event("startup")
