@@ -8,13 +8,12 @@
 #  @Author  : Zhang Jun
 #  @Email   : ibmzhangjun@139.com
 #  @Software: Neptune
-import ast
 import os
 from core import dbengine, tableschema
 from sqlalchemy import inspect, MetaData, Table
 import simplejson as json
 from config import config
-from util import log, toolkit
+from util import log
 import pickle
 
 '''config'''
@@ -114,6 +113,7 @@ class DBMeta(object):
                 metadata = MetaData(bind=engine, schema=self._schema if self.use_schema else None)
                 metadata.reflect(views=True, only=cfg.schema['schema_fetch_tables'] if not cfg.schema[
                     'schema_fetch_all_table'] else None)
+                self._metadata = metadata
                 try:
                     if not os.path.exists(cache_path):
                         os.makedirs(cache_path)
@@ -125,7 +125,6 @@ class DBMeta(object):
                     # couldn't write the file for some reason
                     log.logger.debug('Metadata save Error '
                                      '[ %s ] ' % os.path.join(cache_path, metadata_pickle_filename))
-                self._metadata = metadata
         else:
             metadata = MetaData(bind=engine, schema=self._schema if self.use_schema else None)
             metadata.reflect(views=True, only=cfg.schema['schema_fetch_tables'] if not cfg.schema[
@@ -180,7 +179,8 @@ class DBMeta(object):
                             for key, value in column.items():
                                 cdict[key] = value.__str__()
                             jtbl['Columns'].append(cdict)
-                        jtbl['Dict'] = json.loads(json.dumps(user_table.__dict__, indent=4, sort_keys=True, default=str))
+                        jtbl['Dict'] = json.loads(json.dumps(user_table.__dict__,
+                                                             indent=4, sort_keys=True, default=str))
                 view_names = inspector.get_view_names()
                 if self.use_schema:
                     view_names = inspector.get_view_names(schema=self._schema)
@@ -219,7 +219,8 @@ class DBMeta(object):
                         vtbl['Dict'] = json.loads(
                             json.dumps(user_view.__dict__, indent=4, sort_keys=True, default=str))
                 with open(self.schema_file, 'w') as jsonfile:
-                    json.dump(jmeta, jsonfile, separators=(',', ':'), sort_keys=False, indent=4, ensure_ascii=False, encoding='utf-8')
+                    json.dump(jmeta, jsonfile, separators=(',', ':'),
+                              sort_keys=False, indent=4, ensure_ascii=False, encoding='utf-8')
             else:
                 log.logger.error('Can not get metadata at gen_schema() ... ')
                 raise Exception('Can not get metadata at gen_schema()')
@@ -294,7 +295,7 @@ class DBMeta(object):
 if __name__ == '__main__':
     meta = DBMeta()
     metadata = meta.metadata
-    otable=meta.gettable('orders')
+    otable = meta.gettable('orders')
     log.logger.debug(otable.table2json())
     log.logger.debug("****************************************************")
     if metadata is not None:
@@ -305,4 +306,3 @@ if __name__ == '__main__':
             log.logger.debug(table.name)
     log.logger.debug("****************************************************")
     log.logger.debug(meta.schema_file)
-
