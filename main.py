@@ -552,9 +552,33 @@ if cfg.application['app_user_func']:
                 detail='UserFunction [ %s ] not found' % func_name
             )
 
+
+@app.get("/sys/config",
+         tags=["System"],
+         summary="Show the system configuration.",
+         description="",
+         )
+async def sys_config(SecuretKey: str = Header(..., min_length=5),
+                      current_user_role: bool = Depends(security.get_super_permission)):
+    """
+        Please use 'app_confirm_key' as SecuretKey to confirm the operation
+        - **SecuretKey** (header): **Required** - use 'app_confirm_key' default value is 'Confirmed'.
+    """
+    log.logger.debug(
+        'Access \'/sys/config\' : run in main.py, input data: [ %s ]' % SecuretKey)
+    if SecuretKey == cfg.application['app_confirm_key']:
+        return {
+            "System_Config": cfg
+        }
+    else:
+        return {
+            "System_Config": 'Operation Aborted'
+        }
+
+
 @app.get("/sys/reloadmeta",
          tags=["System"],
-         summary="Reload the DbSchemaResources.",
+         summary="Reload the Database Schema .",
          description="",
          )
 async def reload_meta(SecuretKey: str = Header(..., min_length=5),
