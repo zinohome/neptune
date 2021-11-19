@@ -2,6 +2,14 @@
 # -*- coding: utf-8 -*-
 
 
+#  #
+#  Copyright (C) 2021 ZinoHome, Inc. All Rights Reserved
+#  #
+#  @Time    : 2021
+#  @Author  : Zhang Jun
+#  @Email   : ibmzhangjun@139.com
+#  @Software: Neptune
+
 from util import toolkit, log
 from config import config, querydef
 from fastapi import FastAPI, Header, Depends, HTTPException
