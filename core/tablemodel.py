@@ -176,7 +176,7 @@ class TableModel(object):
             else:
                 field_list = re.split(r'[\s\,\;]+', fieldlist)
                 for cl in rtable.c:
-                    if cl._name in field_list:
+                    if cl.name in field_list:
                         select_cl.append(cl)
                 select_st = select(select_cl, distinct=distinct)
                 count_st = select([func.count(select_cl[0]).label('col_count')], distinct=distinct)
@@ -260,7 +260,7 @@ class TableModel(object):
                 else:
                     field_list = toolkit.to_list(fieldlist)
                     for cl in rtable.c:
-                        if cl._name in field_list:
+                        if cl.name in field_list:
                             select_cl.append(cl)
                     select_st = select(select_cl)
             else:
@@ -300,7 +300,7 @@ class TableModel(object):
                 log.logger.debug('Select Result Return : [ %s ] rows ' % result.rowcount)
                 for row in result:
                     # result.items() returns an array like [(key0, value0), (key1, value1)]
-                    for column, value in row.items():
+                    for column, value in row._mapping.items():
                         # build up the dictionary
                         d = {**d, **{column: value}}
                     a.append(d)
@@ -338,11 +338,12 @@ class TableModel(object):
                 result = session.execute(insert_st, fvl)
                 log.logger.debug('Insert Result: [ %s ]' % result)
                 # log.logger.debug('Insert Result: [ %s ]' % json.dumps([dict(r) for r in result], default=self.alchemyencoder))
-                if result.is_insert:
+                # log.logger.debug('result.rowcount: [ %s ]' % result.rowcount)
+                if result.rowcount > 0:
                     return_json['insert_row_id'] = result.inserted_primary_key[0]
                     return_json['insertResult'] = 'True'
                 else:
-                    return_json['insertResult'] = 'True'
+                    return_json['insertResult'] = 'False'
             else:
                 return_json['insert_row_id'] = -1
                 return_json['insertResult'] = 'False'
@@ -585,7 +586,8 @@ if __name__ == '__main__':
 
     '''
     table = TableModel('orders')
-    sresult = table.select('*', None, None, 20, 0, None, None, False, False, False)
+    sresult = table.select('*', None, None, 20, 20, None, None, False, False, False)
+    #sresult = table.selectbyid('10114', 'customerNumber,orderDate')
     log.logger.debug(sresult)
 
 

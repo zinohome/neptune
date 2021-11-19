@@ -193,3 +193,1882 @@ FROM mysqlsrc.orders ]
 2021-11-13 at 16:12:08 | INFO | Add Custom query ...
 2021-11-13 at 16:12:08 | INFO | Neptune Starting ....
 2021-11-13 at 16:12:08 | INFO | API cache does not exists ....
+2021-11-19 at 11:43:17 | INFO | Neptune Start Up ....
+2021-11-19 at 11:43:17 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 11:43:17 | INFO | Add Custom query ...
+2021-11-19 at 11:43:17 | INFO | Neptune Starting ....
+2021-11-19 at 11:43:17 | INFO | API cache does not exists ....
+2021-11-19 at 11:43:52 | INFO | Neptune Shutting Down ....
+2021-11-19 at 11:43:52 | INFO | API cache does not exists ....
+2021-11-19 at 12:20:08 | INFO | Neptune Start Up ....
+2021-11-19 at 12:20:08 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:20:08 | INFO | Add Custom query ...
+2021-11-19 at 12:20:08 | INFO | Neptune Starting ....
+2021-11-19 at 12:20:08 | INFO | API cache does not exists ....
+2021-11-19 at 12:21:19 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:21:19 | INFO | API cache does not exists ....
+2021-11-19 at 12:21:21 | INFO | Neptune Start Up ....
+2021-11-19 at 12:21:21 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:21:21 | INFO | Add Custom query ...
+2021-11-19 at 12:21:21 | INFO | Neptune Starting ....
+2021-11-19 at 12:21:21 | INFO | API cache does not exists ....
+2021-11-19 at 12:21:36 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:21:36 | INFO | API cache does not exists ....
+2021-11-19 at 12:21:38 | INFO | Neptune Start Up ....
+2021-11-19 at 12:21:38 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:21:38 | INFO | Add Custom query ...
+2021-11-19 at 12:21:38 | INFO | Neptune Starting ....
+2021-11-19 at 12:21:38 | INFO | API cache does not exists ....
+2021-11-19 at 12:22:07 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:22:07 | INFO | API cache does not exists ....
+2021-11-19 at 12:22:09 | INFO | Neptune Start Up ....
+2021-11-19 at 12:22:09 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:22:09 | INFO | Add Custom query ...
+2021-11-19 at 12:22:09 | INFO | Neptune Starting ....
+2021-11-19 at 12:22:09 | INFO | API cache does not exists ....
+2021-11-19 at 12:23:55 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:23:55 | INFO | API cache does not exists ....
+2021-11-19 at 12:23:57 | INFO | Neptune Start Up ....
+2021-11-19 at 12:23:57 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:23:57 | INFO | Add Custom query ...
+2021-11-19 at 12:23:57 | INFO | Neptune Starting ....
+2021-11-19 at 12:23:57 | INFO | API cache does not exists ....
+2021-11-19 at 12:24:37 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:24:37 | INFO | API cache does not exists ....
+2021-11-19 at 12:24:38 | INFO | Neptune Start Up ....
+2021-11-19 at 12:24:38 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:24:39 | INFO | Add Custom query ...
+2021-11-19 at 12:24:39 | INFO | Neptune Starting ....
+2021-11-19 at 12:24:39 | INFO | API cache does not exists ....
+2021-11-19 at 12:24:59 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:24:59 | INFO | API cache does not exists ....
+2021-11-19 at 12:25:01 | INFO | Neptune Start Up ....
+2021-11-19 at 12:25:01 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:25:01 | INFO | Add Custom query ...
+2021-11-19 at 12:25:01 | INFO | Neptune Starting ....
+2021-11-19 at 12:25:01 | INFO | API cache does not exists ....
+2021-11-19 at 12:25:02 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 363,
+            "orderDate": "2013-01-06",
+            "orderNumber": 10100,
+            "requiredDate": "2013-01-13",
+            "shippedDate": "2013-01-10",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Check on availability.",
+            "customerNumber": 128,
+            "orderDate": "2013-01-09",
+            "orderNumber": 10101,
+            "requiredDate": "2013-01-18",
+            "shippedDate": "2013-01-11",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 181,
+            "orderDate": "2013-01-10",
+            "orderNumber": 10102,
+            "requiredDate": "2013-01-18",
+            "shippedDate": "2013-01-14",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 121,
+            "orderDate": "2013-01-29",
+            "orderNumber": 10103,
+            "requiredDate": "2013-02-07",
+            "shippedDate": "2013-02-02",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 141,
+            "orderDate": "2013-01-31",
+            "orderNumber": 10104,
+            "requiredDate": "2013-02-09",
+            "shippedDate": "2013-02-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 145,
+            "orderDate": "2013-02-11",
+            "orderNumber": 10105,
+            "requiredDate": "2013-02-21",
+            "shippedDate": "2013-02-12",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 278,
+            "orderDate": "2013-02-17",
+            "orderNumber": 10106,
+            "requiredDate": "2013-02-24",
+            "shippedDate": "2013-02-21",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Difficult to negotiate with customer. We need more marketing materials",
+            "customerNumber": 131,
+            "orderDate": "2013-02-24",
+            "orderNumber": 10107,
+            "requiredDate": "2013-03-03",
+            "shippedDate": "2013-02-26",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 385,
+            "orderDate": "2013-03-03",
+            "orderNumber": 10108,
+            "requiredDate": "2013-03-12",
+            "shippedDate": "2013-03-08",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer requested that FedEx Ground is used for this shipping",
+            "customerNumber": 486,
+            "orderDate": "2013-03-10",
+            "orderNumber": 10109,
+            "requiredDate": "2013-03-19",
+            "shippedDate": "2013-03-11",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 187,
+            "orderDate": "2013-03-18",
+            "orderNumber": 10110,
+            "requiredDate": "2013-03-24",
+            "shippedDate": "2013-03-20",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 129,
+            "orderDate": "2013-03-25",
+            "orderNumber": 10111,
+            "requiredDate": "2013-03-31",
+            "shippedDate": "2013-03-30",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer requested that ad materials (such as posters, pamphlets) be included in the shippment",
+            "customerNumber": 144,
+            "orderDate": "2013-03-24",
+            "orderNumber": 10112,
+            "requiredDate": "2013-04-03",
+            "shippedDate": "2013-03-29",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 124,
+            "orderDate": "2013-03-26",
+            "orderNumber": 10113,
+            "requiredDate": "2013-04-02",
+            "shippedDate": "2013-03-27",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 172,
+            "orderDate": "2013-04-01",
+            "orderNumber": 10114,
+            "requiredDate": "2013-04-07",
+            "shippedDate": "2013-04-02",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 424,
+            "orderDate": "2013-04-04",
+            "orderNumber": 10115,
+            "requiredDate": "2013-04-12",
+            "shippedDate": "2013-04-07",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 381,
+            "orderDate": "2013-04-11",
+            "orderNumber": 10116,
+            "requiredDate": "2013-04-19",
+            "shippedDate": "2013-04-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 148,
+            "orderDate": "2013-04-16",
+            "orderNumber": 10117,
+            "requiredDate": "2013-04-24",
+            "shippedDate": "2013-04-17",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer has worked with some of our vendors in the past and is aware of their MSRP",
+            "customerNumber": 216,
+            "orderDate": "2013-04-21",
+            "orderNumber": 10118,
+            "requiredDate": "2013-04-29",
+            "shippedDate": "2013-04-26",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 382,
+            "orderDate": "2013-04-28",
+            "orderNumber": 10119,
+            "requiredDate": "2013-05-05",
+            "shippedDate": "2013-05-02",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 12:26:09 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:26:09 | INFO | API cache does not exists ....
+2021-11-19 at 12:26:11 | INFO | Neptune Start Up ....
+2021-11-19 at 12:26:11 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:26:11 | INFO | Add Custom query ...
+2021-11-19 at 12:26:11 | INFO | Neptune Starting ....
+2021-11-19 at 12:26:11 | INFO | API cache does not exists ....
+2021-11-19 at 12:26:12 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 172,
+            "orderDate": "2013-04-01",
+            "orderNumber": 10114,
+            "requiredDate": "2013-04-07",
+            "shippedDate": "2013-04-02",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 12:26:50 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:26:50 | INFO | API cache does not exists ....
+2021-11-19 at 12:26:52 | INFO | Neptune Start Up ....
+2021-11-19 at 12:26:52 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:26:52 | INFO | Add Custom query ...
+2021-11-19 at 12:26:52 | INFO | Neptune Starting ....
+2021-11-19 at 12:26:52 | INFO | API cache does not exists ....
+2021-11-19 at 12:26:53 | ERROR | Exception at tablemodel selectbyid(): Neither 'Column' object nor 'Comparator' object has an attribute '_name' 
+2021-11-19 at 12:26:53 | SUCCESS | test debug output tm.select(): 
+ {
+    "selectError": "Exception at tablemodel selectbyid(): Neither 'Column' object nor 'Comparator' object has an attribute '_name' ",
+    "selectResult": "Error"
+}
+2021-11-19 at 12:27:30 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:27:30 | INFO | API cache does not exists ....
+2021-11-19 at 12:27:33 | INFO | Neptune Start Up ....
+2021-11-19 at 12:27:33 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:27:33 | INFO | Add Custom query ...
+2021-11-19 at 12:27:33 | INFO | Neptune Starting ....
+2021-11-19 at 12:27:33 | INFO | API cache does not exists ....
+2021-11-19 at 12:27:57 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:27:57 | INFO | API cache does not exists ....
+2021-11-19 at 12:27:59 | ERROR | Exception at tablemodel selectbyid(): Neither 'Column' object nor 'Comparator' object has an attribute '_name' 
+2021-11-19 at 12:27:59 | INFO | Neptune Start Up ....
+2021-11-19 at 12:27:59 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:27:59 | INFO | Add Custom query ...
+2021-11-19 at 12:27:59 | INFO | Neptune Starting ....
+2021-11-19 at 12:27:59 | INFO | API cache does not exists ....
+2021-11-19 at 12:28:34 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:28:34 | INFO | API cache does not exists ....
+2021-11-19 at 12:28:36 | INFO | Neptune Start Up ....
+2021-11-19 at 12:28:36 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:28:36 | INFO | Add Custom query ...
+2021-11-19 at 12:28:36 | INFO | Neptune Starting ....
+2021-11-19 at 12:28:36 | INFO | API cache does not exists ....
+2021-11-19 at 12:29:17 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:29:17 | INFO | API cache does not exists ....
+2021-11-19 at 12:29:19 | INFO | Neptune Start Up ....
+2021-11-19 at 12:29:19 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:29:19 | INFO | Add Custom query ...
+2021-11-19 at 12:29:19 | INFO | Neptune Starting ....
+2021-11-19 at 12:29:19 | INFO | API cache does not exists ....
+2021-11-19 at 12:29:50 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:29:50 | INFO | API cache does not exists ....
+2021-11-19 at 12:29:54 | INFO | Neptune Start Up ....
+2021-11-19 at 12:29:54 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:29:54 | INFO | Add Custom query ...
+2021-11-19 at 12:29:54 | INFO | Neptune Starting ....
+2021-11-19 at 12:29:54 | INFO | API cache does not exists ....
+2021-11-19 at 12:38:49 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 172,
+            "orderDate": "2013-04-01"
+        }
+    ]
+}
+2021-11-19 at 12:39:21 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:39:21 | INFO | API cache does not exists ....
+2021-11-19 at 12:39:24 | INFO | Neptune Start Up ....
+2021-11-19 at 12:39:24 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:39:24 | INFO | Add Custom query ...
+2021-11-19 at 12:39:24 | INFO | Neptune Starting ....
+2021-11-19 at 12:39:24 | INFO | API cache does not exists ....
+2021-11-19 at 12:40:04 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:40:04 | INFO | API cache does not exists ....
+2021-11-19 at 12:40:06 | INFO | Neptune Start Up ....
+2021-11-19 at 12:40:06 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:40:07 | INFO | Add Custom query ...
+2021-11-19 at 12:40:07 | INFO | Neptune Starting ....
+2021-11-19 at 12:40:07 | INFO | API cache does not exists ....
+2021-11-19 at 12:40:08 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10125,
+            "requiredDate": "2013-05-27",
+            "shippedDate": "2013-05-24",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 458,
+            "orderDate": "2013-05-28",
+            "orderNumber": 10126,
+            "requiredDate": "2013-06-07",
+            "shippedDate": "2013-06-02",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer requested special shippment. The instructions were passed along to the warehouse",
+            "customerNumber": 151,
+            "orderDate": "2013-06-03",
+            "orderNumber": 10127,
+            "requiredDate": "2013-06-09",
+            "shippedDate": "2013-06-06",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 141,
+            "orderDate": "2013-06-06",
+            "orderNumber": 10128,
+            "requiredDate": "2013-06-12",
+            "shippedDate": "2013-06-11",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 324,
+            "orderDate": "2013-06-12",
+            "orderNumber": 10129,
+            "requiredDate": "2013-06-18",
+            "shippedDate": "2013-06-14",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 198,
+            "orderDate": "2013-06-16",
+            "orderNumber": 10130,
+            "requiredDate": "2013-06-24",
+            "shippedDate": "2013-06-21",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 447,
+            "orderDate": "2013-06-16",
+            "orderNumber": 10131,
+            "requiredDate": "2013-06-25",
+            "shippedDate": "2013-06-21",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 323,
+            "orderDate": "2013-06-25",
+            "orderNumber": 10132,
+            "requiredDate": "2013-07-01",
+            "shippedDate": "2013-06-28",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 141,
+            "orderDate": "2013-06-27",
+            "orderNumber": 10133,
+            "requiredDate": "2013-07-04",
+            "shippedDate": "2013-07-03",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 250,
+            "orderDate": "2013-07-01",
+            "orderNumber": 10134,
+            "requiredDate": "2013-07-10",
+            "shippedDate": "2013-07-05",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 124,
+            "orderDate": "2013-07-02",
+            "orderNumber": 10135,
+            "requiredDate": "2013-07-12",
+            "shippedDate": "2013-07-03",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer is interested in buying more Ferrari models",
+            "customerNumber": 242,
+            "orderDate": "2013-07-04",
+            "orderNumber": 10136,
+            "requiredDate": "2013-07-14",
+            "shippedDate": "2013-07-06",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-07-10",
+            "orderNumber": 10137,
+            "requiredDate": "2013-07-20",
+            "shippedDate": "2013-07-14",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 496,
+            "orderDate": "2013-07-07",
+            "orderNumber": 10138,
+            "requiredDate": "2013-07-16",
+            "shippedDate": "2013-07-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 282,
+            "orderDate": "2013-07-16",
+            "orderNumber": 10139,
+            "requiredDate": "2013-07-23",
+            "shippedDate": "2013-07-21",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 12:40:08 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 172,
+            "orderDate": "2013-04-01"
+        }
+    ]
+}
+2021-11-19 at 12:40:41 | INFO | Neptune Shutting Down ....
+2021-11-19 at 12:40:41 | INFO | API cache does not exists ....
+2021-11-19 at 12:40:43 | INFO | Neptune Start Up ....
+2021-11-19 at 12:40:43 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 12:40:43 | INFO | Add Custom query ...
+2021-11-19 at 12:40:43 | INFO | Neptune Starting ....
+2021-11-19 at 12:40:43 | INFO | API cache does not exists ....
+2021-11-19 at 12:40:44 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 12:40:44 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 282,
+            "orderDate": "2013-07-16"
+        }
+    ]
+}
+2021-11-19 at 13:04:24 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:04:24 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 282,
+            "orderDate": "2013-07-16"
+        }
+    ]
+}
+2021-11-19 at 13:04:53 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:04:53 | INFO | API cache does not exists ....
+2021-11-19 at 13:04:55 | INFO | Neptune Start Up ....
+2021-11-19 at 13:04:55 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:04:55 | INFO | Add Custom query ...
+2021-11-19 at 13:04:55 | INFO | Neptune Starting ....
+2021-11-19 at 13:04:55 | INFO | API cache does not exists ....
+2021-11-19 at 13:04:55 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:04:55 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 282,
+            "orderDate": "2013-07-16"
+        }
+    ]
+}
+2021-11-19 at 13:05:32 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:05:32 | INFO | API cache does not exists ....
+2021-11-19 at 13:05:33 | INFO | Neptune Start Up ....
+2021-11-19 at 13:05:33 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:05:34 | INFO | Add Custom query ...
+2021-11-19 at 13:05:34 | INFO | Neptune Starting ....
+2021-11-19 at 13:05:34 | INFO | API cache does not exists ....
+2021-11-19 at 13:05:35 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:05:35 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": []
+}
+2021-11-19 at 13:06:01 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:06:01 | INFO | API cache does not exists ....
+2021-11-19 at 13:06:02 | INFO | Neptune Start Up ....
+2021-11-19 at 13:06:02 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:06:02 | INFO | Add Custom query ...
+2021-11-19 at 13:06:02 | INFO | Neptune Starting ....
+2021-11-19 at 13:06:02 | INFO | API cache does not exists ....
+2021-11-19 at 13:06:03 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:06:03 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 112,
+            "orderDate": "2013-05-21"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-08-06"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-11-29"
+        }
+    ]
+}
+2021-11-19 at 13:06:36 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:06:36 | INFO | API cache does not exists ....
+2021-11-19 at 13:06:38 | INFO | Neptune Start Up ....
+2021-11-19 at 13:06:38 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:06:38 | INFO | Add Custom query ...
+2021-11-19 at 13:06:38 | INFO | Neptune Starting ....
+2021-11-19 at 13:06:38 | INFO | API cache does not exists ....
+2021-11-19 at 13:07:13 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:07:13 | INFO | API cache does not exists ....
+2021-11-19 at 13:07:15 | INFO | Neptune Start Up ....
+2021-11-19 at 13:07:15 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:07:15 | INFO | Add Custom query ...
+2021-11-19 at 13:07:15 | INFO | Neptune Starting ....
+2021-11-19 at 13:07:15 | INFO | API cache does not exists ....
+2021-11-19 at 13:07:15 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:07:15 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": []
+}
+2021-11-19 at 13:07:15 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 112,
+            "orderDate": "2013-05-21"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-08-06"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-11-29"
+        }
+    ]
+}
+2021-11-19 at 13:07:27 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:07:27 | INFO | API cache does not exists ....
+2021-11-19 at 13:07:28 | INFO | Neptune Start Up ....
+2021-11-19 at 13:07:28 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:07:28 | INFO | Add Custom query ...
+2021-11-19 at 13:07:28 | INFO | Neptune Starting ....
+2021-11-19 at 13:07:28 | INFO | API cache does not exists ....
+2021-11-19 at 13:07:29 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:07:29 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:07:29 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 112,
+            "orderDate": "2013-05-21"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-08-06"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-11-29"
+        }
+    ]
+}
+2021-11-19 at 13:13:53 | ERROR | Exception at tablemodel insert(): malformed node or string: <_ast.Name object at 0x103f59bb0> 
+2021-11-19 at 13:17:57 | ERROR | Exception at tablemodel insert(): malformed node or string: <_ast.Name object at 0x103ed49d0> 
+2021-11-19 at 13:18:25 | ERROR | Exception at tablemodel insert(): malformed node or string: <_ast.Name object at 0x103ea53a0> 
+2021-11-19 at 13:21:37 | ERROR | Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, "Duplicate entry '10123' for key 'PRIMARY'")
+[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]
+[parameters: {'orderNumber': '10123', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) 
+2021-11-19 at 13:22:19 | ERROR | Exception at tablemodel insert(): (pymysql.err.OperationalError) (1364, "Field 'orderNumber' doesn't have a default value")
+[SQL: INSERT INTO mysqlsrc.orders (`orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]
+[parameters: {'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]
+(Background on this error at: https://sqlalche.me/e/14/e3q8) 
+2021-11-19 at 13:26:20 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:26:20 | INFO | API cache does not exists ....
+2021-11-19 at 13:26:21 | INFO | Neptune Start Up ....
+2021-11-19 at 13:26:21 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:26:21 | INFO | Add Custom query ...
+2021-11-19 at 13:26:21 | INFO | Neptune Starting ....
+2021-11-19 at 13:26:21 | INFO | API cache does not exists ....
+2021-11-19 at 13:27:04 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:27:04 | INFO | API cache does not exists ....
+2021-11-19 at 13:27:05 | INFO | Neptune Start Up ....
+2021-11-19 at 13:27:05 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:27:05 | INFO | Add Custom query ...
+2021-11-19 at 13:27:05 | INFO | Neptune Starting ....
+2021-11-19 at 13:27:05 | INFO | API cache does not exists ....
+2021-11-19 at 13:29:07 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:29:07 | INFO | API cache does not exists ....
+2021-11-19 at 13:29:09 | INFO | Neptune Start Up ....
+2021-11-19 at 13:29:09 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:29:09 | INFO | Add Custom query ...
+2021-11-19 at 13:29:09 | INFO | Neptune Starting ....
+2021-11-19 at 13:29:09 | INFO | API cache does not exists ....
+2021-11-19 at 13:36:31 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:36:31 | INFO | API cache does not exists ....
+2021-11-19 at 13:36:36 | INFO | Neptune Start Up ....
+2021-11-19 at 13:36:36 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:36:36 | INFO | Add Custom query ...
+2021-11-19 at 13:36:36 | INFO | Neptune Starting ....
+2021-11-19 at 13:36:36 | INFO | API cache does not exists ....
+2021-11-19 at 13:36:39 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:36:39 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:36:39 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 112,
+            "orderDate": "2013-05-21"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-08-06"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-11-29"
+        }
+    ]
+}
+2021-11-19 at 13:36:39 | ERROR | Exception at tablemodel insert(): malformed node or string: None 
+2021-11-19 at 13:36:39 | SUCCESS | test debug output tm.(): 
+ {
+    "insertError": "Exception at tablemodel insert(): malformed node or string: None ",
+    "insertResult": "Error"
+}
+2021-11-19 at 13:37:53 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:37:53 | INFO | API cache does not exists ....
+2021-11-19 at 13:37:56 | INFO | Neptune Start Up ....
+2021-11-19 at 13:37:56 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:37:56 | INFO | Add Custom query ...
+2021-11-19 at 13:37:56 | INFO | Neptune Starting ....
+2021-11-19 at 13:37:56 | INFO | API cache does not exists ....
+2021-11-19 at 13:37:58 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:37:58 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:37:58 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 112,
+            "orderDate": "2013-05-21"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-08-06"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-11-29"
+        }
+    ]
+}
+2021-11-19 at 13:37:58 | CRITICAL | 0
+2021-11-19 at 13:37:58 | SUCCESS | test debug output tm.(): 
+ {
+    "insertResult": "True",
+    "insert_row_id": "10428"
+}
+2021-11-19 at 13:40:14 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:40:14 | INFO | API cache does not exists ....
+2021-11-19 at 13:40:18 | INFO | Neptune Start Up ....
+2021-11-19 at 13:40:18 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:40:18 | INFO | Add Custom query ...
+2021-11-19 at 13:40:18 | INFO | Neptune Starting ....
+2021-11-19 at 13:40:18 | INFO | API cache does not exists ....
+2021-11-19 at 13:40:19 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:40:19 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:40:19 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 112,
+            "orderDate": "2013-05-21"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-08-06"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-11-29"
+        }
+    ]
+}
+2021-11-19 at 13:40:19 | CRITICAL | 1
+2021-11-19 at 13:40:19 | SUCCESS | test debug output tm.(): 
+ {
+    "insertResult": "True",
+    "insert_row_id": "10429"
+}
+2021-11-19 at 13:40:33 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:40:33 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:40:33 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 112,
+            "orderDate": "2013-05-21"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-08-06"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-11-29"
+        }
+    ]
+}
+2021-11-19 at 13:40:33 | ERROR | Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, "Duplicate entry '10429' for key 'PRIMARY'")
+[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]
+[parameters: {'orderNumber': '10429', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) 
+2021-11-19 at 13:40:33 | SUCCESS | test debug output tm.(): 
+ {
+    "insertError": "Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, \"Duplicate entry '10429' for key 'PRIMARY'\")\n[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]\n[parameters: {'orderNumber': '10429', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]\n(Background on this error at: https://sqlalche.me/e/14/gkpj) ",
+    "insertResult": "Error"
+}
+2021-11-19 at 13:41:31 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:41:31 | INFO | API cache does not exists ....
+2021-11-19 at 13:41:34 | INFO | Neptune Start Up ....
+2021-11-19 at 13:41:34 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:41:34 | INFO | Add Custom query ...
+2021-11-19 at 13:41:34 | INFO | Neptune Starting ....
+2021-11-19 at 13:41:34 | INFO | API cache does not exists ....
+2021-11-19 at 13:41:36 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:41:36 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:41:36 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 112,
+            "orderDate": "2013-05-21"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-08-06"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-11-29"
+        }
+    ]
+}
+2021-11-19 at 13:41:36 | CRITICAL | 1
+2021-11-19 at 13:41:36 | SUCCESS | test debug output tm.(): 
+ {
+    "insertResult": "True",
+    "insert_row_id": "10430"
+}
+2021-11-19 at 13:43:07 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:43:07 | INFO | API cache does not exists ....
+2021-11-19 at 13:43:08 | INFO | Neptune Start Up ....
+2021-11-19 at 13:43:08 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:43:08 | INFO | Add Custom query ...
+2021-11-19 at 13:43:08 | INFO | Neptune Starting ....
+2021-11-19 at 13:43:08 | INFO | API cache does not exists ....
+2021-11-19 at 13:43:12 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 114,
+            "orderDate": "2013-04-29",
+            "orderNumber": 10120,
+            "requiredDate": "2013-05-08",
+            "shippedDate": "2013-05-01",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 353,
+            "orderDate": "2013-05-07",
+            "orderNumber": 10121,
+            "requiredDate": "2013-05-13",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 350,
+            "orderDate": "2013-05-08",
+            "orderNumber": 10122,
+            "requiredDate": "2013-05-16",
+            "shippedDate": "2013-05-13",
+            "status": "Shipped"
+        },
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        },
+        {
+            "comments": "Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch",
+            "customerNumber": 112,
+            "orderDate": "2013-05-21",
+            "orderNumber": 10124,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-25",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:43:12 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": null,
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10123,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 13:43:12 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "customerNumber": 112,
+            "orderDate": "2013-05-21"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-08-06"
+        },
+        {
+            "customerNumber": 112,
+            "orderDate": "2014-11-29"
+        }
+    ]
+}
+2021-11-19 at 13:43:12 | ERROR | Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, "Duplicate entry '10430' for key 'PRIMARY'")
+[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]
+[parameters: {'orderNumber': '10430', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) 
+2021-11-19 at 13:43:12 | SUCCESS | test debug output tm.(): 
+ {
+    "insertError": "Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, \"Duplicate entry '10430' for key 'PRIMARY'\")\n[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]\n[parameters: {'orderNumber': '10430', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]\n(Background on this error at: https://sqlalche.me/e/14/gkpj) ",
+    "insertResult": "Error"
+}
+2021-11-19 at 13:43:39 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:43:39 | INFO | API cache does not exists ....
+2021-11-19 at 13:43:41 | INFO | Neptune Start Up ....
+2021-11-19 at 13:43:41 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:43:41 | INFO | Add Custom query ...
+2021-11-19 at 13:43:41 | INFO | Neptune Starting ....
+2021-11-19 at 13:43:41 | INFO | API cache does not exists ....
+2021-11-19 at 13:43:42 | ERROR | Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, "Duplicate entry '10430' for key 'PRIMARY'")
+[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]
+[parameters: {'orderNumber': '10430', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) 
+2021-11-19 at 13:43:42 | SUCCESS | test debug output tm.(): 
+ {
+    "insertError": "Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, \"Duplicate entry '10430' for key 'PRIMARY'\")\n[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]\n[parameters: {'orderNumber': '10430', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]\n(Background on this error at: https://sqlalche.me/e/14/gkpj) ",
+    "insertResult": "Error"
+}
+2021-11-19 at 13:43:55 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:43:55 | INFO | API cache does not exists ....
+2021-11-19 at 13:43:57 | INFO | Neptune Start Up ....
+2021-11-19 at 13:43:57 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:43:57 | INFO | Add Custom query ...
+2021-11-19 at 13:43:57 | INFO | Neptune Starting ....
+2021-11-19 at 13:43:57 | INFO | API cache does not exists ....
+2021-11-19 at 13:43:58 | SUCCESS | test debug output tm.(): 
+ {
+    "insertResult": "True",
+    "insert_row_id": "10431"
+}
+2021-11-19 at 13:44:23 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:44:23 | INFO | API cache does not exists ....
+2021-11-19 at 13:44:25 | INFO | Neptune Start Up ....
+2021-11-19 at 13:44:25 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:44:25 | INFO | Add Custom query ...
+2021-11-19 at 13:44:25 | INFO | Neptune Starting ....
+2021-11-19 at 13:44:25 | INFO | API cache does not exists ....
+2021-11-19 at 13:45:13 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:45:13 | INFO | API cache does not exists ....
+2021-11-19 at 13:45:15 | INFO | Neptune Start Up ....
+2021-11-19 at 13:45:15 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:45:15 | INFO | Add Custom query ...
+2021-11-19 at 13:45:15 | INFO | Neptune Starting ....
+2021-11-19 at 13:45:15 | INFO | API cache does not exists ....
+2021-11-19 at 13:45:16 | SUCCESS | test debug output tm.(): 
+ {
+    "insertResult": "True",
+    "insert_row_id": "10432"
+}
+2021-11-19 at 13:45:42 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:45:42 | INFO | API cache does not exists ....
+2021-11-19 at 13:45:44 | INFO | Neptune Start Up ....
+2021-11-19 at 13:45:44 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:45:44 | INFO | Add Custom query ...
+2021-11-19 at 13:45:44 | INFO | Neptune Starting ....
+2021-11-19 at 13:45:44 | INFO | API cache does not exists ....
+2021-11-19 at 13:52:38 | INFO | Neptune Shutting Down ....
+2021-11-19 at 13:52:38 | INFO | API cache does not exists ....
+2021-11-19 at 13:52:40 | INFO | Neptune Start Up ....
+2021-11-19 at 13:52:40 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 13:52:40 | INFO | Add Custom query ...
+2021-11-19 at 13:52:40 | INFO | Neptune Starting ....
+2021-11-19 at 13:52:40 | INFO | API cache does not exists ....
+2021-11-19 at 14:16:43 | INFO | Neptune Shutting Down ....
+2021-11-19 at 14:16:43 | INFO | API cache does not exists ....
+2021-11-19 at 14:16:45 | INFO | Neptune Start Up ....
+2021-11-19 at 14:16:45 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 14:16:45 | INFO | Add Custom query ...
+2021-11-19 at 14:16:45 | INFO | Neptune Starting ....
+2021-11-19 at 14:16:45 | INFO | API cache does not exists ....
+2021-11-19 at 14:16:54 | INFO | Neptune Shutting Down ....
+2021-11-19 at 14:16:54 | INFO | API cache does not exists ....
+2021-11-19 at 14:16:56 | INFO | Neptune Start Up ....
+2021-11-19 at 14:16:56 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 14:16:56 | INFO | Add Custom query ...
+2021-11-19 at 14:16:56 | INFO | Neptune Starting ....
+2021-11-19 at 14:16:56 | INFO | API cache does not exists ....
+2021-11-19 at 14:16:57 | SUCCESS | test debug output tm.updatebyid(): 
+ {
+    "udpate_rowcount": 1
+}
+2021-11-19 at 14:18:03 | INFO | Neptune Shutting Down ....
+2021-11-19 at 14:18:03 | INFO | API cache does not exists ....
+2021-11-19 at 14:18:05 | INFO | Neptune Start Up ....
+2021-11-19 at 14:18:05 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 14:18:05 | INFO | Add Custom query ...
+2021-11-19 at 14:18:05 | INFO | Neptune Starting ....
+2021-11-19 at 14:18:05 | INFO | API cache does not exists ....
+2021-11-19 at 14:18:05 | SUCCESS | test debug output tm.updatebyid(): 
+ {
+    "udpate_rowcount": 1
+}
+2021-11-19 at 14:18:05 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": "null",
+            "customerNumber": 103,
+            "orderDate": "2021-05-20",
+            "orderNumber": 10432,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "NoShipped"
+        }
+    ]
+}
+2021-11-19 at 14:19:07 | INFO | Neptune Shutting Down ....
+2021-11-19 at 14:19:07 | INFO | API cache does not exists ....
+2021-11-19 at 14:19:09 | INFO | Neptune Start Up ....
+2021-11-19 at 14:19:09 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 14:19:09 | INFO | Add Custom query ...
+2021-11-19 at 14:19:09 | INFO | Neptune Starting ....
+2021-11-19 at 14:19:09 | INFO | API cache does not exists ....
+2021-11-19 at 14:19:09 | ERROR | Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, "Duplicate entry '10432' for key 'PRIMARY'")
+[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]
+[parameters: {'orderNumber': '10432', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) 
+2021-11-19 at 14:19:09 | SUCCESS | test debug output tm.insert(): 
+ {
+    "insertError": "Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, \"Duplicate entry '10432' for key 'PRIMARY'\")\n[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]\n[parameters: {'orderNumber': '10432', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]\n(Background on this error at: https://sqlalche.me/e/14/gkpj) ",
+    "insertResult": "Error"
+}
+2021-11-19 at 14:19:09 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": "null",
+            "customerNumber": 103,
+            "orderDate": "2021-05-20",
+            "orderNumber": 10432,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "NoShipped"
+        }
+    ]
+}
+2021-11-19 at 14:19:09 | SUCCESS | test debug output tm.updatebyid(): 
+ {
+    "udpate_rowcount": 1
+}
+2021-11-19 at 14:19:09 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": "null",
+            "customerNumber": 103,
+            "orderDate": "2021-05-20",
+            "orderNumber": 10432,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "NoShipped"
+        }
+    ]
+}
+2021-11-19 at 14:19:09 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": "null",
+            "customerNumber": 103,
+            "orderDate": "2021-05-20",
+            "orderNumber": 10432,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "NoShipped"
+        }
+    ]
+}
+2021-11-19 at 14:19:54 | INFO | Neptune Shutting Down ....
+2021-11-19 at 14:19:54 | INFO | API cache does not exists ....
+2021-11-19 at 14:19:55 | INFO | Neptune Start Up ....
+2021-11-19 at 14:19:55 | INFO | API prefix is: [ /api/v1 ]
+2021-11-19 at 14:19:55 | INFO | Add Custom query ...
+2021-11-19 at 14:19:55 | INFO | Neptune Starting ....
+2021-11-19 at 14:19:55 | INFO | API cache does not exists ....
+2021-11-19 at 14:19:56 | ERROR | Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, "Duplicate entry '10432' for key 'PRIMARY'")
+[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]
+[parameters: {'orderNumber': '10432', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) 
+2021-11-19 at 14:19:56 | SUCCESS | test debug output tm.insert(): 
+ {
+    "insertError": "Exception at tablemodel insert(): (pymysql.err.IntegrityError) (1062, \"Duplicate entry '10432' for key 'PRIMARY'\")\n[SQL: INSERT INTO mysqlsrc.orders (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, comments, `customerNumber`) VALUES (%(orderNumber)s, %(orderDate)s, %(requiredDate)s, %(shippedDate)s, %(status)s, %(comments)s, %(customerNumber)s)]\n[parameters: {'orderNumber': '10432', 'orderDate': '2013-05-20', 'requiredDate': '2013-05-29', 'shippedDate': '2013-05-22', 'status': 'Shipped', 'comments': 'null', 'customerNumber': '103'}]\n(Background on this error at: https://sqlalche.me/e/14/gkpj) ",
+    "insertResult": "Error"
+}
+2021-11-19 at 14:19:56 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": "null",
+            "customerNumber": 103,
+            "orderDate": "2021-05-20",
+            "orderNumber": 10432,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "NoShipped"
+        }
+    ]
+}
+2021-11-19 at 14:19:56 | SUCCESS | test debug output tm.updatebyid(): 
+ {
+    "udpate_rowcount": 1
+}
+2021-11-19 at 14:19:56 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": "null",
+            "customerNumber": 103,
+            "orderDate": "2021-05-20",
+            "orderNumber": 10432,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "NoShipped"
+        }
+    ]
+}
+2021-11-19 at 14:19:56 | SUCCESS | test debug output tm.deletebyid(): 
+ {
+    "delet_rowcount": 1
+}
+2021-11-19 at 14:20:19 | SUCCESS | test debug output tm.insert(): 
+ {
+    "insertResult": "True",
+    "insert_row_id": "10432"
+}
+2021-11-19 at 14:20:19 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": "null",
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10432,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-19 at 14:20:19 | SUCCESS | test debug output tm.updatebyid(): 
+ {
+    "udpate_rowcount": 1
+}
+2021-11-19 at 14:20:19 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": "null",
+            "customerNumber": 103,
+            "orderDate": "2021-05-20",
+            "orderNumber": 10432,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "NoShipped"
+        }
+    ]
+}
+2021-11-19 at 14:20:19 | SUCCESS | test debug output tm.deletebyid(): 
+ {
+    "delet_rowcount": 1
+}
