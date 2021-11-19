@@ -9,16 +9,13 @@
 #  @Author  : Zhang Jun
 #  @Email   : ibmzhangjun@139.com
 #  @Software: Neptune
-from flask_admin.menu import MenuLink
+from starlette.responses import FileResponse
 
 from util import toolkit, log
 from config import config, querydef
 from fastapi import FastAPI, Header, Depends, HTTPException
 from starlette.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
-from fastapi.middleware.wsgi import WSGIMiddleware
-from flask import Flask
-from flask_admin import Admin, AdminIndexView
 from fastapi.openapi.docs import (
     get_redoc_html,
     get_swagger_ui_html,
@@ -38,6 +35,9 @@ cfg = config.Config()
 
 '''logging'''
 log = log.Logger(level=cfg.application['app_log_level'])
+
+'''app_dir'''
+app_dir = os.path.dirname(os.path.abspath(__file__))
 
 '''API prefix'''
 prefix = cfg.application['app_prefix']
@@ -59,20 +59,8 @@ app = FastAPI(
 )
 
 favicon_path = 'static/favicon.ico'
-
 app.mount("/static", StaticFiles(directory="static"), name="static")
-app.mount("/admin/static/img", StaticFiles(directory="admin/static/img"), name="adminstaticimg")
-
-# add admin flask app
-flask_admin = Flask(__name__)
-# set optional bootswatch theme
-flask_admin.config['FLASK_ADMIN_SWATCH'] = 'Cosmo'
-admin = Admin(flask_admin, name=cfg.application['app_name'] + ' Admin', url='/', template_mode='bootstrap3')
-admin.add_link(MenuLink('API Docs', '/apidocs', 'apidocs'))
-admin.add_link(MenuLink('API Redoc', '/apiredoc', 'apiredoc'))
-
-
-app.mount("/admin", WSGIMiddleware(flask_admin))
+app.mount("/admin", StaticFiles(directory="admin",html = True), name="admin")
 
 
 @app.on_event("startup")
@@ -106,7 +94,6 @@ if cfg.application['app_cors_origins']:
 
 '''app route'''
 
-
 @app.get("/",
          tags=["Default"],
          summary="Get information for this application.",
@@ -120,6 +107,11 @@ async def app_root():
         "Author": "ibmzhangjun@139.com",
         "Description": cfg.application['app_description']
     }
+
+
+@app.get('/favicon.ico', include_in_schema=False)
+async def favicon():
+    return FileResponse(os.path.join(app_dir, 'static/favicon.ico'))
 
 
 @app.get("/apidocs", include_in_schema=False)
