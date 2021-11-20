@@ -10,6 +10,7 @@ application:
   app_user_func: True
   app_exception_detail: True
   app_confirm_key: Confirmed
+  app_http_port: 8890
 schema:
   schema_cache_enabled: true
   schema_cache_filename: neptune_metadata

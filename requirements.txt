@@ -17,6 +17,5 @@ pydantic==1.8.2
 python-multipart==0.0.5
 PyJwt==2.3.0
 pytest==6.2.5
-flask_sqlalchemy==2.5.1
 flask_admin==1.5.8
-Flask-AdminLTE3==1.0.8
+simple-rest-client==1.1.1
