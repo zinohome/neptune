@@ -16,6 +16,10 @@ from config import config, querydef
 from fastapi import FastAPI, Header, Depends, HTTPException
 from starlette.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
+from fastapi.middleware.wsgi import WSGIMiddleware
+from flask import Flask, escape, request
+from importlib import import_module
+from flask_login import LoginManager
 from fastapi.openapi.docs import (
     get_redoc_html,
     get_swagger_ui_html,
@@ -28,6 +32,9 @@ from starlette.status import HTTP_401_UNAUTHORIZED, HTTP_404_NOT_FOUND
 from core import security, dbengine, tablemodel, apimodel, userfunc
 from datetime import timedelta
 from core import dbmeta as meta
+from admin.apps.config import admin_config
+from admin.apps import login_manager
+from decouple import config as admcfg
 
 
 '''config'''
@@ -59,8 +66,7 @@ app = FastAPI(
 )
 
 favicon_path = 'static/favicon.ico'
-app.mount("/static", StaticFiles(directory="static"), name="static")
-app.mount("/admin", StaticFiles(directory="admin",html = True), name="admin")
+app.mount("/static", StaticFiles(directory="admin/apps/static"), name="static")
 
 
 @app.on_event("startup")
@@ -74,6 +80,21 @@ def shutdown_event():
     log.logger.info(cfg.application['app_name'] + ' Shutting Down ....')
     clear_meta_cache()
 
+'''Admin_app'''
+
+DEBUG = admcfg('DEBUG', default=True, cast=bool)
+get_config_mode = 'Debug'
+#get_config_mode = 'Production'
+admin_app_config = admin_config[get_config_mode.capitalize()]
+admin_app = Flask(__name__, template_folder='admin/apps/templates', static_folder='admin/apps/static')
+admin_app.config.from_object(admin_app_config)
+# login
+login_manager.init_app(admin_app)
+# blueprint
+for module_name in ('authentication', 'home'):
+    module = import_module('admin.apps.{}.routes'.format(module_name))
+    admin_app.register_blueprint(module.blueprint)
+app.mount("/admin", WSGIMiddleware(admin_app))
 
 '''CORS'''
 origins = []
@@ -111,7 +132,11 @@ async def app_root():
 
 @app.get('/favicon.ico', include_in_schema=False)
 async def favicon():
-    return FileResponse(os.path.join(app_dir, 'static/favicon.ico'))
+    return FileResponse(os.path.join(app_dir, 'admin/apps/static/favicon.ico'))
+
+@app.get('/admin/favicon.ico', include_in_schema=False)
+async def adminfavicon():
+    return FileResponse(os.path.join(app_dir, 'admin/apps/static/favicon.ico'))
 
 
 @app.get("/apidocs", include_in_schema=False)
