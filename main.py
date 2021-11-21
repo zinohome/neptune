@@ -201,7 +201,7 @@ async def read_users_me(current_user: security.User = Depends(security.get_curre
     return current_user
 
 
-@app.get(prefix+"/_schema",
+@app.get(prefix+"/_schema/database",
          tags=["Schema"],
          summary="Retrieve DbSchema Resources.",
          description="By default, all tables are returned .",
@@ -211,7 +211,7 @@ async def get_schema(current_user: security.User = Depends(security.get_current_
     return meta.DBMeta().response_schema()
 
 
-@app.get(prefix+"/_schema/{table_name}",
+@app.get(prefix+"/_schema/_table/{table_name}",
          tags=["Schema"],
          summary="Retrieve table definition for the given table.",
          description="This describes the table, its fields and indexes.",
