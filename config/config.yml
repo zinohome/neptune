@@ -11,6 +11,7 @@ application:
   app_exception_detail: True
   app_confirm_key: Confirmed
   app_http_port: 8890
+  app_http_timeout: 3
 schema:
   schema_cache_enabled: true
   schema_cache_filename: neptune_metadata

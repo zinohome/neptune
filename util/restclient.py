@@ -26,7 +26,7 @@ class NeptuneClient():
         self._access_token = None
         self._token_type = 'bearer'
         self._api_root_url = 'http://127.0.0.1:' + str(cfg.application['app_http_port']) + cfg.application['app_prefix'] + '/'
-        self._api_client = API(api_root_url = self._api_root_url, params = {}, headers = {}, timeout = 3, append_slash = False, json_encode_body = False, ssl_verify=False)
+        self._api_client = API(api_root_url = self._api_root_url, params = {}, headers = {}, timeout = cfg.application['app_http_timeout'], append_slash = False, json_encode_body = False, ssl_verify=False)
 
 
     @property
