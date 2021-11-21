@@ -10,12 +10,21 @@ from flask_login import (
     logout_user
 )
 
+from config import config
+from util import log
+
+'''config'''
+cfg = config.Config()
+
+'''logging'''
+log = log.Logger(level=cfg.application['app_log_level'])
+
+
 from admin.apps import login_manager
 from admin.apps.authentication import blueprint
-from admin.apps.authentication.forms import LoginForm, CreateAccountForm
+from admin.apps.authentication.forms import LoginForm
 from admin.apps.authentication.models import Users
 
-from admin.apps.authentication.util import verify_pass
 
 
 @blueprint.route('/')
@@ -29,17 +38,11 @@ def route_default():
 def login():
     login_form = LoginForm(request.form)
     if 'login' in request.form:
-
         # read form data
-        username = request.form['username']
-        password = request.form['password']
-
-        # Locate user
-        user = Users.query.filter_by(username=username).first()
-
+        user = Users(request.form['username'])
+        user.password = request.form['password']
         # Check the password
-        if user and verify_pass(password, user.password):
-
+        if user.user_login():
             login_user(user)
             return redirect(url_for('authentication_blueprint.route_default'))
 
@@ -47,49 +50,11 @@ def login():
         return render_template('accounts/login.html',
                                msg='Wrong user or password',
                                form=login_form)
-
+    log.logger.debug(current_user)
     if not current_user.is_authenticated:
         return render_template('accounts/login.html',
                                form=login_form)
     return redirect(url_for('home_blueprint.index'))
-
-
-@blueprint.route('/register', methods=['GET', 'POST'])
-def register():
-    create_account_form = CreateAccountForm(request.form)
-    if 'register' in request.form:
-
-        username = request.form['username']
-        email = request.form['email']
-
-        # Check usename exists
-        user = Users.query.filter_by(username=username).first()
-        if user:
-            return render_template('accounts/register.html',
-                                   msg='Username already registered',
-                                   success=False,
-                                   form=create_account_form)
-
-        # Check email exists
-        user = Users.query.filter_by(email=email).first()
-        if user:
-            return render_template('accounts/register.html',
-                                   msg='Email already registered',
-                                   success=False,
-                                   form=create_account_form)
-
-        # else we can create the user
-        user = Users(**request.form)
-        db.session.add(user)
-        db.session.commit()
-
-        return render_template('accounts/register.html',
-                               msg='User created please <a href="/login">login</a>',
-                               success=True,
-                               form=create_account_form)
-
-    else:
-        return render_template('accounts/register.html', form=create_account_form)
 
 
 @blueprint.route('/logout')

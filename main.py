@@ -190,7 +190,7 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     return {"access_token": access_token, "token_type": "bearer"}
 
 
-@app.get(prefix + "/users/me",
+@app.get(prefix + "/users",
          response_model=security.User,
          tags=["Security"],
          summary="Retrieve user information.",

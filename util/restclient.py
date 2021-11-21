@@ -78,16 +78,34 @@ class NeptuneClient():
             log.logger.error('Exception at renew_token() %s ' % exp)
             traceback.print_exc()
 
-    def fetchme(self):
+    def user_login(self):
+        login_pass = False
+        api = self._api_client
+        api.add_resource(resource_name='token')
+        request_body = {"username": self.username,"password": self.password}
+        try:
+            response = api.token.create(body = request_body)
+            if response.status_code == 200:
+                self._access_token = response.body['access_token']
+                self._token_type = response.body['token_type']
+                self._lastlogin = datetime.utcnow()
+                login_pass = True
+            else:
+                log.logger.error('Can not get user_login at user_login() ... ')
+        except Exception as exp:
+            log.logger.error('Exception at user_login() %s ' % exp)
+        return login_pass
+
+    def fetchusers(self):
         api = self._api_client
         api.headers = {'Authorization': 'Bearer ' + self.access_token}
-        api.api_root_url = self.api_root_url + 'users/'
-        api.add_resource(resource_name='me')
+        api.api_root_url = self.api_root_url
+        api.add_resource(resource_name='users')
         try:
-            response = api.me.list()
+            response = api.users.list()
             return response.body
         except Exception as exp:
-            log.logger.error('Exception at fetch() %s ' % exp)
+            log.logger.error('Exception at fetchusers() %s ' % exp)
             traceback.print_exc()
 
     def fetch(self, resource_name, url_prefix='', action='list', body=None):
@@ -118,10 +136,11 @@ class NeptuneClient():
 
 if __name__ == '__main__':
     nc = NeptuneClient('admin','admin')
+    log.logger.debug(nc.user_login())
     if nc.token_expired:
         nc.renew_token()
     if ( not nc.token_expired ) and ( nc.access_token is not None ):
-        log.logger.debug(nc.fetchme())
+        log.logger.debug(nc.fetchusers())
         nc.fetch('database','_schema')
         nc.fetch('orders','_schema/_table')
 
