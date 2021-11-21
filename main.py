@@ -280,7 +280,7 @@ async def get_data(table_name: str,
     return ptable.select(fieldlist, filter, toolkit.to_dict(filterparam), limit, offset, order, group, distinct, count_only, include_count)
 
 
-@app.post(prefix+"/_table/{table_name}/query",
+@app.post(prefix+"/_table/_query/{table_name}",
           tags=["Data - Table Level"],
           summary="Retrieve one or more records. ",
           description="",)
@@ -445,7 +445,7 @@ async def get_data_by_id(table_name: str, id: str,
     return ptable.selectbyid(id, fieldlist, idfield)
 
 
-@app.post(prefix+"/_table/{table_name}/querybyid",
+@app.post(prefix+"/_table/_querybyid/{table_name}",
           tags=["Data - Row Level"],
           summary="Retrieve one record by identifier.",
           description="",
