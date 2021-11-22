@@ -19,3 +19,4 @@ PyJwt==2.3.0
 pytest==6.2.5
 flask_admin==1.5.8
 simple-rest-client==1.1.1
+python-decouple==3.4
