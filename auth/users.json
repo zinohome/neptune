@@ -17,7 +17,7 @@
     },
     "writer": {
         "username": "writer",
-        "full_name": "c",
+        "full_name": "Writer",
         "email": "writer@zino.com",
         "hashed_password": "$2b$12$keQAorYzGkrYU10ya9OwHuAlgtvueay.dHhqxtMWjYP4daGQXsjGO",
         "role":"Writer",

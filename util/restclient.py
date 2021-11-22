@@ -5,11 +5,9 @@ import asyncio
 import traceback
 
 from simple_rest_client.api import API
-from simple_rest_client.resource import AsyncResource
 from config import config
 from datetime import datetime, timedelta
 from util import log
-import simplejson as json
 
 '''config'''
 cfg = config.Config()

@@ -50,7 +50,6 @@ def login():
         return render_template('accounts/login.html',
                                msg='Wrong user or password',
                                form=login_form)
-    log.logger.debug(current_user)
     if not current_user.is_authenticated:
         return render_template('accounts/login.html',
                                form=login_form)
