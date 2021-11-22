@@ -29,6 +29,7 @@ import os
 from fastapi.security import OAuth2PasswordRequestForm
 from auth import users
 from starlette.status import HTTP_401_UNAUTHORIZED, HTTP_404_NOT_FOUND
+from starlette.responses import RedirectResponse
 from core import security, dbengine, tablemodel, apimodel, userfunc
 from datetime import timedelta
 from core import dbmeta as meta
@@ -94,6 +95,7 @@ login_manager.init_app(admin_app)
 for module_name in ('authentication', 'home'):
     module = import_module('admin.apps.{}.routes'.format(module_name))
     admin_app.register_blueprint(module.blueprint)
+
 app.mount("/admin", WSGIMiddleware(admin_app))
 
 '''CORS'''
@@ -115,6 +117,7 @@ if cfg.application['app_cors_origins']:
 
 '''app route'''
 
+
 @app.get("/",
          tags=["Default"],
          summary="Get information for this application.",
@@ -122,12 +125,16 @@ if cfg.application['app_cors_origins']:
          )
 async def app_root():
     log.logger.debug('Access \'/\' : run in app_root()')
+    '''
     return {
         "Application_Name": cfg.application['app_name'],
         "Version": cfg.application['app_version'],
         "Author": "ibmzhangjun@139.com",
         "Description": cfg.application['app_description']
     }
+    '''
+    response = RedirectResponse(url="/admin")
+    return response
 
 
 @app.get('/favicon.ico', include_in_schema=False)
