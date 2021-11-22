@@ -1,4 +1,5 @@
-# -*- encoding: utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 #  #
 #  Copyright (C) 2021 ZinoHome, Inc. All Rights Reserved
@@ -11,7 +12,7 @@
 from flask import Blueprint
 
 blueprint = Blueprint(
-    'authentication_blueprint',
+    'config_blueprint',
     __name__,
     url_prefix=''
 )

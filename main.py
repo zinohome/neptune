@@ -33,7 +33,7 @@ from starlette.responses import RedirectResponse
 from core import security, dbengine, tablemodel, apimodel, userfunc
 from datetime import timedelta
 from core import dbmeta as meta
-from admin.apps.config import admin_config
+from admin.apps.config.config import admin_config
 from admin.apps import login_manager
 from decouple import config as admcfg
 

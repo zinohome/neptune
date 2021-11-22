@@ -10,11 +10,11 @@ from flask_login import (
     logout_user
 )
 
-from config import config
+from config import config as apiconfig
 from util import log
 
 '''config'''
-cfg = config.Config()
+cfg = apiconfig.Config()
 
 '''logging'''
 log = log.Logger(level=cfg.application['app_log_level'])
