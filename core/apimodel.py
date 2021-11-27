@@ -18,8 +18,8 @@ class TableQueryBody(BaseModel):
     fieldlist: str = '*'
     filter: str = None
     filterparam: str = None
-    limit: int = config.Config().query['query_default_limit']
-    offset: int = config.Config().query['query_default_offset']
+    limit: int = config.app_config['Query_Config'].query_default_limit
+    offset: int = config.app_config['Query_Config'].query_default_offset
     order: str = None
     group: str = None
     distinct: bool = False

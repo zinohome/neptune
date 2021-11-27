@@ -5140,3 +5140,51 @@ FROM mysqlsrc.orders ]
 2021-11-27 at 09:51:58 | INFO | API cache does not exists ....
 2021-11-27 at 10:54:45 | ERROR | Exception at user_login() [Errno 61] Connection refused 
 2021-11-27 at 10:54:45 | ERROR | Exception at renew_token() [Errno 61] Connection refused 
+2021-11-27 at 12:31:55 | SUCCESS | [测试log] hello, world
+2021-11-27 at 12:31:55 | INFO | [测试log] hello, world
+2021-11-27 at 12:31:55 | WARNING | [测试log] hello, world
+2021-11-27 at 12:31:55 | ERROR | [测试log] hello, world
+2021-11-27 at 12:31:55 | CRITICAL | [测试log] hello, world
+2021-11-27 at 12:31:55 | ERROR | [测试log] hello, world
+NoneType: None
+2021-11-27 at 12:31:56 | SUCCESS | test debug output tm.insert(): 
+ {
+    "insertResult": "True",
+    "insert_row_id": "10432"
+}
+2021-11-27 at 12:31:56 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": "null",
+            "customerNumber": 103,
+            "orderDate": "2013-05-20",
+            "orderNumber": 10432,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "Shipped"
+        }
+    ]
+}
+2021-11-27 at 12:31:56 | SUCCESS | test debug output tm.updatebyid(): 
+ {
+    "udpate_rowcount": 1
+}
+2021-11-27 at 12:31:57 | SUCCESS | test debug output tm.select(): 
+ {
+    "data": [
+        {
+            "comments": "null",
+            "customerNumber": 103,
+            "orderDate": "2021-05-20",
+            "orderNumber": 10432,
+            "requiredDate": "2013-05-29",
+            "shippedDate": "2013-05-22",
+            "status": "NoShipped"
+        }
+    ]
+}
+2021-11-27 at 12:31:57 | SUCCESS | test debug output tm.deletebyid(): 
+ {
+    "delet_rowcount": 1
+}

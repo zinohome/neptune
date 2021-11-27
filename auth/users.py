@@ -16,10 +16,10 @@ from util import log
 from config import config
 
 '''config'''
-cfg = config.Config()
+cfg = config.app_config
 
 '''logging'''
-log = log.Logger(level=cfg.application['app_log_level'])
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 
 def singleton(class_):

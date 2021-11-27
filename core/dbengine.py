@@ -16,10 +16,10 @@ from urllib import parse
 
 
 '''config'''
-cfg = config.Config()
+cfg = config.app_config
 
 '''logging'''
-log = log.Logger(level=cfg.application['app_log_level'])
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 
 def singleton(class_):
@@ -36,32 +36,32 @@ def singleton(class_):
 class DBEngine(object):
     def __init__(self):
         uri = ''
-        if cfg.database['db_gendburi']:
+        if cfg['Database_Config'].db_gendburi:
             uri = str(toolkit.gen_dburi())
         else:
-            olduri = cfg.database['db_uri']
+            olduri = cfg['Database_Config'].db_uri
             if 'UNQUOTEPASSWORD' in olduri:
-                uri = olduri.replace("UNQUOTEPASSWORD", parse.unquote_plus(cfg.database['db_password']))
+                uri = olduri.replace("UNQUOTEPASSWORD", parse.unquote_plus(cfg['Database_Config'].db_password))
             else:
                 uri = olduri
         log.logger.debug('Connect use uri [ %s ]' % uri)
-        if cfg.database['db_dialect'] == 'oracle':
+        if cfg['Database_Config'].db_dialect == 'oracle':
             self.__engine = create_engine(uri,
                                           echo=False,
-                                          pool_size=cfg.connection['con_pool_size'],
-                                          max_overflow=cfg.connection['con_max_overflow'],
-                                          pool_use_lifo=cfg.connection['con_pool_use_lifo'],
-                                          pool_pre_ping=cfg.connection['con_pool_pre_ping'],
-                                          pool_recycle=cfg.connection['con_pool_recycle'],
-                                          exclude_tablespaces=cfg.database['db_exclude_tablespaces'])
+                                          pool_size=cfg['Connection_Config'].con_pool_size,
+                                          max_overflow=cfg['Connection_Config'].con_max_overflow,
+                                          pool_use_lifo=cfg['Connection_Config'].con_pool_use_lifo,
+                                          pool_pre_ping=cfg['Connection_Config'].con_pool_pre_ping,
+                                          pool_recycle=cfg['Connection_Config'].con_pool_recycle,
+                                          exclude_tablespaces=cfg['Database_Config'].db_exclude_tablespaces)
         else:
             self.__engine = create_engine(uri,
                                           echo=False,
-                                          pool_size=cfg.connection['con_pool_size'],
-                                          max_overflow=cfg.connection['con_max_overflow'],
-                                          pool_use_lifo=cfg.connection['con_pool_use_lifo'],
-                                          pool_pre_ping=cfg.connection['con_pool_pre_ping'],
-                                          pool_recycle=cfg.connection['con_pool_recycle'])
+                                          pool_size=cfg['Connection_Config'].con_pool_size,
+                                          max_overflow=cfg['Connection_Config'].con_max_overflow,
+                                          pool_use_lifo=cfg['Connection_Config'].con_pool_use_lifo,
+                                          pool_pre_ping=cfg['Connection_Config'].con_pool_pre_ping,
+                                          pool_recycle=cfg['Connection_Config'].con_pool_recycle)
 
     def connect(self):
         return self.__engine

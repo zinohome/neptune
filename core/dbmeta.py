@@ -17,13 +17,13 @@ from util import log
 import pickle
 
 '''config'''
-cfg = config.Config()
+cfg = config.app_config
 
 '''logging'''
-log = log.Logger(level=cfg.application['app_log_level'])
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 # cache file define
-metadata_pickle_filename = cfg.schema['schema_cache_filename']
+metadata_pickle_filename = cfg['Schema_Config'].schema_cache_filename
 cache_path = os.path.join(os.path.expanduser("~"), ".neptune_cache")
 
 
@@ -40,14 +40,14 @@ def singleton(class_):
 @singleton
 class DBMeta(object):
     def __init__(self):
-        self.use_schema = cfg.database['db_use_schema']
-        self._schema = cfg.database['db_schema']
+        self.use_schema = cfg['Database_Config'].db_use_schema
+        self._schema = cfg['Database_Config'].db_schema
         self._tableCount = 0
         self._tables = 'N/A'
         self._viewCount = 0
         self._metadata = None
         self.load_metadata()
-        if cfg.application['app_force_generate_meta']:
+        if cfg['Application_Config'].app_force_generate_meta:
             log.logger.debug('Generate Schema file from database ...')
             self.gen_schema()
         else:
@@ -90,13 +90,13 @@ class DBMeta(object):
         basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
         apppath = os.path.abspath(os.path.join(basepath, os.pardir))
         configpath = os.path.abspath(os.path.join(apppath, 'config'))
-        metafilepath = os.path.abspath(os.path.join(configpath, cfg.schema['schema_db_metafile']))
+        metafilepath = os.path.abspath(os.path.join(configpath, cfg['Schema_Config'].schema_db_metafile))
         return metafilepath
 
     def load_metadata(self):
         engine = dbengine.DBEngine().connect()
         cached_metadata = None
-        if cfg.schema['schema_cache_enabled']:
+        if cfg['Schema_Config'].schema_cache_enabled:
             if os.path.exists(os.path.join(cache_path, metadata_pickle_filename)):
                 try:
                     with open(os.path.join(cache_path, metadata_pickle_filename), 'rb') as cache_file:
@@ -111,8 +111,7 @@ class DBMeta(object):
                 self._metadata = cached_metadata
             else:
                 metadata = MetaData(bind=engine, schema=self._schema if self.use_schema else None)
-                metadata.reflect(views=True, only=cfg.schema['schema_fetch_tables'] if not cfg.schema[
-                    'schema_fetch_all_table'] else None)
+                metadata.reflect(views=True, only=cfg['Schema_Config'].schema_fetch_tables if not cfg['Schema_Config'].schema_fetch_all_table else None)
                 self._metadata = metadata
                 try:
                     if not os.path.exists(cache_path):
@@ -127,8 +126,7 @@ class DBMeta(object):
                                      '[ %s ] ' % os.path.join(cache_path, metadata_pickle_filename))
         else:
             metadata = MetaData(bind=engine, schema=self._schema if self.use_schema else None)
-            metadata.reflect(views=True, only=cfg.schema['schema_fetch_tables'] if not cfg.schema[
-                'schema_fetch_all_table'] else None)
+            metadata.reflect(views=True, only=cfg['Schema_Config'].schema_fetch_tables if not cfg['Schema_Config'].schema_fetch_all_table else None)
             self._metadata = metadata
 
     def gen_schema(self):
@@ -138,18 +136,18 @@ class DBMeta(object):
         try:
             if metadata is not None:
                 log.logger.debug("Generate Schema from : [ %s ] with db schema "
-                                 "[ %s ]" % (cfg.database['db_name'], self._schema))
+                                 "[ %s ]" % (cfg['Database_Config'].db_name, self._schema))
                 jmeta = {}
-                jmeta['Schema'] = cfg.database['db_schema']
+                jmeta['Schema'] = cfg['Database_Config'].db_schema
                 jtbls = {}
                 jmeta['Tables'] = jtbls
-                table_list_set = set(cfg.schema['schema_fetch_tables'])
+                table_list_set = set(cfg['Schema_Config'].schema_fetch_tables)
                 table_names = inspector.get_table_names()
                 if self.use_schema:
                     table_names = inspector.get_table_names(schema=self._schema)
                 for table_name in table_names:
                     persist_table = False
-                    if cfg.schema['schema_fetch_all_table']:
+                    if cfg['Schema_Config'].schema_fetch_all_table:
                         persist_table = True
                     else:
                         if table_name in table_list_set:
@@ -186,7 +184,7 @@ class DBMeta(object):
                     view_names = inspector.get_view_names(schema=self._schema)
                 for view_name in view_names:
                     persist_view = False
-                    if cfg.schema['schema_fetch_all_table']:
+                    if cfg['Schema_Config'].schema_fetch_all_table:
                         persist_view = True
                     else:
                         if view_name in table_list_set:

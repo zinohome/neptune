@@ -13,10 +13,10 @@ from util import log
 from core import userfunc
 
 '''config'''
-cfg = config.Config()
+cfg = config.app_config
 
 '''logging'''
-log = log.Logger(level=cfg.application['app_log_level'])
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 class TestUserFunc:
     def test_user_func(self):

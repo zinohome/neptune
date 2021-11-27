@@ -23,10 +23,10 @@ from sqlalchemy.sql import text
 from sqlalchemy.orm import sessionmaker, scoped_session
 
 '''config'''
-cfg = config.Config()
+cfg = config.app_config
 
 '''logging'''
-log = log.Logger(level=cfg.application['app_log_level'])
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 
 class TableModel(object):
@@ -36,7 +36,7 @@ class TableModel(object):
         self._name = table_name
         self.engine = dbengine.DBEngine().connect()
         self._dbmeta = dbmeta.DBMeta()
-        self._use_schema = cfg.database['db_use_schema']
+        self._use_schema = cfg['Database_Config'].db_use_schema
         self.metadata = meta.metadata
         self.metadata.bind = self.engine
         self._schematable = self._dbmeta.gettable(table_name)
@@ -142,8 +142,8 @@ class TableModel(object):
 
     def select(self, fieldlist='*', filter=None,
                filterparam=None,
-               limit=cfg.query['query_default_limit'],
-               offset=cfg.query['query_default_offset'],
+               limit=cfg['Query_Config'].query_default_limit,
+               offset=cfg['Query_Config'].query_default_offset,
                order=None, group=None, distinct=False,
                count_only=False, include_count=False):
         log.logger.debug('table select():')
@@ -180,8 +180,8 @@ class TableModel(object):
                         select_cl.append(cl)
                 select_st = select(select_cl, distinct=distinct)
                 count_st = select([func.count(select_cl[0]).label('col_count')], distinct=distinct)
-            if limit > cfg.query['query_limit_upset']:
-                limit = cfg.query['query_limit_upset']
+            if limit > cfg['Query_Config'].query_limit_upset:
+                limit = cfg['Query_Config'].query_limit_upset
             select_st = select_st.limit(limit).offset(offset)
             if order is not None:
                 select_st = select_st.order_by(text(order))
@@ -229,7 +229,7 @@ class TableModel(object):
                 return_json['data'] = None
         except Exception as e:
             log.logger.error('Exception at table select(): %s ' % e)
-            if cfg.application['app_exception_detail']:
+            if cfg['Application_Config'].app_exception_detail:
                 traceback.print_exc(limit=3, file=sys.stdout)
             return_json['selectResult'] = 'Error'
             return_json['selectError'] = 'Exception at table select(): %s ' % e
@@ -266,7 +266,7 @@ class TableModel(object):
             else:
                 select_st = select([rtable])
             log.logger.debug('SQL of Select: [ %s ]' % select_st)
-            select_st = select_st.limit(cfg.query['query_limit_upset'])
+            select_st = select_st.limit(cfg['Query_Config'].query_limit_upset)
             log.logger.debug('SQL of Select: [ %s ]' % select_st)
             l_pklist = []
             if idfiled is not None:
@@ -309,7 +309,7 @@ class TableModel(object):
                 return_json['data'] = None
         except Exception as e:
             log.logger.error('Exception at tablemodel selectbyid(): %s ' % e)
-            if cfg.application['app_exception_detail']:
+            if cfg['Application_Config'].app_exception_detail:
                 traceback.print_exc(limit=3, file=sys.stdout)
             return_json['selectResult'] = 'Error'
             return_json['selectError'] = 'Exception at tablemodel selectbyid(): %s ' % e
@@ -349,7 +349,7 @@ class TableModel(object):
                 return_json['insertResult'] = 'False'
         except Exception as e:
             log.logger.error('Exception at tablemodel insert(): %s ' % e)
-            if cfg.application['app_exception_detail']:
+            if cfg['Application_Config'].app_exception_detail:
                 traceback.print_exc(limit=3, file=sys.stdout)
             return_json['insertResult'] = 'Error'
             return_json['insertError'] = 'Exception at tablemodel insert(): %s ' % e
@@ -394,7 +394,7 @@ class TableModel(object):
                 return_json['udpate_rowcount'] = 0
         except Exception as e:
             log.logger.error('Exception at tablemodel update(): %s ' % e)
-            if cfg.application['app_exception_detail']:
+            if cfg['Application_Config'].app_exception_detail:
                 traceback.print_exc(limit=3, file=sys.stdout)
             return_json['updateResult'] = 'Error'
             return_json['updateError'] = 'Exception at tablemodel update(): %s ' % e
@@ -427,9 +427,9 @@ class TableModel(object):
             pkstr = None
             for pk in lpklist:
                 if pkstr is not None:
-                    pkstr = pkstr + ' and ' + pk + '=:' + cfg.application['app_param_prefix'] + pk
+                    pkstr = pkstr + ' and ' + pk + '=:' + cfg['Application_Config'].app_param_prefix + pk
                 else:
-                    pkstr = pk + '=:' + cfg.application['app_param_prefix'] + pk
+                    pkstr = pk + '=:' + cfg['Application_Config'].app_param_prefix + pk
             log.logger.debug('Primarykey select string : [ %s ]' % pkstr)
             pkparm = dict(zip(lpklist, toolkit.to_list(idvalue)))
             # pkparm = dict(zip(ulpklist, toolkit.to_list(idvalue)))
@@ -457,7 +457,7 @@ class TableModel(object):
                 return_json['udpate_rowcount'] = 0
         except Exception as e:
             log.logger.error('Exception at tablemodel updatebyid(): %s ' % e)
-            if cfg.application['app_exception_detail']:
+            if cfg['Application_Config'].app_exception_detail:
                 traceback.print_exc(limit=3, file=sys.stdout)
             return_json['updateResult'] = 'Error'
             return_json['updateError'] = 'Exception at tablemodel updatebyid(): %s ' % e
@@ -493,7 +493,7 @@ class TableModel(object):
                 return_json['delet_rowcount'] = 0
         except Exception as e:
             log.logger.error('Exception at tablemodel delete(): %s ' % e)
-            if cfg.application['app_exception_detail']:
+            if cfg['Application_Config'].app_exception_detail:
                 traceback.print_exc(limit=3, file=sys.stdout)
             return_json['deleteResult'] = 'Error'
             return_json['deleteError'] = 'Exception at tablemodel delete(): %s ' % e
@@ -546,7 +546,7 @@ class TableModel(object):
                 return_json['delet_rowcount'] = 0
         except Exception as e:
             log.logger.error('Exception at tablemodel deletebyid(): %s ' % e)
-            if cfg.application['app_exception_detail']:
+            if cfg['Application_Config'].app_exception_detail:
                 traceback.print_exc(limit=3, file=sys.stdout)
             return_json['deleteResult'] = 'Error'
             return_json['deleteError'] = 'Exception at tablemodel deletebyid(): %s ' % e

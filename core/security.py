@@ -15,10 +15,10 @@ from util import log
 
 
 '''config'''
-cfg = config.Config()
+cfg = config.app_config
 
 '''logging'''
-log = log.Logger(level=cfg.application['app_log_level'])
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 '''oauth2 and jwt'''
 
@@ -44,7 +44,7 @@ class UserInDB(User):
     hashed_password: str
 
 
-prefix = cfg.application['app_prefix']
+prefix = cfg['Application_Config'].app_prefix
 if prefix.startswith('/'):
     pass
 else:
@@ -86,7 +86,7 @@ def create_access_token(*, data: dict, expires_delta: timedelta = None):
     else:
         expire = datetime.utcnow() + timedelta(minutes=15)
     to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, cfg.security['security_key'], algorithm=cfg.security['security_algorithm'])
+    encoded_jwt = jwt.encode(to_encode, cfg['Security_Config'].security_key, algorithm=[cfg['Security_Config'].security_algorithm])
     log.logger.debug('create_access_token with encoded_jwt: [%s]' % encoded_jwt)
     return encoded_jwt
 
@@ -98,7 +98,7 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
         headers={"WWW-Authenticate": "Bearer"},
     )
     try:
-        payload = jwt.decode(token, cfg.security['security_key'], algorithms=[cfg.security['security_algorithm']])
+        payload = jwt.decode(token, cfg['Security_Config'].security_key, algorithms=[cfg['Security_Config'].security_algorithm])
         username: str = payload.get("sub")
         if username is None:
             raise credentials_exception
