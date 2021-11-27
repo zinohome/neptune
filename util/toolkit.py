@@ -84,7 +84,7 @@ def to_fvcol(lststr):
 
 
 def uappend(lststr):
-    return config.Config().application['app_param_prefix']+'{}'.format(lststr)
+    return config.app_config['Application_Config'].app_param_prefix+'{}'.format(lststr)
 
 
 def uappendlist(slist):
@@ -92,13 +92,13 @@ def uappendlist(slist):
 
 
 def gen_dburi():
-    cfg = config.Config()
-    db = {'drivername': cfg.database['db_drivername'],
-          'username': cfg.database['db_username'],
-          'password': parse.unquote_plus(cfg.database['db_password']),
-          'host': cfg.database['db_host'],
-          'port': cfg.database['db_port'],
-          'database': cfg.database['db_name']
+    cfg = config.app_config
+    db = {'drivername': cfg['Database_Config'].db_drivername,
+          'username': cfg['Database_Config'].db_username,
+          'password': parse.unquote_plus(cfg['Database_Config'].db_password),
+          'host': cfg['Database_Config'].db_host,
+          'port': cfg['Database_Config'].db_port,
+          'database': cfg['Database_Config'].db_name
           }
     return URL.create(**db)
 
@@ -106,9 +106,12 @@ def gen_dburi():
 if __name__ == '__main__':
     str1 = "{'name': 'productDescription', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': False}"
     print(to_json(str1))
-    '''
+
     print(uappendlist(['id', 'name', 'phone']))
+
     print(uappend('id'))
+    print(gen_dburi().__class__)
+    '''
     test = '{"id":3,"name":"sdf"}'
     testl = '{"id":3,"name":"sdf","phone":"234243"},' \
             '{"id":3,"name":"sdf","phone":"234243"},' \

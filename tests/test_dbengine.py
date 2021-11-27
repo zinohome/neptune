@@ -14,7 +14,7 @@ from core import dbengine
 from sqlalchemy.engine.base import Engine
 
 '''config'''
-cfg = config.Config()
+cfg = config.app_config
 
 class TestDBEngine(object):
 
@@ -24,4 +24,4 @@ class TestDBEngine(object):
         #for item in dir(engine):
         #    print(item)
         assert isinstance(engine, Engine)
-        assert engine.pool.size() == cfg.connection['con_pool_size']
+        assert engine.pool.size() == cfg['Connection_Config'].con_pool_size

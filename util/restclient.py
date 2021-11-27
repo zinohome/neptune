@@ -10,10 +10,10 @@ from datetime import datetime, timedelta
 from util import log
 
 '''config'''
-cfg = config.Config()
+cfg = config.app_config
 
 '''logging'''
-log = log.Logger(level=cfg.application['app_log_level'])
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 class NeptuneClient():
     def __init__(self, username, password):
@@ -23,8 +23,8 @@ class NeptuneClient():
         self._token_expired = True
         self._access_token = None
         self._token_type = 'bearer'
-        self._api_root_url = 'http://127.0.0.1:' + str(cfg.application['app_http_port']) + cfg.application['app_prefix'] + '/'
-        self._api_client = API(api_root_url = self._api_root_url, params = {}, headers = {}, timeout = cfg.application['app_http_timeout'], append_slash = False, json_encode_body = False, ssl_verify=False)
+        self._api_root_url = 'http://127.0.0.1:' + str(cfg['Application_Config'].app_http_port) + cfg['Application_Config'].app_prefix + '/'
+        self._api_client = API(api_root_url = self._api_root_url, params = {}, headers = {}, timeout = cfg['Application_Config'].app_http_timeout, append_slash = False, json_encode_body = False, ssl_verify=False)
 
 
     @property
@@ -44,7 +44,7 @@ class NeptuneClient():
         if self._lastlogin == 0:
             self._token_expired = True
         else:
-            self._token_expired = datetime.utcnow() - self._lastlogin > timedelta(minutes=cfg.security['access_token_expire_minutes'] - 1)
+            self._token_expired = datetime.utcnow() - self._lastlogin > timedelta(minutes=cfg['Security_Config'].access_token_expire_minutes - 1)
         return self._token_expired
 
     @property

@@ -13,10 +13,10 @@ from config import config
 
 class TestConfig:
     def test_config(self):
-        cfg = config.Config()
-        print(cfg.application.__class__)
-        assert isinstance(cfg.application, dict)
-        print(cfg.application['app_name'])
-        assert cfg.application['app_name'] == 'Neptune'
-        assert cfg.connection['con_max_overflow'] == 5
+        cfg = config.app_config
+        print(cfg['Application_Config'].app_description)
+        print(cfg['Schema_Config'].schema_fetch_tables)
+        print(cfg['Database_Config'].db_uri)
+        assert cfg['Application_Config'].app_name == 'Neptune'
+        assert cfg['Connection_Config'].con_max_overflow == 5
 
