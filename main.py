@@ -17,9 +17,8 @@ from fastapi import FastAPI, Header, Depends, HTTPException
 from starlette.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
 from fastapi.middleware.wsgi import WSGIMiddleware
-from flask import Flask, escape, request
+from flask import Flask
 from importlib import import_module
-from flask_login import LoginManager
 from fastapi.openapi.docs import (
     get_redoc_html,
     get_swagger_ui_html,
@@ -33,34 +32,32 @@ from starlette.responses import RedirectResponse
 from core import security, dbengine, tablemodel, apimodel, userfunc
 from datetime import timedelta
 from core import dbmeta as meta
-from admin.apps.config.config import admin_config
 from admin.apps import login_manager
-from decouple import config as admcfg
 
 
 '''config'''
-cfg = config.Config()
+cfg = config.app_config
 
 '''logging'''
-log = log.Logger(level=cfg.application['app_log_level'])
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 '''app_dir'''
 app_dir = os.path.dirname(os.path.abspath(__file__))
 
 '''API prefix'''
-prefix = cfg.application['app_prefix']
+prefix = cfg['Application_Config'].app_prefix
 if prefix.startswith('/'):
     pass
 else:
     prefix = '/' + prefix
-log.logger.info(cfg.application['app_name'] + ' Start Up ....')
+log.logger.info(cfg['Application_Config'].app_name + ' Start Up ....')
 log.logger.info("API prefix is: [ %s ]" % prefix)
 
 '''API define'''
 app = FastAPI(
-    title=cfg.application['app_name'],
-    description=cfg.application['app_description'],
-    version=cfg.application['app_version'],
+    title=cfg['Application_Config'].app_name,
+    description=cfg['Application_Config'].app_description,
+    version=cfg['Application_Config'].app_version,
     openapi_url=prefix+"/openapi.json",
     docs_url=None,
     redoc_url=None
@@ -72,23 +69,21 @@ app.mount("/static", StaticFiles(directory="admin/apps/static"), name="static")
 
 @app.on_event("startup")
 async def startup_event():
-    log.logger.info(cfg.application['app_name'] + ' Starting ....')
+    log.logger.info(cfg['Application_Config'].app_name + ' Starting ....')
     clear_meta_cache()
 
 
 @app.on_event("shutdown")
 def shutdown_event():
-    log.logger.info(cfg.application['app_name'] + ' Shutting Down ....')
+    log.logger.info(cfg['Application_Config'].app_name + ' Shutting Down ....')
     clear_meta_cache()
 
 '''Admin_app'''
 
-DEBUG = admcfg('DEBUG', default=True, cast=bool)
+DEBUG = cfg['Admin_Config'].DEBUG
 get_config_mode = 'Debug'
-#get_config_mode = 'Production'
-admin_app_config = admin_config[get_config_mode.capitalize()]
 admin_app = Flask(__name__, template_folder='admin/apps/templates', static_folder='admin/apps/static')
-admin_app.config.from_object(admin_app_config)
+admin_app.config.from_object(cfg['Admin_Config'])
 # login
 login_manager.init_app(admin_app)
 # blueprint
@@ -102,8 +97,8 @@ app.mount("/admin", WSGIMiddleware(admin_app))
 origins = []
 
 # Set all CORS enabled origins
-if cfg.application['app_cors_origins']:
-    origins_raw = cfg.application['app_cors_origins'].split(",")
+if cfg['Application_Config'].app_cors_origins:
+    origins_raw = cfg['Application_Config'].app_cors_origins.split(",")
     for origin in origins_raw:
         use_origin = origin.strip()
         origins.append(use_origin)
@@ -127,10 +122,10 @@ async def app_root():
     log.logger.debug('Access \'/\' : run in app_root()')
     '''
     return {
-        "Application_Name": cfg.application['app_name'],
-        "Version": cfg.application['app_version'],
+        "Application_Name": cfg['Application_Config'].app_name,
+        "Version": cfg['Application_Config'].app_version,
         "Author": "ibmzhangjun@139.com",
-        "Description": cfg.application['app_description']
+        "Description": cfg['Application_Config'].app_description
     }
     '''
     response = RedirectResponse(url="/admin")
@@ -190,7 +185,7 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
             detail="Incorrect username or password",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    access_token_expires = timedelta(minutes=cfg.security['access_token_expire_minutes'])
+    access_token_expires = timedelta(minutes=cfg['Security_Config'].access_token_expire_minutes)
     access_token = security.create_access_token(
         data={"sub": user.username}, expires_delta=access_token_expires
     )
@@ -243,8 +238,8 @@ async def get_data(table_name: str,
                    fieldlist: str = Header('*'),
                    filter: str = Header(None),
                    filterparam: str = Header(None),
-                   limit: int = Header(cfg.query['query_default_limit'], gt=0, le=cfg.query['query_limit_upset']),
-                   offset: int = Header(cfg.query['query_default_offset'], gt=-1),
+                   limit: int = Header(cfg['Query_Config'].query_default_limit, gt=0, le=cfg['Query_Config'].query_limit_upset),
+                   offset: int = Header(cfg['Query_Config'].query_default_offset, gt=-1),
                    order: str = Header(None),
                    group: str = Header(None),
                    distinct: bool = Header(False),
@@ -550,7 +545,7 @@ async def delete_data_by_id(table_name: str, id: str,
     return ptable.deletebyid(idfield, id)
 
 
-if cfg.application['app_user_func']:
+if cfg['Application_Config'].app_user_func:
     log.logger.info('Add Custom query ...')
     qdef = querydef.QueryDef()
     desstr = "**USAGE:**<br/><br/>"
@@ -606,7 +601,7 @@ async def sys_config(SecuretKey: str = Header(..., min_length=5),
     """
     log.logger.debug(
         'Access \'/sys/config\' : run in main.py, input data: [ %s ]' % SecuretKey)
-    if SecuretKey == cfg.application['app_confirm_key']:
+    if SecuretKey == cfg['Application_Config'].app_confirm_key:
         return {
             "System_Config": cfg
         }
@@ -630,7 +625,7 @@ async def reload_meta(SecuretKey: str = Header(..., min_length=5),
     """
     log.logger.debug(
         'Access \'/sys/reloadmeta\' : run in reload_meta(), input data: [ %s ]' % SecuretKey)
-    if SecuretKey == cfg.application['app_confirm_key']:
+    if SecuretKey == cfg['Application_Config'].app_confirm_key:
         clear_meta_cache()
         schema_file = meta.DBMeta().schema_file()
         if os.path.exists(schema_file):
@@ -660,7 +655,7 @@ async def sys_status(SecuretKey: str = Header(..., min_length=5),
     """
     log.logger.debug(
         'Access \'/sys/status\' : run in main.py, input data: [ %s ]' % SecuretKey)
-    if SecuretKey == cfg.application['app_confirm_key']:
+    if SecuretKey == cfg['Application_Config'].app_confirm_key:
         return {
             "Pool_status": dbengine.DBEngine().connect().pool.status()
         }
@@ -672,8 +667,8 @@ async def sys_status(SecuretKey: str = Header(..., min_length=5),
 
 def clear_meta_cache():
     # cache file define
-    metadata_pickle_filename = cfg.schema['schema_cache_filename']
-    cache_path = os.path.join(os.path.expanduser("~"), ".pyAPI_cache")
+    metadata_pickle_filename = cfg['Schema_Config'].schema_cache_filename
+    cache_path = os.path.join(os.path.expanduser("~"), ".neptune_cache")
     cache_file = os.path.join(cache_path, metadata_pickle_filename)
     if os.path.exists(cache_file):
         os.remove(cache_file)

@@ -10,14 +10,14 @@ from flask_login import (
     logout_user
 )
 
-from config import config as apiconfig
+from config import config
 from util import log
 
 '''config'''
-cfg = apiconfig.Config()
+cfg = config.app_config
 
 '''logging'''
-log = log.Logger(level=cfg.application['app_log_level'])
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 
 from admin.apps import login_manager
