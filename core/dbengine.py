@@ -53,7 +53,7 @@ class DBEngine(object):
                                           pool_use_lifo=cfg['Connection_Config'].con_pool_use_lifo,
                                           pool_pre_ping=cfg['Connection_Config'].con_pool_pre_ping,
                                           pool_recycle=cfg['Connection_Config'].con_pool_recycle,
-                                          exclude_tablespaces=cfg['Database_Config'].db_exclude_tablespaces)
+                                          exclude_tablespaces=toolkit.to_list(cfg['Database_Config'].db_exclude_tablespaces))
         else:
             self.__engine = create_engine(uri,
                                           echo=False,

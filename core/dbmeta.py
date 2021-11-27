@@ -13,7 +13,7 @@ from core import dbengine, tableschema
 from sqlalchemy import inspect, MetaData, Table
 import simplejson as json
 from config import config
-from util import log
+from util import log, toolkit
 import pickle
 
 '''config'''
@@ -110,8 +110,13 @@ class DBMeta(object):
                 cached_metadata.bind = engine
                 self._metadata = cached_metadata
             else:
-                metadata = MetaData(bind=engine, schema=self._schema if self.use_schema else None)
-                metadata.reflect(views=True, only=cfg['Schema_Config'].schema_fetch_tables if not cfg['Schema_Config'].schema_fetch_all_table else None)
+                metadata = MetaData(bind=engine)
+                if self.use_schema:
+                    metadata = MetaData(bind=engine, schema=self._schema)
+                if cfg['Schema_Config'].schema_fetch_all_table == True:
+                    metadata.reflect(views=True)
+                else:
+                    metadata.reflect(views=True, only=toolkit.to_list(cfg['Schema_Config'].schema_fetch_tables))
                 self._metadata = metadata
                 try:
                     if not os.path.exists(cache_path):
@@ -125,8 +130,13 @@ class DBMeta(object):
                     log.logger.debug('Metadata save Error '
                                      '[ %s ] ' % os.path.join(cache_path, metadata_pickle_filename))
         else:
-            metadata = MetaData(bind=engine, schema=self._schema if self.use_schema else None)
-            metadata.reflect(views=True, only=cfg['Schema_Config'].schema_fetch_tables if not cfg['Schema_Config'].schema_fetch_all_table else None)
+            metadata = MetaData(bind=engine)
+            if self.use_schema:
+                metadata = MetaData(bind=engine, schema=self._schema)
+            if cfg['Schema_Config'].schema_fetch_all_table == True:
+                metadata.reflect(views=True)
+            else:
+                metadata.reflect(views=True, only=toolkit.to_list(cfg['Schema_Config'].schema_fetch_tables))
             self._metadata = metadata
 
     def gen_schema(self):
@@ -141,7 +151,7 @@ class DBMeta(object):
                 jmeta['Schema'] = cfg['Database_Config'].db_schema
                 jtbls = {}
                 jmeta['Tables'] = jtbls
-                table_list_set = set(cfg['Schema_Config'].schema_fetch_tables)
+                table_list_set = set(toolkit.to_list(cfg['Schema_Config'].schema_fetch_tables))
                 table_names = inspector.get_table_names()
                 if self.use_schema:
                     table_names = inspector.get_table_names(schema=self._schema)
@@ -293,7 +303,7 @@ class DBMeta(object):
 if __name__ == '__main__':
     meta = DBMeta()
     metadata = meta.metadata
-    otable = meta.gettable('orders')
+    otable = meta.gettable('customers')
     log.logger.debug(otable.table2json())
     log.logger.debug("****************************************************")
     if metadata is not None:

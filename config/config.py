@@ -62,7 +62,7 @@ class Database_Config(Config):
     db_username = config('db_username', default = 'root')
     db_password = config('db_password', default = 'passw0rd')
     db_uri = config('db_uri', default = 'mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc')
-    db_exclude_tablespaces = config('db_exclude_tablespaces', default = '[SYSTEM,SYSAUX]', cast = list)
+    db_exclude_tablespaces = config('db_exclude_tablespaces', default = '[SYSTEM,SYSAUX]')
 
 class Connection_Config(Config):
     con_pool_size = config('con_pool_size', default = 20, cast = int)
@@ -95,3 +95,5 @@ if __name__ == '__main__':
     print(app_config['Application_Config'].app_description)
     print(app_config['Schema_Config'].schema_fetch_tables)
     print(app_config['Database_Config'].db_uri)
+    print(app_config['Database_Config'].db_exclude_tablespaces)
+    print(app_config['Schema_Config'].schema_fetch_tables)
