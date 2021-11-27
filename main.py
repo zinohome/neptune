@@ -117,7 +117,7 @@ if cfg['Application_Config'].app_cors_origins:
          tags=["Default"],
          summary="Get information for this application.",
          description="Return application information",
-         )
+         include_in_schema=False)
 async def app_root():
     log.logger.debug('Access \'/\' : run in app_root()')
     '''

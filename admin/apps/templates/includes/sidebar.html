@@ -47,6 +47,75 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item has-treeview {% if 'tables-' in segment %} menu-open {% endif %}">
+            <a href="#" class="nav-link {% if 'tables-' in segment %} active {% endif %}">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Tables
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/admin/tables-simple.html" class="nav-link {% if 'tables-simple' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Simple Tables</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/tables-data.html" class="nav-link {% if 'tables-data' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>DataTables</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/tables-jsgrid.html" class="nav-link {% if 'tables-jsgrid' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>jsGrid</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview {% if 'api' in segment %} menu-open {% endif %}">
+            <a href="#" class="nav-link {% if 'api' in segment %} active {% endif %}">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                API
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/admin/api-docs.html" class="nav-link {% if 'api-docs.html' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Swagger</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/api-redoc.html" class="nav-link {% if 'api-redoc.html' in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Redoc</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-header">Documents</li>
+          <li class="nav-item">
+            <a target="_blank" rel="noopener noreferrer"
+               href="https://adminlte.io/docs/3.0/" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>UI Documentation</p>
+            </a>
+          </li>
+          <!-- Reference -->
+          <li class="nav-header">MISCELLANEOUS</li>
+          <li class="nav-item">
+            <a target="_blank" rel="noopener noreferrer"
+               href="https://adminlte.io/docs/3.0/" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>UI Documentation</p>
+            </a>
+          </li>
           <li class="nav-item has-treeview {% if 'layout' in segment %} menu-open {% endif %}">
             <a href="#" class="nav-link {% if 'layout' in segment %} active {% endif %}">
               <i class="nav-icon fas fa-copy"></i>
@@ -126,35 +195,6 @@
                 <a href="/admin/forms-validation.html" class="nav-link {% if 'forms-validation' in segment %} active {% endif %}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Validation</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview {% if 'tables-' in segment %} menu-open {% endif %}">
-            <a href="#" class="nav-link {% if 'tables-' in segment %} active {% endif %}">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Tables
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/admin/tables-simple.html" class="nav-link {% if 'tables-simple' in segment %} active {% endif %}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/admin/tables-data.html" class="nav-link {% if 'tables-data' in segment %} active {% endif %}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>DataTables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/admin/tables-jsgrid.html" class="nav-link {% if 'tables-jsgrid' in segment %} active {% endif %}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>jsGrid</p>
                 </a>
               </li>
             </ul>
@@ -318,14 +358,6 @@
                 </a>
               </li>
             </ul>
-          </li>
-          <li class="nav-header">MISCELLANEOUS</li>
-          <li class="nav-item">
-            <a target="_blank" rel="noopener noreferrer"
-               href="https://adminlte.io/docs/3.0/" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>UI Documentation</p>
-            </a>
           </li>
         </ul>
       </nav>
