@@ -32,6 +32,9 @@ class Application_Config(Config):
     app_confirm_key = config('app_confirm_key', default = 'Confirmed')
     app_http_port = config('app_http_port', default = 8890, cast = int)
     app_http_timeout = config('app_http_timeout', default = 3, cast = int)
+    app_load_metadat_on_load = config('app_load_metadat_on_load', default = True, cast = bool)
+    app_clear_metadat_on_startup = config('app_clear_metadat_on_startup', default = True, cast = bool)
+    app_clear_metadat_on_shutdown = config('app_clear_metadat_on_shutdown', default = True, cast = bool)
 
 class Schema_Config(Config):
     schema_cache_enabled = config('schema_cache_enabled', default = True, cast = bool)

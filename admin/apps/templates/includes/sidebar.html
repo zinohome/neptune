@@ -56,6 +56,14 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              {% for systable in systables %}
+              <li class="nav-item">
+                <a href="/admin/tables-{{ systable }}.html" class="nav-link {% if 'tables-' + systable in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{ systable }}</p>
+                </a>
+              </li>
+              {% endfor %}
               <li class="nav-item">
                 <a href="/admin/tables-simple.html" class="nav-link {% if 'tables-simple' in segment %} active {% endif %}">
                   <i class="far fa-circle nav-icon"></i>

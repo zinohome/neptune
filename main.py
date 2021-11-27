@@ -29,7 +29,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from auth import users
 from starlette.status import HTTP_401_UNAUTHORIZED, HTTP_404_NOT_FOUND
 from starlette.responses import RedirectResponse
-from core import security, dbengine, tablemodel, apimodel, userfunc
+from core import security, dbengine, tablemodel, apimodel, userfunc, dbmeta
 from datetime import timedelta
 from core import dbmeta as meta
 from admin.apps import login_manager
@@ -70,13 +70,17 @@ app.mount("/static", StaticFiles(directory="admin/apps/static"), name="static")
 @app.on_event("startup")
 async def startup_event():
     log.logger.info(cfg['Application_Config'].app_name + ' Starting ....')
-    clear_meta_cache()
+    if cfg['Application_Config'].app_clear_metadat_on_startup:
+        clear_meta_cache()
+    if cfg['Application_Config'].app_load_metadat_on_load:
+        meta = dbmeta.DBMeta()
 
 
 @app.on_event("shutdown")
 def shutdown_event():
     log.logger.info(cfg['Application_Config'].app_name + ' Shutting Down ....')
-    clear_meta_cache()
+    if cfg['Application_Config'].app_clear_metadat_on_shutdown:
+        clear_meta_cache()
 
 '''Admin_app'''
 
