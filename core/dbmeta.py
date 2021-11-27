@@ -279,6 +279,20 @@ class DBMeta(object):
         else:
             return None
 
+    def get_tables(self):
+        tblist = []
+        for tb in self._tables:
+            if table.type == 'table':
+                tblist.append(tb.name)
+        return tblist
+
+    def get_views(self):
+        viewlist = []
+        for tb in self._tables:
+            if table.type == 'view':
+                viewlist.append(tb.name)
+        return viewlist
+
     def response_schema(self):
         tblist = []
         for tb in self._tables:
