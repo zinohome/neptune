@@ -24,14 +24,14 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview {% if 'index' in segment %} menu-open {% endif %}">
-            <a href="#" class="nav-link {% if 'index' in segment %} active {% endif %}">
+          <li class="nav-item {% if 'index' in segment %} menu-open {% endif %}">
+            <a href="/admin/index.html" class="nav-link {% if 'index' in segment %} active {% endif %}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
+                Welcome
               </p>
             </a>
+            <!--
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/admin/index.html" class="nav-link {% if 'index.html' in segment %} active {% endif %}">
@@ -46,6 +46,7 @@
                 </a>
               </li>
             </ul>
+             -->
           </li>
           <li class="nav-item has-treeview {% if 'tables-' in segment %} menu-open {% endif %}">
             <a href="#" class="nav-link {% if 'tables-' in segment %} active {% endif %}">
@@ -56,30 +57,60 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              {% for systable in systables %}
-              <li class="nav-item">
-                <a href="/admin/tables-{{ systable }}.html" class="nav-link {% if 'tables-' + systable in segment %} active {% endif %}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>{{ systable }}</p>
-                </a>
-              </li>
-              {% endfor %}
-              <li class="nav-item">
-                <a href="/admin/tables-simple.html" class="nav-link {% if 'tables-simple' in segment %} active {% endif %}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
-                </a>
-              </li>
               <li class="nav-item">
                 <a href="/admin/tables-data.html" class="nav-link {% if 'tables-data' in segment %} active {% endif %}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>DataTables</p>
                 </a>
               </li>
+              {% for systable in systables %}
               <li class="nav-item">
-                <a href="/admin/tables-jsgrid.html" class="nav-link {% if 'tables-jsgrid' in segment %} active {% endif %}">
+                <a href="/admin/tables-{{ systable }}.html" class="nav-link {% if 'tables-' + systable in segment %} active {% endif %}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>jsGrid</p>
+                  <p>{{ systable|capitalize }}</p>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li class="nav-item has-treeview {% if 'tables-' in segment %} menu-open {% endif %}">
+            <a href="#" class="nav-link {% if 'tables-' in segment %} active {% endif %}">
+              <i class="nav-icon fas fa-columns"></i>
+              <p>
+                Views
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              {% for sysview in sysviews %}
+              <li class="nav-item">
+                <a href="/admin/tables-{{ sysview }}.html" class="nav-link {% if 'tables-' + sysview in segment %} active {% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{ sysview|capitalize }}</p>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li class="nav-item has-treeview {% if 'config' in segment %} menu-open {% endif %}">
+            <a href="#" class="nav-link {% if 'api' in segment %} active {% endif %}">
+              <i class="nav-icon fas fa-cogs"></i>
+              <p>
+                Settings
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/admin/api-docs.html" class="nav-link {% if 'api-docs.html' in segment %} active {% endif %}">
+                  <i class="far fa-tasks nav-icon"></i>
+                  <p>Settings</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/api-redoc.html" class="nav-link {% if 'api-redoc.html' in segment %} active {% endif %}">
+                  <i class="far fa-user nav-icon"></i>
+                  <p>Users</p>
                 </a>
               </li>
             </ul>
@@ -95,13 +126,13 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/admin/api-docs.html" class="nav-link {% if 'api-docs.html' in segment %} active {% endif %}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-reorder nav-icon"></i>
                   <p>Swagger</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="/admin/api-redoc.html" class="nav-link {% if 'api-redoc.html' in segment %} active {% endif %}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-reorder nav-icon"></i>
                   <p>Redoc</p>
                 </a>
               </li>
@@ -116,6 +147,7 @@
             </a>
           </li>
           <!-- Reference -->
+          <!--
           <li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
             <a target="_blank" rel="noopener noreferrer"
@@ -367,6 +399,7 @@
               </li>
             </ul>
           </li>
+          -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

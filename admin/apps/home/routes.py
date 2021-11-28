@@ -14,8 +14,10 @@ from core import dbmeta
 @blueprint.route('/index')
 @login_required
 def index():
-    systables = dbmeta.DBMeta().response_schema()
-    return render_template('home/index.html', segment='index', systables=systables)
+    sysdbmeta = dbmeta.DBMeta()
+    systables = sysdbmeta.get_tables()
+    sysviews = sysdbmeta.get_views()
+    return render_template('home/index.html', segment='index', systables=systables, sysviews=sysviews)
 
 
 @blueprint.route('/<template>')
@@ -29,10 +31,11 @@ def route_template(template):
 
         # Detect the current page
         segment = get_segment(request)
-        systables = dbmeta.DBMeta().response_schema()
-
+        sysdbmeta = dbmeta.DBMeta()
+        systables = sysdbmeta.get_tables()
+        sysviews = sysdbmeta.get_views()
         # Serve the file (if exists) from app/templates/home/FILE.html
-        return render_template("home/" + template, segment=segment, systables=systables)
+        return render_template("home/" + template, segment=segment, systables=systables, sysviews=sysviews)
 
     except TemplateNotFound:
         return render_template('home/page-404.html'), 404
