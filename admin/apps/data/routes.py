@@ -19,7 +19,7 @@ cfg = config.app_config
 log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 
-@blueprint.route('/data-view-<viewname>.html')
+@blueprint.route('/data-view-<viewname>.html',methods = ['GET', 'POST'])
 @login_required
 def dataview(viewname):
     sysdbmeta = dbmeta.DBMeta()
@@ -34,7 +34,7 @@ def dataview(viewname):
                                                                             classes="table table-bordered table-striped")
     return render_template('home/data-view.html', segment='data-view-'+viewname, systables=systables, sysviews=sysviews, elename=viewname, data=data)
 
-@blueprint.route('/data-table-<tablename>.html')
+@blueprint.route('/data-table-<tablename>.html',methods = ['GET', 'POST'])
 @login_required
 def datatable(tablename):
     sysdbmeta = dbmeta.DBMeta()
