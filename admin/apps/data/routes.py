@@ -1,13 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-from flask import render_template, request
-from flask_login import login_required
+import loguru
+from flask import render_template, request, session
+from flask_login import login_required, current_user
 from jinja2 import TemplateNotFound
 from admin.apps.data import blueprint
 
 from core import dbmeta
-from util import restclient
+from util import restclient, cryptutil
+
+from config import config
+from util import log
+
+'''config'''
+cfg = config.app_config
+
+'''logging'''
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
+
 
 @blueprint.route('/data-view-<viewname>.html')
 @login_required
@@ -16,7 +26,7 @@ def dataview(viewname):
     systables = sysdbmeta.get_tables()
     sysviews = sysdbmeta.get_views()
     # get data
-    nc = restclient.NeptuneClient('admin', 'admin')
+    nc = restclient.NeptuneClient(session['username'], cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
     if nc.token_expired:
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
@@ -31,7 +41,7 @@ def datatable(tablename):
     systables = sysdbmeta.get_tables()
     sysviews = sysdbmeta.get_views()
     # get data
-    nc = restclient.NeptuneClient('admin', 'admin')
+    nc = restclient.NeptuneClient(session['username'], cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
     if nc.token_expired:
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
