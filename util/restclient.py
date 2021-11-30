@@ -8,6 +8,9 @@ from simple_rest_client.api import API
 from config import config
 from datetime import datetime, timedelta
 from util import log
+import pandas as pd
+import json
+from pandas import json_normalize
 
 '''config'''
 cfg = config.app_config
@@ -126,11 +129,16 @@ class NeptuneClient():
                     response = func(body)
                 else:
                     response = func()
-                log.logger.debug(response.body)
+                # log.logger.debug(response.body)
                 return response.body
             except Exception as exp:
                 log.logger.error('Exception at fetch() %s ' % exp)
                 traceback.print_exc()
+
+    def toDataFrame(self, jsonobj, attbname):
+        dataframe = json_normalize(jsonobj[attbname])
+        return dataframe
+
 
 if __name__ == '__main__':
     nc = NeptuneClient('admin','admin')
@@ -140,5 +148,10 @@ if __name__ == '__main__':
     if ( not nc.token_expired ) and ( nc.access_token is not None ):
         log.logger.debug(nc.fetchusers())
         nc.fetch('database','_schema')
-        nc.fetch('orders','_schema/_table')
+        resultstr = nc.fetch('orders','_schema/_table')
+        resultstr = nc.fetch('orders','_table')
+        # log.logger.debug(resultstr)
+        # log.logger.debug(dir(resultstr))
+        df = nc.toDataFrame(resultstr,'data')
+        log.logger.debug(df.to_html(table_id="example", classes="table table-bordered table-striped"))
 
