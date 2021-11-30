@@ -19,12 +19,14 @@ cfg = config.app_config
 log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 
-@blueprint.route('/data-view-<viewname>.html',methods = ['GET', 'POST'])
+@blueprint.route('/data-view-<viewname>.html',  methods = ['GET', 'POST'])
 @login_required
 def dataview(viewname):
     sysdbmeta = dbmeta.DBMeta()
     systables = sysdbmeta.get_tables()
     sysviews = sysdbmeta.get_views()
+    log.logger.debug(request)
+    log.logger.debug(request.args)
     # get data
     nc = restclient.NeptuneClient(session['username'], cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
     if nc.token_expired:
@@ -34,7 +36,7 @@ def dataview(viewname):
                                                                             classes="table table-bordered table-striped")
     return render_template('home/data-view.html', segment='data-view-'+viewname, systables=systables, sysviews=sysviews, elename=viewname, data=data)
 
-@blueprint.route('/data-table-<tablename>.html',methods = ['GET', 'POST'])
+@blueprint.route('/data-table-<tablename>.html', methods = ['GET', 'POST'])
 @login_required
 def datatable(tablename):
     sysdbmeta = dbmeta.DBMeta()
