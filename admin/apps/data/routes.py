@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import loguru
 from flask import render_template, request, session
-from flask_login import login_required, current_user
+from flask_login import login_required
 from jinja2 import TemplateNotFound
 from admin.apps.data import blueprint
 
@@ -25,16 +25,34 @@ def dataview(viewname):
     sysdbmeta = dbmeta.DBMeta()
     systables = sysdbmeta.get_tables()
     sysviews = sysdbmeta.get_views()
-    log.logger.debug(request)
-    log.logger.debug(request.args)
     # get data
-    nc = restclient.NeptuneClient(session['username'], cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
+    nc = restclient.NeptuneClient(session['username'],
+                                  cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
     if nc.token_expired:
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
-        data = nc.toDataFrame(nc.fetch(viewname, '_table'), 'data').to_html(index=False, table_id="datatable",
-                                                                            classes="table table-bordered table-striped")
-    return render_template('home/data-view.html', segment='data-view-'+viewname, systables=systables, sysviews=sysviews, elename=viewname, data=data)
+        ncmeta = nc.fetch(viewname, '_schema/_table')
+    return render_template('home/data-view.html', segment='data-view-'+viewname,
+                           systables=systables, sysviews=sysviews, elename=viewname, meta=ncmeta)
+
+@blueprint.route('/data-view-<viewname>-data',  methods = ['GET', 'POST'])
+@login_required
+def getviewdata(viewname):
+    # get data
+    nc = restclient.NeptuneClient(session['username'],
+                                  cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
+    if nc.token_expired:
+        nc.renew_token()
+    if (not nc.token_expired) and (nc.access_token is not None):
+        # ncmeta = nc.fetch(viewname, '_schema/_table')
+        ncdata = nc.fetch(viewname, '_table')
+        rdata = {
+            'data': ncdata['data'],
+            'recordsFiltered': 20,
+            'recordsTotal': 50,
+            'draw': request.args.get('draw', type=int),
+        }
+    return rdata
 
 @blueprint.route('/data-table-<tablename>.html', methods = ['GET', 'POST'])
 @login_required
@@ -43,11 +61,29 @@ def datatable(tablename):
     systables = sysdbmeta.get_tables()
     sysviews = sysdbmeta.get_views()
     # get data
-    nc = restclient.NeptuneClient(session['username'], cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
+    nc = restclient.NeptuneClient(session['username'],
+                                  cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
     if nc.token_expired:
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
-        data = nc.toDataFrame(nc.fetch(tablename, '_table'), 'data').to_html(index=False, table_id="datatable",
-                                                                            classes="table table-bordered table-striped")
-    return render_template('home/data-table.html', segment='data-table-'+tablename, systables=systables, sysviews=sysviews, elename=tablename, data=data)
+        ncmeta = nc.fetch(tablename, '_schema/_table')
+    return render_template('home/data-table.html', segment='data-table-'+tablename,
+                           systables=systables, sysviews=sysviews, elename=tablename, meta=ncmeta)
 
+@blueprint.route('/data-table-<tablename>-data',  methods = ['GET', 'POST'])
+@login_required
+def gettabledata(tablename):
+    # get data
+    nc = restclient.NeptuneClient(session['username'],
+                                  cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
+    if nc.token_expired:
+        nc.renew_token()
+    if (not nc.token_expired) and (nc.access_token is not None):
+        ncdata = nc.fetch(tablename, '_table')
+        rdata = {
+            'data': ncdata['data'],
+            'recordsFiltered': 20,
+            'recordsTotal': 50,
+            'draw': request.args.get('draw', type=int),
+        }
+    return rdata

@@ -149,9 +149,10 @@ if __name__ == '__main__':
         log.logger.debug(nc.fetchusers())
         nc.fetch('database','_schema')
         resultstr = nc.fetch('orders','_schema/_table')
+        log.logger.debug(resultstr)
         resultstr = nc.fetch('orders','_table')
-        # log.logger.debug(resultstr)
+        log.logger.debug(resultstr)
         # log.logger.debug(dir(resultstr))
-        df = nc.toDataFrame(resultstr,'data')
-        log.logger.debug(df.to_html(table_id="example", classes="table table-bordered table-striped"))
+        # df = nc.toDataFrame(resultstr,'data')
+        # log.logger.debug(df.to_html(table_id="example", classes="table table-bordered table-striped"))
 

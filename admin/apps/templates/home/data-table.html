@@ -53,7 +53,17 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                {{ data | safe }}
+                <table id="datatable" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    {% for column in meta.columns %}
+                    <th>{{ column['name'] }}</th>
+                    {% endfor %}
+                  </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
               </div>
               <!-- /.card-body -->
             </div>
@@ -91,21 +101,28 @@
     $(function () {
       $("#datatable").DataTable({
         "language": {
+            "processing": "processing ......",
             "lengthMenu": "Display _MENU_ records per page",
             "zeroRecords": "Nothing found - sorry",
             "info": "Showing page _PAGE_ of _PAGES_",
             "infoEmpty": "No records available",
             "infoFiltered": "(filtered from _MAX_ total records)"
         },
+        "processing": true,
+        "serverSide": true,
+        "ajax": "/admin/data-table-{{ elename }}-data",
+        "columns": [
+          {% for column in meta.columns %}
+          { "data": "{{ column['name'] }}" }{{ ", " if not loop.last else "" }}
+          {% endfor %}
+          ],
         "responsive": true,
         "autoWidth": true,
         "paging": true,
         "lengthChange": true,
-        "searching": true,
-        "ordering": true,
+        "searching": false,
+        "ordering": false,
         "info": true,
-        "autoWidth": true,
-        "responsive": true,
       });
     });
   </script>
