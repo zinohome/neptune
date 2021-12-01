@@ -109,13 +109,19 @@ class NeptuneClient():
             log.logger.error('Exception at fetchusers() %s ' % exp)
             traceback.print_exc()
 
-    def fetch(self, resource_name, url_prefix='', action='list', body=None):
+    def fetch(self, resource_name, url_prefix='', action='list', body=None, offset=None, limit=None, withcounters=None):
         if self.token_expired:
             self.renew_token()
         if (not self.token_expired) and (self.access_token is not None):
             # log.logger.debug('access_token : %s' % self.access_token)
             api = self._api_client
             api.headers = {'Authorization': 'Bearer ' + self.access_token}
+            if offset is not None:
+                api.headers['offset'] = offset
+            if limit is not None:
+                api.headers['limit'] = limit
+            if withcounters is not None:
+                api.headers['include-count'] = True
             api.api_root_url = self.api_root_url + url_prefix
             api.add_resource(resource_name=resource_name)
             try:
@@ -150,7 +156,7 @@ if __name__ == '__main__':
         nc.fetch('database','_schema')
         resultstr = nc.fetch('orders','_schema/_table')
         log.logger.debug(resultstr)
-        resultstr = nc.fetch('orders','_table')
+        resultstr = nc.fetch('orders','_table', 'list', None, 10, 10, True)
         log.logger.debug(resultstr)
         # log.logger.debug(dir(resultstr))
         # df = nc.toDataFrame(resultstr,'data')
