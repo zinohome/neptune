@@ -5,7 +5,7 @@
 (function( factory ){
 	if ( typeof define === 'function' && define.amd ) {
 		// AMD
-		define( ['jquery', 'datatables.net-bs4', 'datatables.net-buttons'], function ( $ ) {
+		define( ['jquery', 'datatables.net-se', 'datatables.net-buttons'], function ( $ ) {
 			return factory( $, window, document );
 		} );
 	}
@@ -17,7 +17,7 @@
 			}
 
 			if ( ! $ || ! $.fn.dataTable ) {
-				$ = require('datatables.net-bs4')(root, $).$;
+				$ = require('datatables.net-se')(root, $).$;
 			}
 
 			if ( ! $.fn.dataTable.Buttons ) {
@@ -35,49 +35,48 @@
 'use strict';
 var DataTable = $.fn.dataTable;
 
+
 $.extend( true, DataTable.Buttons.defaults, {
 	dom: {
 		container: {
-			className: 'dt-buttons btn-group flex-wrap'
+			className: 'dt-buttons ui basic buttons'
 		},
 		button: {
-			className: 'btn btn-secondary'
+			tag: 'button',
+			className: 'ui button'
 		},
 		collection: {
 			tag: 'div',
-			className: 'dropdown-menu',
-			button: {
-				tag: 'a',
-				className: 'dt-button dropdown-item',
-				active: 'active',
-				disabled: 'disabled'
-			}
+			className: 'ui basic vertical buttons'
 		},
 		splitWrapper: {
 			tag: 'div',
-			className: 'dt-btn-split-wrapper btn-group',
+			className: 'dt-btn-split-wrapper buttons',
 		},
 		splitDropdown: {
 			tag: 'button',
-			text: '',
-			className: 'btn btn-secondary dt-btn-split-drop dropdown-toggle dropdown-toggle-split',
-			align: 'split-left',
-			splitAlignClass: 'dt-button-split-left'
+			text: '&#x25BC;',
+			className: 'ui floating button dt-btn-split-drop dropdown icon',
 		},
 		splitDropdownButton: {
 			tag: 'button',
-			className: 'dt-btn-split-drop-button btn btn-secondary'
+			className: 'dt-btn-split-drop-button ui button'
 		}
-	},
-	buttonCreated: function ( config, button ) {
-		return config.buttons ?
-			$('<div class="btn-group"/>').append(button) :
-			button;
 	}
 } );
 
-DataTable.ext.buttons.collection.className += ' dropdown-toggle';
-DataTable.ext.buttons.collection.rightAlignClassName = 'dropdown-menu-right';
+$(document).on('buttons-popover.dt', function () {
+	var notButton = false;
+	$('.dtsp-panesContainer').each(function() {
+		if(!$(this).is('button')){
+			notButton = true;
+		}
+	});
+	if(notButton){
+		$('.dtsp-panesContainer').removeClass('vertical buttons')
+	}
+});
+
 
 return DataTable.Buttons;
 }));
