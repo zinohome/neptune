@@ -84,14 +84,19 @@
 {% block javascripts %}
 
   <!-- jQuery -->
-  <script src="/static/assets/plugins/jquery/jquery.min.js"></script>
+  <script src="/static/assets/plugins/jquery/jquery.js"></script>
   <!-- Bootstrap 4 -->
-  <script src="/static/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/plugins/bootstrap/js/bootstrap.bundle.js"></script>
   <!-- DataTables -->
-  <script src="/static/assets/plugins/datatables/jquery.dataTables.min.js"></script>
-  <script src="/static/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="/static/assets/plugins/datatables/jquery.dataTables.js"></script>
   <script src="/static/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="/static/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
   <script src="/static/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <!-- DataTables altEditor -->
+  <script src="/static/assets/plugins/datatables-select/js/dataTables.select.js"></script>
+  <script src="/static/assets/plugins/datatables-buttons/js/dataTables.buttons.js"></script>
+  <script src="/static/assets/plugins/datatables-buttons/js/buttons.bootstrap4.js"></script>
+  <script src="/static/assets/plugins/edittable/dataTables.altEditor.free.js"></script>
   <!-- AdminLTE App -->
   <script src="/static/assets/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
@@ -112,18 +117,21 @@
         "processing": true,
         "serverSide": true,
         "ajax": "/admin/data-view-{{ elename }}-data",
-        "columns": [
-          {% for column in meta.columns %}
-          { "data": "{{ column['name'] }}" }{{ ", " if not loop.last else "" }}
-          {% endfor %}
-          ],
         "responsive": true,
         "autoWidth": true,
         "paging": true,
+        "deferRender": true,
+        "stateSave": true,
         "lengthChange": true,
         "searching": false,
         "ordering": false,
         "info": true,
+        "dom": '<lfr<t>ip>',        // Needs button container
+        "columns": [
+          {% for column in meta.columns %}
+          { "data": "{{ column['name'] }}" }{{ ", " if not loop.last else "" }}
+          {% endfor %}
+          ]
       });
     });
   </script>

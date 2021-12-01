@@ -2450,6 +2450,7 @@ input[type="button"].btn-block {
 .btn-group-vertical {
   position: relative;
   display: inline-flex;
+  float: right;
   vertical-align: middle; }
   .btn-group > .btn,
   .btn-group-vertical > .btn {
