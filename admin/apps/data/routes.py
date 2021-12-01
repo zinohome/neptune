@@ -35,7 +35,7 @@ def dataview(viewname):
     return render_template('home/data-view.html', segment='data-view-'+viewname,
                            systables=systables, sysviews=sysviews, elename=viewname, meta=ncmeta)
 
-@blueprint.route('/data-view-<viewname>-data',  methods = ['GET', 'POST'])
+@blueprint.route('/data-view-<viewname>/getdata',  methods = ['GET', 'POST'])
 @login_required
 def getviewdata(viewname):
     # get data
@@ -71,7 +71,7 @@ def datatable(tablename):
     return render_template('home/data-table.html', segment='data-table-'+tablename,
                            systables=systables, sysviews=sysviews, elename=tablename, meta=ncmeta)
 
-@blueprint.route('/data-table-<tablename>-data',  methods = ['GET', 'POST'])
+@blueprint.route('/data-table-<tablename>/getdata',  methods = ['GET', 'POST'])
 @login_required
 def gettabledata(tablename):
     # get data
@@ -89,3 +89,28 @@ def gettabledata(tablename):
             'draw': request.args.get('draw', type=int),
         }
     return rdata
+
+@blueprint.route('/data-table-<tablename>/putdata',  methods = ['PUT'])
+@login_required
+def puttabledata(tablename):
+    log.logger.debug(tablename)
+    log.logger.debug(request)
+    log.logger.debug(dir(request))
+    log.logger.debug(request.method)
+    log.logger.debug(request.form)
+
+@blueprint.route('/data-table-<tablename>/deletedata',  methods = ['DELETE'])
+@login_required
+def deletetabledata(tablename):
+    log.logger.debug(tablename)
+    log.logger.debug(request)
+    log.logger.debug(request.method)
+    log.logger.debug(request.form)
+
+@blueprint.route('/data-table-<tablename>/postdata',  methods = ['POST'])
+@login_required
+def posttabledata(tablename):
+    log.logger.debug(tablename)
+    log.logger.debug(request)
+    log.logger.debug(request.method)
+    log.logger.debug(request.form)

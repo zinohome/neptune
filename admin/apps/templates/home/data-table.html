@@ -86,7 +86,7 @@
 {% block javascripts %}
 
   <!-- jQuery -->
-  <script src="/static/assets/plugins/jquery/jquery.min.js"></script>
+  <script src="/static/assets/plugins/jquery/jquery.js"></script>
   <!-- Bootstrap 4 -->
   <script src="/static/assets/plugins/bootstrap/js/bootstrap.bundle.js"></script>
   <!-- DataTables -->
@@ -118,21 +118,19 @@
         },
         "processing": true,
         "serverSide": true,
-        "ajax": "/admin/data-table-{{ elename }}-data",
+        "ajax": "/admin/data-table-{{ elename }}/getdata",
         "responsive": true,
         "autoWidth": true,
         "paging": true,
-        "deferRender": true,
-        "stateSave": true,
         "lengthChange": true,
         "searching": false,
         "ordering": false,
         "info": true,
-        "select": "single",
+        "select": 'single',
         "dom": '<lfBr<t>ip>',        // Needs button container
         "buttons": [
             {
-                text: 'Create',
+                text: 'Add',
                 name: 'add'        // do not change name
             },
             {
@@ -153,20 +151,26 @@
         "altEditor": true,
         "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]],
          onAddRow: function(datatable, rowdata, success, error) {
+            alert(rowdata);
+            alert(rowdata.id);
+            alert(rowdata.employeeNumber);
             $.ajax({
                 // a tipycal url would be / with type='PUT'
-                url: url_ws_mock_ok,
-                type: 'POST',
+                url: "/admin/data-table-{{ elename }}/putdata",
+                type: 'PUT',
                 data: rowdata,
                 success: success,
                 error: error
             });
         },
         onDeleteRow: function(datatable, rowdata, success, error) {
+            alert(rowdata);
+            alert(rowdata.id);
+            alert(rowdata.employeeNumber);
             $.ajax({
                 // a tipycal url would be /{id} with type='DELETE'
-                url: url_ws_mock_ok,
-                type: 'GET',
+                url: "/admin/data-table-{{ elename }}/deletedata",
+                type: 'DELETE',
                 data: rowdata,
                 success: success,
                 error: error
@@ -175,8 +179,8 @@
         onEditRow: function(datatable, rowdata, success, error) {
             $.ajax({
                 // a tipycal url would be /{id} with type='POST'
-                url: url_ws_mock_ok,
-                type: 'GET',
+                url: "/admin/data-table-{{ elename }}/postdata",
+                type: 'POST',
                 data: rowdata,
                 success: success,
                 error: error

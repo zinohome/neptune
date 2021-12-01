@@ -84,7 +84,7 @@
 {% block javascripts %}
 
   <!-- jQuery -->
-  <script src="/static/assets/plugins/jquery/jquery.min.js"></script>
+  <script src="/static/assets/plugins/jquery/jquery.js"></script>
   <!-- Bootstrap 4 -->
   <script src="/static/assets/plugins/bootstrap/js/bootstrap.bundle.js"></script>
   <!-- DataTables -->
@@ -117,7 +117,7 @@
         "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]],
         "processing": true,
         "serverSide": true,
-        "ajax": "/admin/data-view-{{ elename }}-data",
+        "ajax": "/admin/data-view-{{ elename }}/getdata",
         "responsive": true,
         "autoWidth": true,
         "paging": true,
