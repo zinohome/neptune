@@ -49,7 +49,7 @@ def getviewdata(viewname):
                           request.args.get('length', type=int), True)
         rdata = {
             'data': ncdata['data'],
-            'recordsFiltered': len(ncdata['data']),
+            'recordsFiltered': ncdata['record_count'],
             'recordsTotal': ncdata['record_count'],
             'draw': request.args.get('draw', type=int),
         }
@@ -80,10 +80,11 @@ def gettabledata(tablename):
     if nc.token_expired:
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
-        ncdata = nc.fetch(tablename, '_table','list',None,request.args.get('start', type=int),request.args.get('length', type=int),True)
+        ncdata = nc.fetch(tablename, '_table', 'list', None, request.args.get('start', type=int),
+                          request.args.get('length', type=int), True)
         rdata = {
             'data': ncdata['data'],
-            'recordsFiltered': len(ncdata['data']),
+            'recordsFiltered': ncdata['record_count'],
             'recordsTotal': ncdata['record_count'],
             'draw': request.args.get('draw', type=int),
         }

@@ -117,11 +117,11 @@ class NeptuneClient():
             api = self._api_client
             api.headers = {'Authorization': 'Bearer ' + self.access_token}
             if offset is not None:
-                api.headers['offset'] = offset
+                api.headers['offset'] = str(offset)
             if limit is not None:
-                api.headers['limit'] = limit
+                api.headers['limit'] = str(limit)
             if withcounters is not None:
-                api.headers['include-count'] = True
+                api.headers['include-count'] = str(withcounters)
             api.api_root_url = self.api_root_url + url_prefix
             api.add_resource(resource_name=resource_name)
             try:
@@ -135,7 +135,6 @@ class NeptuneClient():
                     response = func(body)
                 else:
                     response = func()
-                # log.logger.debug(response.body)
                 return response.body
             except Exception as exp:
                 log.logger.error('Exception at fetch() %s ' % exp)
@@ -154,8 +153,8 @@ if __name__ == '__main__':
     if ( not nc.token_expired ) and ( nc.access_token is not None ):
         log.logger.debug(nc.fetchusers())
         nc.fetch('database','_schema')
-        resultstr = nc.fetch('orders','_schema/_table')
-        log.logger.debug(resultstr)
+        #resultstr = nc.fetch('orders','_schema/_table')
+        #log.logger.debug(resultstr)
         resultstr = nc.fetch('orders','_table', 'list', None, 10, 10, True)
         log.logger.debug(resultstr)
         # log.logger.debug(dir(resultstr))
