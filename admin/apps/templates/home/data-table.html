@@ -152,6 +152,36 @@
         ],
         "altEditor": true,
         "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]],
+         onAddRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                // a tipycal url would be / with type='PUT'
+                url: url_ws_mock_ok,
+                type: 'POST',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
+        onDeleteRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                // a tipycal url would be /{id} with type='DELETE'
+                url: url_ws_mock_ok,
+                type: 'GET',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
+        onEditRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                // a tipycal url would be /{id} with type='POST'
+                url: url_ws_mock_ok,
+                type: 'GET',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
         "columns": [
           {% for column in meta.columns %}
           { "data": "{{ column['name'] }}" }{{ ", " if not loop.last else "" }}
