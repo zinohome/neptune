@@ -151,9 +151,6 @@
         "altEditor": true,
         "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]],
          onAddRow: function(datatable, rowdata, success, error) {
-            alert(rowdata);
-            alert(rowdata.id);
-            alert(rowdata.employeeNumber);
             $.ajax({
                 // a tipycal url would be / with type='PUT'
                 url: "/admin/data-table-{{ elename }}/putdata",
@@ -164,9 +161,6 @@
             });
         },
         onDeleteRow: function(datatable, rowdata, success, error) {
-            alert(rowdata);
-            alert(rowdata.id);
-            alert(rowdata.employeeNumber);
             $.ajax({
                 // a tipycal url would be /{id} with type='DELETE'
                 url: "/admin/data-table-{{ elename }}/deletedata",

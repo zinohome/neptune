@@ -102,10 +102,23 @@ def puttabledata(tablename):
 @blueprint.route('/data-table-<tablename>/deletedata',  methods = ['DELETE'])
 @login_required
 def deletetabledata(tablename):
-    log.logger.debug(tablename)
-    log.logger.debug(request)
-    log.logger.debug(request.method)
-    log.logger.debug(request.form)
+    log.logger.debug(request.form.to_dict())
+    requstdict = request.form.to_dict()
+    sysdbmeta = dbmeta.DBMeta()
+    pkname = None
+    idvalue = None
+    pks = sysdbmeta.get_table_primary_keys(tablename)
+    if len(pks) == 1:
+        pkname = pks[0]
+    if not pkname:
+        idvalue = requstdict[pkname]
+    nc = restclient.NeptuneClient(session['username'],
+                                  cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
+    if nc.token_expired:
+        nc.renew_token()
+    if (not nc.token_expired) and (nc.access_token is not None):
+        ncdata = nc.fetch(tablename, '_table', 'list', None, request.args.get('start', type=int),
+                          request.args.get('length', type=int), True)
 
 @blueprint.route('/data-table-<tablename>/postdata',  methods = ['POST'])
 @login_required
