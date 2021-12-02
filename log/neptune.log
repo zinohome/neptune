@@ -7044,3 +7044,7 @@ NoneType: None
 2021-12-02 at 16:07:23 | INFO | API prefix is: [ /api/v1 ]
 2021-12-02 at 16:07:25 | INFO | Add Custom query ...
 2021-12-02 at 16:07:25 | INFO | Neptune Starting ....
+2021-12-02 at 16:10:27 | ERROR | Exception at tablemodel deletebyid(): (pymysql.err.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`mysqlsrc`.`employees`, CONSTRAINT `employees_ibfk_1` FOREIGN KEY (`reportsTo`) REFERENCES `employees` (`employeeNumber`))')
+[SQL: DELETE FROM mysqlsrc.employees WHERE employeeNumber=%(employeeNumber)s]
+[parameters: {'employeeNumber': 1143}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) 
