@@ -44,6 +44,5 @@ class Users(object):
 
 
 if __name__ == '__main__':
-    '''
     print(Users().users)
-    '''
+    print(json.dumps(Users().users))
