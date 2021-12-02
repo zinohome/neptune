@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import json
+
 import loguru
 from flask import render_template, request, session
 from flask_login import login_required
-from jinja2 import TemplateNotFound
+
+from admin.apps.authentication.forms import LoginForm
 from admin.apps.data import blueprint
+from flask import Response
 
 from core import dbmeta
 from util import restclient, cryptutil
@@ -32,8 +36,10 @@ def dataview(viewname):
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
         ncmeta = nc.fetch(viewname, '_schema/_table')
-    return render_template('home/data-view.html', segment='data-view-'+viewname,
-                           systables=systables, sysviews=sysviews, elename=viewname, meta=ncmeta)
+        return render_template('home/data-view.html', segment='data-view-'+viewname,
+                           systables=systables, sysviews=sysviews, elename=viewname, meta=ncmeta['body'])
+    else:
+        return render_template('accounts/login.html', msg='Login time expired !', form=LoginForm())
 
 @blueprint.route('/data-view-<viewname>/getdata',  methods = ['GET', 'POST'])
 @login_required
@@ -48,12 +54,15 @@ def getviewdata(viewname):
         ncdata = nc.fetch(viewname, '_table', 'list', None, request.args.get('start', type=int),
                           request.args.get('length', type=int), True)
         rdata = {
-            'data': ncdata['data'],
-            'recordsFiltered': ncdata['record_count'],
-            'recordsTotal': ncdata['record_count'],
+            'data': ncdata['body']['data'],
+            'recordsFiltered': ncdata['body']['record_count'],
+            'recordsTotal': ncdata['body']['record_count'],
             'draw': request.args.get('draw', type=int),
         }
-    return rdata
+        return rdata
+    else:
+        return render_template('accounts/login.html', msg='Login time expired !', form=LoginForm())
+
 
 @blueprint.route('/data-table-<tablename>.html', methods = ['GET', 'POST'])
 @login_required
@@ -68,8 +77,10 @@ def datatable(tablename):
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
         ncmeta = nc.fetch(tablename, '_schema/_table')
-    return render_template('home/data-table.html', segment='data-table-'+tablename,
-                           systables=systables, sysviews=sysviews, elename=tablename, meta=ncmeta)
+        return render_template('home/data-table.html', segment='data-table-'+tablename,
+                           systables=systables, sysviews=sysviews, elename=tablename, meta=ncmeta['body'])
+    else:
+        return render_template('accounts/login.html', msg='Login time expired !', form=LoginForm())
 
 @blueprint.route('/data-table-<tablename>/getdata',  methods = ['GET', 'POST'])
 @login_required
@@ -83,12 +94,14 @@ def gettabledata(tablename):
         ncdata = nc.fetch(tablename, '_table', 'list', None, request.args.get('start', type=int),
                           request.args.get('length', type=int), True)
         rdata = {
-            'data': ncdata['data'],
-            'recordsFiltered': ncdata['record_count'],
-            'recordsTotal': ncdata['record_count'],
+            'data': ncdata['body']['data'],
+            'recordsFiltered': ncdata['body']['record_count'],
+            'recordsTotal': ncdata['body']['record_count'],
             'draw': request.args.get('draw', type=int),
         }
-    return rdata
+        return rdata
+    else:
+        return render_template('accounts/login.html', msg='Login time expired !', form=LoginForm())
 
 @blueprint.route('/data-table-<tablename>/putdata',  methods = ['PUT'])
 @login_required
@@ -110,17 +123,22 @@ def deletetabledata(tablename):
     pks = sysdbmeta.get_table_primary_keys(tablename)
     if len(pks) == 1:
         pkname = pks[0]
-    log.logger.debug(pkname)
     if pkname is not None:
         idvalue = requstdict[pkname]
-    log.logger.debug(idvalue)
     nc = restclient.NeptuneClient(session['username'],
                                   cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
     if nc.token_expired:
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
         ncdata = nc.deletebyid(tablename, '_table', pkname, str(idvalue))
-        log.logger.debug(ncdata)
+        if ncdata['code'] == 200 and "delet_rowcount" in ncdata['body'] and ncdata['body']['delet_rowcount'] == 1:
+            return Response('{"status":200, "body": "'+ str(ncdata['body'])+'"}', status=200)
+        else:
+            return Response('{"status":500, "body": "'+ str(ncdata['body'])+'"}', status=500)
+    else:
+        return Response('{"status":500, "body": "{\"delete error\":\"Login expired\"}"}', status=500)
+
+
 
 @blueprint.route('/data-table-<tablename>/postdata',  methods = ['POST'])
 @login_required

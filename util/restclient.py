@@ -135,7 +135,8 @@ class NeptuneClient():
                     response = func(body)
                 else:
                     response = func()
-                return response.body
+                res = {'code': response.status_code, 'body': response.body}
+                return res
             except Exception as exp:
                 log.logger.error('Exception at fetch() %s ' % exp)
                 traceback.print_exc()
@@ -160,7 +161,8 @@ class NeptuneClient():
                 func = getattr(res,action)
                 response = None
                 response = func()
-                return response.body
+                res = {'code':response.status_code, 'body':response.body}
+                return res
             except Exception as exp:
                 log.logger.error('Exception at deletebyid() %s ' % exp)
                 traceback.print_exc()
