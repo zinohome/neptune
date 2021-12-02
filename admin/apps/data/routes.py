@@ -110,15 +110,17 @@ def deletetabledata(tablename):
     pks = sysdbmeta.get_table_primary_keys(tablename)
     if len(pks) == 1:
         pkname = pks[0]
-    if not pkname:
+    log.logger.debug(pkname)
+    if pkname is not None:
         idvalue = requstdict[pkname]
+    log.logger.debug(idvalue)
     nc = restclient.NeptuneClient(session['username'],
                                   cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
     if nc.token_expired:
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
-        ncdata = nc.fetch(tablename, '_table', 'list', None, request.args.get('start', type=int),
-                          request.args.get('length', type=int), True)
+        ncdata = nc.deletebyid(tablename, '_table', pkname, str(idvalue))
+        log.logger.debug(ncdata)
 
 @blueprint.route('/data-table-<tablename>/postdata',  methods = ['POST'])
 @login_required

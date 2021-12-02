@@ -140,6 +140,31 @@ class NeptuneClient():
                 log.logger.error('Exception at fetch() %s ' % exp)
                 traceback.print_exc()
 
+    def deletebyid(self, resource_name, url_prefix='', idfield=None, idvalue=None):
+        action = 'destroy'
+        if self.token_expired:
+            self.renew_token()
+        if (not self.token_expired) and (self.access_token is not None):
+            # log.logger.debug('access_token : %s' % self.access_token)
+            api = self._api_client
+            api.headers = {'Authorization': 'Bearer ' + self.access_token}
+            if idfield is not None:
+                api.headers['idfield'] = str(idfield)
+            api.api_root_url = self.api_root_url + url_prefix
+            api.add_resource(resource_name=resource_name,full_action_url=api.api_root_url + '/' + resource_name + '/' + idvalue)
+            try:
+                res = api._resources[api.correct_attribute_name(resource_name)]
+                # log.logger.debug(res.actions)
+                log.logger.debug(res.get_action_full_url(action))
+                # log.logger.debug(res.get_action(action))
+                func = getattr(res,action)
+                response = None
+                response = func()
+                return response.body
+            except Exception as exp:
+                log.logger.error('Exception at deletebyid() %s ' % exp)
+                traceback.print_exc()
+
     def toDataFrame(self, jsonobj, attbname):
         dataframe = json_normalize(jsonobj[attbname])
         return dataframe
@@ -156,6 +181,8 @@ if __name__ == '__main__':
         #resultstr = nc.fetch('orders','_schema/_table')
         #log.logger.debug(resultstr)
         resultstr = nc.fetch('orders','_table', 'list', None, 10, 10, True)
+        log.logger.debug(resultstr)
+        resultstr = nc.deletebyid('employees','_table','employeeNumber','1002')
         log.logger.debug(resultstr)
         # log.logger.debug(dir(resultstr))
         # df = nc.toDataFrame(resultstr,'data')
