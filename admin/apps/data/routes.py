@@ -51,7 +51,7 @@ def getviewdata(viewname):
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
         # ncmeta = nc.fetch(viewname, '_schema/_table')
-        ncdata = nc.fetch(viewname, '_table', 'list', None, request.args.get('start', type=int),
+        ncdata = nc.fetch(viewname, '_table', None, request.args.get('start', type=int),
                           request.args.get('length', type=int), True)
         rdata = {
             'data': ncdata['body']['data'],
@@ -91,7 +91,7 @@ def gettabledata(tablename):
     if nc.token_expired:
         nc.renew_token()
     if (not nc.token_expired) and (nc.access_token is not None):
-        ncdata = nc.fetch(tablename, '_table', 'list', None, request.args.get('start', type=int),
+        ncdata = nc.fetch(tablename, '_table', None, request.args.get('start', type=int),
                           request.args.get('length', type=int), True)
         rdata = {
             'data': ncdata['body']['data'],
@@ -103,19 +103,58 @@ def gettabledata(tablename):
     else:
         return render_template('accounts/login.html', msg='Login time expired !', form=LoginForm())
 
+
+
+@blueprint.route('/data-table-<tablename>/postdata',  methods = ['POST'])
+@login_required
+def posttabledata(tablename):
+    requstdict = request.form.to_dict()
+    nc = restclient.NeptuneClient(session['username'],
+                                  cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
+    if nc.token_expired:
+        nc.renew_token()
+    if (not nc.token_expired) and (nc.access_token is not None):
+        restbody = json.dumps({"fieldvalue":str(requstdict)})
+        ncdata = nc.post(tablename, '_table', restbody)
+        if ncdata['code'] == 200 and "insertResult" in ncdata['body'] and ncdata['body']['insertResult'] == 'True':
+            return Response(json.dumps(requstdict), status=200)
+        else:
+            return Response('{"status":500, "body": "' + str(ncdata['body']) + '"}', status=500)
+    else:
+        return Response('{"status":500, "body": "{\"post error\":\"Login expired\"}"}', status=500)
+
+
+
 @blueprint.route('/data-table-<tablename>/putdata',  methods = ['PUT'])
 @login_required
 def puttabledata(tablename):
-    log.logger.debug(tablename)
-    log.logger.debug(request)
-    log.logger.debug(dir(request))
-    log.logger.debug(request.method)
-    log.logger.debug(request.form)
+    requstdict = request.form.to_dict()
+    sysdbmeta = dbmeta.DBMeta()
+    pkname = None
+    idvalue = None
+    pks = sysdbmeta.get_table_primary_keys(tablename)
+    if len(pks) == 1:
+        pkname = pks[0]
+    if pkname is not None:
+        idvalue = requstdict[pkname]
+    nc = restclient.NeptuneClient(session['username'],
+                                  cryptutil.decrypt(cfg['Admin_Config'].SECRET_KEY, session['password']))
+    if nc.token_expired:
+        nc.renew_token()
+    if (not nc.token_expired) and (nc.access_token is not None):
+        restbody = json.dumps({"fieldvalue":str(requstdict)})
+        ncdata = nc.put(tablename, '_table', restbody, pkname, str(idvalue))
+        if ncdata['code'] == 200 and "udpate_rowcount" in ncdata['body'] and int(ncdata['body']['udpate_rowcount']) > 0:
+            return Response(json.dumps(requstdict), status=200)
+        else:
+            return Response('{"status":500, "body": "' + str(ncdata['body']) + '"}', status=500)
+    else:
+        return Response('{"status":500, "body": "{\"put error\":\"Login expired\"}"}', status=500)
+
 
 @blueprint.route('/data-table-<tablename>/deletedata',  methods = ['DELETE'])
 @login_required
 def deletetabledata(tablename):
-    log.logger.debug(request.form.to_dict())
     requstdict = request.form.to_dict()
     sysdbmeta = dbmeta.DBMeta()
     pkname = None
@@ -139,11 +178,3 @@ def deletetabledata(tablename):
         return Response('{"status":500, "body": "{\"delete error\":\"Login expired\"}"}', status=500)
 
 
-
-@blueprint.route('/data-table-<tablename>/postdata',  methods = ['POST'])
-@login_required
-def posttabledata(tablename):
-    log.logger.debug(tablename)
-    log.logger.debug(request)
-    log.logger.debug(request.method)
-    log.logger.debug(request.form)

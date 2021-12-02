@@ -152,9 +152,9 @@
         "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]],
          onAddRow: function(datatable, rowdata, success, error) {
             $.ajax({
-                // a tipycal url would be / with type='PUT'
-                url: "/admin/data-table-{{ elename }}/putdata",
-                type: 'PUT',
+                // a tipycal url would be / with type='POST'
+                url: "/admin/data-table-{{ elename }}/postdata",
+                type: 'POST',
                 data: rowdata,
                 success: success,
                 error: error
@@ -172,9 +172,9 @@
         },
         onEditRow: function(datatable, rowdata, success, error) {
             $.ajax({
-                // a tipycal url would be /{id} with type='POST'
-                url: "/admin/data-table-{{ elename }}/postdata",
-                type: 'POST',
+                // a tipycal url would be /{id} with type='PUT'
+                url: "/admin/data-table-{{ elename }}/putdata",
+                type: 'PUT',
                 data: rowdata,
                 success: success,
                 error: error

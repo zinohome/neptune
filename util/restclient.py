@@ -109,7 +109,8 @@ class NeptuneClient():
             log.logger.error('Exception at fetchusers() %s ' % exp)
             traceback.print_exc()
 
-    def fetch(self, resource_name, url_prefix='', action='list', body=None, offset=None, limit=None, withcounters=None):
+    def fetch(self, resource_name, url_prefix='', body=None, offset=None, limit=None, withcounters=None):
+        action = 'list'
         if self.token_expired:
             self.renew_token()
         if (not self.token_expired) and (self.access_token is not None):
@@ -141,6 +142,60 @@ class NeptuneClient():
                 log.logger.error('Exception at fetch() %s ' % exp)
                 traceback.print_exc()
 
+    def post(self, resource_name, url_prefix='', body=None):
+        log.logger.debug(body)
+        action = 'create'
+        if self.token_expired:
+            self.renew_token()
+        if (not self.token_expired) and (self.access_token is not None):
+            # log.logger.debug('access_token : %s' % self.access_token)
+            api = self._api_client
+            api.headers = {'Authorization': 'Bearer ' + self.access_token}
+            api.api_root_url = self.api_root_url + url_prefix
+            api.add_resource(resource_name=resource_name)
+            try:
+                res = api._resources[api.correct_attribute_name(resource_name)]
+                func = getattr(res,action)
+                response = None
+                if body is not None:
+                    response = func(body=body)
+                    res = {'code': response.status_code, 'body': response.body}
+                else:
+                    res = {'code': response.status_code, 'body': response.body}
+                return res
+            except Exception as exp:
+                log.logger.error('Exception at post() %s ' % exp)
+                traceback.print_exc()
+
+
+    def put(self, resource_name, url_prefix='', body=None, idfield=None, idvalue=None):
+        log.logger.debug(body)
+        action = 'update'
+        if self.token_expired:
+            self.renew_token()
+        if (not self.token_expired) and (self.access_token is not None):
+            # log.logger.debug('access_token : %s' % self.access_token)
+            api = self._api_client
+            api.headers = {'Authorization': 'Bearer ' + self.access_token}
+            if idfield is not None:
+                api.headers['idfield'] = str(idfield)
+            api.api_root_url = self.api_root_url + url_prefix
+            api.add_resource(resource_name=resource_name, full_action_url=api.api_root_url + '/' + resource_name + '/' + idvalue)
+            try:
+                res = api._resources[api.correct_attribute_name(resource_name)]
+                func = getattr(res,action)
+                response = None
+                if body is not None:
+                    response = func(body=body)
+                    res = {'code': response.status_code, 'body': response.body}
+                else:
+                    res = {'code': response.status_code, 'body': response.body}
+                return res
+            except Exception as exp:
+                log.logger.error('Exception at post() %s ' % exp)
+                traceback.print_exc()
+
+
     def deletebyid(self, resource_name, url_prefix='', idfield=None, idvalue=None):
         action = 'destroy'
         if self.token_expired:
@@ -152,11 +207,11 @@ class NeptuneClient():
             if idfield is not None:
                 api.headers['idfield'] = str(idfield)
             api.api_root_url = self.api_root_url + url_prefix
-            api.add_resource(resource_name=resource_name,full_action_url=api.api_root_url + '/' + resource_name + '/' + idvalue)
+            api.add_resource(resource_name=resource_name, full_action_url=api.api_root_url + '/' + resource_name + '/' + idvalue)
             try:
                 res = api._resources[api.correct_attribute_name(resource_name)]
                 # log.logger.debug(res.actions)
-                log.logger.debug(res.get_action_full_url(action))
+                # log.logger.debug(res.get_action_full_url(action))
                 # log.logger.debug(res.get_action(action))
                 func = getattr(res,action)
                 response = None
@@ -182,10 +237,13 @@ if __name__ == '__main__':
         nc.fetch('database','_schema')
         #resultstr = nc.fetch('orders','_schema/_table')
         #log.logger.debug(resultstr)
-        resultstr = nc.fetch('orders','_table', 'list', None, 10, 10, True)
+        #resultstr = nc.fetch('orders', '_table', None, 10, 10, True)
+        #log.logger.debug(resultstr)
+        #resultstr = nc.deletebyid('employees', '_table', 'employeeNumber', '1002')
+        #log.logger.debug(resultstr)
+        resultstr = nc.post('zinopara', '_table', json.dumps({"fieldvalue":"{'id': '229', 'type': '222', 'creatorid': '222', 'json': '222', 'json_updates': '2222'}"}))
         log.logger.debug(resultstr)
-        resultstr = nc.deletebyid('employees','_table','employeeNumber','1002')
-        log.logger.debug(resultstr)
+
         # log.logger.debug(dir(resultstr))
         # df = nc.toDataFrame(resultstr,'data')
         # log.logger.debug(df.to_html(table_id="example", classes="table table-bordered table-striped"))
