@@ -91,7 +91,7 @@ admin_app.config.from_object(cfg['Admin_Config'])
 # login
 login_manager.init_app(admin_app)
 # blueprint
-for module_name in ('authentication', 'home', 'config', 'data'):
+for module_name in ('authentication', 'config', 'data', 'home'):
     module = import_module('admin.apps.{}.routes'.format(module_name))
     admin_app.register_blueprint(module.blueprint)
 

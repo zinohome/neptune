@@ -3,6 +3,8 @@
 
 from flask import render_template, request
 from flask_login import login_required
+from jinja2 import TemplateNotFound
+
 from admin.apps.config import blueprint
 
 from core import dbmeta
@@ -17,26 +19,35 @@ cfg = config.app_config
 log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 
-@blueprint.route('/settings-config')
+@blueprint.route('/settings-config.html',  methods = ['GET', 'POST'])
 @login_required
 def config():
-    sysdbmeta = dbmeta.DBMeta()
-    systables = sysdbmeta.get_tables()
-    sysviews = sysdbmeta.get_views()
-    return render_template('home/settings-config.html', segment='settings-config', systables=systables, sysviews=sysviews)
+    try:
+        sysdbmeta = dbmeta.DBMeta()
+        systables = sysdbmeta.get_tables()
+        sysviews = sysdbmeta.get_views()
+        return render_template('home/settings-config.html', segment='settings-config', systables=systables, sysviews=sysviews)
+    except TemplateNotFound:
+        return render_template('home/page-404.html'), 404
 
-@blueprint.route('/settings-users')
+    except:
+        return render_template('home/page-500.html'), 500
+
+@blueprint.route('/settings-users.html',  methods = ['GET', 'POST'])
 @login_required
-def users():
-    sysdbmeta = dbmeta.DBMeta()
-    systables = sysdbmeta.get_tables()
-    log.logger.debug(users.Users().users)
-    userslist = list(users.Users().users.values())
-    userskeylist = list(list(users.Users().users.values())[0].keys())
-    log.logger.debug(userslist)
-    log.logger.debug(userskeylist)
-    log.logger.debug(systables)
-    return render_template('home/settings-users.html', userslist=userslist, userskeylist=userskeylist)
+def userstable():
+    try:
+        sysdbmeta = dbmeta.DBMeta()
+        systables = sysdbmeta.get_tables()
+        sysviews = sysdbmeta.get_views()
+        userskeylist = list(list(users.Users().users.values())[0].keys())
+        return render_template('home/settings-users.html', segment='settings-users',
+                           systables=systables, sysviews=sysviews, userskeylist=userskeylist)
+    except TemplateNotFound:
+        return render_template('home/page-404.html'), 404
+
+    except:
+        return render_template('home/page-500.html'), 500
 
 @blueprint.route('/settings-users/getdata',  methods = ['GET', 'POST'])
 @login_required
