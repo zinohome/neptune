@@ -8,7 +8,6 @@ from simple_rest_client.api import API
 from config import config
 from datetime import datetime, timedelta
 from util import log
-import pandas as pd
 import json
 from pandas import json_normalize
 
