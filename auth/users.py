@@ -46,3 +46,8 @@ class Users(object):
 if __name__ == '__main__':
     print(Users().users)
     print(json.dumps(Users().users))
+    userslist = list(Users().users.values())
+    userskeylist = list(list(Users().users.values())[0].keys())
+    print(userslist)
+    print(userskeylist)
+

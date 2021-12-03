@@ -59,6 +59,7 @@ def getviewdata(viewname):
             'recordsTotal': ncdata['body']['record_count'],
             'draw': request.args.get('draw', type=int),
         }
+        log.logger.debug(rdata)
         return rdata
     else:
         return render_template('accounts/login.html', msg='Login time expired !', form=LoginForm())
