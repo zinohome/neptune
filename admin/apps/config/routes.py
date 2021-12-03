@@ -26,11 +26,20 @@ def config():
         sysdbmeta = dbmeta.DBMeta()
         systables = sysdbmeta.get_tables()
         sysviews = sysdbmeta.get_views()
-        return render_template('home/settings-config.html', segment='settings-config', systables=systables, sysviews=sysviews)
+        confignamelist = list(cfg.keys())
+        cfgjson = {}
+        for cfgname in confignamelist:
+           cfgijson = {}
+           for item in cfg[cfgname].__dict__:
+               if not item.startswith('_'):
+                   cfgijson[item] = cfg[cfgname].__dict__[item]
+           cfgjson[cfgname] = cfgijson
+        return render_template('home/settings-config.html', segment='settings-config', systables=systables, sysviews=sysviews, confignamelist=confignamelist, cfgjson=cfgjson)
     except TemplateNotFound:
         return render_template('home/page-404.html'), 404
 
-    except:
+    except Exception as exp:
+        log.logger.error('Exception at route config() %s ' % exp)
         return render_template('home/page-500.html'), 500
 
 @blueprint.route('/settings-users.html',  methods = ['GET', 'POST'])

@@ -94,7 +94,8 @@ app_config = {
 
 
 if __name__ == '__main__':
-    # print(dir(app_config['Application_Config']))
+    print(dir(app_config['Application_Config']))
+    print(app_config['Application_Config'].__dict__)
     print(app_config['Application_Config'].app_description)
     print(app_config['Schema_Config'].schema_fetch_tables)
     print(app_config['Database_Config'].db_uri)
