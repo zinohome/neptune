@@ -69,6 +69,10 @@ def userstable():
 @login_required
 def getusersdata():
     userslist = list(users.Users().users.values())
+    for useritem in userslist:
+        useritem['hashed_password'] = ''
+        useritem['password'] = ''
+        useritem['password_repeat'] = ''
     rdata = {
         'data': userslist,
         'recordsFiltered': len(userslist),
