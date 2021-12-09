@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="/static/assets/plugins/pace-progress/themes/black/pace-theme-flat-top.css">
   <!-- adminlte-->
   <link rel="stylesheet" href="/static/assets/css/adminlte.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="/static/assets/plugins/select2/css/select2.min.css">
 
 {% endblock stylesheets %}
 
@@ -70,12 +72,18 @@
                   {% if confname == 'Application_Config' %}
                   <div class="tab-pane fade show active" id="{{confname}}" role="tabpanel" aria-labelledby="{{confname}}-tab">
                      {% for item in cfgjson[confname] %}
+                     {% if item not in ['app_name','app_version','app_description','app_param_prefix'] %}
                     <div class="form-group row">
                     <label for="{{item}}" class="col-sm-3 col-form-label">{{item}}</label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="{{item}}" value="{{cfgjson[confname][item]}}">
+                      <select class="form-control select2" style="width: 100%;" value="True">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
                     </div>
                     </div>
+                     {% endif %}
                      {% endfor %}
                   </div>
                   {% else %}
