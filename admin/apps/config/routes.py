@@ -42,6 +42,13 @@ def config():
         log.logger.error('Exception at route config() %s ' % exp)
         return render_template('home/page-500.html'), 500
 
+@blueprint.route('/settings-config/savedata',  methods = ['POST', 'GET'])
+@login_required
+def configSaveData():
+    if request.method == 'POST':
+        result = request.form
+        log.logger.debug(result)
+
 @blueprint.route('/settings-users.html',  methods = ['GET', 'POST'])
 @login_required
 def userstable():

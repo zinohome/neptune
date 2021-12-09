@@ -46,6 +46,7 @@
 
       <!-- Default box -->
       <div class="card">
+        <form name="settingsForm" id="settingsForm" role="form" action="/admin/settings-config/savedata" method="POST">
         <div class="card-header">
           <h3 class="card-title">Settings</h3>
         </div>
@@ -76,11 +77,23 @@
                     <div class="form-group row">
                     <label for="{{item}}" class="col-sm-3 col-form-label">{{item}}</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="{{item}}" value="{{cfgjson[confname][item]}}">
-                      <select class="form-control select2" style="width: 100%;" value="True">
-                        <option>True</option>
-                        <option>False</option>
+                      {% if cfgjson[confname][item] in [True,False] %}
+                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
+                        <option value="True">True</option>
+                        <option value="False">False</option>
                       </select>
+                      {% elif cfgjson[confname][item] in ['TRACE','DEBUG','INFO','WARNING','ERROR','CRITICAL'] %}
+                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
+                        <option value="TRACE">TRACE</option>
+                        <option value="DEBUG">DEBUG</option>
+                        <option value="INFO">INFO</option>
+                        <option value="WARNING">WARNING</option>
+                        <option value="ERROR">ERROR</option>
+                        <option value="CRITICAL">CRITICAL</option>
+                      </select>
+                      {% else %}
+                      <input type="text" class="form-control" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
+                      {% endif %}
                     </div>
                     </div>
                      {% endif %}
@@ -92,7 +105,23 @@
                     <div class="form-group row">
                     <label for="{{item}}" class="col-sm-3 col-form-label">{{item}}</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="{{item}}" value="{{cfgjson[confname][item]}}">
+                      {% if cfgjson[confname][item] in [True,False] %}
+                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                      </select>
+                      {% elif cfgjson[confname][item] in ['TRACE','DEBUG','INFO','WARNING','ERROR','CRITICAL'] %}
+                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
+                        <option value="TRACE">TRACE</option>
+                        <option value="DEBUG">DEBUG</option>
+                        <option value="INFO">INFO</option>
+                        <option value="WARNING">WARNING</option>
+                        <option value="ERROR">ERROR</option>
+                        <option value="CRITICAL">CRITICAL</option>
+                      </select>
+                      {% else %}
+                      <input type="text" class="form-control" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
+                      {% endif %}
                     </div>
                     </div>
                      {% endfor %}
@@ -105,6 +134,11 @@
             </div>
         </div>
         <!-- /.card-body -->
+        <div class="modal-footer">
+          <button type="button" data-content="remove" class="btn btn-default button secondary" id="RestBtn">Reset</button>
+          <button type="submit" data-content="remove" class="btn btn-primary button" id="SaveBtn" form="settingsForm">Save</button>
+        </div>
+        </form>
       </div>
       <!-- /.card -->
 
