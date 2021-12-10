@@ -91,7 +91,7 @@ class NeptuneClient():
                 self._lastlogin = datetime.utcnow()
                 login_pass = True
             else:
-                log.logger.error('Can not get user_login at user_login() ... ')
+                log.logger.error('Can not get user login at user_login() ... ')
         except Exception as exp:
             log.logger.error('Exception at user_login() %s ' % exp)
         return login_pass

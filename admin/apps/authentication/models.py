@@ -8,6 +8,7 @@
 #  @Author  : Zhang Jun
 #  @Email   : ibmzhangjun@139.com
 #  @Software: Neptune
+import json
 
 from flask_login import UserMixin
 
@@ -39,6 +40,7 @@ class Users(UserMixin):
         self.hashed_password = None
         self.role = None
         self.disabled = None
+        users.Users().reload()
         sysusers = users.Users().users
         suser = sysusers[username]
         if suser is not None:

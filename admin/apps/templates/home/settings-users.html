@@ -148,6 +148,36 @@
         ],
         "altEditor": true,
         "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]],
+        onAddRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                // a tipycal url would be / with type='POST'
+                url: "/admin/settings-users/postdata",
+                type: 'POST',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
+        onDeleteRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                // a tipycal url would be /{id} with type='DELETE'
+                url: "/admin/settings-users/deletedata",
+                type: 'DELETE',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
+        onEditRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                // a tipycal url would be /{id} with type='PUT'
+                url: "/admin/settings-users/putdata",
+                type: 'PUT',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
         "columns": [
           { "data": "username", "visible": true, "targets": "username", "unique":true, "uniqueMsg":"username must unique !" },
           { "data": "full_name", "visible": true, "targets": "full_name" },

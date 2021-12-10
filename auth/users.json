@@ -4,7 +4,7 @@
         "full_name": "Admin",
         "email": "admin@zino.com",
         "hashed_password": "$2b$12$WGpjvAAjcew9hylrN0RdBOuzFPhdpj9OBp4Hqkz3xLUXuBh72u7xu",
-        "role":"Superadmin",
+        "role": "Superadmin",
         "disabled": "False"
     },
     "reader": {
@@ -12,7 +12,7 @@
         "full_name": "Reader",
         "email": "reader@zino.com",
         "hashed_password": "$2b$12$yXVcWEHglbxjF4STXnpFaeNhJ4mCxGpbPuDwHohg3V/wlbxG2tBQa",
-        "role":"Reader",
+        "role": "Reader",
         "disabled": "False"
     },
     "writer": {
@@ -20,7 +20,15 @@
         "full_name": "Writer",
         "email": "writer@zino.com",
         "hashed_password": "$2b$12$keQAorYzGkrYU10ya9OwHuAlgtvueay.dHhqxtMWjYP4daGQXsjGO",
-        "role":"Writer",
+        "role": "Writer",
         "disabled": "False"
+    },
+    "zhangjun": {
+        "username": "zhangjun",
+        "full_name": "ZhangJun",
+        "email": "zhangjun@zino.com",
+        "hashed_password": "$2b$12$veaxr3YII75zDDxQRbHSy.ev2D/ttpVPTkvk9rFXM14KjWTmv8li2",
+        "role": "Superadmin",
+        "disabled": "True"
     }
 }
