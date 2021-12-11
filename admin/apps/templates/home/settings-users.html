@@ -148,10 +148,45 @@
         ],
         "altEditor": true,
         "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]],
+        onAddRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                // a tipycal url would be / with type='POST'
+                url: "/admin/settings-users/postdata",
+                type: 'POST',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
+        onDeleteRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                // a tipycal url would be /{id} with type='DELETE'
+                url: "/admin/settings-users/deletedata",
+                type: 'DELETE',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
+        onEditRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                // a tipycal url would be /{id} with type='PUT'
+                url: "/admin/settings-users/putdata",
+                type: 'PUT',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
         "columns": [
-          {% for userskey in userskeylist %}
-          { "data": "{{ userskey }}" }{{ ", " if not loop.last else "" }}
-          {% endfor %}
+          { "data": "username", "visible": true, "targets": "username", "unique":true, "uniqueMsg":"username must unique !" },
+          { "data": "full_name", "visible": true, "targets": "full_name" },
+          { "data": "email", "visible": true, "targets": "email" },
+          { "data": "hashed_password", "visible": false, "targets": "hashed_password", "type":"hidden" },
+          { "data": "role", "visible": true, "targets": "role", "type":"select", "options":{"Superadmin":"Superadmin", "Writer":"Writer", "Reader":"Reader"} },
+          { "data": "disabled", "visible": true, "targets": "disabled", "type":"select", "options":{"True":"True", "False":"False"}},
+          { "data": "password", "name": "password", "title": "password", "visible": false, "targets": "password" },
+          { "data": "password_repeat", "name": "password_repeat", "title": "password_repeat", "visible": false, "targets": "password_repeat" }
           ]
       });
     });

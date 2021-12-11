@@ -42,10 +42,27 @@ class Users(object):
         except Exception as err:
             log.logger.error('Exception load Users file %s ' % err)
 
+    def writeback(self):
+        auth_dir = os.path.dirname(os.path.abspath(__file__))
+        try:
+            with open(os.path.join(auth_dir, 'users.json'), 'w', encoding='utf-8') as usersfile:
+                json.dump(self.users,usersfile,indent=4,ensure_ascii=False)
+        except Exception as err:
+            log.logger.error('Exception writeback Users file %s ' % err)
+
+    def reload(self):
+        auth_dir = os.path.dirname(os.path.abspath(__file__))
+        try:
+            with open(os.path.join(auth_dir, 'users.json'), 'r') as usersfile:
+                self.users = json.loads(usersfile.read())
+        except Exception as err:
+            log.logger.error('Exception reload Users file %s ' % err)
+
 
 if __name__ == '__main__':
     print(Users().users)
     print(json.dumps(Users().users))
+    Users().writeback()
     userslist = list(Users().users.values())
     userskeylist = list(list(Users().users.values())[0].keys())
     print(userslist)
