@@ -40,7 +40,14 @@ def settingsconfig():
                if not item.startswith('_'):
                    cfgijson[item] = cfg[cfgname].__dict__[item]
            cfgjson[cfgname] = cfgijson
-        return render_template('home/settings-config.html', segment='settings-config', systables=systables, sysviews=sysviews, confignamelist=confignamelist, cfgjson=cfgjson)
+        config_file = os.path.join(Path(os.path.abspath(__file__)).ancestor(4), 'config/settings.ini')
+        rconfig = configparser.RawConfigParser()
+        rconfig.optionxform = str
+        rconfig.read(config_file)
+        cfgini = {}
+        for key in rconfig['settings']:
+            cfgini[key] = rconfig['settings'][key]
+        return render_template('home/settings-config.html', segment='settings-config', systables=systables, sysviews=sysviews, confignamelist=confignamelist, cfgjson=cfgjson, cfgini=cfgini)
     except TemplateNotFound:
         return render_template('home/page-404.html'), 404
     except Exception as exp:
