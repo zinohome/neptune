@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from flask import render_template, request
+from flask import render_template, request, redirect
 from flask_login import login_required
 from jinja2 import TemplateNotFound
+from importlib import reload
 
 from admin.apps.config import blueprint
 from flask import Response
 import json
+import configparser
+from unipath import Path
+import os
 
 from core import dbmeta
 from config import config
@@ -23,7 +27,7 @@ log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 @blueprint.route('/settings-config.html',  methods = ['GET', 'POST'])
 @login_required
-def config():
+def settingsconfig():
     try:
         sysdbmeta = dbmeta.DBMeta()
         systables = sysdbmeta.get_tables()
@@ -39,7 +43,6 @@ def config():
         return render_template('home/settings-config.html', segment='settings-config', systables=systables, sysviews=sysviews, confignamelist=confignamelist, cfgjson=cfgjson)
     except TemplateNotFound:
         return render_template('home/page-404.html'), 404
-
     except Exception as exp:
         log.logger.error('Exception at route config() %s ' % exp)
         return render_template('home/page-500.html'), 500
@@ -48,8 +51,66 @@ def config():
 @login_required
 def configSaveData():
     if request.method == 'POST':
-        result = request.form
-        log.logger.debug(result)
+        submitdict = request.form.copy()
+        dict_Application_Config = {}
+        dict_Application_Config['app_name'] = cfg['Application_Config'].app_name
+        dict_Application_Config['app_version'] = cfg['Application_Config'].app_version
+        dict_Application_Config['app_description'] = cfg['Application_Config'].app_description
+        dict_Application_Config['app_param_prefix'] = cfg['Application_Config'].app_param_prefix
+        dict_Security_Config = {}
+        dict_Security_Config['security_key'] = submitdict['security_key']
+        dict_Security_Config['security_algorithm'] = submitdict['security_algorithm']
+        dict_Security_Config['access_token_expire_minutes'] = submitdict['access_token_expire_minutes']
+        dict_Admin_Config = {}
+        dict_Admin_Config['DEBUG'] = submitdict['DEBUG']
+        dict_Admin_Config['SECRET_KEY'] = submitdict['SECRET_KEY']
+        dict_Admin_Config['SESSION_COOKIE_HTTPONLY'] = submitdict['SESSION_COOKIE_HTTPONLY']
+        dict_Admin_Config['REMEMBER_COOKIE_HTTPONLY'] = submitdict['REMEMBER_COOKIE_HTTPONLY']
+        dict_Admin_Config['REMEMBER_COOKIE_DURATION'] = submitdict['REMEMBER_COOKIE_DURATION']
+        dict_Schema_Config = {}
+        dict_Query_Config = {}
+        dict_Database_Config = {}
+        dict_Connection_Config = {}
+        for key in submitdict.keys():
+            if key.startswith('app_'):
+                dict_Application_Config[key] = submitdict[key]
+            if key.startswith('schema_'):
+                dict_Schema_Config[key] = submitdict[key]
+            if key.startswith('query_'):
+                dict_Query_Config[key] = submitdict[key]
+            if key.startswith('db_'):
+                dict_Database_Config[key] = submitdict[key]
+            if key.startswith('con_'):
+                dict_Connection_Config[key] = submitdict[key]
+        config_file = os.path.join(Path(os.path.abspath(__file__)).ancestor(4),'config/settings.ini')
+        wconfig = configparser.RawConfigParser()
+        wconfig.optionxform = str
+        wconfig.add_section('settings')
+        wconfig.set('settings', ';application settings', '')
+        for key in dict_Application_Config:
+            wconfig.set('settings', key, dict_Application_Config[key])
+        wconfig.set('settings', ';schema settings', '')
+        for key in dict_Schema_Config:
+            wconfig.set('settings', key, dict_Schema_Config[key])
+        wconfig.set('settings', ';query settings', '')
+        for key in dict_Query_Config:
+            wconfig.set('settings', key, dict_Query_Config[key])
+        wconfig.set('settings', ';security settings', '')
+        for key in dict_Security_Config:
+            wconfig.set('settings', key, dict_Security_Config[key])
+        wconfig.set('settings', ';database settings', '')
+        for key in dict_Database_Config:
+            wconfig.set('settings', key, dict_Database_Config[key])
+        wconfig.set('settings', ';connection settings', '')
+        for key in dict_Connection_Config:
+            wconfig.set('settings', key, dict_Connection_Config[key])
+        wconfig.set('settings', ';admin settings', '')
+        for key in dict_Admin_Config:
+            wconfig.set('settings', key.upper(), dict_Admin_Config[key])
+        o = open(config_file, 'w')
+        wconfig.write(o)
+        o.close()
+        return redirect(request.referrer)
 
 @blueprint.route('/settings-users.html',  methods = ['GET', 'POST'])
 @login_required
@@ -63,7 +124,6 @@ def userstable():
                            systables=systables, sysviews=sysviews, userskeylist=userskeylist)
     except TemplateNotFound:
         return render_template('home/page-404.html'), 404
-
     except:
         return render_template('home/page-500.html'), 500
 

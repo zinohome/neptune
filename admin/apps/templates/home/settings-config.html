@@ -76,23 +76,24 @@
                      {% if item not in ['app_name','app_version','app_description','app_param_prefix'] %}
                     <div class="form-group row">
                     <label for="{{item}}" class="col-sm-3 col-form-label">{{item}}</label>
-                    <div class="col-sm-9">
-                      {% if cfgjson[confname][item] in [True,False] %}
-                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
-                        <option value="True">True</option>
-                        <option value="False">False</option>
+                    <label for="{{item}}" class="col-sm-4">{{cfgjson[confname][item]|string}}</label>
+                    <div class="col-sm-5">
+                      {% if cfgjson[confname][item]|string in ['True','False'] %}
+                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]|string}}">
+                        <option value="True"{% if cfgjson[confname][item]==True %} selected="selected"{% endif %}>True</option>
+                        <option value="False"{% if cfgjson[confname][item]==False %} selected="selected"{% endif %}>False</option>
                       </select>
                       {% elif cfgjson[confname][item] in ['TRACE','DEBUG','INFO','WARNING','ERROR','CRITICAL'] %}
-                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
-                        <option value="TRACE">TRACE</option>
-                        <option value="DEBUG">DEBUG</option>
-                        <option value="INFO">INFO</option>
-                        <option value="WARNING">WARNING</option>
-                        <option value="ERROR">ERROR</option>
-                        <option value="CRITICAL">CRITICAL</option>
+                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]|string}}">
+                        <option value="TRACE"{% if cfgjson[confname][item]=='TRACE' %} selected="selected"{% endif %}>TRACE</option>
+                        <option value="DEBUG"{% if cfgjson[confname][item]=='DEBUG' %} selected="selected"{% endif %}>DEBUG</option>
+                        <option value="INFO"{% if cfgjson[confname][item]=='INFO' %} selected="selected"{% endif %}>INFO</option>
+                        <option value="WARNING"{% if cfgjson[confname][item]=='WARNING' %} selected="selected"{% endif %}>WARNING</option>
+                        <option value="ERROR"{% if cfgjson[confname][item]=='ERROR' %} selected="selected"{% endif %}>ERROR</option>
+                        <option value="CRITICAL"{% if cfgjson[confname][item]=='CRITICAL' %} selected="selected"{% endif %}>CRITICAL</option>
                       </select>
                       {% else %}
-                      <input type="text" class="form-control" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
+                      <input type="text" class="form-control" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]|string}}">
                       {% endif %}
                     </div>
                     </div>
@@ -104,23 +105,24 @@
                      {% for item in cfgjson[confname] %}
                     <div class="form-group row">
                     <label for="{{item}}" class="col-sm-3 col-form-label">{{item}}</label>
-                    <div class="col-sm-9">
-                      {% if cfgjson[confname][item] in [True,False] %}
-                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
-                        <option value="True">True</option>
-                        <option value="False">False</option>
+                    <label for="{{item}}" class="col-sm-4 col-form-label">{{cfgjson[confname][item]|string}}</label>
+                    <div class="col-sm-5">
+                      {% if cfgjson[confname][item]|string in ['True','False'] %}
+                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]|string}}">
+                        <option value="True"{% if cfgjson[confname][item]==True %} selected="selected"{% endif %}>True</option>
+                        <option value="False"{% if cfgjson[confname][item]==False %} selected="selected"{% endif %}>False</option>
                       </select>
                       {% elif cfgjson[confname][item] in ['TRACE','DEBUG','INFO','WARNING','ERROR','CRITICAL'] %}
-                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
-                        <option value="TRACE">TRACE</option>
-                        <option value="DEBUG">DEBUG</option>
-                        <option value="INFO">INFO</option>
-                        <option value="WARNING">WARNING</option>
-                        <option value="ERROR">ERROR</option>
-                        <option value="CRITICAL">CRITICAL</option>
+                      <select class="form-control select2" style="width: 100%;" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]|string}}">
+                        <option value="TRACE"{% if cfgjson[confname][item]=='TRACE' %} selected="selected"{% endif %}>TRACE</option>
+                        <option value="DEBUG"{% if cfgjson[confname][item]=='DEBUG' %} selected="selected"{% endif %}>DEBUG</option>
+                        <option value="INFO"{% if cfgjson[confname][item]=='INFO' %} selected="selected"{% endif %}>INFO</option>
+                        <option value="WARNING"{% if cfgjson[confname][item]=='WARNING' %} selected="selected"{% endif %}>WARNING</option>
+                        <option value="ERROR"{% if cfgjson[confname][item]=='ERROR' %} selected="selected"{% endif %}>ERROR</option>
+                        <option value="CRITICAL"{% if cfgjson[confname][item]=='CRITICAL' %} selected="selected"{% endif %}>CRITICAL</option>
                       </select>
                       {% else %}
-                      <input type="text" class="form-control" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]}}">
+                      <input type="text" class="form-control" name="{{item}}" id="{{item}}" value="{{cfgjson[confname][item]|string}}">
                       {% endif %}
                     </div>
                     </div>
@@ -135,8 +137,8 @@
         </div>
         <!-- /.card-body -->
         <div class="modal-footer">
-          <button type="button" data-content="remove" class="btn btn-default button secondary" id="RestBtn">Reset</button>
-          <button type="submit" data-content="remove" class="btn btn-primary button" id="SaveBtn" form="settingsForm">Save</button>
+          <button type="reset" data-content="reset" class="btn btn-default button secondary" id="RestBtn">Reset</button>
+          <button type="submit" data-content="submit" class="btn btn-primary button" id="SaveBtn" form="settingsForm">Save</button>
         </div>
         </form>
       </div>

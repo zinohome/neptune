@@ -1,0 +1,57 @@
+[settings]
+;application settings
+app_name=Neptune
+app_version=v1.1.2
+app_description=Zero Code REST API for RDBMS
+app_prefix=/api/v1
+app_cors_origins='*'
+app_param_prefix=up_b_
+app_force_generate_meta=True
+app_log_level=INFO
+app_user_func=True
+app_exception_detail=True
+app_confirm_key=Confirmed
+app_http_port=8890
+app_http_timeout=10
+app_load_metadat_on_load=True
+app_clear_metadat_on_startup=False
+app_clear_metadat_on_shutdown=False
+;schema settings
+schema_cache_enabled=True
+schema_cache_filename=neptune_metadata
+schema_db_metafile=metadata.json
+schema_fetch_all_table=True
+schema_fetch_tables=customers,employees
+;query settings
+query_limit_upset=2000
+query_default_limit=10
+query_default_offset=0
+;security settings
+security_key=47051d5e3bafcfcba3c80d6d1119a7adf78d2967a8972b00af1ea231ca61f589
+security_algorithm=HS256
+access_token_expire_minutes=30
+;database settings
+db_gendburi=True
+db_dialect=mysql
+db_drivername=mysql+pymysql
+db_host=192.168.50.10
+db_port=3306
+db_name=mysqlsrc
+db_schema=mysqlsrc
+db_use_schema=True
+db_username=root
+db_password=passw0rd
+db_uri=mysql+pymysql://root:passw0rd@192.168.50.10:3306/mysqlsrc
+db_exclude_tablespaces=SYSTEM,SYSAUX
+;connection settings
+con_pool_size=20
+con_max_overflow=5
+con_pool_use_lifo=True
+con_pool_pre_ping=True
+con_pool_recycle=3600
+;admin settings
+DEBUG = True
+SECRET_KEY=bgt56yh@Passw0rd
+SESSION_COOKIE_HTTPONLY = True
+REMEMBER_COOKIE_HTTPONLY = True
+REMEMBER_COOKIE_DURATION = 3600

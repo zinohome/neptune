@@ -91,13 +91,39 @@ app_config = {
     'Connection_Config': Connection_Config,
     'Admin_Config': Admin_Config
 }
+def recofig():
+    Application_Config = None
+    Schema_Config = None
+    Query_Config = None
+    Security_Config = None
+    Database_Config = None
+    Connection_Config = None
+    Admin_Config = None
+    app_config = {}
+    app_config['Application_Config'] = Application_Config
+    app_config['Schema_Config'] = Schema_Config
+    app_config['Query_Config'] = Query_Config
+    app_config['Security_Config'] = Security_Config
+    app_config['Database_Config'] = Database_Config
+    app_config['Connection_Config'] = Connection_Config
+    app_config['Admin_Config'] = Admin_Config
+
+
 
 
 if __name__ == '__main__':
-    print(dir(app_config['Application_Config']))
+    #print(dir(app_config['Application_Config']))
+    #print(app_config['Application_Config'].__dict__)
+    #print(app_config['Application_Config'].app_description)
+    #print(app_config['Schema_Config'].schema_fetch_tables)
+    #print(app_config['Database_Config'].db_uri)
+    #print(app_config['Database_Config'].db_exclude_tablespaces)
+    #print(app_config['Schema_Config'].schema_fetch_tables)
+    recofig()
     print(app_config['Application_Config'].__dict__)
-    print(app_config['Application_Config'].app_description)
-    print(app_config['Schema_Config'].schema_fetch_tables)
-    print(app_config['Database_Config'].db_uri)
-    print(app_config['Database_Config'].db_exclude_tablespaces)
-    print(app_config['Schema_Config'].schema_fetch_tables)
+    print(app_config['Schema_Config'].__dict__)
+    print(app_config['Query_Config'].__dict__)
+    print(app_config['Security_Config'].__dict__)
+    print(app_config['Database_Config'].__dict__)
+    print(app_config['Connection_Config'].__dict__)
+    print(app_config['Admin_Config'].__dict__)
