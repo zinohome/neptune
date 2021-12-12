@@ -75,6 +75,7 @@ def getusersdata():
         useritem['hashed_password'] = ''
         useritem['password'] = ''
         useritem['password_repeat'] = ''
+        useritem['oldname'] = useritem['username']
     rdata = {
         'data': userslist,
         'recordsFiltered': len(userslist),
@@ -87,7 +88,6 @@ def getusersdata():
 @login_required
 def postusersdata():
     requstdict = request.form.to_dict()
-    log.logger.debug(requstdict)
     if not requstdict['password'] == requstdict['password_repeat']:
         return Response('{"status":500, "password must equal with password_repeat! "}', status=500)
     else:
@@ -109,3 +109,50 @@ def postusersdata():
             else:
                 return Response('{"status":500, "User already exists ! "}', status=500)
 
+@blueprint.route('/settings-users/deletedata',  methods = ['DELETE'])
+@login_required
+def deleteusersdata():
+    requstdict = request.form.to_dict()
+    if requstdict['username'] not in users.Users().users.keys():
+        return Response('{"status":500, "User does not exists ! "}', status=500)
+    else:
+        users.Users().deluser(requstdict['username'])
+        users.Users().writeback()
+        users.Users().reload()
+        return Response(json.dumps(requstdict), status=200)
+
+
+@blueprint.route('/settings-users/putdata',  methods = ['PUT'])
+@login_required
+def putusersdata():
+    requstdict = request.form.to_dict()
+    if not requstdict['password'] == requstdict['password_repeat']:
+        return Response('{"status":500, "password must equal with password_repeat! "}', status=500)
+    else:
+        if (len(requstdict['password'].strip()) == 0) or (len(requstdict['password_repeat'].strip()) == 0):
+            newuser = {}
+            newuser['username'] = requstdict['oldname']
+            newuser['full_name'] = requstdict['full_name']
+            newuser['email'] = requstdict['email']
+            newuser['hashed_password'] = users.Users().users[newuser['username']]['hashed_password']
+            newuser['role'] = requstdict['role']
+            newuser['disabled'] = requstdict['disabled']
+            users.Users().users[newuser['username']] = newuser
+            users.Users().writeback()
+            users.Users().reload()
+            return Response(json.dumps(requstdict), status=200)
+        else:
+            if not (requstdict['username'] == requstdict['oldname']):
+                return Response('{"status":500, "Can not change username ! "}', status=500)
+            else:
+                newuser={}
+                newuser['username'] = requstdict['oldname']
+                newuser['full_name'] = requstdict['full_name']
+                newuser['email'] = requstdict['email']
+                newuser['hashed_password'] = genpwd.get_password_hash(requstdict['password'])
+                newuser['role'] = requstdict['role']
+                newuser['disabled'] = requstdict['disabled']
+                users.Users().users[newuser['username']] = newuser
+                users.Users().writeback()
+                users.Users().reload()
+                return Response(json.dumps(requstdict), status=200)

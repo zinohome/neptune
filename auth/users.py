@@ -42,6 +42,15 @@ class Users(object):
         except Exception as err:
             log.logger.error('Exception load Users file %s ' % err)
 
+    def deluser(self,username):
+        auth_dir = os.path.dirname(os.path.abspath(__file__))
+        try:
+            with open(os.path.join(auth_dir, 'users.json'), 'r') as usersfile:
+                self.users = json.loads(usersfile.read())
+                self.users.pop(username)
+        except Exception as err:
+            log.logger.error('Exception load Users file %s ' % err)
+
     def writeback(self):
         auth_dir = os.path.dirname(os.path.abspath(__file__))
         try:
