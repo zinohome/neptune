@@ -13,7 +13,7 @@ from starlette.responses import FileResponse
 
 from util import toolkit, log
 from config import config, querydef
-from fastapi import FastAPI, Header, Depends, HTTPException
+from fastapi import FastAPI, Header, Depends, HTTPException, status
 from starlette.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
 from fastapi.middleware.wsgi import WSGIMiddleware
@@ -33,6 +33,7 @@ from core import security, dbengine, tablemodel, apimodel, userfunc, dbmeta
 from datetime import timedelta
 from core import dbmeta as meta
 from admin.apps import login_manager
+from fastapi.responses import JSONResponse
 
 
 '''config'''
@@ -193,7 +194,9 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     access_token = security.create_access_token(
         data={"sub": user.username}, expires_delta=access_token_expires
     )
-    return {"access_token": access_token, "token_type": "bearer"}
+    # return {"access_token": access_token, "token_type": "bearer"}
+    rcontent = {"access_token": access_token, "token_type": "bearer"}
+    return JSONResponse(status_code=status.HTTP_200_OK, content=rcontent)
 
 
 @app.get(prefix + "/users",
