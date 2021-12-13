@@ -15,7 +15,6 @@ import simplejson as json
 from config import config
 from util import log, toolkit
 import pickle
-from eralchemy import render_er
 
 '''config'''
 cfg = config.app_config
@@ -325,14 +324,10 @@ if __name__ == '__main__':
     log.logger.debug(otable.table2json())
     log.logger.debug("****************************************************")
     if metadata is not None:
-        filename = 'mymodel.png'
-        render_er(metadata, filename)
         for item in dir(metadata):
             log.logger.debug(item)
         log.logger.debug("===================================================")
         for table in metadata.sorted_tables:
             log.logger.debug(table.name)
-            for item in dir(table):
-                log.logger.debug(item)
     log.logger.debug("****************************************************")
     log.logger.debug(meta.schema_file)
