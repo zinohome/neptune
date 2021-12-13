@@ -76,4 +76,5 @@ if __name__ == '__main__':
     userskeylist = list(list(Users().users.values())[0].keys())
     print(userslist)
     print(userskeylist)
+    print(len(userslist))
 

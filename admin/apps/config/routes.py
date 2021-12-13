@@ -4,7 +4,6 @@
 from flask import render_template, request, redirect
 from flask_login import login_required
 from jinja2 import TemplateNotFound
-from importlib import reload
 
 from admin.apps.config import blueprint
 from flask import Response

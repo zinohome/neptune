@@ -7,8 +7,8 @@ from admin.apps.home import blueprint
 from flask import render_template, request
 from flask_login import login_required
 from jinja2 import TemplateNotFound
-
-from core import dbmeta
+from auth import users
+from core import dbmeta, dbengine
 
 
 @blueprint.route('/index')
@@ -17,8 +17,23 @@ def index():
     sysdbmeta = dbmeta.DBMeta()
     systables = sysdbmeta.get_tables()
     sysviews = sysdbmeta.get_views()
-    return render_template('home/index.html', segment='index', systables=systables, sysviews=sysviews)
+    usercount = len(list(users.Users().users.values()))
+    cpsize=dbengine.DBEngine().connect().pool.size()
+    cpchin=dbengine.DBEngine().connect().pool.checkedin()
+    return render_template('home/index.html', segment='index', systables=systables, sysviews=sysviews,
+                           usercount=usercount, cpsize=cpsize, cpchin=cpchin)
 
+@blueprint.route('/index.html')
+@login_required
+def indexhtml():
+    sysdbmeta = dbmeta.DBMeta()
+    systables = sysdbmeta.get_tables()
+    sysviews = sysdbmeta.get_views()
+    usercount = len(list(users.Users().users.values()))
+    cpsize=dbengine.DBEngine().connect().pool.size()
+    cpchin=dbengine.DBEngine().connect().pool.checkedin()
+    return render_template('home/index.html', segment='index', systables=systables, sysviews=sysviews,
+                           usercount=usercount, cpsize=cpsize, cpchin=cpchin)
 @blueprint.route('/<template>')
 @login_required
 def route_template(template):
