@@ -4,7 +4,7 @@
 nk Page {% endblock %} 
 
 <!-- Element injected in the BODY element -->
-{% block body_class %} sidebar-mini pace-primary {% endblock body_class %}
+{% block body_class %} sidebar-mini layout-navbar-fixed layout-footer-fixed layout-fixed text-sm {% endblock body_class %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}
@@ -17,6 +17,16 @@ nk Page {% endblock %}
   <link rel="stylesheet" href="/static/assets/plugins/pace-progress/themes/black/pace-theme-flat-top.css">
   <!-- adminlte-->
   <link rel="stylesheet" href="/static/assets/css/adminlte.min.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/abyss.css" rel="stylesheet" /> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/kimbie-dark.css" rel="stylesheet" /> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/monokai.css" rel="stylesheet" /> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/monokai-dimmed.css" rel="stylesheet" /> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/one-dark-pro.css" rel="stylesheet" /> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/red.css" rel="stylesheet" /> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/solarized-dark.css" rel="stylesheet" /> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/solarized-light.css" rel="stylesheet" /> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/tomorrow-night-blue.css" rel="stylesheet" /> -->
+  <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/vscode-dark.css" rel="stylesheet" />
 
 {% endblock stylesheets %}
 
@@ -28,12 +38,12 @@ nk Page {% endblock %}
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Blank Page</h1>
+            <h1>DataBase Diagram</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index">Home</a></li>
-              <li class="breadcrumb-item active">Start</li>
+              <li class="breadcrumb-item active">DataBase Diagram</li>
             </ol>
           </div>
         </div>
@@ -45,26 +55,10 @@ nk Page {% endblock %}
 
       <!-- Default box -->
       <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
         <div class="card-body">
-          Start creating your amazing application!
+          <erd-editor width="1065" height="600"></erd-editor>
         </div>
         <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
-        <!-- /.card-footer-->
       </div>
       <!-- /.card -->
 
@@ -85,5 +79,46 @@ nk Page {% endblock %}
   <script src="/static/assets/plugins/pace-progress/pace.min.js"></script>
   <!-- AdminLTE App -->
   <script src="/static/assets/js/adminlte.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/vuerd/dist/vuerd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vuerd/plugin-generate-template/dist/generate-template.min.js"></script>
+  <script>
+    const { extension } = window['vuerd'];
+    const { generateTemplatePanel } = window['@vuerd/plugin-generate-template'];
+    extension({
+      panels: [generateTemplatePanel()],
+    });
+    const editor = document.querySelector('erd-editor');
+    editor.readonly = true;
+    editor.language = "zh_CN";
+    editor.setTheme({
+  canvas: '#282828',
+  table: '#191919',
+  tableActive: '#14496d',
+  focus: '#00a9ff',
+  keyPK: '#B4B400',
+  keyFK: '#dda8b1',
+  keyPFK: '#60b9c4',
+  font: '#a2a2a2',
+  fontActive: 'white',
+  fontPlaceholder: '#6D6D6D',
+  contextmenu: '#191919',
+  contextmenuActive: '#383d41',
+  edit: '#ffc107',
+  columnSelect: '#232a2f',
+  columnActive: '#372908',
+  minimapShadow: 'black',
+  scrollbarThumb: '#6D6D6D',
+  scrollbarThumbActive: '#a2a2a2',
+  menubar: 'black',
+  visualization: '#191919',
+});
+    fetch("https://api.github.com/repos/vuerd/vuerd/contents/data/test.json")
+      .then((response) => response.json())
+      .then((data) => editor.initLoadJson(atob(data.content)));
+    window.addEventListener('resize', () => {
+      editor.width = 1065;
+      editor.height = 600;
+    });
+    window.dispatchEvent(new Event('resize'));
+  </script>
 {% endblock javascripts %}
