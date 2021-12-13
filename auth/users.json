@@ -30,13 +30,5 @@
         "hashed_password": "$2b$12$veaxr3YII75zDDxQRbHSy.ev2D/ttpVPTkvk9rFXM14KjWTmv8li2",
         "role": "Superadmin",
         "disabled": "False"
-    },
-    "jojo": {
-        "username": "jojo",
-        "full_name": "Jojo",
-        "email": "jojo@139.com",
-        "hashed_password": "$2b$12$2a7E59WQR1CMUXbxI0Y9au5U/.Vc6aVS.UNBs2pDtP7iFIBA6Tt/S",
-        "role": "Superadmin",
-        "disabled": "False"
     }
 }
