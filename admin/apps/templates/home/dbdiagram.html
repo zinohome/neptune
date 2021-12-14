@@ -77,8 +77,8 @@ nk Page {% endblock %}
   <script src="/static/assets/plugins/pace-progress/pace.min.js"></script>
   <!-- AdminLTE App -->
   <script src="/static/assets/js/adminlte.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuerd/dist/vuerd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@vuerd/plugin-generate-template/dist/generate-template.min.js"></script>
+  <script src="/static/assets/js/vuerd-mod.js"></script>
+  <script src="/static/assets/js/generate-template.js"></script>
   <script>
     const { extension } = window['vuerd'];
     const { generateTemplatePanel } = window['@vuerd/plugin-generate-template'];
@@ -87,7 +87,6 @@ nk Page {% endblock %}
     });
     const editor = document.querySelector('erd-editor');
     editor.readonly = true;
-    editor.language = "zh_CN";
     editor.setTheme({
   canvas: '#282828',
   table: '#191919',
