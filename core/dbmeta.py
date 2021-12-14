@@ -15,6 +15,7 @@ import simplejson as json
 from config import config
 from util import log, toolkit
 import pickle
+import base64
 
 '''config'''
 cfg = config.app_config
@@ -299,6 +300,18 @@ class DBMeta(object):
             tblist.append(tb.name)
         return tblist
 
+    def response_dbdiagram(self):
+        basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
+        apppath = os.path.abspath(os.path.join(basepath, os.pardir))
+        configpath = os.path.abspath(os.path.join(apppath, 'config'))
+        metafilepath = os.path.abspath(os.path.join(configpath, "dbdiagram.json"))
+        rjson = {"name":"dbdiagram.json",
+                 "type": "file",
+                 "content": ""}
+        with open(metafilepath, 'r') as metafile:
+            rjson['content'] = base64.b64encode(metafile.read().encode('utf-8'))
+        return rjson
+
     def response_table_schema(self, value):
         tb = self.gettable(value)
         if tb is not None:
@@ -331,3 +344,4 @@ if __name__ == '__main__':
             log.logger.debug(table.name)
     log.logger.debug("****************************************************")
     log.logger.debug(meta.schema_file)
+    log.logger.debug(meta.response_dbdiagram())

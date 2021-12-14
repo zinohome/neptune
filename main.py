@@ -145,7 +145,6 @@ async def favicon():
 async def adminfavicon():
     return FileResponse(os.path.join(app_dir, 'admin/apps/static/favicon.ico'))
 
-
 @app.get("/apidocs", include_in_schema=False)
 async def custom_swagger_ui_html():
     return get_swagger_ui_html(
@@ -206,9 +205,17 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
          description="",
          )
 async def read_users_me(current_user: security.User = Depends(security.get_current_active_user)):
-    log.logger.debug('Access \'/users/me/\' : run in read_users_me()')
+    log.logger.debug('Access \'/users/\' : run in read_users_me()')
     return current_user
 
+
+@app.get(prefix+"/_schema/dbdiagram",
+         tags=["Schema"],
+         summary="Retrieve Database Diagram Resources.",
+         description="By default, all tables are returned .",include_in_schema=False)
+async def get_dbdiagram():
+    log.logger.debug('Access \'/_schema/dbdiagram\' : run in get_dbdiagram()')
+    return meta.DBMeta().response_dbdiagram()
 
 @app.get(prefix+"/_schema/database",
          tags=["Schema"],
@@ -216,9 +223,8 @@ async def read_users_me(current_user: security.User = Depends(security.get_curre
          description="By default, all tables are returned .",
          )
 async def get_schema(current_user: security.User = Depends(security.get_current_active_user)):
-    log.logger.debug('Access \'/_schema\' : run in get_schema()')
+    log.logger.debug('Access \'/_schema/database\' : run in get_schema()')
     return meta.DBMeta().response_schema()
-
 
 @app.get(prefix+"/_schema/_table/{table_name}",
          tags=["Schema"],

@@ -1,7 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Bla
-nk Page {% endblock %} 
+{% block title %} Database Diagram {% endblock %}
 
 <!-- Element injected in the BODY element -->
 {% block body_class %} sidebar-mini layout-navbar-fixed layout-footer-fixed layout-fixed text-sm {% endblock body_class %}
@@ -109,9 +108,10 @@ nk Page {% endblock %}
   menubar: 'black',
   visualization: '#191919',
 });
-    fetch("https://api.github.com/repos/vuerd/vuerd/contents/data/test.json")
+    fetch("/api/v1/_schema/dbdiagram")
       .then((response) => response.json())
       .then((data) => editor.initLoadJson(atob(data.content)));
+
     window.addEventListener('resize', () => {
       editor.width = 1065;
       editor.height = 600;
