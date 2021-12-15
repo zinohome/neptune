@@ -31501,7 +31501,52 @@
         return () => {
             const { store, keymap } = contextRef.value;
             const { canvasState: { databaseName, width, zoomLevel, canvasType }, editorState: { hasUndo, hasRedo, readonly, filterState }, } = store;
-            return html ``;
+            return html `
+      <div class="vuerd-menubar">
+        <div
+          class=${classMap({
+            'vuerd-editor-status': true,
+            focus: props.focusState && readonly,
+            edit: props.focusState && !readonly,
+        })}
+          data-tippy-content="Editor Status"
+        ></div>
+        <input
+          class="vuerd-menubar-input"
+          style="width: 150px;"
+          type="text"
+          data-tippy-content="database name"
+          placeholder="database name"
+          spellcheck="false"
+          ?disabled=${readonly}
+          .value=${databaseName}
+          @input=${onChangeDatabaseName}
+        />
+        <input
+          class="vuerd-menubar-input"
+          style="width: 45px;"
+          type="text"
+          data-tippy-content="canvas size"
+          spellcheck="false"
+          placeholder="canvas size"
+          ?disabled=${readonly}
+          .value=${width.toString()}
+          @input=${onNumberOnly}
+          @change=${onResizeCanvas}
+        />
+        <input
+          class="vuerd-menubar-input"
+          style="width: 45px;"
+          type="text"
+          data-tippy-content="zoom level"
+          spellcheck="false"
+          placeholder="zoom level"
+          .value=${zoomDisplayFormat(zoomLevel)}
+          @input=${onNumberOnly}
+          @change=${onZoomLevel}
+        />
+            
+      </div>`;
         };
     };
     defineComponent('vuerd-menubar', {

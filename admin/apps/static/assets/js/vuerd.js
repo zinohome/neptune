@@ -8416,7 +8416,7 @@
     const SIZE_CANVAS_MIN = 2000;
     const SIZE_CANVAS_MAX = 20000;
     const SIZE_CANVAS_ZOOM_MAX = 1;
-    const SIZE_CANVAS_ZOOM_MIN = 0.1;
+    const SIZE_CANVAS_ZOOM_MIN = 1;
     const SIZE_MAX_WIDTH_COMMENT = 120;
 
     /**
