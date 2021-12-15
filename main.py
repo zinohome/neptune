@@ -215,7 +215,15 @@ async def read_users_me(current_user: security.User = Depends(security.get_curre
          description="By default, all tables are returned .",include_in_schema=False)
 async def get_dbdiagram():
     log.logger.debug('Access \'/_schema/dbdiagram\' : run in get_dbdiagram()')
-    return meta.DBMeta().response_dbdiagram()
+    return meta.DBMeta().response_dbdiagram("dbdiagram-canvas.json")
+
+@app.get(prefix+"/_schema/dbdll",
+         tags=["Schema"],
+         summary="Retrieve Database Diagram Resources.",
+         description="By default, all tables are returned .",include_in_schema=False)
+async def get_dbdiagram():
+    log.logger.debug('Access \'/_schema/dbdll\' : run in get_dbdiagram()')
+    return meta.DBMeta().response_dbdiagram("dbddl.sql")
 
 @app.get(prefix+"/_schema/database",
          tags=["Schema"],

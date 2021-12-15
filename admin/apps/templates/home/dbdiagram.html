@@ -85,7 +85,7 @@
       panels: [generateTemplatePanel()],
     });
     const editor = document.querySelector('erd-editor');
-    editor.readonly = true;
+    editor.readonly = false;
     editor.automaticLayout = true;
     editor.setTheme({
   canvas: '#282828',
@@ -109,13 +109,13 @@
   menubar: 'black',
   visualization: '#191919',
 });
-    fetch("/api/v1/_schema/dbdiagram")
-      .then((response) => response.json())
-      .then((data) => editor.initLoadJson(decodeURIComponent(escape(atob(data.content)))));
 
+    fetch("/api/v1/_schema/dbdll")
+      .then((response) => response.json())
+      .then((data) => editor.loadSQLDDL(decodeURIComponent(escape(atob(data.content)))));
     window.addEventListener('resize', () => {
       editor.width = 1065;
-      editor.height = 600;
+      editor.height = window.innerHeight-218;
     });
     window.dispatchEvent(new Event('resize'));
   </script>

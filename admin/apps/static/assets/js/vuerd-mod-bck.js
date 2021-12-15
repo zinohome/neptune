@@ -31678,17 +31678,17 @@
     }
 
     /**
-     *
-     * convert radian to degree
-     *
-     * @param {*} radian
+     * 
+     * convert radian to degree 
+     * 
+     * @param {*} radian 
      * @returns {Number} 0..360
      */
     function radianToDegree(radian) {
         var angle = radian * 180 / Math.PI;
 
         if (angle < 0) {
-            // 각도가 0보다 작으면 360 에서 반전시킨다.
+            // 각도가 0보다 작으면 360 에서 반전시킨다. 
             angle = 360 + angle;
         }
 
@@ -32696,13 +32696,13 @@
     };
 
     /**
-     * @deprecated
-     *
-     * instead of this,  use blend function
-     *
-     * @param {*} startColor
-     * @param {*} endColor
-     * @param {*} t
+     * @deprecated 
+     * 
+     * instead of this,  use blend function 
+     *  
+     * @param {*} startColor 
+     * @param {*} endColor 
+     * @param {*} t 
      */
     function interpolateRGB(startColor, endColor) {
         var t = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0.5;
@@ -32757,8 +32757,8 @@
     }
 
     /**
-     *
-     * @param {Color|String} c
+     * 
+     * @param {Color|String} c 
      */
     function contrast(c$$1) {
         c$$1 = parse(c$$1);
@@ -32786,7 +32786,7 @@
             // if it is second color
             var rate = i == 1 ? colors[i][1] : colors[i][1] - colors[i - 1][1];
 
-            // if it is last color
+            // if it is last color 
             var colorCount = i == colors.length - 1 ? allCount : Math.floor(rate * maxCount);
 
             newColors = newColors.concat(scale$1([startColor, endColor], colorCount), [endColor]);
@@ -32978,7 +32978,7 @@
         //     return (Math.round(Math.random()) - 0.5);
         // })
 
-        // return centeroids.slice(0, k);
+        // return centeroids.slice(0, k); 
     }
 
     function closestCenteroid(point, centeroids, distance) {
@@ -33001,7 +33001,7 @@
 
         if (!assigned.length) return [];
 
-        // initialize centeroid list
+        // initialize centeroid list 
         var centeroid = new Array(assigned[0].length);
         for (var i = 0, len = centeroid.length; i < len; i++) {
             centeroid[i] = 0;
@@ -33207,7 +33207,7 @@
             }
 
             pack(bitmap, function (pixels, i) {
-                // gray scale
+                // gray scale 
                 var grayIndex = Math.round(Color$1.brightness(pixels[i], pixels[i + 1], pixels[i + 2]));
                 black[grayIndex]++;
 
@@ -33392,7 +33392,7 @@
         return ImageLoader;
     }();
 
-    // import GL from '../GL'
+    // import GL from '../GL' 
     function palette(colors) {
         var k = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
         var exportFormat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'hex';
@@ -33492,7 +33492,7 @@
             var prevPoint = points[i - 1];
             var nextPoint = points[i + 1];
 
-            // 기울기
+            // 기울기 
             (nextPoint[1] - prevPoint[1]) / (nextPoint[0] - prevPoint[0]);
 
             var newControlPoint = [prevPoint[0] + (nextPoint[0] - prevPoint[0]) * tension, prevPoint[1] + (nextPoint[1] - prevPoint[1]) * tension];
@@ -33765,7 +33765,7 @@
         };
     }
 
-    // Image manupulate
+    // Image manupulate 
     function resize(dstWidth, dstHeight) {
         return function (bitmap, done) {
             var c = Canvas.drawPixels(bitmap);
@@ -33869,7 +33869,7 @@
                 if (x1 > width - 1) return;
                 if (y1 > height - 1) return;
 
-                var endIndex = y1 * width + x1 << 2; //  bit 2 shift is  * 4
+                var endIndex = y1 * width + x1 << 2; //  bit 2 shift is  * 4  
 
                 fillPixelColor(pixels, endIndex, bitmap.pixels, i);
             })(newBitmap, function () {
@@ -33899,7 +33899,7 @@
             packXY(function (pixels, i, x, y) {
 
                 if (degree == 90) {
-                    var endIndex = x * newBitmap.width + (newBitmap.width - 1 - y) << 2; //  << 2 is equals to (multiply)* 4
+                    var endIndex = x * newBitmap.width + (newBitmap.width - 1 - y) << 2; //  << 2 is equals to (multiply)* 4 
                 } else if (degree == 270) {
                     var endIndex = (newBitmap.height - 1 - x) * newBitmap.width + y << 2;
                 } else if (degree == 180) {
@@ -33986,7 +33986,7 @@
     }
 
     /*
-     * @param {Number} amount  -100..100  ,  value < 0  is darken, value > 0 is brighten
+     * @param {Number} amount  -100..100  ,  value < 0  is darken, value > 0 is brighten 
      */
     function brightness$1() {
         var amount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
@@ -34007,8 +34007,8 @@
     }
 
     /**
-     *
-     * @param {Number} amount from 0 to 100
+     * 
+     * @param {Number} amount from 0 to 100 
      */
     function clip() {
         var amount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
@@ -34020,8 +34020,8 @@
     }
 
     /**
-     *
-     * @param {*} amount   min = -128, max = 128
+     * 
+     * @param {*} amount   min = -128, max = 128 
      */
     function contrast$1() {
         var amount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
@@ -34044,8 +34044,8 @@
      * F.gradient('red, blue, yellow, white, 10')
      */
     function gradient$1() {
-        // 전체 매개변수 기준으로 파싱
-        // 색이 아닌 것 기준으로 scale 변수로 인식
+        // 전체 매개변수 기준으로 파싱 
+        // 색이 아닌 것 기준으로 scale 변수로 인식 
 
         var params = [].concat(Array.prototype.slice.call(arguments));
 
@@ -34101,7 +34101,7 @@
     }
 
     /*
-     * @param {Number} amount   0..360
+     * @param {Number} amount   0..360  
      */
     function hue() {
         var amount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 360;
@@ -34159,7 +34159,7 @@
     }
 
     /**
-     *
+     * 
      * @param {Number} amount 1..100
      */
     function noise() {
@@ -34190,7 +34190,7 @@
     }
 
     /*
-     * @param {Number} amount  -100..100
+     * @param {Number} amount  -100..100 
      */
     function saturation() {
         var amount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 100;
@@ -34207,7 +34207,7 @@
     }
 
     /*
-     * @param {Number} amount  0..1
+     * @param {Number} amount  0..1 
      */
     function sepia() {
         var amount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
@@ -34249,9 +34249,9 @@
 
     /**
      * change the relative darkness of (a part of an image) by overexposure to light.
-     * @param {*} r
-     * @param {*} g
-     * @param {*} b
+     * @param {*} r 
+     * @param {*} g 
+     * @param {*} b 
      */
     function solarize(redValue, greenValue, blueValue) {
         var $redValue = parseParamNumber(redValue);
@@ -34287,7 +34287,7 @@
     }
 
     /*
-     * @param {Number} amount  0..100
+     * @param {Number} amount  0..100 
      */
     function threshold() {
       var scale = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 200;
@@ -34347,8 +34347,8 @@
 
     /*
      * carve, mold, or stamp a design on (a surface) so that it stands out in relief.
-     *
-     * @param {Number} amount   0.0 .. 4.0
+     * 
+     * @param {Number} amount   0.0 .. 4.0 
      */
     function emboss() {
         var amount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 4;
@@ -34468,7 +34468,7 @@
     I am not totally unhappy for a small donation to my PayPal account
     mario@quasimondo.de
 
-    Or support me on flattr:
+    Or support me on flattr: 
     https://flattr.com/thing/72791/StackBlur-a-fast-almost-Gaussian-Blur-Effect-for-CanvasJavascript
 
     Copyright (c) 2010 Mario Klingemann
@@ -35132,7 +35132,7 @@
 
         function runCallback() {
 
-            var smallLoopFunction = makeFunction(loopCount); // loop is call  20 callbacks at once
+            var smallLoopFunction = makeFunction(loopCount); // loop is call  20 callbacks at once 
 
             var currentRunIndex = runIndex;
             var ret = {};
@@ -35577,16 +35577,16 @@
             var side = Math.round(Math.sqrt(weights.length));
             var padding = side * 2;
 
-            // 원본 크기를 늘림
+            // 원본 크기를 늘림 
             var sourceBitmap = cloneBitmap(bitmap, padding);
 
-            // 원본 데이타 복사
+            // 원본 데이타 복사 
             putPixel(sourceBitmap, bitmap, side, side);
 
-            // 최종 아웃풋
+            // 최종 아웃풋 
             var newBitmap = createBitmap(sourceBitmap.pixels.length, sourceBitmap.width, sourceBitmap.height);
 
-            // 마지막 원본 아웃풋
+            // 마지막 원본 아웃풋 
             var returnBitmap = createBitmap(bitmap.pixels.length, bitmap.width, bitmap.height);
 
             var subPixelWeightFunction = createSubPixelWeightFunction(weights, weightTable, sourceBitmap.width, sourceBitmap.height, opaque);
@@ -35640,12 +35640,12 @@
     }
 
     /**
-     * Filter Parser
-     *
+     * Filter Parser 
+     * 
      * F.parseFilter('blur(30)') == ['blue', '30']
      * F.parseFilter('gradient(white, black, 3)') == ['gradient', 'white', 'black', '3']
-     *
-     * @param {String} filterString
+     * 
+     * @param {String} filterString 
      */
     function parseFilter(filterString) {
 
@@ -35730,12 +35730,12 @@
         return groupedFilter;
     }
 
-    /**
-     *
+    /** 
+     * 
      * multiply filters
-     *
+     * 
      * ImageFilter.multi('blur', 'grayscale', 'sharpen', ['blur', 3], function (bitmap) {  return bitmap });
-     *
+     * 
      */
     function multi() {
         for (var _len = arguments.length, filters = Array(_len), _key = 0; _key < _len; _key++) {
@@ -35788,12 +35788,12 @@
 
     /**
      * apply filter into special area
-     *
+     * 
      * F.partial({x,y,width,height}, filter, filter, filter )
      * F.partial({x,y,width,height}, 'filter' )
-     *
-     * @param {{x, y, width, height}} area
-     * @param {*} filters
+     * 
+     * @param {{x, y, width, height}} area 
+     * @param {*} filters   
      */
     function partial(area) {
         var allFilter = null;
@@ -35817,7 +35817,7 @@
         };
     }
 
-    // TODO: worker run
+    // TODO: worker run 
     var ImageFilter = _extends({}, ImageFilter$1, functions);
 
     var Util = {
@@ -36525,9 +36525,9 @@
       }
 
       /**
-       * 자식으로 사용할 컴포넌트를 생성해준다.
-       * 생성 시점에 $store 객체가 자동으로 공유된다.
-       * 모든 데이타는 $store 기준으로 작성한다.
+       * 자식으로 사용할 컴포넌트를 생성해준다. 
+       * 생성 시점에 $store 객체가 자동으로 공유된다. 
+       * 모든 데이타는 $store 기준으로 작성한다. 
        */
 
 
@@ -36545,23 +36545,23 @@
         }
 
         /**
-         * 부모가 정의한 template 과  그 안에서 동작하는 자식 컴포넌트들을 다 합쳐서
-         * 최종 element 를 만들어준다.
-         *
-         * 그리고 자동으로 load 되어질게 있으면 로드 해준다.
+         * 부모가 정의한 template 과  그 안에서 동작하는 자식 컴포넌트들을 다 합쳐서 
+         * 최종 element 를 만들어준다. 
+         * 
+         * 그리고 자동으로 load 되어질게 있으면 로드 해준다. 
          */
 
       }, {
         key: 'render',
         value: function render() {
-          // 1. 나의 template 을 만들어내고
+          // 1. 나의 template 을 만들어내고  
           this.$el = this.parseTemplate(this.template());
           this.refs.$el = this.$el;
 
-          // 개별 객체 셋팅하고
+          // 개별 객체 셋팅하고 
           this.parseTarget();
 
-          // 데이타 로드 하고
+          // 데이타 로드 하고 
           this.load();
 
           this.afterRender();
@@ -36571,7 +36571,7 @@
         value: function afterRender() {}
 
         /**
-         * 자식 컴포넌트로 사용될 객체 정의
+         * 자식 컴포넌트로 사용될 객체 정의 
          */
 
       }, {
@@ -36581,10 +36581,10 @@
         }
 
         /**
-         * Class 기반으로 $el 을 생성하기 위해서
-         * 선언형으로 html 템플릿을 정의한다.
-         *
-         * @param {*} html
+         * Class 기반으로 $el 을 생성하기 위해서 
+         * 선언형으로 html 템플릿을 정의한다. 
+         * 
+         * @param {*} html 
          */
 
       }, {
@@ -36594,7 +36594,7 @@
 
           var $el = new Dom("div").html(html).firstChild();
 
-          // ref element 정리
+          // ref element 정리 
           var refs = $el.findAll('[ref]');
 
           [].concat(toConsumableArray(refs)).forEach(function (node) {
@@ -36634,7 +36634,7 @@
           });
         }
 
-        // load function이 정의된 객체는 load 를 실행해준다.
+        // load function이 정의된 객체는 load 를 실행해준다. 
 
       }, {
         key: 'load',
@@ -36650,7 +36650,7 @@
           });
         }
 
-        // 기본 템플릿 지정
+        // 기본 템플릿 지정 
 
       }, {
         key: 'template',
@@ -36662,7 +36662,7 @@
         value: function initialize() {}
 
         /**
-         * 이벤트를 초기화한다.
+         * 이벤트를 초기화한다. 
          */
 
       }, {
@@ -36672,16 +36672,16 @@
 
           this.initializeEventMachin();
 
-          // 자식 이벤트도 같이 초기화 한다.
-          // 그래서 이 메소드는 부모에서 한번만 불려도 된다.
+          // 자식 이벤트도 같이 초기화 한다. 
+          // 그래서 이 메소드는 부모에서 한번만 불려도 된다. 
           Object.keys(this.childComponents).forEach(function (key) {
             if (_this5[key]) _this5[key].initializeEvent();
           });
         }
 
         /**
-         * 자원을 해제한다.
-         * 이것도 역시 자식 컴포넌트까지 제어하기 때문에 가장 최상위 부모에서 한번만 호출되도 된다.
+         * 자원을 해제한다. 
+         * 이것도 역시 자식 컴포넌트까지 제어하기 때문에 가장 최상위 부모에서 한번만 호출되도 된다. 
          */
 
       }, {
@@ -36690,7 +36690,7 @@
           var _this6 = this;
 
           this.destroyEventMachin();
-          // this.refs = {}
+          // this.refs = {} 
 
           Object.keys(this.childComponents).forEach(function (key) {
             if (_this6[key]) _this6[key].destroy();
@@ -36708,8 +36708,8 @@
         }
 
         /**
-         * property 수집하기
-         * 상위 클래스의 모든 property 를 수집해서 리턴한다.
+         * property 수집하기 
+         * 상위 클래스의 모든 property 를 수집해서 리턴한다. 
          */
 
       }, {
@@ -36861,7 +36861,7 @@
 
           var isAllCheck = true;
           if (eventObject.checkMethodList.length) {
-            // 체크 메소드들은 모든 메소드를 다 적용해야한다.
+            // 체크 메소드들은 모든 메소드를 다 적용해야한다. 
             isAllCheck = eventObject.checkMethodList.every(function (method) {
               return _this8[method].call(_this8, e);
             });
@@ -36881,7 +36881,7 @@
                 var delegateTarget = _this9.matchPath(e.target || e.srcElement, eventObject.delegate);
 
                 if (delegateTarget) {
-                  // delegate target 이 있는 경우만 callback 실행
+                  // delegate target 이 있는 경우만 callback 실행 
                   e.delegateTarget = delegateTarget;
                   e.$delegateTarget = new Dom(delegateTarget);
                   return callback(e);
@@ -36956,11 +36956,11 @@
         }
 
         /**
-         * initialize store event
-         *
-         * you can define '@xxx' method(event) in UIElement
-         *
-         *
+         * initialize store event 
+         * 
+         * you can define '@xxx' method(event) in UIElement 
+         * 
+         * 
          */
 
 
@@ -37290,7 +37290,7 @@
 
                 this.initColorWithoutChangeEvent(this.opt.color);
 
-                // 이벤트 연결
+                // 이벤트 연결 
                 this.initializeEvent();
             }
         }, {
@@ -37299,27 +37299,27 @@
                 this.$store.dispatch('/initColor', color);
             }
 
-            /**
-             * public method
-             *
+            /** 
+             * public method 
+             * 
              */
 
             /**
-             *
-             * show colorpicker with position
-             *
-             * @param {{left, top, hideDelay, isShortCut}} opt
-             * @param {String|Object} color
+             * 
+             * show colorpicker with position  
+             * 
+             * @param {{left, top, hideDelay, isShortCut}} opt 
+             * @param {String|Object} color  
              * @param {Function} showCallback  it is called when colorpicker is shown
              * @param {Function} hideCallback  it is called once when colorpicker is hidden
-             * @param {Function} addCurrentColorCallback
+             * @param {Function} addCurrentColorCallback  
              */
 
         }, {
             key: 'show',
             value: function show(opt, color, showCallback, hideCallback, lastUpdateCallback, addCurrentColorCallback) {
 
-                // 매번 이벤트를 지우고 다시 생성할 필요가 없어서 초기화 코드는 지움.
+                // 매번 이벤트를 지우고 다시 생성할 필요가 없어서 초기화 코드는 지움. 
                 // this.destroy();
                 // this.initializeEvent();
                 // define colorpicker callback
@@ -37345,10 +37345,10 @@
             }
 
             /**
-             *
+             * 
              * initialize color for colorpicker
-             *
-             * @param {String|Object} newColor
+             * 
+             * @param {String|Object} newColor 
              * @param {String} format  hex, rgb, hsl
              */
 
@@ -37359,8 +37359,8 @@
             }
 
             /**
-             * hide colorpicker
-             *
+             * hide colorpicker 
+             * 
              */
 
         }, {
@@ -37369,7 +37369,7 @@
                 if (this.isColorPickerShow) {
                     // this.destroy();
                     this.$root.hide();
-                    this.$root.remove(); // not empty
+                    this.$root.remove(); // not empty 
                     this.isColorPickerShow = false;
 
                     this.callbackHideColorValue();
@@ -37377,8 +37377,8 @@
             }
 
             /**
-             * set to colors in current sets that you see
-             * @param {Array} colors
+             * set to colors in current sets that you see 
+             * @param {Array} colors 
              */
 
         }, {
@@ -37390,9 +37390,9 @@
             }
 
             /**
-             * refresh all color palette
-             *
-             * @param {*} list
+             * refresh all color palette 
+             * 
+             * @param {*} list 
              */
 
         }, {
@@ -37404,7 +37404,7 @@
             }
 
             /**
-             * private method
+             * private method 
              */
 
         }, {
@@ -37504,7 +37504,7 @@
                 return this.opt.position !== 'inline';
             }
 
-            // Event Bindings
+            // Event Bindings 
 
         }, {
             key: 'mouseup.isAbsolute document',
@@ -37530,7 +37530,7 @@
             key: 'mouseover.isAbsolute $root',
             value: function mouseoverIsAbsolute$root(e) {
                 clearTimeout(this.timerCloseColorPicker);
-                // this.__isMouseDown = true;
+                // this.__isMouseDown = true; 
             }
         }, {
             key: 'mousemove.isAbsolute $root',
@@ -37705,7 +37705,7 @@
                 }, opt || {}));
             }
 
-            // Event Bindings
+            // Event Bindings 
 
         }, {
             key: 'mouseup document',
@@ -37798,8 +37798,8 @@
 
             var _this = possibleConstructorReturn(this, (BaseSlider.__proto__ || Object.getPrototypeOf(BaseSlider)).call(this, opt));
 
-            _this.minValue = 0; // min domain value
-            _this.maxValue = 1; // max domain value
+            _this.minValue = 0; // min domain value 
+            _this.maxValue = 1; // max domain value 
             _this.source = 'base-slider';
             return _this;
         }
@@ -38162,8 +38162,8 @@
                             d = rx * rx + ry * ry,
                             hue = caculateAngle(rx, ry);
 
-                        var rgb = Color$1.HSVtoRGB(hue, // 0~360 hue
-                        Math.min(Math.sqrt(d) / radius, 1), // 0..1 Saturation
+                        var rgb = Color$1.HSVtoRGB(hue, // 0~360 hue 
+                        Math.min(Math.sqrt(d) / radius, 1), // 0..1 Saturation 
                         1 //  0..1 Value
                         );
 
@@ -38178,7 +38178,7 @@
                 context.putImageData(img, 0, 0);
 
                 if (this.thinkness > 0) {
-                    context.globalCompositeOperation = "destination-out"; // destination-out 은 그리는 영역이 지워진다.
+                    context.globalCompositeOperation = "destination-out"; // destination-out 은 그리는 영역이 지워진다. 
                     context.fillStyle = 'black';
                     context.beginPath();
                     context.arc(cx, cy, radius - this.thinkness, 0, Math.PI * 2);
@@ -38192,7 +38192,7 @@
             key: 'renderCanvas',
             value: function renderCanvas() {
 
-                // only once rendering
+                // only once rendering 
                 if (this.$store.createdWheelCanvas) return;
 
                 var $canvas = this.refs.$colorwheel;
@@ -38275,10 +38275,10 @@
                         y = _getCurrentXY2.y;
                 }
 
-                // saturation 을
+                // saturation 을 
                 var saturation = Math.min(Math.sqrt(d) / radius, 1);
 
-                // set drag pointer position
+                // set drag pointer position 
                 this.refs.$drag_pointer.css({
                     left: x - minX + 'px',
                     top: y - minY + 'px'
@@ -38312,7 +38312,7 @@
                 this.refresh(true);
             }
 
-            // Event Bindings
+            // Event Bindings 
 
         }, {
             key: 'mouseup document',
@@ -38635,12 +38635,12 @@
                 this.toggle();
             }
 
-            // loadable
+            // loadable 
 
         }, {
             key: 'load $colorsetsList',
             value: function load$colorsetsList() {
-                // colorsets
+                // colorsets 
                 var colorSets = this.$store.dispatch('/getColorSetsList');
 
                 return '\n            <div>\n                ' + colorSets.map(function (element, index) {
@@ -38964,7 +38964,7 @@
 
                 var isDifferent = this.setColorUI(dist / 100);
 
-                // hue 가 변경되지 않은 상태면 changeColor 를 하지 않는다.
+                // hue 가 변경되지 않은 상태면 changeColor 를 하지 않는다. 
                 if (isDifferent !== true) {
                     this.changeColor({
                         h: (this.minValue + this.fullDist * (dist / 100)) * 360,
@@ -39775,7 +39775,7 @@
                         y = _getCurrentXY2.y;
                 }
 
-                // set drag pointer position
+                // set drag pointer position 
                 this.refs.$drag_pointer.css({
                     left: x - minX + 'px',
                     top: y - minY + 'px'
@@ -40255,8 +40255,8 @@
 
           var ItemClass = this.constructor;
 
-          // 클론을 할 때 꼭 부모 참조를 넘겨줘야 한다.
-          // 그렇지 않으면 screenX, Y 에 대한 값을 계산할 수가 없다.
+          // 클론을 할 때 꼭 부모 참조를 넘겨줘야 한다. 
+          // 그렇지 않으면 screenX, Y 에 대한 값을 계산할 수가 없다. 
           var item = new ItemClass(this.toCloneObject());
           item.parent = this.json.parent;
 
@@ -40292,7 +40292,7 @@
 
           return _extends({
             // id: uuidShort(),
-            selected: false, // 선택 여부 체크
+            selected: false, // 선택 여부 체크 
             type: '',
             itemType: ''
           }, obj);
@@ -40342,7 +40342,7 @@
       }, {
         key: "copyItem",
         value: function copyItem(childItem) {
-          // clone 을 어떻게 해야하나?
+          // clone 을 어떻게 해야하나? 
 
           var child = childItem.clone();
 
@@ -41768,7 +41768,7 @@
 
           if (e.altKey) {
             this.removeStep(index);
-            // return false;
+            // return false; 
           } else {
 
             this.selectStep(index);
@@ -42603,11 +42603,11 @@
           this.selectedTab = type;
           this.refs.$tab.attr("data-value", type);
 
-          // 설정된 이미지를 재생성한다. type 에 맞게
-          // 데이타 전송은 다 문자열로 하는게 나을까? 객체로 하는게 나을 까 ?
-          // json 형태로만 주고 받는게 좋을 듯 하다.
-          // 자체 객체가 있으니 다루기가 너무 힘들어지고 있다.
-          // 파싱 용도로만 쓰자.
+          // 설정된 이미지를 재생성한다. type 에 맞게 
+          // 데이타 전송은 다 문자열로 하는게 나을까? 객체로 하는게 나을 까 ? 
+          // json 형태로만 주고 받는게 좋을 듯 하다. 
+          // 자체 객체가 있으니 다루기가 너무 힘들어지고 있다. 
+          // 파싱 용도로만 쓰자. 
 
           this.image = this.createGradient({ type: type }, this.image);
 
@@ -43122,7 +43122,7 @@
             if (propName !== 'edit' || !props.edit || !input)
                 return;
             lastCursorFocus(input);
-        }),
+        }), 
         // firefox
         watch(props, propName => {
             if (propName !== 'edit')
@@ -44826,9 +44826,9 @@
 
       /*
       Insert item x in list a, and keep it sorted assuming a is sorted.
-
+      
       If x is already in a, insert it to the right of the rightmost x.
-
+      
       Optional args lo (default 0) and hi (default a.length) bound the slice
       of a to be searched.
        */
@@ -44895,7 +44895,7 @@
 
       /*
       Pop and return the current smallest value, and add the new item.
-
+      
       This is more efficient than heappop() followed by heappush(), and can be
       more appropriate when using a fixed size heap. Note that the value
       returned may be larger than item! That constrains reasonable use of
@@ -45176,8 +45176,8 @@
     var heap = heap$1.exports;
 
     /**
-     * A node in grid.
-     * This class holds some basic information about a node and custom
+     * A node in grid. 
+     * This class holds some basic information about a node and custom 
      * attributes may be added, depending on the algorithms' needs.
      * @constructor
      * @param {number} x - The x coordinate of the node on the grid.
@@ -45540,7 +45540,7 @@
             if (x0 === x1 && y0 === y1) {
                 break;
             }
-
+            
             e2 = 2 * err;
             if (e2 > -dy) {
                 err = err - dy;
@@ -45771,7 +45771,7 @@
      * @param {Object} opt
      * @param {boolean} opt.allowDiagonal Whether diagonal movement is allowed.
      *     Deprecated, use diagonalMovement instead.
-     * @param {boolean} opt.dontCrossCorners Disallow diagonal movement touching
+     * @param {boolean} opt.dontCrossCorners Disallow diagonal movement touching 
      *     block corners. Deprecated, use diagonalMovement instead.
      * @param {DiagonalMovement} opt.diagonalMovement Allowed diagonal movement.
      * @param {function} opt.heuristic Heuristic function to estimate the distance
@@ -45989,7 +45989,7 @@
                 neighbor.parent = node;
             }
         }
-
+        
         // fail to find the path
         return [];
     };
@@ -46501,7 +46501,7 @@
             //    return h(a, end) - h(b, end);
             //});
 
-
+            
             /*jshint -W084 *///Disable warning: Expected a conditional expression and instead saw an assignment
             for (k = 0, min = Infinity; neighbour = neighbours[k]; ++k) {
             /*jshint +W084 *///Enable warning: Expected a conditional expression and instead saw an assignment
@@ -52722,14 +52722,6 @@
     function createERDMenus(context, canvas) {
         const { store, keymap, eventBus } = context;
         return [
-            {
-                icon: {
-                    prefix: 'fas',
-                    name: 'eye',
-                },
-                name: 'View Option',
-                children: createShowMenus(context),
-            },
             {
                 icon: {
                     prefix: 'mdi',

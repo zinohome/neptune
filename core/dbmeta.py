@@ -10,8 +10,8 @@
 #  @Software: Neptune
 import os
 from core import dbengine, tableschema
-from sqlalchemy import inspect, MetaData, Table
-from sqlalchemy.schema import CreateTable
+from sqlalchemy import inspect, Table
+from sqlalchemy.schema import MetaData,CreateTable
 import simplejson as json
 from config import config
 from util import log, toolkit
@@ -350,14 +350,18 @@ class DBMeta(object):
             dbdiagramtable = {}
             dbdiagramtable['tables'] = tbllist
             dbdiagram['table'] = dbdiagramtable
-            log.logger.debug(dbdiagram)
-            with open(diagramfilepath, 'w') as diagramfile:
+            #log.logger.debug(dbdiagram)
+            with open(diagramfilepath, 'w', encoding='utf-8') as diagramfile:
                 json.dump(dbdiagram, diagramfile, separators=(',', ':'),
                           sort_keys=False, indent=4, ensure_ascii=False, encoding='utf-8')
         except Exception as exp:
             log.logger.error('Exception at gen_dbdirgram() %s ' % exp)
 
     def gen_ddl(self):
+        basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
+        apppath = os.path.abspath(os.path.join(basepath, os.pardir))
+        configpath = os.path.abspath(os.path.join(apppath, 'config'))
+        ddlfilepath = os.path.abspath(os.path.join(configpath, "dbddl.sql"))
         engine = dbengine.DBEngine().connect()
         inspector = inspect(engine)
         metadata = self.metadata
@@ -379,11 +383,44 @@ class DBMeta(object):
                             persist_table = True
                     if persist_table:
                         user_table = Table(table_name, metadata, autoload_with=engine)
-                        crtstr = CreateTable(user_table).compile(engine)
-                        print(CreateTable(user_table).compile(engine))
-                        #log.logger.debug(dir(crtstr))
-                        ddlstr = ddlstr + str(crtstr)
-                #log.logger.debug(ddlstr)
+                        tblcrtstr = str(CreateTable(user_table).compile(engine))
+                        tblcrtstr = tblcrtstr.replace(' ' + self._schema + '.', ' ')
+                        tblcrtstr = tblcrtstr.replace(' '+table_name+' ',' `'+table_name+'` ')
+                        table_columns = inspector.get_columns(table_name)
+                        if self.use_schema:
+                            table_columns = inspector.get_columns(table_name, schema=self._schema)
+                        for column in table_columns:
+                            tblcrtstr = tblcrtstr.replace('\t'+column['name'] + ' ', '\t`' + column['name'] + '` ')
+                            tblcrtstr = tblcrtstr.replace('(' + column['name'] + ')', ' `(' + column['name'] + '`) ')
+                        #log.logger.debug(tblcrtstr)
+                        ddlstr = ddlstr + tblcrtstr
+                view_names = inspector.get_view_names()
+                if self.use_schema:
+                    view_names = inspector.get_view_names(schema=self._schema)
+                for view_name in view_names:
+                    persist_view = False
+                    if cfg['Schema_Config'].schema_fetch_all_table:
+                        persist_view = True
+                    else:
+                        if view_name in table_list_set:
+                            persist_view = True
+                    if persist_view:
+                        user_view = Table(view_name, metadata, autoload_with=engine)
+                        viewcrtstr = str(CreateTable(user_view).compile(engine))
+                        viewcrtstr = viewcrtstr.replace(' ' + self._schema + '.', ' ')
+                        viewcrtstr = viewcrtstr.replace(' ' + view_name + ' ', ' `' + view_name + '` ')
+                        view_columns = inspector.get_columns(view_name)
+                        if self.use_schema:
+                            view_columns = inspector.get_columns(view_name, schema=self._schema)
+                        for vcolumn in view_columns:
+                            viewcrtstr = viewcrtstr.replace('\t' + vcolumn['name'] + ' ', '\t`' + vcolumn['name'] + '` ')
+                            viewcrtstr = viewcrtstr.replace('(' + vcolumn['name'] + ')', ' `(' + vcolumn['name'] + '`) ')
+                        #log.logger.debug(viewcrtstr)
+                        ddlstr = ddlstr + viewcrtstr
+                log.logger.debug(ddlstr)
+                with open(ddlfilepath, 'w', encoding='utf-8') as ddlfile:
+                    ddlfile.write(ddlstr)
+                    ddlfile.close()
             else:
                 log.logger.error('Can not get metadata at gen_ddl() ... ')
                 raise Exception('Can not get metadata at gen_ddl()')
@@ -391,12 +428,12 @@ class DBMeta(object):
             log.logger.error('Exception at gen_ddl() %s ' % exp)
 
 
-    def response_dbdiagram(self):
+    def response_dbdiagram(self, filename):
         basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
         apppath = os.path.abspath(os.path.join(basepath, os.pardir))
         configpath = os.path.abspath(os.path.join(apppath, 'config'))
-        diagramfilepath = os.path.abspath(os.path.join(configpath, "dbdiagram.json"))
-        rjson = {"name":"dbdiagram.json",
+        diagramfilepath = os.path.abspath(os.path.join(configpath, filename))
+        rjson = {"name":filename,
                  "type": "file",
                  "content": ""}
         with open(diagramfilepath, 'r') as diagramfile:
