@@ -110,7 +110,7 @@
 });
     fetch("/api/v1/_schema/dbdiagram")
       .then((response) => response.json())
-      .then((data) => editor.initLoadJson(atob(data.content)));
+      .then((data) => editor.initLoadJson(decodeURIComponent(escape(atob(data.content)))));
 
     window.addEventListener('resize', () => {
       editor.width = 1065;

@@ -16,6 +16,7 @@ from config import config
 from util import log, toolkit
 import pickle
 import base64
+import uuid
 
 '''config'''
 cfg = config.app_config
@@ -188,6 +189,7 @@ class DBMeta(object):
                             for key, value in column.items():
                                 cdict[key] = value.__str__()
                             jtbl['Columns'].append(cdict)
+                        log.logger.debug(json.dumps(user_table.__dict__, indent=4, sort_keys=True, default=str))
                         jtbl['Dict'] = json.loads(json.dumps(user_table.__dict__,
                                                              indent=4, sort_keys=True, default=str))
                 view_names = inspector.get_view_names()
@@ -225,6 +227,7 @@ class DBMeta(object):
                             for key, value in vcolumn.items():
                                 vdict[key] = value.__str__()
                             vtbl['Columns'].append(vdict)
+                        log.logger.debug(json.dumps(user_view.__dict__, indent=4, sort_keys=True, default=str))
                         vtbl['Dict'] = json.loads(
                             json.dumps(user_view.__dict__, indent=4, sort_keys=True, default=str))
                 with open(self.schema_file, 'w') as jsonfile:
@@ -300,16 +303,72 @@ class DBMeta(object):
             tblist.append(tb.name)
         return tblist
 
+    def gen_dbdirgram(self):
+        basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
+        apppath = os.path.abspath(os.path.join(basepath, os.pardir))
+        configpath = os.path.abspath(os.path.join(apppath, 'config'))
+        canvasfilepath = os.path.abspath(os.path.join(configpath, "dbdiagram-canvas.json"))
+        diagramfilepath = os.path.abspath(os.path.join(configpath, "dbdiagram.json"))
+        dbdiagram={}
+        canvas = {}
+        with open(canvasfilepath, 'r') as canvasfile:
+            canvas = json.loads(canvasfile.read())
+        canvas['databaseName'] = cfg['Database_Config'].db_name
+        dbdiagram['canvas'] = canvas
+        tables = self.get_tables()
+        tbllist = []
+        for tbl in tables:
+            dgtable = self.gettable(tbl)
+            ndgtable = {}
+            ndgtable['name'] = dgtable.name
+            ndgtable['comment'] = ''
+            ndgtable['id'] = str(uuid.uuid1())
+            ndgtable['ui'] = {'active':True,'left':50,'top':50,'zIndex':1,'widthName':60,'widthComment':60}
+            ndgcolume = {}
+            pks = dgtable.primarykeys
+            clmlist = []
+            for clm in dgtable.columns:
+                ndgcolume = {}
+                ndgcolume['id'] = str(uuid.uuid1())
+                ndgcolume['name'] = clm['name']
+                ndgcolume['comment'] = '' if clm['comment'] == 'None' else clm['comment']
+                ndgcolume['dataType'] = clm['type']
+                ndgcolume['default'] =  '' if clm['default'] == 'None' else clm['default']
+                ndgcolume['option'] = {"autoIncrement": False,"primaryKey": False,"unique": False,"notNull": False}
+                ndgcolume['ui'] = {"active": False, "pk": False, "fk": False, "pfk": False, "widthName": 60,
+                                   "widthComment": 60, "widthDataType": 60, "widthDefault": 60}
+                if clm.__contains__('nullable'):
+                    ndgcolume['option']['notNull'] = 'true' if clm['nullable'] == 'False' else 'false'
+                if clm.__contains__('autoincrement'):
+                    ndgcolume['option']['autoIncrement'] = clm['autoincrement']
+                if clm['name'] in pks:
+                    ndgcolume['option']['primaryKey'] = True
+                    ndgcolume['ui']['pk'] = True
+                clmlist.append(ndgcolume)
+            ndgtable['columns'] = clmlist
+            tbllist.append(ndgtable)
+        dbdiagramtable = {}
+        dbdiagramtable['tables'] = tbllist
+        dbdiagram['table'] = dbdiagramtable
+        log.logger.debug(dbdiagram)
+        with open(diagramfilepath, 'w') as diagramfile:
+            json.dump(dbdiagram, diagramfile, separators=(',', ':'),
+                      sort_keys=False, indent=4, ensure_ascii=False, encoding='utf-8')
+
+
+
+
+
     def response_dbdiagram(self):
         basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
         apppath = os.path.abspath(os.path.join(basepath, os.pardir))
         configpath = os.path.abspath(os.path.join(apppath, 'config'))
-        metafilepath = os.path.abspath(os.path.join(configpath, "dbdiagram.json"))
+        diagramfilepath = os.path.abspath(os.path.join(configpath, "dbdiagram.json"))
         rjson = {"name":"dbdiagram.json",
                  "type": "file",
                  "content": ""}
-        with open(metafilepath, 'r') as metafile:
-            rjson['content'] = base64.b64encode(metafile.read().encode('utf-8'))
+        with open(diagramfilepath, 'r') as diagramfile:
+            rjson['content'] = base64.b64encode(diagramfile.read().encode('utf-8'))
         return rjson
 
     def response_table_schema(self, value):
@@ -333,7 +392,9 @@ if __name__ == '__main__':
     otable = meta.gettable('customers')
     log.logger.debug(meta.get_tables())
     log.logger.debug(meta.get_views())
+    meta.gen_dbdirgram()
 
+    '''
     log.logger.debug(otable.table2json())
     log.logger.debug("****************************************************")
     if metadata is not None:
@@ -345,3 +406,4 @@ if __name__ == '__main__':
     log.logger.debug("****************************************************")
     log.logger.debug(meta.schema_file)
     log.logger.debug(meta.response_dbdiagram())
+    '''
