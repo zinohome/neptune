@@ -11,6 +11,7 @@
 import os
 from core import dbengine, tableschema
 from sqlalchemy import inspect, MetaData, Table
+from sqlalchemy.schema import CreateTable
 import simplejson as json
 from config import config
 from util import log, toolkit
@@ -189,7 +190,6 @@ class DBMeta(object):
                             for key, value in column.items():
                                 cdict[key] = value.__str__()
                             jtbl['Columns'].append(cdict)
-                        log.logger.debug(json.dumps(user_table.__dict__, indent=4, sort_keys=True, default=str))
                         jtbl['Dict'] = json.loads(json.dumps(user_table.__dict__,
                                                              indent=4, sort_keys=True, default=str))
                 view_names = inspector.get_view_names()
@@ -227,7 +227,6 @@ class DBMeta(object):
                             for key, value in vcolumn.items():
                                 vdict[key] = value.__str__()
                             vtbl['Columns'].append(vdict)
-                        log.logger.debug(json.dumps(user_view.__dict__, indent=4, sort_keys=True, default=str))
                         vtbl['Dict'] = json.loads(
                             json.dumps(user_view.__dict__, indent=4, sort_keys=True, default=str))
                 with open(self.schema_file, 'w') as jsonfile:
@@ -304,59 +303,92 @@ class DBMeta(object):
         return tblist
 
     def gen_dbdirgram(self):
-        basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
-        apppath = os.path.abspath(os.path.join(basepath, os.pardir))
-        configpath = os.path.abspath(os.path.join(apppath, 'config'))
-        canvasfilepath = os.path.abspath(os.path.join(configpath, "dbdiagram-canvas.json"))
-        diagramfilepath = os.path.abspath(os.path.join(configpath, "dbdiagram.json"))
-        dbdiagram={}
-        canvas = {}
-        with open(canvasfilepath, 'r') as canvasfile:
-            canvas = json.loads(canvasfile.read())
-        canvas['databaseName'] = cfg['Database_Config'].db_name
-        dbdiagram['canvas'] = canvas
-        tables = self.get_tables()
-        tbllist = []
-        for tbl in tables:
-            dgtable = self.gettable(tbl)
-            ndgtable = {}
-            ndgtable['name'] = dgtable.name
-            ndgtable['comment'] = ''
-            ndgtable['id'] = str(uuid.uuid1())
-            ndgtable['ui'] = {'active':True,'left':50,'top':50,'zIndex':1,'widthName':60,'widthComment':60}
-            ndgcolume = {}
-            pks = dgtable.primarykeys
-            clmlist = []
-            for clm in dgtable.columns:
+        try:
+            basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
+            apppath = os.path.abspath(os.path.join(basepath, os.pardir))
+            configpath = os.path.abspath(os.path.join(apppath, 'config'))
+            canvasfilepath = os.path.abspath(os.path.join(configpath, "dbdiagram-canvas.json"))
+            diagramfilepath = os.path.abspath(os.path.join(configpath, "dbdiagram.json"))
+            dbdiagram={}
+            canvas = {}
+            with open(canvasfilepath, 'r') as canvasfile:
+                canvas = json.loads(canvasfile.read())
+            canvas['databaseName'] = cfg['Database_Config'].db_name
+            dbdiagram['canvas'] = canvas
+            tables = self.get_tables()
+            tbllist = []
+            for tbl in tables:
+                dgtable = self.gettable(tbl)
+                ndgtable = {}
+                ndgtable['name'] = dgtable.name
+                ndgtable['comment'] = ''
+                ndgtable['id'] = str(uuid.uuid1())
+                ndgtable['ui'] = {'active':True,'left':50,'top':50,'zIndex':1,'widthName':60,'widthComment':60}
                 ndgcolume = {}
-                ndgcolume['id'] = str(uuid.uuid1())
-                ndgcolume['name'] = clm['name']
-                ndgcolume['comment'] = '' if clm['comment'] == 'None' else clm['comment']
-                ndgcolume['dataType'] = clm['type']
-                ndgcolume['default'] =  '' if clm['default'] == 'None' else clm['default']
-                ndgcolume['option'] = {"autoIncrement": False,"primaryKey": False,"unique": False,"notNull": False}
-                ndgcolume['ui'] = {"active": False, "pk": False, "fk": False, "pfk": False, "widthName": 60,
-                                   "widthComment": 60, "widthDataType": 60, "widthDefault": 60}
-                if clm.__contains__('nullable'):
-                    ndgcolume['option']['notNull'] = 'true' if clm['nullable'] == 'False' else 'false'
-                if clm.__contains__('autoincrement'):
-                    ndgcolume['option']['autoIncrement'] = clm['autoincrement']
-                if clm['name'] in pks:
-                    ndgcolume['option']['primaryKey'] = True
-                    ndgcolume['ui']['pk'] = True
-                clmlist.append(ndgcolume)
-            ndgtable['columns'] = clmlist
-            tbllist.append(ndgtable)
-        dbdiagramtable = {}
-        dbdiagramtable['tables'] = tbllist
-        dbdiagram['table'] = dbdiagramtable
-        log.logger.debug(dbdiagram)
-        with open(diagramfilepath, 'w') as diagramfile:
-            json.dump(dbdiagram, diagramfile, separators=(',', ':'),
-                      sort_keys=False, indent=4, ensure_ascii=False, encoding='utf-8')
+                pks = dgtable.primarykeys
+                clmlist = []
+                for clm in dgtable.columns:
+                    ndgcolume = {}
+                    ndgcolume['id'] = str(uuid.uuid1())
+                    ndgcolume['name'] = clm['name']
+                    ndgcolume['comment'] = '' if clm['comment'] == 'None' else clm['comment']
+                    ndgcolume['dataType'] = clm['type']
+                    ndgcolume['default'] =  '' if clm['default'] == 'None' else clm['default']
+                    ndgcolume['option'] = {"autoIncrement": False,"primaryKey": False,"unique": False,"notNull": False}
+                    ndgcolume['ui'] = {"active": False, "pk": False, "fk": False, "pfk": False, "widthName": 60,
+                                       "widthComment": 60, "widthDataType": 60, "widthDefault": 60}
+                    if clm.__contains__('nullable'):
+                        ndgcolume['option']['notNull'] = 'true' if clm['nullable'] == 'False' else 'false'
+                    if clm.__contains__('autoincrement'):
+                        ndgcolume['option']['autoIncrement'] = clm['autoincrement']
+                    if clm['name'] in pks:
+                        ndgcolume['option']['primaryKey'] = True
+                        ndgcolume['ui']['pk'] = True
+                    clmlist.append(ndgcolume)
+                ndgtable['columns'] = clmlist
+                tbllist.append(ndgtable)
+            dbdiagramtable = {}
+            dbdiagramtable['tables'] = tbllist
+            dbdiagram['table'] = dbdiagramtable
+            log.logger.debug(dbdiagram)
+            with open(diagramfilepath, 'w') as diagramfile:
+                json.dump(dbdiagram, diagramfile, separators=(',', ':'),
+                          sort_keys=False, indent=4, ensure_ascii=False, encoding='utf-8')
+        except Exception as exp:
+            log.logger.error('Exception at gen_dbdirgram() %s ' % exp)
 
-
-
+    def gen_ddl(self):
+        engine = dbengine.DBEngine().connect()
+        inspector = inspect(engine)
+        metadata = self.metadata
+        ddlstr = ''
+        try:
+            if metadata is not None:
+                log.logger.debug("Generate Schema from : [ %s ] with db schema "
+                                 "[ %s ]" % (cfg['Database_Config'].db_name, self._schema))
+                table_list_set = set(toolkit.to_list(cfg['Schema_Config'].schema_fetch_tables))
+                table_names = inspector.get_table_names()
+                if self.use_schema:
+                    table_names = inspector.get_table_names(schema=self._schema)
+                for table_name in table_names:
+                    persist_table = False
+                    if cfg['Schema_Config'].schema_fetch_all_table:
+                        persist_table = True
+                    else:
+                        if table_name in table_list_set:
+                            persist_table = True
+                    if persist_table:
+                        user_table = Table(table_name, metadata, autoload_with=engine)
+                        crtstr = CreateTable(user_table).compile(engine)
+                        print(CreateTable(user_table).compile(engine))
+                        #log.logger.debug(dir(crtstr))
+                        ddlstr = ddlstr + str(crtstr)
+                #log.logger.debug(ddlstr)
+            else:
+                log.logger.error('Can not get metadata at gen_ddl() ... ')
+                raise Exception('Can not get metadata at gen_ddl()')
+        except Exception as exp:
+            log.logger.error('Exception at gen_ddl() %s ' % exp)
 
 
     def response_dbdiagram(self):
@@ -392,7 +424,8 @@ if __name__ == '__main__':
     otable = meta.gettable('customers')
     log.logger.debug(meta.get_tables())
     log.logger.debug(meta.get_views())
-    meta.gen_dbdirgram()
+    #meta.gen_dbdirgram()
+    meta.gen_ddl()
 
     '''
     log.logger.debug(otable.table2json())
