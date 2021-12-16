@@ -16,16 +16,6 @@
   <link rel="stylesheet" href="/static/assets/plugins/pace-progress/themes/black/pace-theme-flat-top.css">
   <!-- adminlte-->
   <link rel="stylesheet" href="/static/assets/css/adminlte.min.css">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/abyss.css" rel="stylesheet" /> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/kimbie-dark.css" rel="stylesheet" /> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/monokai.css" rel="stylesheet" /> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/monokai-dimmed.css" rel="stylesheet" /> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/one-dark-pro.css" rel="stylesheet" /> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/red.css" rel="stylesheet" /> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/solarized-dark.css" rel="stylesheet" /> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/solarized-light.css" rel="stylesheet" /> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/tomorrow-night-blue.css" rel="stylesheet" /> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuerd/theme/vscode-dark.css" rel="stylesheet" /> -->
 
 {% endblock stylesheets %}
 
@@ -88,33 +78,31 @@
     editor.readonly = false;
     editor.automaticLayout = true;
     editor.setTheme({
-  canvas: '#282828',
-  table: '#191919',
-  tableActive: '#14496d',
-  focus: '#00a9ff',
-  keyPK: '#B4B400',
-  keyFK: '#dda8b1',
-  keyPFK: '#60b9c4',
-  font: '#a2a2a2',
-  fontActive: 'white',
-  fontPlaceholder: '#6D6D6D',
-  contextmenu: '#191919',
-  contextmenuActive: '#383d41',
-  edit: '#ffc107',
-  columnSelect: '#232a2f',
-  columnActive: '#372908',
-  minimapShadow: 'black',
-  scrollbarThumb: '#6D6D6D',
-  scrollbarThumbActive: '#a2a2a2',
-  menubar: 'black',
-  visualization: '#191919',
+      canvas: 'white',
+      table: '#eee8d5',
+      tableActive: '#657b83',
+      focus: '#657b83',
+      keyPk: '#b4b400',
+      keyFk: '#dda8b1',
+      keyPfk: '#60b9c4',
+      font: '#586e75',
+      fontActive: '#000000',
+      fontPlaceholder: 'rgba(88, 110, 117, 0.67)',
+      contextmenu: '#eee8d5',
+      contextmenuActive: '#dfca88',
+      edit: '#ffc107',
+      columnSelect: '#dfca88',
+      columnActive: 'rgb(223, 202, 136)',
+      minimapShadow: '#a8a8a8',
+      scrollbarThumb: 'rgba(100, 100, 100, 0.4)',
+      scrollbarThumbActive: 'rgba(100, 100, 100, 0.7)',
+      menubar: 'light',
+      visualization: '#fdf6e3',
 });
-    fetch("/api/v1/_schema/dbdiagram")
-      .then((response) => response.json())
-      .then((data) => editor.initLoadJson(atob(data.content)));
     fetch("/api/v1/_schema/dbdll")
       .then((response) => response.json())
       .then((data) => editor.loadSQLDDL(decodeURIComponent(escape(atob(data.content)))));
+
     window.addEventListener('resize', () => {
       editor.width = 1065;
       editor.height = window.innerHeight-218;

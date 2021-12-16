@@ -31513,17 +31513,6 @@
         ></div>
         <input
           class="vuerd-menubar-input"
-          style="width: 150px;"
-          type="text"
-          data-tippy-content="database name"
-          placeholder="database name"
-          spellcheck="false"
-          ?disabled=${readonly}
-          .value=${databaseName}
-          @input=${onChangeDatabaseName}
-        />
-        <input
-          class="vuerd-menubar-input"
           style="width: 45px;"
           type="text"
           data-tippy-content="canvas size"
