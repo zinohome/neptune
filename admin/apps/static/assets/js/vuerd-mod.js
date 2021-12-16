@@ -11547,7 +11547,7 @@
     defineComponent('vuerd-provider', {
         render: (_, ctx) => () => html `
       <style type="text/css">
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        @import url('/static/googlefontscss.css');
         :host {
           --vuerd-font-family: 'Noto Sans', sans-serif;
           font-size: ${SIZE_FONT}px;
