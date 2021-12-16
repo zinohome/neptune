@@ -60,6 +60,8 @@ class DBMeta(object):
                 log.logger.debug('Schema file does not exists, generate it from database ...')
                 self.gen_schema()
         self.load_schema()
+        self.gen_dbdirgramcanvas()
+        self.gen_ddl()
 
     @property
     def schema(self):
@@ -357,6 +359,28 @@ class DBMeta(object):
         except Exception as exp:
             log.logger.error('Exception at gen_dbdirgram() %s ' % exp)
 
+
+    def gen_dbdirgramcanvas(self):
+        try:
+            basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
+            apppath = os.path.abspath(os.path.join(basepath, os.pardir))
+            configpath = os.path.abspath(os.path.join(apppath, 'config'))
+            canvasfilepath = os.path.abspath(os.path.join(configpath, "dbdiagram-canvas.json"))
+            diagramfilepath = os.path.abspath(os.path.join(configpath, "dbdiagram.json"))
+            dbdiagram={}
+            canvas = {}
+            with open(canvasfilepath, 'r') as canvasfile:
+                canvas = json.loads(canvasfile.read())
+            canvas['databaseName'] = cfg['Database_Config'].db_name
+            dbdiagram['canvas'] = canvas
+            #log.logger.debug(dbdiagram)
+            with open(diagramfilepath, 'w', encoding='utf-8') as diagramfile:
+                json.dump(dbdiagram, diagramfile, separators=(',', ':'),
+                          sort_keys=False, indent=4, ensure_ascii=False, encoding='utf-8')
+        except Exception as exp:
+            log.logger.error('Exception at gen_dbdirgram() %s ' % exp)
+
+
     def gen_ddl(self):
         basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
         apppath = os.path.abspath(os.path.join(basepath, os.pardir))
@@ -417,7 +441,7 @@ class DBMeta(object):
                             viewcrtstr = viewcrtstr.replace('(' + vcolumn['name'] + ')', ' `(' + vcolumn['name'] + '`) ')
                         #log.logger.debug(viewcrtstr)
                         ddlstr = ddlstr + viewcrtstr
-                log.logger.debug(ddlstr)
+                #log.logger.debug(ddlstr)
                 with open(ddlfilepath, 'w', encoding='utf-8') as ddlfile:
                     ddlfile.write(ddlstr)
                     ddlfile.close()
@@ -428,7 +452,7 @@ class DBMeta(object):
             log.logger.error('Exception at gen_ddl() %s ' % exp)
 
 
-    def response_dbdiagram(self, filename):
+    def response_dbdiagram(self, filename, canvasonly=False):
         basepath = os.path.abspath(os.path.dirname(os.path.abspath(__file__)))
         apppath = os.path.abspath(os.path.join(basepath, os.pardir))
         configpath = os.path.abspath(os.path.join(apppath, 'config'))
@@ -462,6 +486,7 @@ if __name__ == '__main__':
     log.logger.debug(meta.get_tables())
     log.logger.debug(meta.get_views())
     #meta.gen_dbdirgram()
+    meta.gen_dbdirgramcanvas()
     meta.gen_ddl()
 
     '''

@@ -109,7 +109,9 @@
   menubar: 'black',
   visualization: '#191919',
 });
-
+    fetch("/api/v1/_schema/dbdiagram")
+      .then((response) => response.json())
+      .then((data) => editor.initLoadJson(atob(data.content)));
     fetch("/api/v1/_schema/dbdll")
       .then((response) => response.json())
       .then((data) => editor.loadSQLDDL(decodeURIComponent(escape(atob(data.content)))));

@@ -9,11 +9,11 @@
     "tableComment": true,
     "columnComment": true,
     "columnDataType": true,
-    "columnDefault": true,
+    "columnDefault": false,
     "columnAutoIncrement": false,
     "columnPrimaryKey": true,
     "columnUnique": false,
-    "columnNotNull": true,
+    "columnNotNull": false,
     "relationship": false
   },
   "database": "MySQL",
