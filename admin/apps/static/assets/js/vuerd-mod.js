@@ -52755,19 +52755,7 @@
     function createRelationshipMenus(context, relationship) {
         const { store } = context;
         return [
-            {
-                icon: {
-                    prefix: 'mdi',
-                    name: 'vector-line',
-                    size: 18,
-                },
-                name: 'Relationship Type',
-                children: createSingleRelationship(context, relationship),
-            },
-            {
-                name: 'Delete',
-                execute: () => store.dispatch(removeRelationship([relationship.id])),
-            },
+
         ].map(menu => (Object.assign(Object.assign({}, menu), { options: Object.assign({}, defaultOptions$8) })));
     }
 
