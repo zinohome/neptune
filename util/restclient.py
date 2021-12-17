@@ -25,7 +25,8 @@ class NeptuneClient():
         self._token_expired = True
         self._access_token = None
         self._token_type = 'bearer'
-        self._api_root_url = 'http://127.0.0.1:' + str(cfg['Application_Config'].app_http_port) + cfg['Application_Config'].app_prefix + '/'
+        httpstr = 'https' if cfg['Application_Config'].app_admin_use_https else 'http'
+        self._api_root_url = httpstr + '://127.0.0.1:' + str(cfg['Application_Config'].app_http_port) + cfg['Application_Config'].app_prefix + '/'
         self._api_client = API(api_root_url = self._api_root_url, params = {}, headers = {}, timeout = cfg['Application_Config'].app_http_timeout, append_slash = False, json_encode_body = False, ssl_verify=False)
 
 
