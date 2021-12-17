@@ -29,6 +29,7 @@ class Application_Config(Config):
     app_log_level = config('app_log_level', default = 'INFO')
     app_user_func = config('app_user_func', default = True, cast = bool)
     app_exception_detail = config('app_exception_detail', default = True, cast = bool)
+    app_admin_use_https = config('app_admin_use_https', default = True, cast = bool)
     app_confirm_key = config('app_confirm_key', default = 'Confirmed')
     app_http_port = config('app_http_port', default = 8890, cast = int)
     app_http_timeout = config('app_http_timeout', default = 3, cast = int)
