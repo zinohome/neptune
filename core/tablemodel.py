@@ -14,7 +14,6 @@ import traceback
 import re
 import decimal, datetime
 from fastapi.encoders import jsonable_encoder
-import json
 from core import dbengine, dbmeta
 from config import config
 from sqlalchemy import select
