@@ -8,8 +8,16 @@ from flask import render_template, request
 from flask_login import login_required
 from jinja2 import TemplateNotFound
 from auth import users
+from config import config
+from util import log
 from core import dbmeta, dbengine
 
+
+'''config'''
+cfg = config.app_config
+
+'''logging'''
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 @blueprint.route('/index')
 @login_required
@@ -18,8 +26,14 @@ def index():
     systables = sysdbmeta.get_tables()
     sysviews = sysdbmeta.get_views()
     usercount = len(list(users.Users().users.values()))
-    cpsize=dbengine.DBEngine().connect().pool.size()
-    cpchin=dbengine.DBEngine().connect().pool.checkedin()
+    cpsize = 0
+    cpchin = 0
+    if cfg['Database_Config'].db_dialect == 'sqlite':
+        cpsize = 1
+        cpchin = 1
+    else:
+        cpsize = dbengine.DBEngine().connect().pool.size()
+        cpchin=dbengine.DBEngine().connect().pool.checkedin()
     return render_template('home/index.html', segment='index', systables=systables, sysviews=sysviews,
                            usercount=usercount, cpsize=cpsize, cpchin=cpchin)
 
@@ -30,8 +44,14 @@ def indexhtml():
     systables = sysdbmeta.get_tables()
     sysviews = sysdbmeta.get_views()
     usercount = len(list(users.Users().users.values()))
-    cpsize=dbengine.DBEngine().connect().pool.size()
-    cpchin=dbengine.DBEngine().connect().pool.checkedin()
+    cpsize = 0
+    cpchin = 0
+    if cfg['Database_Config'].db_dialect == 'sqlite':
+        cpsize = 1
+        cpchin = 1
+    else:
+        cpsize = dbengine.DBEngine().connect().pool.size()
+        cpchin=dbengine.DBEngine().connect().pool.checkedin()
     return render_template('home/index.html', segment='index', systables=systables, sysviews=sysviews,
                            usercount=usercount, cpsize=cpsize, cpchin=cpchin)
 @blueprint.route('/<template>')

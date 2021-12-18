@@ -56,5 +56,6 @@ class API:
         return list(self._resources.keys())
 
     def correct_attribute_name(self, name):
-        slug_name = slugify(name)
-        return slug_name.replace("-", "_")
+        #slug_name = slugify(name)
+        #return slug_name.replace("-", "_")
+        return name.replace("-", "_")

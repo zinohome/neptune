@@ -480,6 +480,7 @@ class DBMeta(object):
 
 
 if __name__ == '__main__':
+    log.logger.debug(cfg['Database_Config'].db_schema)
     meta = DBMeta()
     metadata = meta.metadata
     otable = meta.gettable('customers')

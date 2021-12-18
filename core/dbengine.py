@@ -54,6 +54,11 @@ class DBEngine(object):
                                           pool_pre_ping=cfg['Connection_Config'].con_pool_pre_ping,
                                           pool_recycle=cfg['Connection_Config'].con_pool_recycle,
                                           exclude_tablespaces=toolkit.to_list(cfg['Database_Config'].db_exclude_tablespaces))
+        elif cfg['Database_Config'].db_dialect == 'sqlite':
+            self.__engine = create_engine(uri,
+                                          echo=False,
+                                          pool_pre_ping=cfg['Connection_Config'].con_pool_pre_ping,
+                                          pool_recycle=cfg['Connection_Config'].con_pool_recycle)
         else:
             self.__engine = create_engine(uri,
                                           echo=False,
