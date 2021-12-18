@@ -14,6 +14,7 @@ import traceback
 import re
 import decimal, datetime
 from fastapi.encoders import jsonable_encoder
+import json
 from core import dbengine, dbmeta
 from config import config
 from sqlalchemy import select
@@ -212,22 +213,20 @@ class TableModel(object):
             if result is not None:
                 log.logger.debug('Select Result: [ %s ]' % result)
                 log.logger.debug('Select Result Return : [ %s ] rows ' % result.rowcount)
-                if result.rowcount >0:
-                    for row in result:
-                        # result.items() returns an array like [(key0, value0), (key1, value1)]
-                        for column, value in row._mapping.items():
-                            # build up the dictionary
-                            d = {**d, **{column: value}}
-                        a.append(d)
-                    if bool(count_only):
-                        return_json['record_count'] = colcount
-                    elif bool(include_count):
-                        return_json['record_count'] = colcount
-                        return_json['data'] = a
-                    else:
-                        return_json['data'] = a
+
+                for row in result:
+                    # result.items() returns an array like [(key0, value0), (key1, value1)]
+                    #log.logger.debug(dict(row))
+                    #for column, value in row._mapping.items():
+                    #    d = {**d, **{column: value}}
+                    a.append(dict(row))
+                if bool(count_only):
+                    return_json['record_count'] = colcount
+                elif bool(include_count):
+                    return_json['record_count'] = colcount
+                    return_json['data'] = a
                 else:
-                    return_json['data'] = None
+                    return_json['data'] = a
             else:
                 return_json['data'] = None
         except Exception as e:
@@ -303,10 +302,10 @@ class TableModel(object):
                 log.logger.debug('Select Result Return : [ %s ] rows ' % result.rowcount)
                 for row in result:
                     # result.items() returns an array like [(key0, value0), (key1, value1)]
-                    for column, value in row._mapping.items():
-                        # build up the dictionary
-                        d = {**d, **{column: value}}
-                    a.append(d)
+                    # log.logger.debug(dict(row))
+                    # for column, value in row._mapping.items():
+                    #    d = {**d, **{column: value}}
+                    a.append(dict(row))
                 return_json['data'] = a
             else:
                 return_json['data'] = None
