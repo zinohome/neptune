@@ -7,5 +7,3 @@ uvicorn main:app --host 0.0.0.0 --port 8890 --reload --no-server-header --no-dat
 gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app -b 0.0.0.0:8890
 
 /opt/pyAPI/venv/bin/gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app -b 0.0.0.0:8890
-
-brew install graphviz 
