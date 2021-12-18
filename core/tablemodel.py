@@ -212,19 +212,22 @@ class TableModel(object):
             if result is not None:
                 log.logger.debug('Select Result: [ %s ]' % result)
                 log.logger.debug('Select Result Return : [ %s ] rows ' % result.rowcount)
-                for row in result:
-                    # result.items() returns an array like [(key0, value0), (key1, value1)]
-                    for column, value in row._mapping.items():
-                        # build up the dictionary
-                        d = {**d, **{column: value}}
-                    a.append(d)
-                if bool(count_only):
-                    return_json['record_count'] = colcount
-                elif bool(include_count):
-                    return_json['record_count'] = colcount
-                    return_json['data'] = a
+                if result.rowcount >0:
+                    for row in result:
+                        # result.items() returns an array like [(key0, value0), (key1, value1)]
+                        for column, value in row._mapping.items():
+                            # build up the dictionary
+                            d = {**d, **{column: value}}
+                        a.append(d)
+                    if bool(count_only):
+                        return_json['record_count'] = colcount
+                    elif bool(include_count):
+                        return_json['record_count'] = colcount
+                        return_json['data'] = a
+                    else:
+                        return_json['data'] = a
                 else:
-                    return_json['data'] = a
+                    return_json['data'] = None
             else:
                 return_json['data'] = None
         except Exception as e:
