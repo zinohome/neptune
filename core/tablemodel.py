@@ -441,6 +441,7 @@ class TableModel(object):
             submittypedpkparm = dict(zip(ulpklist, prlist))
             log.logger.debug('Primarykey select param : [ %s ]' % submittypedpkparm)
             fvl = toolkit.to_fvcol(fieldvalue)
+            log.logger.debug('Update Values: [ %s ]' % fvl)
             if pkstr is not None:
                 update_st = update_st.where(text(pkstr))
                 if fvl is not None:
