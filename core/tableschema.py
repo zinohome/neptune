@@ -92,3 +92,11 @@ class TableSchema(object):
             'columns': self._columns,
             'dict': self._dict
         }
+
+    def getColumnType(self, Columename):
+        rType = 'None'
+        for column in self.columns:
+            if column['name'] == Columename:
+                rType = column['type']
+                rType = rType[:rType.find("(")] if rType.find("(") > -1 else rType
+                return rType

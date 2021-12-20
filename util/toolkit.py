@@ -14,9 +14,11 @@ import ast
 import re
 from urllib import parse
 import simplejson as json
+import sqlalchemy.types as satypes
 from sqlalchemy.engine.url import URL
 from config import config
 from util import log
+from datetime import datetime
 
 '''config'''
 cfg = config.app_config
@@ -24,6 +26,25 @@ cfg = config.app_config
 '''logging'''
 log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
+type_sql2py_dict = {}
+for key in satypes.__dict__['__all__']:
+    sqltype = getattr(satypes, key)
+    if 'python_type' in dir(sqltype) and not sqltype.__name__.startswith('Type'):
+        try:
+            typeinst = sqltype()
+        except TypeError as e: #List/array wants inner-type
+            typeinst = sqltype(None)
+        try:
+            type_sql2py_dict[sqltype.__name__] = typeinst.python_type
+        except NotImplementedError:
+            pass
+
+type_py2sql_dict = {}
+for key, val in type_sql2py_dict.items():
+    if not val in type_py2sql_dict:
+        type_py2sql_dict[val] = [key]
+    else:
+        type_py2sql_dict[val].append(key)
 
 def is_dict(dictstr):
     if isinstance(dictstr, dict):
@@ -89,10 +110,42 @@ def to_fvcol(lststr):
     else:
         return None
 
+def getpytype(sqltype):
+    pytype = None
+    if type_sql2py_dict.__contains__(sqltype):
+        pytype = type_sql2py_dict[sqltype]
+    return pytype
+
 def convertSQLObject(vol, tableschema):
-    log.logger.debug("====================================convertSQLObject====================================")
-    log.logger.debug(vol)
-    log.logger.debug(tableschema)
+    cvol = vol.copy()
+    for key in cvol.keys():
+        if getpytype(tableschema.getColumnType(key)).__name__ == 'int':
+            cvol[key] = int(cvol[key])
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'str':
+            cvol[key] = str(cvol[key])
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'float':
+            cvol[key] = float(cvol[key])
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'Decimal':
+            cvol[key] = float(cvol[key])
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'datetime':
+            cvol[key] = datetime.strptime(cvol[key], "%Y-%m-%d %H:%M:%S")
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'bytes':
+            cvol[key] = bytes(cvol[key], encoding ="utf8")
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'bool':
+            cvol[key] = json.loads(cvol[key].lower())
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'date':
+            cvol[key] = datetime.strptime(cvol[key], "%Y-%m-%d")
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'time':
+            cvol[key] = datetime.strptime(cvol[key], "%H:%M:%S")
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'timedelta':
+            cvol[key] = cvol[key]
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'list':
+            cvol[key] = ast.literal_eval(cvol[key])
+        elif getpytype(tableschema.getColumnType(key)).__name__ == 'dict':
+            cvol[key] = ast.literal_eval(cvol[key])
+        else:
+            cvol[key] = cvol[key]
+    return cvol
 
 
 def uappend(lststr):
