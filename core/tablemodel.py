@@ -334,6 +334,7 @@ class TableModel(object):
             insert_st = rtable.insert()
             log.logger.debug('SQL of Insert: [ %s ]' % insert_st)
             fvl = toolkit.to_fvcol(fieldvalue)
+            fvl = toolkit.convertSQLObject(fvl, self.schematable)
             log.logger.debug('Insert Values: [ %s ]' % fvl)
             if fvl is not None:
                 result = session.execute(insert_st, fvl)
@@ -375,6 +376,7 @@ class TableModel(object):
             update_st = rtable.update()
             log.logger.debug('SQL of Update: [ %s ]' % update_st)
             fvl = toolkit.to_fvcol(fieldvalue)
+            fvl = toolkit.convertSQLObject(fvl, self.schematable)
             log.logger.debug('Update Values: [ %s ]' % fvl)
             if filter is not None:
                 update_st = update_st.where(text(filter))
