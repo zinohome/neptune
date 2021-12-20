@@ -16,6 +16,13 @@ from urllib import parse
 import simplejson as json
 from sqlalchemy.engine.url import URL
 from config import config
+from util import log
+
+'''config'''
+cfg = config.app_config
+
+'''logging'''
+log = log.Logger(level=cfg['Application_Config'].app_log_level)
 
 
 def is_dict(dictstr):
@@ -82,6 +89,11 @@ def to_fvcol(lststr):
     else:
         return None
 
+def convertSQLObject(vol, tableschema):
+    log.logger.debug("====================================convertSQLObject====================================")
+    log.logger.debug(vol)
+    log.logger.debug(tableschema)
+
 
 def uappend(lststr):
     return config.app_config['Application_Config'].app_param_prefix+'{}'.format(lststr)
@@ -92,7 +104,6 @@ def uappendlist(slist):
 
 
 def gen_dburi():
-    cfg = config.app_config
     db = {'drivername': cfg['Database_Config'].db_drivername,
           'username': cfg['Database_Config'].db_username,
           'password': parse.unquote_plus(cfg['Database_Config'].db_password),
