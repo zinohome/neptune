@@ -132,6 +132,7 @@ def puttabledata(tablename):
     pkname = None
     idvalue = None
     pks = sysdbmeta.get_table_primary_keys(tablename)
+    #TODO add multikey
     if len(pks) == 1:
         pkname = pks[0]
     if pkname is not None:
@@ -159,6 +160,7 @@ def deletetabledata(tablename):
     pkname = None
     idvalue = None
     pks = sysdbmeta.get_table_primary_keys(tablename)
+    #TODO add multikey
     if len(pks) == 1:
         pkname = pks[0]
     if pkname is not None:

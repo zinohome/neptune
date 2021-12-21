@@ -436,10 +436,12 @@ class TableModel(object):
             log.logger.debug('Primarykey select string : [ %s ]' % pkstr)
             pkparm = dict(zip(lpklist, toolkit.to_list(idvalue)))
             # pkparm = dict(zip(ulpklist, toolkit.to_list(idvalue)))
+            #log.logger.debug(pkparm)
             typedpkparm = {}
             for (k, v) in pkparm.items():
                 typedpkparm[k] = rtable.c[k].type.python_type(v)
             prlist = [v for v in typedpkparm.values()]
+            #log.logger.debug(prlist)
             submittypedpkparm = dict(zip(ulpklist, prlist))
             log.logger.debug('Primarykey select param : [ %s ]' % submittypedpkparm)
             fvl = toolkit.to_fvcol(fieldvalue)

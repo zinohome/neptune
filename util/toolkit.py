@@ -38,7 +38,7 @@ for key in satypes.__dict__['__all__']:
             type_sql2py_dict[sqltype.__name__] = typeinst.python_type
         except NotImplementedError:
             pass
-log.logger.debug(type_sql2py_dict)
+
 type_py2sql_dict = {}
 for key, val in type_sql2py_dict.items():
     if not val in type_py2sql_dict:
