@@ -38,7 +38,7 @@ for key in satypes.__dict__['__all__']:
             type_sql2py_dict[sqltype.__name__] = typeinst.python_type
         except NotImplementedError:
             pass
-
+log.logger.debug(type_sql2py_dict)
 type_py2sql_dict = {}
 for key, val in type_sql2py_dict.items():
     if not val in type_py2sql_dict:
@@ -119,32 +119,35 @@ def getpytype(sqltype):
 def convertSQLObject(vol, tableschema):
     cvol = vol.copy()
     for key in cvol.keys():
-        if getpytype(tableschema.getColumnType(key)).__name__ == 'int':
-            cvol[key] = int(cvol[key])
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'str':
-            cvol[key] = str(cvol[key])
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'float':
-            cvol[key] = float(cvol[key])
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'Decimal':
-            cvol[key] = float(cvol[key])
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'datetime':
-            cvol[key] = datetime.strptime(cvol[key], "%Y-%m-%d %H:%M:%S")
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'bytes':
-            cvol[key] = bytes(cvol[key], encoding ="utf8")
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'bool':
-            cvol[key] = json.loads(cvol[key].lower())
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'date':
-            cvol[key] = datetime.strptime(cvol[key], "%Y-%m-%d")
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'time':
-            cvol[key] = datetime.strptime(cvol[key], "%H:%M:%S")
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'timedelta':
+        if getpytype(tableschema.getColumnType(key)) is None:
             cvol[key] = cvol[key]
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'list':
-            cvol[key] = ast.literal_eval(cvol[key])
-        elif getpytype(tableschema.getColumnType(key)).__name__ == 'dict':
-            cvol[key] = ast.literal_eval(cvol[key])
         else:
-            cvol[key] = cvol[key]
+            if getpytype(tableschema.getColumnType(key)).__name__ == 'int':
+                cvol[key] = int(cvol[key])
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'str':
+                cvol[key] = str(cvol[key])
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'float':
+                cvol[key] = float(cvol[key])
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'Decimal':
+                cvol[key] = float(cvol[key])
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'datetime':
+                cvol[key] = datetime.strptime(cvol[key], "%Y-%m-%d %H:%M:%S")
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'bytes':
+                cvol[key] = bytes(cvol[key], encoding ="utf8")
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'bool':
+                cvol[key] = json.loads(cvol[key].lower())
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'date':
+                cvol[key] = datetime.strptime(cvol[key], "%Y-%m-%d")
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'time':
+                cvol[key] = datetime.strptime(cvol[key], "%H:%M:%S")
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'timedelta':
+                cvol[key] = cvol[key]
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'list':
+                cvol[key] = ast.literal_eval(cvol[key])
+            elif getpytype(tableschema.getColumnType(key)).__name__ == 'dict':
+                cvol[key] = ast.literal_eval(cvol[key])
+            else:
+                cvol[key] = cvol[key]
     return cvol
 
 

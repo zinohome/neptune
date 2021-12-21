@@ -18,7 +18,7 @@
             "relationship":false
         },
         "database":"MySQL",
-        "databaseName":"sample",
+        "databaseName":"mysqlsrc",
         "canvasType":"ERD",
         "language":"GraphQL",
         "tableCase":"pascalCase",
