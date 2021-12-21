@@ -142,6 +142,7 @@ def convertSQLObject(vol, tableschema):
                 cvol[key] = datetime.strptime(cvol[key], "%H:%M:%S")
             elif getpytype(tableschema.getColumnType(key)).__name__ == 'timedelta':
                 cvol[key] = cvol[key]
+                #TODO:Add string to timedelta
             elif getpytype(tableschema.getColumnType(key)).__name__ == 'list':
                 cvol[key] = ast.literal_eval(cvol[key])
             elif getpytype(tableschema.getColumnType(key)).__name__ == 'dict':
